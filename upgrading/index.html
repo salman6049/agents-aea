@@ -1116,8 +1116,8 @@
 <p>This page provides some tipps of how to upgrade between versions.</p>
 <h2 id="v033-to-v040">v0.3.3 to v0.4.0</h2>
 <ul>
-<li>Message sending in the skills has been updated. In the past you had to construct messages, then serialize them and place them in an envelope:</li>
-</ul>
+<li> Message sending in the skills has been updated. In the past you had to construct messages, then serialize them and place them in an envelope:
+
 <div class="highlight"><pre><span></span><code><span class="n">cfp_msg</span> <span class="o">=</span> <span class="n">FipaMessage</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span>
     <span class="n">to</span><span class="o">=</span><span class="n">opponent_addr</span><span class="p">,</span>
@@ -1135,15 +1135,17 @@
 <span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">envelope</span><span class="p">)</span>
 </code></pre></div>
-<p>Now this has been simplified to:
+
+Now this has been simplified to:
 <div class="highlight"><pre><span></span><code><span class="n">cfp_msg</span> <span class="o">=</span> <span class="n">FipaMessage</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="n">cfp_msg</span><span class="o">.</span><span class="n">counterparty</span> <span class="o">=</span> <span class="n">opponent_addr</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">cfp_msg</span><span class="p">)</span>
-</code></pre></div></p>
-<p>You must update your skills as the old implementation is no longer supported.</p>
-<ul>
-<li>Connection constructors have been simplified. In the past you had to implement both the <code>__init__</code> as well as the <code>from_config</code> methods of a Connection. Now you only have to implement the <code>__init__</code> method which by default at load time now receives the following kwargs: <code>configuration: ConnectionConfig, identity: Identity, crypto_store: CryptoStore</code>. See for example in the scaffold connection:</li>
-</ul>
+</code></pre></div>
+
+You must update your skills as the old implementation is no longer supported.
+</li>
+<li> Connection constructors have been simplified. In the past you had to implement both the `__init__` as well as the `from_config` methods of a Connection. Now you only have to implement the `__init__` method which by default at load time now receives the following kwargs: `configuration: ConnectionConfig, identity: Identity, crypto_store: CryptoStore`. See for example in the scaffold connection:
+
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyScaffoldConnection</span><span class="p">(</span><span class="n">Connection</span><span class="p">):</span>
     <span class="sd">"""Proxy to the functionality of the SDK or API."""</span>
 
@@ -1166,8 +1168,12 @@
             <span class="n">configuration</span><span class="o">=</span><span class="n">configuration</span><span class="p">,</span> <span class="n">crypto_store</span><span class="o">=</span><span class="n">crypto_store</span><span class="p">,</span> <span class="n">identity</span><span class="o">=</span><span class="n">identity</span>
         <span class="p">)</span>
 </code></pre></div>
-<p>As a result of this feature, you are now able to pass key-pairs to your connections via the <code>CryptoStore</code>.</p>
-<p>You must update your connections as the old implementation is no longer supported.</p>
+
+As a result of this feature, you are now able to pass key-pairs to your connections via the `CryptoStore`.
+
+You must update your connections as the old implementation is no longer supported.
+</li>
+</ul>
 </article>
 </div>
 </div>
