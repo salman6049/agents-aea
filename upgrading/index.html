@@ -1142,7 +1142,7 @@
 </code></pre></div></p>
 <p>You must update your skills as the old implementation is no longer supported.</p>
 <ul>
-<li>Connection constructors have been simplified. In the past you had to implement both the <code>__init__</code> as well as the <code>from_dir</code> methods of a Connection. Now you only have to implement the <code>__init__</code> method which by default at load time now receives the following kwargs: <code>configuration: ConnectionConfig, identity: Identity, crypto_store: CryptoStore</code>. See for example in the scaffold connection:</li>
+<li>Connection constructors have been simplified. In the past you had to implement both the <code>__init__</code> as well as the <code>from_config</code> methods of a Connection. Now you only have to implement the <code>__init__</code> method which by default at load time now receives the following kwargs: <code>configuration: ConnectionConfig, identity: Identity, crypto_store: CryptoStore</code>. See for example in the scaffold connection:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyScaffoldConnection</span><span class="p">(</span><span class="n">Connection</span><span class="p">):</span>
     <span class="sd">"""Proxy to the functionality of the SDK or API."""</span>
