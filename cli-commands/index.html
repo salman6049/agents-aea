@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -288,7 +283,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -376,8 +371,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -396,18 +391,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
@@ -461,6 +446,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1086,6 +1076,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1111,36 +1106,40 @@
 </thead>
 <tbody>
 <tr>
-<td><code>add connection/protocol/skill [public_id]</code></td>
-<td>Add connection, protocol, or skill, with <code>[public_id]</code>, to the AEA. <code>add --local</code> to add from local <code>packages</code> directory.</td>
+<td><code>add [package_type] [public_id]</code></td>
+<td>Add a <code>package_type</code> connection, contract, protocol, or skill, with <code>[public_id]</code>, to the AEA. <code>add --local</code> to add from local <code>packages</code> directory.</td>
 </tr>
 <tr>
-<td><code>add-key fetchai/ethereum file</code></td>
-<td>Add a private key from a file.</td>
+<td><code>add-key [ledger_id] file</code></td>
+<td>Add a private key from a file for <code>ledger_id</code>.</td>
 </tr>
 <tr>
-<td><code>create NAME</code></td>
-<td>Create a new aea project called <code>[name]</code>.</td>
+<td><code>create [name]</code></td>
+<td>Create a new aea project called <code>name</code>.</td>
 </tr>
 <tr>
 <td><code>config get [path]</code></td>
-<td>Reads the config specified in <code>[path]</code> and prints its target.</td>
+<td>Reads the config specified in <code>path</code> and prints its target.</td>
 </tr>
 <tr>
 <td><code>config set [path] [--type TYPE]</code></td>
-<td>Sets a new value for the target of the <code>[path]</code>. Optionally cast to type.</td>
+<td>Sets a new value for the target of the <code>path</code>. Optionally cast to type.</td>
 </tr>
 <tr>
-<td><code>delete NAME</code></td>
+<td><code>delete [name]</code></td>
 <td>Delete an aea project. See below for disabling a resource.</td>
 </tr>
 <tr>
-<td><code>fetch PUBLIC_ID</code></td>
-<td>Fetch an aea project with <code>[public_id]</code>. <code>fetch --local</code> to fetch from local <code>packages</code> directory.</td>
+<td><code>eject [package_type] [public_id]</code></td>
+<td>Move a package of <code>package_type</code> and <code>package_id</code> from vendor to project working directory.</td>
 </tr>
 <tr>
-<td><code>fingerprint c/p/s [public_id]</code></td>
-<td>Fingerprint connection, protocol, or skill, with <code>[public_id]</code>.</td>
+<td><code>fetch [public_id]</code></td>
+<td>Fetch an aea project with <code>public_id</code>. <code>fetch --local</code> to fetch from local <code>packages</code> directory.</td>
+</tr>
+<tr>
+<td><code>fingerprint [package_type] [public_id]</code></td>
+<td>Fingerprint connection, contract, protocol, or skill, with <code>public_id</code>.</td>
 </tr>
 <tr>
 <td><code>freeze</code></td>
@@ -1151,19 +1150,23 @@
 <td>Run the GUI.</td>
 </tr>
 <tr>
-<td><code>generate-key fetchai/ethereum/all</code></td>
+<td><code>generate protocol [protocol_spec_path]</code></td>
+<td>Generate a protocol from the specification.</td>
+</tr>
+<tr>
+<td><code>generate-key [ledger_id]</code></td>
 <td>Generate private keys. The AEA uses a private key to derive the associated public key and address.</td>
 </tr>
 <tr>
-<td><code>generate-wealth fetchai/ethereum</code></td>
+<td><code>generate-wealth [ledger_id]</code></td>
 <td>Generate wealth for address on test network.</td>
 </tr>
 <tr>
-<td><code>get-address fetchai/ethereum</code></td>
+<td><code>get-address [ledger_id]</code></td>
 <td>Get the address associated with the private key.</td>
 </tr>
 <tr>
-<td><code>get-wealth fetchai/ethereum</code></td>
+<td><code>get-wealth [ledger_id]</code></td>
 <td>Get the wealth associated with the private key.</td>
 </tr>
 <tr>
@@ -1175,11 +1178,15 @@
 <td>Initialize your AEA configurations. (With <code>--author</code> to define author.)</td>
 </tr>
 <tr>
+<td><code>interact</code></td>
+<td>Interact with a running AEA via the stub connection.</td>
+</tr>
+<tr>
 <td><code>launch [path_to_agent_project]...</code></td>
 <td>Launch many agents at the same time.</td>
 </tr>
 <tr>
-<td><code>list protocols/connections/skills</code></td>
+<td><code>list [package_type]</code></td>
 <td>List the installed resources.</td>
 </tr>
 <tr>
@@ -1187,28 +1194,32 @@
 <td>Login to a registry account with credentials.</td>
 </tr>
 <tr>
+<td><code>logout</code></td>
+<td>Logout from registry account.</td>
+</tr>
+<tr>
 <td><code>publish</code></td>
 <td>Publish the AEA to registry. Needs to be executed from an AEA project.<code>publish --local</code> to publish to local <code>packages</code> directory.</td>
 </tr>
 <tr>
-<td><code>push connection/protocol/skill [public_id]</code></td>
-<td>Push connection, protocol, or skill with <code>[public_id]</code> to registry. <code>push --local</code> to push to local <code>packages</code> directory.</td>
+<td><code>push [protocol_type] [public_id]</code></td>
+<td>Push connection, protocol, or skill with <code>public_id</code> to registry.   <code>push --local</code> to push to local <code>packages</code> directory.</td>
 </tr>
 <tr>
-<td><code>remove connection/protocol/skill [name]</code></td>
-<td>Remove connection, protocol, or skill, called <code>[name]</code>, from AEA.</td>
+<td><code>remove [protocol_type] [name]</code></td>
+<td>Remove connection, protocol, or skill, called <code>name</code>, from AEA.</td>
 </tr>
 <tr>
 <td><code>run {using [connections, ...]}</code></td>
 <td>Run the AEA on the Fetch.ai network with default or specified connections.</td>
 </tr>
 <tr>
-<td><code>search protocols/connections/skills</code></td>
-<td>Search for components in the registry. <code>search --local protocols/connections/skills [--query searching_query]</code> to search in local <code>packages</code> directory.</td>
+<td><code>search [protocol_type]</code></td>
+<td>Search for components in the registry. <code>search --local [protocol_type] [--query searching_query]</code> to search in local <code>packages</code> directory.</td>
 </tr>
 <tr>
-<td><code>scaffold connection/protocol/skill [name]</code></td>
-<td>Scaffold a new connection, protocol, or skill called <code>[name]</code>.</td>
+<td><code>scaffold [protocol_type] [name]</code></td>
+<td>Scaffold a new connection, protocol, or skill called <code>name</code>.</td>
 </tr>
 <tr>
 <td><code>-v DEBUG run</code></td>

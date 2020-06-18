@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -288,7 +283,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -395,8 +390,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -415,18 +410,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
@@ -480,6 +465,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1104,6 +1094,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1135,7 +1130,8 @@
 <h1>Upgrading versions</h1>
 <p>This page provides some tipps of how to upgrade between versions.</p>
 <h2 id="v040-to-v041">v0.4.0 to v0.4.1</h2>
-<p>No breaking changes mean there are no upgrage requirements.</p>
+<p>There are no upgrage requirements if you use the CLI based approach to AEA development.</p>
+<p>Connections are now added via <a href="../api/registries/resources#resources-objects"><code>Resources</code></a> to the AEA, not the AEA constructor directly. For programmatic usage remove the list of connections from the AEA constructor and instead add the connections to resources.</p>
 <h2 id="v033-to-v040">v0.3.3 to v0.4.0</h2>
 <ul>
 <li> Message sending in the skills has been updated. In the past you had to construct messages, then serialize them and place them in an envelope:

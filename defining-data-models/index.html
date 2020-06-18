@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -288,7 +283,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -376,8 +371,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -396,18 +391,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
@@ -461,6 +446,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1109,6 +1099,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1144,10 +1139,10 @@
 <article class="md-content__inner md-typeset">
 <h1>Defining Data Models</h1>
 <p>In this section, we explain how to define <em>data models</em>, an important component of the OEF Search &amp; Discovery. It allows agents to describe themselves and to discover the services/resources they are interested in.</p>
-<p>In a sentence, a <code>DataModel</code> is a set of <em>attributes</em>, and a <code>Description</code> of a service/resource is an assignment of those attributes.</p>
+<p>In a sentence, a <a href="../api/helpers/search/models#datamodel-objects"><code>DataModel</code></a> is a set of <em>attributes</em>, and a <a href="../api/helpers/search/models#description-objects"><code>Description</code></a> of a service/resource is an assignment of those attributes.</p>
 <p>All you need to specify data models and descriptions (that is, instances of the data model) can be found in the <code>aea.helpers.search</code> module.</p>
 <h2 id="attributes">Attributes</h2>
-<p>At the lowest level of our data model language, we have the <code>Attribute</code>.
+<p>At the lowest level of our data model language, we have the <a href="../api/helpers/search/models#attribute-objects"><code>Attribute</code></a>.
 An attribute is an abstract definition of a property.</p>
 <p>It is identified by a <em>name</em>, that must be unique in a given data model (that is, we can't have two attributes that share the same name).</p>
 <p>Every attribute has a <em>type</em>, that specifies the domain of the property, that is, the possible values that the attribute can assume. At the moment, we support five types of attributes:</p>

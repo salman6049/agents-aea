@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -375,7 +370,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -463,8 +458,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -483,18 +478,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
@@ -548,6 +533,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1172,6 +1162,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1334,7 +1329,7 @@ aea delete my_gym_aea
 <p>In the <code>setup</code> method of the <code>GymHandler</code> the <code>GymTask</code> is initialized, as well as its <code>setup</code> and <code>execute</code> methods called. The handler, which is registered against the <code>GymMessage.protocol_id</code> then filters for messages of that protocol with the performative <code>GymMessage.Performative.PERCEPT</code>. These messages are passed to the <code>proxy_env_queue</code> of the task.</p>
 <p>The <code>GymTask</code> is responsible for training the RL agent. In particular, <code>MyRLAgent</code> is initialized and trained against <code>ProxyEnv</code>. The <code>ProxyEnv</code> instantiates a <code>gym.Env</code> class and therefore implements its API. This means the proxy environment is compatible with any <code>gym</code> compatible RL agent. However, unlike other environments it only acts as a proxy and does not implement an environment of its own. It allows for the decoupling of the process environment of the <code>gym.env</code> from the process environment of the RL agent. The actual <code>gym.env</code> against which the agent is trained is wrapped by the <code>gym</code> connection. The proxy environment and gym connection communicate via a protocol, the <code>gym</code> protocol. Note, it would trivially be possible to implement the <code>gym</code> environment in another AEA; this way one AEA could provide <code>gym</code> environments as a service. Naturally, the overhead created by the introduction of the extra layers causes a higher latency when training the RL agent.</p>
 <p>In this particular skill, which chiefly serves for demonstration purposes, we implement a very basic RL agent. The agent trains a model of price of <code>n</code> goods: it aims to discover the most likely price of each good. To this end, the agent randomly selects one of the <code>n</code> goods on each training step and then chooses as an <code>action</code> the price which it deems is most likely accepted. Each good is represented by an id and the possible price range <code>[1,100]</code> divided into 100 integer bins. For each price bin, a <code>PriceBandit</code> is created which models the likelihood of this price. In particular, a price bandit maintains a <a href="https://en.wikipedia.org/wiki/Beta_distribution">beta distribution</a>. The beta distribution is initialized to the uniform distribution. Each time the price associated with a given <code>PriceBandit</code> is accepted or rejected the distribution maintained by the <code>PriceBandit</code> is updated. For each good, the agent can therefore over time learn which price is most likely.</p>
-<p><center><img alt="Gym skill illustration" src="../assets/gym-skill.png"/></center></p>
+<p><img alt="Gym skill illustration" class="center" src="/assets/gym-skill.png" style="display: block; margin-left: auto; margin-right: auto;width:50%;"/></p>
 <p>The illustration shows how the RL agent only interacts with the proxy environment by sending it <code>action (A)</code> and receiving <code>observation (O)</code>, <code>reward (R)</code>, <code>done (D)</code> and  <code>info (I)</code>.</p>
 <p><br/></p>
 </article>

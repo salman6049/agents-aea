@@ -174,11 +174,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -285,7 +280,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -374,8 +369,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -394,18 +389,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
@@ -459,6 +444,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1083,6 +1073,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1095,10 +1090,10 @@
 <p>Here we present an incomplete list of known limitations:</p>
 <ul>
 <li>
-<p>The AEABuilder checks the consistency of packages at the <code>add</code> stage. However, it does not currently check the consistency again at the <code>load</code> stage. This means, if a package is tampered with after it is added to the AEABuilder then these inconsistencies might not be detected by the AEABuilder.</p>
+<p>The <a href="../api/aea_builder#aeabuilder-objects"><code>AEABuilder</code></a> checks the consistency of packages at the <code>add</code> stage. However, it does not currently check the consistency again at the <code>load</code> stage. This means, if a package is tampered with after it is added to the <code>AEABuilder</code> then these inconsistencies might not be detected by the <code>AEABuilder</code>.</p>
 </li>
 <li>
-<p>The AEABuilder assumes that packages with public ids of identical author and package name have a matching version. As a result, if a developer uses a package with matching author and package name but different version in the public id, then the AEABuilder will not detect this and simply use the last loaded package.</p>
+<p>The <a href="../api/aea_builder#aeabuilder-objects"><code>AEABuilder</code></a> assumes that packages with public ids of identical author and package name have a matching version. As a result, if a developer uses a package with matching author and package name but different version in the public id, then the <code>AEABuilder</code> will not detect this and simply use the last loaded package.</p>
 </li>
 </ul>
 <p><br/></p>

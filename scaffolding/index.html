@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -288,7 +283,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -322,6 +317,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#scaffold-a-protocol">
     Scaffold a protocol
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scaffold-a-contract">
+    Scaffold a contract
   </a>
 </li>
 <li class="md-nav__item">
@@ -409,8 +409,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -429,18 +429,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
     </a>
 </li>
 <li class="md-nav__item">
@@ -494,6 +484,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1118,6 +1113,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1146,6 +1146,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#scaffold-a-contract">
+    Scaffold a contract
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#scaffold-a-connection">
     Scaffold a connection
   </a>
@@ -1162,7 +1167,7 @@
 <article class="md-content__inner md-typeset">
 <h1>Scaffolding packages</h1>
 <h2 id="scaffold-generator">Scaffold generator</h2>
-<p>The scaffold generator builds out the directory structure required when adding new skills, protocols, and connections to the AEA.</p>
+<p>The scaffold generator builds out the directory structure required when adding new skills, protocols, contracts and connections to the AEA.</p>
 <p>For example, create a new AEA project (add the author flag using your own author handle if this is your first project using the <code>aea</code> package).</p>
 <div class="highlight"><pre><span></span><code>aea create my_aea --author <span class="s2">"fetchai"</span>
 <span class="nb">cd</span> my_aea
@@ -1174,12 +1179,15 @@
 <h3 id="scaffold-a-protocol">Scaffold a protocol</h3>
 <div class="highlight"><pre><span></span><code>aea scaffold protocol my_protocol
 </code></pre></div>
+<h3 id="scaffold-a-contract">Scaffold a contract</h3>
+<div class="highlight"><pre><span></span><code>aea scaffold contract my_contract
+</code></pre></div>
 <h3 id="scaffold-a-connection">Scaffold a connection</h3>
 <div class="highlight"><pre><span></span><code>aea scaffold connection my_connection
 </code></pre></div>
-<p>After running the above commands, you are ready to develop your own skill, protocol and connection.</p>
+<p>After running the above commands, you are able to develop your own skill, protocol, contract and connection.</p>
 <p>Once you have made changes to your scaffolded packages, make sure you update the fingerprint of the package:</p>
-<div class="highlight"><pre><span></span><code>aea fingerprint <span class="o">[</span>package_name<span class="o">]</span>
+<div class="highlight"><pre><span></span><code>aea fingerprint <span class="o">[</span>package_name<span class="o">]</span> <span class="o">[</span>public_id<span class="o">]</span>
 </code></pre></div>
 <p>Then you are ready to run the AEA.</p>
 <p><br/></p>

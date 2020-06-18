@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
-      Generic skills
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
@@ -288,7 +283,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../step_one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
@@ -376,8 +371,8 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../connect-a-frontend/" title="Frontend intergration">
-      Frontend intergration
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
+      Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
@@ -395,11 +390,6 @@
       Contract deploy and interact
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../aries-cloud-agent-example/" title="Identity - Aries Cloud Agent">
-      Identity - Aries Cloud Agent
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -413,7 +403,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#local-demo">
-    Local Demo
+    Local demo
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -432,7 +422,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#local-demo-with-skills">
-    Local Demo with skills
+    Local demo with skills
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -465,17 +455,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#deployed-test-network">
-    Deployed Test Network
+<a class="md-nav__link" href="#deployed-agent-communication-network">
+    Deployed agent communication network
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ledger-integration/" title="Using public ledgers">
-      Using public ledgers
-    </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
@@ -528,6 +513,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
+      Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
@@ -1152,6 +1142,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
+      Simple OEF
+    </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1165,7 +1160,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#local-demo">
-    Local Demo
+    Local demo
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -1184,7 +1179,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#local-demo-with-skills">
-    Local Demo with skills
+    Local demo with skills
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -1217,8 +1212,8 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#deployed-test-network">
-    Deployed Test Network
+<a class="md-nav__link" href="#deployed-agent-communication-network">
+    Deployed agent communication network
   </a>
 </li>
 </ul>
@@ -1229,12 +1224,8 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1>P2P Connection</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section is highly experimental. We will update it soon.</p>
-</div>
 <p>The <code>fetchai/p2p_libp2p:0.2.0</code> connection allows AEAs to create a peer-to-peer communication network. In particular, the connection creates an overlay network which maps agents' public keys to IP addresses.</p>
-<h2 id="local-demo">Local Demo</h2>
+<h2 id="local-demo">Local demo</h2>
 <h3 id="create-and-run-the-genesis-aea">Create and run the genesis AEA</h3>
 <p>Create one AEA as follows:</p>
 <div class="highlight"><pre><span></span><code>aea create my_genesis_aea
@@ -1263,7 +1254,7 @@ Here <code>MULTI_ADDRESSES</code> needs to be replaced with the list of multi ad
 <div class="highlight"><pre><span></span><code>aea run --connections fetchai/p2p_libp2p:0.2.0
 </code></pre></div>
 <p>You can inspect the <code>libp2p_node.log</code> log files of the AEA to see how they discover each other.</p>
-<h2 id="local-demo-with-skills">Local Demo with skills</h2>
+<h2 id="local-demo-with-skills">Local demo with skills</h2>
 <h3 id="fetch-the-weather-station-and-client">Fetch the weather station and client</h3>
 <p>Create one AEA as follows:</p>
 <div class="highlight"><pre><span></span><code>aea fetch fetchai/weather_station:0.5.0
@@ -1312,7 +1303,7 @@ Here <code>MULTI_ADDRESSES</code> needs to be replaced with the list of multi ad
 <p>Now run the weather client:
 <div class="highlight"><pre><span></span><code>aea run --connections <span class="s2">"fetchai/p2p_libp2p:0.2.0,fetchai/oef:0.4.0"</span>
 </code></pre></div></p>
-<h2 id="deployed-test-network">Deployed Test Network</h2>
+<h2 id="deployed-agent-communication-network">Deployed agent communication network</h2>
 <p>You can connect to the deployed public test network by adding one or multiple of the following addresses as the <code>lipp2p_entry_peers</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">/dns4/agents-p2p-dht.sandbox.fetch-ai.com/tcp/9000/p2p/16Uiu2HAkw1ypeQYQbRFV5hKUxGRHocwU5ohmVmCnyJNg36tnPFdx</span>
 <span class="l l-Scalar l-Scalar-Plain">/dns4/agents-p2p-dht.sandbox.fetch-ai.com/tcp/9001/p2p/16Uiu2HAmVWnopQAqq4pniYLw44VRvYxBUoRHqjz1Hh2SoCyjbyRW</span>
@@ -1333,7 +1324,7 @@ Here <code>MULTI_ADDRESSES</code> needs to be replaced with the list of multi ad
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../aries-cloud-agent-example/" rel="prev" title="Identity - Aries Cloud Agent">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../erc1155-skills/" rel="prev" title="Contract deploy and interact">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -1342,17 +1333,17 @@ Here <code>MULTI_ADDRESSES</code> needs to be replaced with the list of multi ad
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Identity - Aries Cloud Agent
+                Contract deploy and interact
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../ledger-integration/" rel="next" title="Using public ledgers">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../raspberry-set-up/" rel="next" title="Build an AEA on a Raspberry Pi">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Using public ledgers
+                Build an AEA on a Raspberry Pi
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
