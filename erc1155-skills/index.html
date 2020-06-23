@@ -352,6 +352,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -532,6 +537,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -1277,10 +1287,10 @@ with a one-step atomic swap functionality. That means the trade between the two 
 <p>Create the AEA that will deploy the contract.</p>
 <div class="highlight"><pre><span></span><code>aea create erc1155_deployer
 <span class="nb">cd</span> erc1155_deployer
-aea add connection fetchai/oef:0.4.0
-aea add skill fetchai/erc1155_deploy:0.6.0
+aea add connection fetchai/oef:0.5.0
+aea add skill fetchai/erc1155_deploy:0.7.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
 </code></pre></div>
 <p>Additionally, create the private key for the deployer AEA. Generate and add a key for Ethereum use:</p>
 <div class="highlight"><pre><span></span><code>aea generate-key ethereum
@@ -1290,10 +1300,10 @@ aea add-key ethereum eth_private_key.txt
 <p>In another terminal, create the AEA that will sign the transaction.</p>
 <div class="highlight"><pre><span></span><code>aea create erc1155_client
 <span class="nb">cd</span> erc1155_client
-aea add connection fetchai/oef:0.4.0
-aea add skill fetchai/erc1155_client:0.5.0
+aea add connection fetchai/oef:0.5.0
+aea add skill fetchai/erc1155_client:0.6.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
 </code></pre></div>
 <p>Additionally, create the private key for the client AEA. Generate and add a key for Ethereum use:</p>
 <div class="highlight"><pre><span></span><code>aea generate-key ethereum
@@ -1325,7 +1335,7 @@ And change the default ledger:
 </div>
 <h2 id="run-the-aeas">Run the AEAs</h2>
 <p>First, run the deployer AEA.</p>
-<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.4.0
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.5.0
 </code></pre></div>
 <p>It will perform the following steps:
 - deploy the smart contract
@@ -1335,7 +1345,7 @@ And change the default ledger:
 <div class="highlight"><pre><span></span><code>Successfully minted items. Transaction digest: ...
 </code></pre></div></p>
 <p>Then, in the separate terminal run the client AEA.</p>
-<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.4.0
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.5.0
 </code></pre></div>
 <p>You will see that upon discovery the two AEAs exchange information about the transaction and the client at the end signs and sends the signature to the deployer AEA to send it to the network.</p>
 <div class="admonition note">

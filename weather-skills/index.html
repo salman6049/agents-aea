@@ -429,6 +429,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -528,6 +533,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -1309,10 +1319,10 @@ aea install
 The following steps create the weather station from scratch:
 <div class="highlight"><pre><span></span><code>aea create my_weather_station
 <span class="nb">cd</span> my_weather_station
-aea add connection fetchai/oef:0.4.0
-aea add skill fetchai/weather_station:0.4.0
+aea add connection fetchai/oef:0.5.0
+aea add skill fetchai/weather_station:0.5.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
 </code></pre></div>
 
 In `weather_station/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect. To connect to Fetchai:
@@ -1334,10 +1344,10 @@ aea install
 The following steps create the weather client from scratch:
 <div class="highlight"><pre><span></span><code>aea create my_weather_client
 <span class="nb">cd</span> my_weather_client
-aea add connection fetchai/oef:0.4.0
-aea add skill fetchai/weather_client:0.3.0
+aea add connection fetchai/oef:0.5.0
+aea add skill fetchai/weather_client:0.4.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
 </code></pre></div>
 
 In `my_weather_client/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect.
@@ -1441,7 +1451,7 @@ This updates the weather client skill config (`my_weather_client/vendor/fetchai/
 </details>
 <h3 id="run-the-aeas">Run the AEAs</h3>
 <p>Run both AEAs from their respective terminals.
-<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.4.0
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.5.0
 </code></pre></div></p>
 <p>You will see that the AEAs negotiate and then transact using the selected ledger.</p>
 <h3 id="delete-the-aeas">Delete the AEAs</h3>

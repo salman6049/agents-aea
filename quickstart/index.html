@@ -443,6 +443,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -542,6 +547,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -1371,9 +1381,9 @@ First, create a new AEA project and enter it.
 <b>Add the echo skill</b>
 <br/>    
 Second, add the echo skill to the project. 
-<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.2.0
+<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.3.0
 </code></pre></div>
-This copies the `fetchai/echo:0.2.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.2.0` consists of the name of the author of the skill, followed by the skill name and its version.   
+This copies the `fetchai/echo:0.3.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.3.0` consists of the name of the author of the skill, followed by the skill name and its version.   
 </details>
 <h2 id="usage-of-the-stub-connection">Usage of the stub connection</h2>
 <p>AEAs use envelopes containing messages for communication. We use a stub connection to send envelopes to and receive envelopes from the AEA.     </p>
@@ -1384,7 +1394,7 @@ This copies the `fetchai/echo:0.2.0` skill code containing the "behaviours", and
 <div class="highlight"><pre><span></span><code>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE,
 </code></pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.2.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
+<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.3.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
 </code></pre></div>
 <h2 id="run-the-aea">Run the AEA</h2>
 <p>Run the AEA with the default <code>fetchai/stub:0.5.0</code> connection.</p>
@@ -1415,7 +1425,7 @@ info: Echo Behaviour: act method called.
 <p>Let's look at the <code>Handler</code> in more depth.</p>
 <h3 id="add-a-message-to-the-input-file">Add a message to the input file</h3>
 <p>From a different terminal and same directory, we send the AEA a message wrapped in an envelope via the input file.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.2.0,\x08\x01*\x07\n\x05hello,'</span> &gt;&gt; input_file
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.3.0,\x08\x01*\x07\n\x05hello,'</span> &gt;&gt; input_file
 </code></pre></div>
 <p>You will see the <code>Echo Handler</code> dealing with the envelope and responding with the same message to the <code>output_file</code>, and also decoding the Base64 encrypted message in this case.</p>
 <div class="highlight"><pre><span></span><code>info: Echo Behaviour: act method called.

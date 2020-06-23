@@ -352,6 +352,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -470,6 +475,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -1136,10 +1146,10 @@
 <span class="nb">cd</span> my_aea
 </code></pre></div>
 <p>Add the http server connection package</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_server:0.3.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_server:0.4.0
 </code></pre></div>
 <p>Update the default connection:</p>
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/http_server:0.3.0
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/http_server:0.4.0
 </code></pre></div>
 <p>Modify the <code>api_spec_path</code>:</p>
 <div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.connections.http_server.config.api_spec_path <span class="s2">"../examples/http_ex/petstore.yaml"</span>
@@ -1267,7 +1277,7 @@
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">HttpHandler</span>
 </code></pre></div>
 <p>Finally, we run the fingerprinter:
-<div class="highlight"><pre><span></span><code>aea fingerprint skill fetchai/http_echo:0.2.0
+<div class="highlight"><pre><span></span><code>aea fingerprint skill fetchai/http_echo:0.3.0
 </code></pre></div>
 Note, you will have to replace the author name with your author handle.</p>
 <p>We can now run the AEA:
@@ -1277,7 +1287,7 @@ Note, you will have to replace the author name with your author handle.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'http://127.0.0.1:8000'</span><span class="p">)</span>
-<span class="n">response</span><span class="o">.</span><span class="n">status_code</span> 
+<span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
 <span class="c1"># &gt;&gt;&gt; 404</span>
 <span class="c1"># we receive a not found since the path is not available in the api spec</span>
 

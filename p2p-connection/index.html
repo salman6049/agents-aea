@@ -352,6 +352,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -518,6 +523,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -1266,8 +1276,8 @@ aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp
 </code></pre></div></p>
 <p>Then extend the <code>aea-config.yaml</code> of each project as follows:
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="p p-Indicator">?</span> <span class="s">"fetchai/oef_search:0.2.0"</span>
-  <span class="p p-Indicator">:</span> <span class="s">"fetchai/oef:0.4.0"</span>
+  <span class="p p-Indicator">?</span> <span class="s">"fetchai/oef_search:0.3.0"</span>
+  <span class="p p-Indicator">:</span> <span class="s">"fetchai/oef:0.5.0"</span>
 </code></pre></div></p>
 <h3 id="run-oef">Run OEF</h3>
 <p>Run the oef for search and discovery:
@@ -1275,7 +1285,7 @@ aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp
 </code></pre></div></p>
 <h3 id="run-weather-station">Run weather station</h3>
 <p>Run the weather station first:
-<div class="highlight"><pre><span></span><code>aea run --connections <span class="s2">"fetchai/p2p_libp2p:0.2.0,fetchai/oef:0.4.0"</span>
+<div class="highlight"><pre><span></span><code>aea run --connections <span class="s2">"fetchai/p2p_libp2p:0.2.0,fetchai/oef:0.5.0"</span>
 </code></pre></div>
 The weather station will form the genesis node. Wait until you see the lines:
 <div class="highlight"><pre><span></span><code>My libp2p addresses: ...
@@ -1301,7 +1311,7 @@ aea add-key fetchai fet_private_key.txt
 </code></pre></div>
 Here <code>MULTI_ADDRESSES</code> needs to be replaced with the list of multi addresses displayed in the log output of the weather station AEA.</p>
 <p>Now run the weather client:
-<div class="highlight"><pre><span></span><code>aea run --connections <span class="s2">"fetchai/p2p_libp2p:0.2.0,fetchai/oef:0.4.0"</span>
+<div class="highlight"><pre><span></span><code>aea run --connections <span class="s2">"fetchai/p2p_libp2p:0.2.0,fetchai/oef:0.5.0"</span>
 </code></pre></div></p>
 <h2 id="deployed-agent-communication-network">Deployed agent communication network</h2>
 <p>You can connect to the deployed public test network by adding one or multiple of the following addresses as the <code>lipp2p_entry_peers</code>:</p>

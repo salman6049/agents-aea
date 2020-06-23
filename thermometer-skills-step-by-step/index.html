@@ -544,6 +544,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -643,6 +648,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -2263,7 +2273,7 @@ the <a href="../oef-ledger">OEF search node</a> registration and we assume that 
   <span class="nt">dialogues</span><span class="p">:</span>
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Dialogues</span>
     <span class="nt">args</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
-<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai/fipa:0.3.0'</span><span class="p p-Indicator">,</span> <span class="s">'fetchai/oef_search:0.2.0'</span><span class="p p-Indicator">,</span> <span class="s">'fetchai/default:0.2.0'</span><span class="p p-Indicator">]</span>
+<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai/fipa:0.4.0'</span><span class="p p-Indicator">,</span> <span class="s">'fetchai/oef_search:0.3.0'</span><span class="p p-Indicator">,</span> <span class="s">'fetchai/default:0.3.0'</span><span class="p p-Indicator">]</span>
 <span class="nt">ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai'</span><span class="p p-Indicator">]</span>
 <span class="nt">dependencies</span><span class="p">:</span>
   <span class="nt">pyserial</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
@@ -2989,7 +2999,7 @@ Remember that we send a message to the <code>DecisionMaker</code> with a transac
   <span class="nt">dialogues</span><span class="p">:</span>
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Dialogues</span>
     <span class="nt">args</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
-<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai/fipa:0.3.0'</span><span class="p p-Indicator">,</span><span class="s">'fetchai/default:0.2.0'</span><span class="p p-Indicator">,</span><span class="s">'fetchai/oef_search:0.2.0'</span><span class="p p-Indicator">]</span>
+<span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai/fipa:0.4.0'</span><span class="p p-Indicator">,</span><span class="s">'fetchai/default:0.3.0'</span><span class="p p-Indicator">,</span><span class="s">'fetchai/oef_search:0.3.0'</span><span class="p p-Indicator">]</span>
 <span class="nt">ledgers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'fetchai'</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 We must pay attention to the models and the strategy’s variables. Here we can change the price we would like to buy each reading at or the currency we would like to transact with. </p>
@@ -3027,10 +3037,10 @@ aea add-key fetchai fet_private_key.txt
 </code></pre></div>
 <h4 id="run-both-aeas">Run both AEAs</h4>
 <p>Run both AEAs from their respective terminals</p>
-<p><div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.4.0
+<p><div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.5.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
-aea run --connections fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
+aea run --connections fetchai/oef:0.5.0
 </code></pre></div>
 You will see that the AEAs negotiate and then transact using the Fetch.ai testnet.</p>
 <h3 id="ethereum-ledger-payment">Ethereum ledger payment</h3>
@@ -3065,10 +3075,10 @@ aea add-key ethereum eth_private_key.txt
 Go to the <a href="https://faucet.metamask.io/"> MetaMask Faucet </a> and request some test ETH for the account your weather client AEA is using (you need to first load your AEAs private key into MetaMask). Your private key is at <code>my_client/eth_private_key.txt</code>.</p>
 <h4 id="run-both-aeas_1">Run both AEAs</h4>
 <p>Run both AEAs from their respective terminals.</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.4.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.5.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
-aea run --connections fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
+aea run --connections fetchai/oef:0.5.0
 </code></pre></div>
 <p>You will see that the AEAs negotiate and then transact using the Ethereum testnet.</p>
 <h2 id="delete-the-aeas">Delete the AEAs</h2>

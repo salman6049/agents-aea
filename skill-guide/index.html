@@ -430,6 +430,11 @@
       Upgrading versions
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
+      Modes of running an AEA
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -529,6 +534,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
+      Message routing
     </a>
 </li>
 <li class="md-nav__item">
@@ -1398,7 +1408,7 @@ aea scaffold skill my_search
 <span class="nt">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">contracts</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="s">'fetchai/oef_search:0.2.0'</span>
+<span class="p p-Indicator">-</span> <span class="s">'fetchai/oef_search:0.3.0'</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="nt">my_search_behaviour</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
@@ -1421,13 +1431,13 @@ aea scaffold skill my_search
 Ensure, you use the correct author name to reference your skill (here we use <code>fetchai</code> as the author.)</p>
 <h2 id="step-7-add-the-oef-protocol-and-connection">Step 7: Add the oef protocol and connection</h2>
 <p>Our AEA does not have the oef protocol yet so let's add it.
-<div class="highlight"><pre><span></span><code>aea add protocol fetchai/oef_search:0.2.0
+<div class="highlight"><pre><span></span><code>aea add protocol fetchai/oef_search:0.3.0
 </code></pre></div></p>
 <p>This adds the protocol to our AEA and makes it available on the path <code>packages.fetchai.protocols...</code>.</p>
 <p>We also need to add the oef connection and install its dependencies:
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.4.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/oef:0.5.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
 </code></pre></div></p>
 <h2 id="step-8-run-a-service-provider-aea">Step 8: Run a service provider AEA</h2>
 <p>We first start a local <a href="../oef-ledger">OEF search and communication node</a> in a separate terminal window.</p>
@@ -1435,7 +1445,7 @@ aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.4.
 </code></pre></div>
 <p>In order to be able to find another AEA when searching, from a different terminal window, we fetch and run another finished AEA:
 <div class="highlight"><pre><span></span><code>aea fetch fetchai/simple_service_registration:0.5.0 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> simple_service_registration
-aea run --connections fetchai/oef:0.4.0
+aea run --connections fetchai/oef:0.5.0
 </code></pre></div></p>
 <p>This AEA will simply register a location service on the <a href="../oef-ledger">OEF search node</a> so we can search for it.</p>
 <details><summary>Click here to see full code</summary>
@@ -1605,7 +1615,7 @@ The associated `skill.yaml` is:
 <span class="nt">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">contracts</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.2.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.3.0</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="nt">service</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
@@ -1635,7 +1645,7 @@ The associated `skill.yaml` is:
 </details>
 <h2 id="step-9-run-the-search-aea">Step 9: Run the Search AEA</h2>
 <p>We can then launch our AEA.</p>
-<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.4.0
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/oef:0.5.0
 </code></pre></div>
 <p>We can see that the AEA sends search requests to the <a href="../oef-ledger">OEF search node</a> and receives search responses from the <a href="../oef-ledger">OEF search node</a>. Since our AEA is only searching on the <a href="../oef-ledger">OEF search node</a> - and not registered on the <a href="../oef-ledger">OEF search node</a> - the search response returns a single agent (the service provider).</p>
 <p>We stop the AEA with <code>CTRL + C</code>.</p>
