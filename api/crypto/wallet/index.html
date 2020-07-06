@@ -265,7 +265,7 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../thermometer-skills-step-by-step/" title="Trade between two AEAs">
+<a class="md-nav__link" href="../../../generic-skills-step-by-step/" title="Trade between two AEAs">
       Trade between two AEAs
     </a>
 </li>
@@ -315,11 +315,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../standalone-transaction/" title="Create stand-alone transaction">
       Create stand-alone transaction
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../decision-maker-transaction/" title="Create decision-maker transaction">
-      Create decision-maker transaction
     </a>
 </li>
 <li class="md-nav__item">
@@ -489,6 +484,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../query-language/" title="The Query Language">
       The Query Language
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../simple-oef-usage/" title="SOEF Connection">
+      SOEF Connection
     </a>
 </li>
 </ul>
@@ -760,11 +760,6 @@
       LedgerApis
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../registry/" title="Registry">
-      Registry
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -841,8 +836,36 @@
     connection_cryptos
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign_message">
+    sign_message
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign_transaction">
+    sign_transaction
+  </a>
+</li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-14-8" id="nav-1-5-8-14-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-14-8">
+      Registries
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-14-8">
+        Registries
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../registries/base/" title="Base">
+      Base
+    </a>
 </li>
 </ul>
 </nav>
@@ -972,13 +995,18 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../helpers/multiple_executor/" title="MultipleExecutor">
+      MultipleExecutor
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-8" id="nav-1-5-8-16-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8-16-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-9" id="nav-1-5-8-16-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-9">
       Preferences
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-8-16-8">
+<label class="md-nav__title" for="nav-1-5-8-16-9">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -991,12 +1019,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-9" id="nav-1-5-8-16-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8-16-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-10" id="nav-1-5-8-16-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-10">
       Search
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-8-16-9">
+<label class="md-nav__title" for="nav-1-5-8-16-10">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1017,6 +1045,24 @@
 <a class="md-nav__link" href="../../helpers/test_cases/" title="Test Cases">
       Test Cases
     </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-12" id="nav-1-5-8-16-12" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-12">
+      Transaction
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-16-12">
+        Transaction
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../helpers/transaction/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1073,6 +1119,57 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../protocols/default/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-19-4" id="nav-1-5-8-19-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-19-4">
+      Signing Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-19-4">
+        Signing Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/signing/custom_types/" title="Custom Types">
+      Custom Types
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/signing/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/signing/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-19-5" id="nav-1-5-8-19-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-19-5">
+      State Update Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-19-5">
+        State Update Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/state_update/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/state_update/serialization/" title="Serialization">
       Serialization
     </a>
 </li>
@@ -1243,6 +1340,16 @@
     connection_cryptos
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign_message">
+    sign_message
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign_transaction">
+    sign_transaction
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1339,6 +1446,31 @@ to the private key.</li>
  <span class="o">|</span> <span class="n">connection_cryptos</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">CryptoStore</span>
 </code></pre></div>
 <p>Get the connection crypto store.</p>
+<p><a name=".aea.crypto.wallet.Wallet.sign_message"></a></p>
+<h4 id="sign_message">sign<code>_</code>message</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">sign_message</span><span class="p">(</span><span class="n">crypto_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">is_deprecated_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+<p>Sign a message.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>crypto_id</code>: the id of the crypto</li>
+<li><code>message</code>: the message to be signed</li>
+<li><code>is_deprecated_mode</code>: what signing mode to use</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>the signature of the message</p>
+<p><a name=".aea.crypto.wallet.Wallet.sign_transaction"></a></p>
+<h4 id="sign_transaction">sign<code>_</code>transaction</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">sign_transaction</span><span class="p">(</span><span class="n">crypto_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">transaction</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span>
+</code></pre></div>
+<p>Sign a tx.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>crypto_id</code>: the id of the crypto</li>
+<li><code>transaction</code>: the transaction to be signed</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>the signed tx</p>
 </article>
 </div>
 </div>
@@ -1346,7 +1478,7 @@ to the private key.</li>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../registry/" rel="prev" title="Registry">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../ledger_apis/" rel="prev" title="LedgerApis">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -1355,11 +1487,11 @@ to the private key.</li>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Registry
+                LedgerApis
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../../decision_maker/base/" rel="next" title="Base">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../registries/base/" rel="next" title="Base">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">

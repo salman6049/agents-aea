@@ -1,499 +1,527 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.fetch.ai/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/version/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/language-agnostic-definition/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/agent-oriented-development/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/vision/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/app-areas/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/oef-ledger/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/identity/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/aries-cloud-agent-demo/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/car-park-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/gym-example/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/gym-skill/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/ml-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/tac-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/tac-skills-contract/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/tac/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/thermometer-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/weather-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/quickstart/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/core-components-1/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/aea-vs-mvc/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/skill-guide/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/core-components-2/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.fetch.ai/thermometer-skills-step-by-step/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <loc>https://docs.fetch.ai/generic-skills-step-by-step/</loc>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/step-one/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/build-aea-step-by-step/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/scaffolding/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/protocol-generator/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/logging/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/multiplexer-standalone/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/standalone-transaction/</loc>
-     <lastmod>2020-06-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.fetch.ai/decision-maker-transaction/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/deployment/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/known-limits/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/build-aea-programmatically/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/cli-vs-programmatic-aeas/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/agent-vs-aea/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/upgrading/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/modes/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/generic-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/connect-a-frontend/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/http-connection-and-skill/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/orm-integration/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/erc1155-skills/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/p2p-connection/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/raspberry-set-up/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/design-principles/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/diagram/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/connection/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/protocol/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/skill/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/contract/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/decision-maker/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/ledger-integration/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/message-routing/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/config/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/defining-data-models/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/query-language/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/simple-oef-usage/</loc>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/cli-how-to/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/cli-commands/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/package-imports/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/wealth/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/cli-gui/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/performance-benchmark/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/aea/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/aea_builder/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/agent/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/agent_loop/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/launcher/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/multiplexer/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/runner/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/runtime/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/components/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/components/loader/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/configurations/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/configurations/components/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/configurations/constants/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/configurations/loader/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/connections/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/connections/stub/connection/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/context/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/contracts/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/contracts/ethereum/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/cosmos/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/ethereum/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/fetchai/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/helpers/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/ledger_apis/</loc>
-     <lastmod>2020-06-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.fetch.ai/api/crypto/registry/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/crypto/wallet/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/crypto/registries/base/</loc>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/decision_maker/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/decision_maker/default/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/decision_maker/messages/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/decision_maker/messages/state_update/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/decision_maker/messages/transaction/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/async_friendly_queue/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/async_utils/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/dialogue/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/exception_policy/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/exec_timeout/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/ipfs/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/helpers/multiple_executor/</loc>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/preference_representations/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/search/generic/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/search/models/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/helpers/test_cases/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/helpers/transaction/base/</loc>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/identity/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/mail/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/protocols/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/protocols/generator/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/protocols/default/custom_types/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/protocols/default/message/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/protocols/default/serialization/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/protocols/signing/custom_types/</loc>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/protocols/signing/message/</loc>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/protocols/signing/serialization/</loc>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/protocols/state_update/message/</loc>
+     <lastmod>2020-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/protocols/state_update/serialization/</loc>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/registries/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/registries/filter/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/registries/resources/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/skills/base/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/skills/error/handlers/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/skills/behaviours/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/skills/tasks/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/test_tools/generic/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/questions-and-answers/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/simple-oef/</loc>
-     <lastmod>2020-06-23</lastmod>
+     <lastmod>2020-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

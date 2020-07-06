@@ -37,9 +37,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#abstract-class-ledgerapi" tabindex="0">
-        Skip to content
-      </a>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -265,7 +262,7 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../thermometer-skills-step-by-step/" title="Trade between two AEAs">
+<a class="md-nav__link" href="../generic-skills-step-by-step/" title="Trade between two AEAs">
       Trade between two AEAs
     </a>
 </li>
@@ -315,11 +312,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../standalone-transaction/" title="Create stand-alone transaction">
       Create stand-alone transaction
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../decision-maker-transaction/" title="Create decision-maker transaction">
-      Create decision-maker transaction
     </a>
 </li>
 <li class="md-nav__item">
@@ -455,46 +447,9 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Ledger &amp; Crypto APIs
-      </label>
 <a class="md-nav__link md-nav__link--active" href="./" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#abstract-class-ledgerapi">
-    Abstract class LedgerApi
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fetchai-ledger">
-    Fetch.ai Ledger
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ethereum-ledger">
-    Ethereum Ledger
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fetchai-implementation">
-    Fetch.ai implementation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ethereum-implementation">
-    Ethereum implementation
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../message-routing/" title="Message routing">
@@ -527,6 +482,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../query-language/" title="The Query Language">
       The Query Language
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simple-oef-usage/" title="SOEF Connection">
+      SOEF Connection
     </a>
 </li>
 </ul>
@@ -799,14 +759,27 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/registry/" title="Registry">
-      Registry
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-14-8" id="nav-1-5-8-14-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-14-8">
+      Registries
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-14-8">
+        Registries
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/registries/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -933,13 +906,18 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/multiple_executor/" title="MultipleExecutor">
+      MultipleExecutor
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-8" id="nav-1-5-8-16-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8-16-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-9" id="nav-1-5-8-16-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-9">
       Preferences
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-8-16-8">
+<label class="md-nav__title" for="nav-1-5-8-16-9">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -952,12 +930,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-9" id="nav-1-5-8-16-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8-16-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-10" id="nav-1-5-8-16-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-10">
       Search
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-8-16-9">
+<label class="md-nav__title" for="nav-1-5-8-16-10">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -978,6 +956,24 @@
 <a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
       Test Cases
     </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-12" id="nav-1-5-8-16-12" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-12">
+      Transaction
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-16-12">
+        Transaction
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/transaction/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1034,6 +1030,57 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/protocols/default/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-19-4" id="nav-1-5-8-19-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-19-4">
+      Signing Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-19-4">
+        Signing Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/signing/custom_types/" title="Custom Types">
+      Custom Types
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/signing/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/signing/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-19-5" id="nav-1-5-8-19-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-19-5">
+      State Update Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-19-5">
+        State Update Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/state_update/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/state_update/serialization/" title="Serialization">
       Serialization
     </a>
 </li>
@@ -1133,46 +1180,6 @@
 </div>
 </div>
 </div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#abstract-class-ledgerapi">
-    Abstract class LedgerApi
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fetchai-ledger">
-    Fetch.ai Ledger
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ethereum-ledger">
-    Ethereum Ledger
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fetchai-implementation">
-    Fetch.ai implementation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ethereum-implementation">
-    Ethereum implementation
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1>Ledger &amp; Crypto APIs</h1>
@@ -1186,310 +1193,6 @@
 <p>The <code>Wallet</code> holds instantiation of the abstract <code>Crypto</code> base class, in particular <code>FetchaiCrypto</code> and <code>EthereumCrypto</code>.</p>
 <p>The <code>LedgerApis</code> holds instantiation of the abstract <code>LedgerApi</code> base class, in particular <code>FetchaiLedgerApi</code> and <code>EthereumLedgerApi</code>.
 You can think the concrete implementations of the base class <code>LedgerApi</code> as wrappers of the blockchain specific python SDK. </p>
-<h2 id="abstract-class-ledgerapi">Abstract class LedgerApi</h2>
-<p>Each <code>LedgerApi</code> must implement all the methods based on the abstract class.
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LedgerApi</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
-    <span class="sd">"""Interface for ledger APIs."""</span>
-
-    <span class="n">identifier</span> <span class="o">=</span> <span class="s2">"base"</span>  <span class="c1"># type: str</span>
-
-    <span class="nd">@property</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Get the underlying API object.</span>
-
-<span class="sd">        This can be used for low-level operations with the concrete ledger APIs.</span>
-<span class="sd">        If there is no such object, return None.</span>
-<span class="sd">        """</span>
-</code></pre></div>
-The api property can be used for low-level operation with the concrete ledger APIs.</p>
-<p><div class="highlight"><pre><span></span><code>    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">Address</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Get the balance of a given account.</span>
-
-<span class="sd">        This usually takes the form of a web request to be waited synchronously.</span>
-
-<span class="sd">        :param address: the address.</span>
-<span class="sd">        :return: the balance.</span>
-<span class="sd">        """</span>
-</code></pre></div>
-The <code>get_balance</code> method returns the amount of tokens we hold for a specific address.
-<div class="highlight"><pre><span></span><code>    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">transfer</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">crypto</span><span class="p">:</span> <span class="n">Crypto</span><span class="p">,</span>
-        <span class="n">destination_address</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-        <span class="n">tx_fee</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-        <span class="n">tx_nonce</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">kwargs</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Submit a transaction to the ledger.</span>
-
-<span class="sd">        If the mandatory arguments are not enough for specifying a transaction</span>
-<span class="sd">        in the concrete ledger API, use keyword arguments for the additional parameters.</span>
-
-<span class="sd">        :param crypto: the crypto object associated to the payer.</span>
-<span class="sd">        :param destination_address: the destination address of the payee.</span>
-<span class="sd">        :param amount: the amount of wealth to be transferred.</span>
-<span class="sd">        :param tx_fee: the transaction fee.</span>
-<span class="sd">        :param tx_nonce: verifies the authenticity of the tx</span>
-<span class="sd">        :return: tx digest if successful, otherwise None</span>
-<span class="sd">        """</span>
-</code></pre></div>
-The <code>transfer</code> is where we must implement the logic for sending a transaction to the ledger. </p>
-<p><div class="highlight"><pre><span></span><code>    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">is_transaction_settled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tx_digest</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Check whether a transaction is settled or not.</span>
-
-<span class="sd">        :param tx_digest: the digest associated to the transaction.</span>
-<span class="sd">        :return: True if the transaction has been settled, False o/w.</span>
-<span class="sd">        """</span>
-
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">is_transaction_valid</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">tx_digest</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">tx_nonce</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Check whether a transaction is valid or not (non-blocking).</span>
-
-<span class="sd">        :param seller: the address of the seller.</span>
-<span class="sd">        :param client: the address of the client.</span>
-<span class="sd">        :param tx_nonce: the transaction nonce.</span>
-<span class="sd">        :param amount: the amount we expect to get from the transaction.</span>
-<span class="sd">        :param tx_digest: the transaction digest.</span>
-
-<span class="sd">        :return: True if the transaction referenced by the tx_digest matches the terms.</span>
-<span class="sd">        """</span>
-</code></pre></div>
-The <code>is_transaction_settled</code> and <code>is_transaction_valid</code> are two functions that helps us to verify a transaction digest.
-<div class="highlight"><pre><span></span><code>    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">generate_tx_nonce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Generate a random str message.</span>
-
-<span class="sd">        :param seller: the address of the seller.</span>
-<span class="sd">        :param client: the address of the client.</span>
-<span class="sd">        :return: return the hash in hex.</span>
-<span class="sd">        """</span>
-</code></pre></div>
-Lastly, we implemented a support function that generates a random hash to help us with verifying the uniqueness of transactions. The sender of the funds must include this hash in the transaction
-as extra data for the transaction to be considered valid.</p>
-<p>Next, we are going to discuss the different implementation of <code>send_transaction</code> and <code>validate_transacaction</code> for the two natively supported ledgers of the framework.</p>
-<h2 id="fetchai-ledger">Fetch.ai Ledger</h2>
-<p><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">transfer</span><span class="p">(</span>  <span class="c1"># pylint: disable=arguments-differ</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">crypto</span><span class="p">:</span> <span class="n">Crypto</span><span class="p">,</span>
-        <span class="n">destination_address</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-        <span class="n">tx_fee</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-        <span class="n">tx_nonce</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">is_waiting_for_confirmation</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-        <span class="sd">"""Submit a transaction to the ledger."""</span>
-        <span class="n">tx_digest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_transfer_tokens</span><span class="p">(</span>
-            <span class="n">crypto</span><span class="p">,</span> <span class="n">destination_address</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">tx_fee</span>
-        <span class="p">)</span>
-        <span class="k">return</span> <span class="n">tx_digest</span>
-</code></pre></div>
-As you can see, the implementation for sending a transcation to the Fetch.ai ledger is relatively trivial.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We cannot use the tx_nonce yet in the Fetch.ai ledger.</p>
-</div>
-<p><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">is_transaction_settled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tx_digest</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">"""Check whether a transaction is settled or not."""</span>
-        <span class="n">tx_status</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">TxStatus</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_get_transaction_receipt</span><span class="p">(</span><span class="n">tx_digest</span><span class="p">))</span>
-        <span class="n">is_successful</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="n">tx_status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">is_successful</span> <span class="o">=</span> <span class="n">tx_status</span><span class="o">.</span><span class="n">status</span> <span class="ow">in</span> <span class="n">SUCCESSFUL_TERMINAL_STATES</span>
-        <span class="k">return</span> <span class="n">is_successful</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">is_transaction_valid</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">tx_digest</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">tx_nonce</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Check whether a transaction is valid or not (non-blocking).</span>
-
-<span class="sd">        :param seller: the address of the seller.</span>
-<span class="sd">        :param client: the address of the client.</span>
-<span class="sd">        :param tx_nonce: the transaction nonce.</span>
-<span class="sd">        :param amount: the amount we expect to get from the transaction.</span>
-<span class="sd">        :param tx_digest: the transaction digest.</span>
-
-<span class="sd">        :return: True if the random_message is equals to tx['input']</span>
-<span class="sd">        """</span>
-        <span class="n">is_valid</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="n">tx_contents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_get_transaction</span><span class="p">(</span><span class="n">tx_digest</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">tx_contents</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">seller_address</span> <span class="o">=</span> <span class="n">FetchaiAddress</span><span class="p">(</span><span class="n">seller</span><span class="p">)</span>
-            <span class="n">is_valid</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="nb">str</span><span class="p">(</span><span class="n">tx_contents</span><span class="o">.</span><span class="n">from_address</span><span class="p">)</span> <span class="o">==</span> <span class="n">client</span>
-                <span class="ow">and</span> <span class="n">amount</span> <span class="o">==</span> <span class="n">tx_contents</span><span class="o">.</span><span class="n">transfers</span><span class="p">[</span><span class="n">seller_address</span><span class="p">]</span>
-                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_transaction_settled</span><span class="p">(</span><span class="n">tx_digest</span><span class="o">=</span><span class="n">tx_digest</span><span class="p">)</span>
-            <span class="p">)</span>
-        <span class="k">return</span> <span class="n">is_valid</span>
-</code></pre></div>
-Inside the <code>validate_transcation</code> we request the contents of the transaction based on the tx_digest we received. We are checking that the address
-of the client is the same as the one that is inside the <code>from</code> field of the transaction. Lastly, we are checking that the transaction is settled.
-If both of these checks return True we consider the transaction as valid.</p>
-<h2 id="ethereum-ledger">Ethereum Ledger</h2>
-<p><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">transfer</span><span class="p">(</span>  <span class="c1"># pylint: disable=arguments-differ</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">crypto</span><span class="p">:</span> <span class="n">Crypto</span><span class="p">,</span>
-        <span class="n">destination_address</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-        <span class="n">tx_fee</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-        <span class="n">tx_nonce</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">chain_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Submit a transfer transaction to the ledger.</span>
-
-<span class="sd">        :param crypto: the crypto object associated to the payer.</span>
-<span class="sd">        :param destination_address: the destination address of the payee.</span>
-<span class="sd">        :param amount: the amount of wealth to be transferred.</span>
-<span class="sd">        :param tx_fee: the transaction fee.</span>
-<span class="sd">        :param tx_nonce: verifies the authenticity of the tx</span>
-<span class="sd">        :param chain_id: the Chain ID of the Ethereum transaction. Default is 1 (i.e. mainnet).</span>
-<span class="sd">        :return: tx digest if present, otherwise None</span>
-<span class="sd">        """</span>
-        <span class="n">tx_digest</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="n">nonce</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_get_transaction_count</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">address</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">nonce</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">tx_digest</span>
-
-        <span class="n">transaction</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">"nonce"</span><span class="p">:</span> <span class="n">nonce</span><span class="p">,</span>
-            <span class="s2">"chainId"</span><span class="p">:</span> <span class="n">chain_id</span><span class="p">,</span>
-            <span class="s2">"to"</span><span class="p">:</span> <span class="n">destination_address</span><span class="p">,</span>
-            <span class="s2">"value"</span><span class="p">:</span> <span class="n">amount</span><span class="p">,</span>
-            <span class="s2">"gas"</span><span class="p">:</span> <span class="n">tx_fee</span><span class="p">,</span>
-            <span class="s2">"gasPrice"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api</span><span class="o">.</span><span class="n">toWei</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_gas_price</span><span class="p">,</span> <span class="n">GAS_ID</span><span class="p">),</span>
-            <span class="s2">"data"</span><span class="p">:</span> <span class="n">tx_nonce</span><span class="p">,</span>
-        <span class="p">}</span>
-
-        <span class="n">gas_estimate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_get_gas_estimate</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">gas_estimate</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">tx_fee</span> <span class="o">&lt;=</span> <span class="n">gas_estimate</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
-                <span class="s2">"Need to increase tx_fee in the configs to cover the gas consumption of the transaction. Estimated gas consumption is: </span><span class="si">{}</span><span class="s2">."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                    <span class="n">gas_estimate</span>
-                <span class="p">)</span>
-            <span class="p">)</span>
-            <span class="k">return</span> <span class="n">tx_digest</span>
-
-        <span class="n">signed_transaction</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">sign_transaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
-
-        <span class="n">tx_digest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_signed_transaction</span><span class="p">(</span><span class="n">tx_signed</span><span class="o">=</span><span class="n">signed_transaction</span><span class="p">,)</span>
-
-        <span class="k">return</span> <span class="n">tx_digest</span>
-</code></pre></div>
-On contrary to the Fetch.ai implementation of the <code>send_transaction</code> function, the Ethereum implementation is more complicated. This happens because we must create 
-the transaction dictionary and send a raw transaction.</p>
-<ul>
-<li>The <code>nonce</code> is a counter for the transaction we are sending. This is an auto-increment int based on how many transactions we are sending from the specific account.</li>
-<li>The <code>chain_id</code> specifies if we are trying to reach the <code>mainnet</code> or another <code>testnet</code>.</li>
-<li>The <code>to</code> field is the address we want to send the funds.</li>
-<li>The <code>value</code> is the number of tokens we want to transfer.</li>
-<li>The <code>gas</code> is the price we are paying to be able to send the transaction.</li>
-<li>The <code>gasPrice</code> is the price of the gas we want to pay.</li>
-<li>The <code>data</code> in the field that enables to send custom data (originally is used to send data to a smart contract).</li>
-</ul>
-<p>Once we filled the transaction dictionary. We are checking that the transaction fee is more than the estimated gas for the transaction otherwise we will not be able to complete the transfer. Then we are signing and we are sending the transaction. Once we get the transaction receipt we consider the transaction completed and
-we return the transaction digest. </p>
-<p><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">is_transaction_settled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tx_digest</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Check whether a transaction is settled or not.</span>
-
-<span class="sd">        :param tx_digest: the digest associated to the transaction.</span>
-<span class="sd">        :return: True if the transaction has been settled, False o/w.</span>
-<span class="sd">        """</span>
-        <span class="n">is_successful</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="n">tx_receipt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_transaction_receipt</span><span class="p">(</span><span class="n">tx_digest</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">tx_receipt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">is_successful</span> <span class="o">=</span> <span class="n">tx_receipt</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">is_successful</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">is_transaction_valid</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">tx_digest</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span>
-        <span class="n">tx_nonce</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Check whether a transaction is valid or not (non-blocking).</span>
-
-<span class="sd">        :param tx_digest: the transaction digest.</span>
-<span class="sd">        :param seller: the address of the seller.</span>
-<span class="sd">        :param client: the address of the client.</span>
-<span class="sd">        :param tx_nonce: the transaction nonce.</span>
-<span class="sd">        :param amount: the amount we expect to get from the transaction.</span>
-<span class="sd">        :return: True if the random_message is equals to tx['input']</span>
-<span class="sd">        """</span>
-        <span class="n">is_valid</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="n">tx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_get_transaction</span><span class="p">(</span><span class="n">tx_digest</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">tx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">is_valid</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="n">tx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"input"</span><span class="p">)</span> <span class="o">==</span> <span class="n">tx_nonce</span>
-                <span class="ow">and</span> <span class="n">tx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"value"</span><span class="p">)</span> <span class="o">==</span> <span class="n">amount</span>
-                <span class="ow">and</span> <span class="n">tx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"from"</span><span class="p">)</span> <span class="o">==</span> <span class="n">client</span>
-                <span class="ow">and</span> <span class="n">tx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"to"</span><span class="p">)</span> <span class="o">==</span> <span class="n">seller</span>
-            <span class="p">)</span>
-        <span class="k">return</span> <span class="n">is_valid</span>
-</code></pre></div>
-The <code>validate_transaction</code> and <code>is_transaction_settled</code> functions help us to check if a transaction digest is valid and is settled. 
-In the Ethereum API, we can pass the <code>tx_nonce</code>, so we can check that it's the same. If it is different, we consider that transaction as no valid. The same happens if any of <code>amount</code>, <code>client</code> address
-or the <code>seller</code> address is different.</p>
-<p>Lastly, the <code>generate_tx_nonce</code> function is the same for both <code>LedgerApi</code> implementations but we use different hashing functions. 
-Both use the timestamp as a random factor alongside the seller and client addresses.</p>
-<h4 id="fetchai-implementation">Fetch.ai implementation</h4>
-<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">generate_tx_nonce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Generate a random str message.</span>
-
-<span class="sd">        :param seller: the address of the seller.</span>
-<span class="sd">        :param client: the address of the client.</span>
-<span class="sd">        :return: return the hash in hex.</span>
-<span class="sd">        """</span>
-        <span class="n">time_stamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
-        <span class="n">aggregate_hash</span> <span class="o">=</span> <span class="n">sha256_hash</span><span class="p">(</span>
-            <span class="sa">b</span><span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">seller</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">client</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="s2">"big"</span><span class="p">)])</span>
-        <span class="p">)</span>
-        <span class="k">return</span> <span class="n">aggregate_hash</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
-</code></pre></div>
-<h4 id="ethereum-implementation">Ethereum implementation</h4>
-<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">generate_tx_nonce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">"""</span>
-<span class="sd">        Generate a unique hash to distinguish txs with the same terms.</span>
-
-<span class="sd">        :param seller: the address of the seller.</span>
-<span class="sd">        :param client: the address of the client.</span>
-<span class="sd">        :return: return the hash in hex.</span>
-<span class="sd">        """</span>
-        <span class="n">time_stamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
-        <span class="n">aggregate_hash</span> <span class="o">=</span> <span class="n">Web3</span><span class="o">.</span><span class="n">keccak</span><span class="p">(</span>
-            <span class="sa">b</span><span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">seller</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">client</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">time_stamp</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="s2">"big"</span><span class="p">)])</span>
-        <span class="p">)</span>
-        <span class="k">return</span> <span class="n">aggregate_hash</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
-</code></pre></div>
 </article>
 </div>
 </div>

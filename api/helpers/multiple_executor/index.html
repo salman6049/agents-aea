@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/api/crypto/registry/" rel="canonical"/>
+<link href="https://docs.fetch.ai/api/helpers/multiple_executor/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
-<title>Registry - AEA Developer Documentation</title>
+<title>MultipleExecutor - AEA Developer Documentation</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#aeacryptoregistry" tabindex="0">
+<a class="md-skip" href="#aeahelpersmultiple_executor" tabindex="0">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Registry
+                MultipleExecutor
               
             </span>
 </div>
@@ -265,7 +265,7 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../thermometer-skills-step-by-step/" title="Trade between two AEAs">
+<a class="md-nav__link" href="../../../generic-skills-step-by-step/" title="Trade between two AEAs">
       Trade between two AEAs
     </a>
 </li>
@@ -315,11 +315,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../standalone-transaction/" title="Create stand-alone transaction">
       Create stand-alone transaction
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../decision-maker-transaction/" title="Create decision-maker transaction">
-      Create decision-maker transaction
     </a>
 </li>
 <li class="md-nav__item">
@@ -489,6 +484,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../query-language/" title="The Query Language">
       The Query Language
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../simple-oef-usage/" title="SOEF Connection">
+      SOEF Connection
     </a>
 </li>
 </ul>
@@ -720,8 +720,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-14" id="nav-1-5-8-14" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-14" id="nav-1-5-8-14" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-5-8-14">
       Crypto
     </label>
@@ -731,164 +731,57 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../base/" title="Base">
+<a class="md-nav__link" href="../../crypto/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cosmos/" title="Cosmos">
+<a class="md-nav__link" href="../../crypto/cosmos/" title="Cosmos">
       Cosmos
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ethereum/" title="Ethereum">
+<a class="md-nav__link" href="../../crypto/ethereum/" title="Ethereum">
       Ethereum
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../fetchai/" title="Fetchai">
+<a class="md-nav__link" href="../../crypto/fetchai/" title="Fetchai">
       Fetchai
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../helpers/" title="Helpers">
+<a class="md-nav__link" href="../../crypto/helpers/" title="Helpers">
       Helpers
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ledger_apis/" title="LedgerApis">
+<a class="md-nav__link" href="../../crypto/ledger_apis/" title="LedgerApis">
       LedgerApis
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Registry
-      </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Registry">
-      Registry
-    </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cryptoid-objects">
-    CryptoId Objects
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#__init__">
-    __init__
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#name">
-    name
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#entrypoint-objects">
-    EntryPoint Objects
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#__init___1">
-    __init__
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#import_path">
-    import_path
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#class_name">
-    class_name
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#load">
-    load
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cryptospec-objects">
-    CryptoSpec Objects
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#__init___2">
-    __init__
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make">
-    make
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cryptoregistry-objects">
-    CryptoRegistry Objects
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#__init___3">
-    __init__
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#supported_crypto_ids">
-    supported_crypto_ids
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#register">
-    register
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make_1">
-    make
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#has_spec">
-    has_spec
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#register_1">
-    register
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make_2">
-    make
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wallet/" title="Wallet">
+<a class="md-nav__link" href="../../crypto/wallet/" title="Wallet">
       Wallet
     </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-14-8" id="nav-1-5-8-14-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-14-8">
+      Registries
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-14-8">
+        Registries
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../crypto/registries/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -944,8 +837,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16" id="nav-1-5-8-16" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16" id="nav-1-5-8-16" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-5-8-16">
       Helpers
     </label>
@@ -955,17 +848,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/async_friendly_queue/" title="Async Friendly Queue">
+<a class="md-nav__link" href="../async_friendly_queue/" title="Async Friendly Queue">
       Async Friendly Queue
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/async_utils/" title="Async Utils">
+<a class="md-nav__link" href="../async_utils/" title="Async Utils">
       Async Utils
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/base/" title="Base">
+<a class="md-nav__link" href="../base/" title="Base">
       Base
     </a>
 </li>
@@ -980,7 +873,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/dialogue/base/" title="Base">
+<a class="md-nav__link" href="../dialogue/base/" title="Base">
       Base
     </a>
 </li>
@@ -988,12 +881,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/exception_policy/" title="Exception Policy">
+<a class="md-nav__link" href="../exception_policy/" title="Exception Policy">
       Exception Policy
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/exec_timeout/" title="Exec Timeout">
+<a class="md-nav__link" href="../exec_timeout/" title="Exec Timeout">
       Exec Timeout
     </a>
 </li>
@@ -1008,27 +901,199 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/ipfs/base/" title="Base">
+<a class="md-nav__link" href="../ipfs/base/" title="Base">
       Base
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-8" id="nav-1-5-8-16-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8-16-8">
-      Preferences
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-8-16-8">
-        Preferences
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        MultipleExecutor
       </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="MultipleExecutor">
+      MultipleExecutor
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/preference_representations/base/" title="Base">
-      Base
-    </a>
+<a class="md-nav__link" href="#executorexceptionpolicies-objects">
+    ExecutorExceptionPolicies Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractexecutortask-objects">
+    AbstractExecutorTask Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#__init__">
+    __init__
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future">
+    future
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop">
+    stop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create_async_task">
+    create_async_task
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id">
+    id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failed">
+    failed
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractmultiprocessexecutortask-objects">
+    AbstractMultiprocessExecutorTask Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start_1">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create_async_task_1">
+    create_async_task
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractmultipleexecutor-objects">
+    AbstractMultipleExecutor Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#__init___1">
+    __init__
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_running">
+    is_running
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start_2">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop_1">
+    stop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#num_failed">
+    num_failed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failed_tasks">
+    failed_tasks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not_failed_tasks">
+    not_failed_tasks
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#threadexecutor-objects">
+    ThreadExecutor Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processexecutor-objects">
+    ProcessExecutor Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asyncexecutor-objects">
+    AsyncExecutor Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractmultiplerunner-objects">
+    AbstractMultipleRunner Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#__init___2">
+    __init__
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_running_1">
+    is_running
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start_3">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop_2">
+    stop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#num_failed_1">
+    num_failed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failed_1">
+    failed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not_failed">
+    not_failed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#join_thread">
+    join_thread
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1036,20 +1101,38 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-9" id="nav-1-5-8-16-9" type="checkbox"/>
 <label class="md-nav__link" for="nav-1-5-8-16-9">
-      Search
+      Preferences
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
 <label class="md-nav__title" for="nav-1-5-8-16-9">
+        Preferences
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../preference_representations/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-10" id="nav-1-5-8-16-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-10">
+      Search
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-16-10">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/search/generic/" title="Generic">
+<a class="md-nav__link" href="../search/generic/" title="Generic">
       Generic
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/search/models/" title="Models">
+<a class="md-nav__link" href="../search/models/" title="Models">
       Models
     </a>
 </li>
@@ -1057,9 +1140,27 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/test_cases/" title="Test Cases">
+<a class="md-nav__link" href="../test_cases/" title="Test Cases">
       Test Cases
     </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-16-12" id="nav-1-5-8-16-12" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-16-12">
+      Transaction
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-16-12">
+        Transaction
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transaction/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1116,6 +1217,57 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../protocols/default/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-19-4" id="nav-1-5-8-19-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-19-4">
+      Signing Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-19-4">
+        Signing Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/signing/custom_types/" title="Custom Types">
+      Custom Types
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/signing/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/signing/serialization/" title="Serialization">
+      Serialization
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8-19-5" id="nav-1-5-8-19-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-8-19-5">
+      State Update Protocol
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-8-19-5">
+        State Update Protocol
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/state_update/message/" title="Message">
+      Message
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../protocols/state_update/serialization/" title="Serialization">
       Serialization
     </a>
 </li>
@@ -1222,8 +1374,13 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cryptoid-objects">
-    CryptoId Objects
+<a class="md-nav__link" href="#executorexceptionpolicies-objects">
+    ExecutorExceptionPolicies Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractexecutortask-objects">
+    AbstractExecutorTask Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -1233,16 +1390,60 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#name">
-    name
+<a class="md-nav__link" href="#future">
+    future
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop">
+    stop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create_async_task">
+    create_async_task
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id">
+    id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failed">
+    failed
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#entrypoint-objects">
-    EntryPoint Objects
+<a class="md-nav__link" href="#abstractmultiprocessexecutortask-objects">
+    AbstractMultiprocessExecutorTask Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start_1">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create_async_task_1">
+    create_async_task
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractmultipleexecutor-objects">
+    AbstractMultipleExecutor Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -1252,26 +1453,56 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#import_path">
-    import_path
+<a class="md-nav__link" href="#is_running">
+    is_running
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#class_name">
-    class_name
+<a class="md-nav__link" href="#start_2">
+    start
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#load">
-    load
+<a class="md-nav__link" href="#stop_1">
+    stop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#num_failed">
+    num_failed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failed_tasks">
+    failed_tasks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not_failed_tasks">
+    not_failed_tasks
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cryptospec-objects">
-    CryptoSpec Objects
+<a class="md-nav__link" href="#threadexecutor-objects">
+    ThreadExecutor Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processexecutor-objects">
+    ProcessExecutor Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asyncexecutor-objects">
+    AsyncExecutor Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractmultiplerunner-objects">
+    AbstractMultipleRunner Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -1281,52 +1512,38 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#make">
-    make
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cryptoregistry-objects">
-    CryptoRegistry Objects
-  </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#__init___3">
-    __init__
+<a class="md-nav__link" href="#is_running_1">
+    is_running
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#supported_crypto_ids">
-    supported_crypto_ids
+<a class="md-nav__link" href="#start_3">
+    start
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#register">
-    register
+<a class="md-nav__link" href="#stop_2">
+    stop
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#make_1">
-    make
+<a class="md-nav__link" href="#num_failed_1">
+    num_failed
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#has_spec">
-    has_spec
+<a class="md-nav__link" href="#failed_1">
+    failed
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#register_1">
-    register
+<a class="md-nav__link" href="#not_failed">
+    not_failed
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#make_2">
-    make
+<a class="md-nav__link" href="#join_thread">
+    join_thread
   </a>
 </li>
 </ul>
@@ -1339,170 +1556,221 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<p><a name=".aea.crypto.registry"></a></p>
-<h1 id="aeacryptoregistry">aea.crypto.registry</h1>
-<p>This module implements the crypto registry.</p>
-<p><a name=".aea.crypto.registry.CryptoId"></a></p>
-<h2 id="cryptoid-objects">CryptoId Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">CryptoId</span><span class="p">(</span><span class="n">RegexConstrainedString</span><span class="p">)</span>
+<p><a name=".aea.helpers.multiple_executor"></a></p>
+<h1 id="aeahelpersmultiple_executor">aea.helpers.multiple<code>_</code>executor</h1>
+<p>This module contains the helpers to run multiple stoppable tasks in different modes: async, threaded, multiprocess .</p>
+<p><a name=".aea.helpers.multiple_executor.ExecutorExceptionPolicies"></a></p>
+<h2 id="executorexceptionpolicies-objects">ExecutorExceptionPolicies Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExecutorExceptionPolicies</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
 </code></pre></div>
-<p>The identifier of a crypto class.</p>
-<p><a name=".aea.crypto.registry.CryptoId.__init__"></a></p>
+<p>Runner exception policy modes.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask"></a></p>
+<h2 id="abstractexecutortask-objects">AbstractExecutorTask Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AbstractExecutorTask</span><span class="p">(</span><span class="n">ABC</span><span class="p">)</span>
+</code></pre></div>
+<p>Abstract task class to create Task classes.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.__init__"></a></p>
 <h4 id="__init__"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
-</code></pre></div>
-<p>Initialize the crypto id.</p>
-<p><a name=".aea.crypto.registry.CryptoId.name"></a></p>
-<h4 id="name">name</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">name</span><span class="p">()</span>
-</code></pre></div>
-<p>Get the id name.</p>
-<p><a name=".aea.crypto.registry.EntryPoint"></a></p>
-<h2 id="entrypoint-objects">EntryPoint Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">EntryPoint</span><span class="p">(</span><span class="n">RegexConstrainedString</span><span class="p">)</span>
-</code></pre></div>
-<p>The entry point for a Crypto resource.</p>
-<p>The regular expression matches the strings in the following format:</p>
-<pre><code>path.to.module:className
-</code></pre>
-<p><a name=".aea.crypto.registry.EntryPoint.__init__"></a></p>
-<h4 id="__init___1"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
-</code></pre></div>
-<p>Initialize the entrypoint.</p>
-<p><a name=".aea.crypto.registry.EntryPoint.import_path"></a></p>
-<h4 id="import_path">import<code>_</code>path</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">import_path</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get the import path.</p>
-<p><a name=".aea.crypto.registry.EntryPoint.class_name"></a></p>
-<h4 id="class_name">class<code>_</code>name</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">class_name</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get the class name.</p>
-<p><a name=".aea.crypto.registry.EntryPoint.load"></a></p>
-<h4 id="load">load</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">load</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Crypto</span><span class="p">]</span>
-</code></pre></div>
-<p>Load the crypto object.</p>
-<p><strong>Returns</strong>:</p>
-<p>the cyrpto object, loaded following the spec.</p>
-<p><a name=".aea.crypto.registry.CryptoSpec"></a></p>
-<h2 id="cryptospec-objects">CryptoSpec Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">CryptoSpec</span><span class="p">()</span>
-</code></pre></div>
-<p>A specification for a particular instance of a crypto object.</p>
-<p><a name=".aea.crypto.registry.CryptoSpec.__init__"></a></p>
-<h4 id="__init___2"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="n">CryptoId</span><span class="p">,</span> <span class="n">entry_point</span><span class="p">:</span> <span class="n">EntryPoint</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="p">,)</span>
-</code></pre></div>
-<p>Initialize a crypto specification.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>id</code>: the id associated to this specification</li>
-<li><code>entry_point</code>: The Python entry_point of the environment class (e.g. module.name:Class).</li>
-<li><code>kwargs</code>: other custom keyword arguments.</li>
-</ul>
-<p><a name=".aea.crypto.registry.CryptoSpec.make"></a></p>
-<h4 id="make">make</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">make</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Crypto</span>
-</code></pre></div>
-<p>Instantiate an instance of the crypto object with appropriate arguments.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>kwargs</code>: the key word arguments</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>a crypto object</p>
-<p><a name=".aea.crypto.registry.CryptoRegistry"></a></p>
-<h2 id="cryptoregistry-objects">CryptoRegistry Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">CryptoRegistry</span><span class="p">()</span>
-</code></pre></div>
-<p>Registry for Crypto classes.</p>
-<p><a name=".aea.crypto.registry.CryptoRegistry.__init__"></a></p>
-<h4 id="__init___3"><code>__</code>init<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">()</span>
 </code></pre></div>
-<p>Initialize the Crypto registry.</p>
-<p><a name=".aea.crypto.registry.CryptoRegistry.supported_crypto_ids"></a></p>
-<h4 id="supported_crypto_ids">supported<code>_</code>crypto<code>_</code>ids</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">supported_crypto_ids</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+<p>Init task.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.future"></a></p>
+<h4 id="future">future</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@future</span><span class="o">.</span><span class="n">setter</span>
+ <span class="o">|</span> <span class="n">future</span><span class="p">(</span><span class="n">future</span><span class="p">:</span> <span class="n">TaskAwaitable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Get the supported crypto ids.</p>
-<p><a name=".aea.crypto.registry.CryptoRegistry.register"></a></p>
-<h4 id="register">register</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">register</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="n">CryptoId</span><span class="p">,</span> <span class="n">entry_point</span><span class="p">:</span> <span class="n">EntryPoint</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<p>Set awaitable to get result of task execution.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.start"></a></p>
+<h4 id="start">start</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">start</span><span class="p">()</span>
 </code></pre></div>
-<p>Register a Crypto module.</p>
+<p>Implement start task function here.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.stop"></a></p>
+<h4 id="stop">stop</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">stop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Implement stop task function here.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.create_async_task"></a></p>
+<h4 id="create_async_task">create<code>_</code>async<code>_</code>task</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">create_async_task</span><span class="p">(</span><span class="n">loop</span><span class="p">:</span> <span class="n">AbstractEventLoop</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TaskAwaitable</span>
+</code></pre></div>
+<p>Create asyncio task for task run in asyncio loop.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>id</code>: the Cyrpto identifier (e.g. 'fetchai', 'ethereum' etc.)</li>
-<li><code>entry_point</code>: the entry point, i.e. 'path.to.module:ClassName'</li>
+<li><code>loop</code>: the event loop</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>task to run in asyncio loop.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.id"></a></p>
+<h4 id="id">id</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="nb">id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+</code></pre></div>
+<p>Return task id.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractExecutorTask.failed"></a></p>
+<h4 id="failed">failed</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">failed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Return was exception failed or not.</p>
+<p>If it's running it's not failed.</p>
+<p>:rerurn: bool</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultiprocessExecutorTask"></a></p>
+<h2 id="abstractmultiprocessexecutortask-objects">AbstractMultiprocessExecutorTask Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AbstractMultiprocessExecutorTask</span><span class="p">(</span><span class="n">AbstractExecutorTask</span><span class="p">)</span>
+</code></pre></div>
+<p>Task for multiprocess executor.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultiprocessExecutorTask.start"></a></p>
+<h4 id="start_1">start</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">start</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span>
+</code></pre></div>
+<p>Return function and arguments to call within subprocess.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultiprocessExecutorTask.create_async_task"></a></p>
+<h4 id="create_async_task_1">create<code>_</code>async<code>_</code>task</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">create_async_task</span><span class="p">(</span><span class="n">loop</span><span class="p">:</span> <span class="n">AbstractEventLoop</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TaskAwaitable</span>
+</code></pre></div>
+<p>Create asyncio task for task run in asyncio loop.</p>
+<p>Raise error, cause async mode is not supported, cause this task for multiprocess executor only.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>loop</code>: the event loop</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>task to run in asyncio loop.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor"></a></p>
+<h2 id="abstractmultipleexecutor-objects">AbstractMultipleExecutor Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AbstractMultipleExecutor</span><span class="p">(</span><span class="n">ABC</span><span class="p">)</span>
+</code></pre></div>
+<p>Abstract class to create multiple executors classes.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.__init__"></a></p>
+<h4 id="__init___1"><code>__</code>init<code>__</code></h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">tasks</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">AbstractExecutorTask</span><span class="p">],</span> <span class="n">task_fail_policy</span><span class="o">=</span><span class="n">ExecutorExceptionPolicies</span><span class="o">.</span><span class="n">propagate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Init executor.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>tasks</code>: sequence of AbstractExecutorTask instances to run.</li>
+<li><code>task_fail_policy</code>: the exception policy of all the tasks</li>
+</ul>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.is_running"></a></p>
+<h4 id="is_running">is<code>_</code>running</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">is_running</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Return running state of the executor.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.start"></a></p>
+<h4 id="start_2">start</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">start</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Start tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.stop"></a></p>
+<h4 id="stop_1">stop</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">stop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Stop tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.num_failed"></a></p>
+<h4 id="num_failed">num<code>_</code>failed</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">num_failed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+</code></pre></div>
+<p>Return number of failed tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.failed_tasks"></a></p>
+<h4 id="failed_tasks">failed<code>_</code>tasks</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">failed_tasks</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">AbstractExecutorTask</span><span class="p">]</span>
+</code></pre></div>
+<p>Return sequence failed tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleExecutor.not_failed_tasks"></a></p>
+<h4 id="not_failed_tasks">not<code>_</code>failed<code>_</code>tasks</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">not_failed_tasks</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">AbstractExecutorTask</span><span class="p">]</span>
+</code></pre></div>
+<p>Return sequence successful tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.ThreadExecutor"></a></p>
+<h2 id="threadexecutor-objects">ThreadExecutor Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ThreadExecutor</span><span class="p">(</span><span class="n">AbstractMultipleExecutor</span><span class="p">)</span>
+</code></pre></div>
+<p>Thread based executor to run multiple agents in threads.</p>
+<p><a name=".aea.helpers.multiple_executor.ProcessExecutor"></a></p>
+<h2 id="processexecutor-objects">ProcessExecutor Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ProcessExecutor</span><span class="p">(</span><span class="n">ThreadExecutor</span><span class="p">)</span>
+</code></pre></div>
+<p>Subprocess based executor to run multiple agents in threads.</p>
+<p><a name=".aea.helpers.multiple_executor.AsyncExecutor"></a></p>
+<h2 id="asyncexecutor-objects">AsyncExecutor Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AsyncExecutor</span><span class="p">(</span><span class="n">AbstractMultipleExecutor</span><span class="p">)</span>
+</code></pre></div>
+<p>Thread based executor to run multiple agents in threads.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner"></a></p>
+<h2 id="abstractmultiplerunner-objects">AbstractMultipleRunner Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AbstractMultipleRunner</span><span class="p">()</span>
+</code></pre></div>
+<p>Abstract multiple runner to create classes to launch tasks with selected mode.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.__init__"></a></p>
+<h4 id="__init___2"><code>__</code>init<code>__</code></h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">mode</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fail_policy</span><span class="o">=</span><span class="n">ExecutorExceptionPolicies</span><span class="o">.</span><span class="n">propagate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Init with selected executor mode.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>mode</code>: one of supported executor modes</li>
+<li><code>fail_policy</code>: one of ExecutorExceptionPolicies to be used with Executor</li>
+</ul>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.is_running"></a></p>
+<h4 id="is_running_1">is<code>_</code>running</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">is_running</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Return state of the executor.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.start"></a></p>
+<h4 id="start_3">start</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">start</span><span class="p">(</span><span class="n">threaded</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Run agents.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>threaded</code>: run in dedicated thread without blocking current thread.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
-<p><a name=".aea.crypto.registry.CryptoRegistry.make"></a></p>
-<h4 id="make_1">make</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">make</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="n">CryptoId</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Crypto</span>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.stop"></a></p>
+<h4 id="stop_2">stop</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">stop</span><span class="p">(</span><span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Make an instance of the crypto class associated to the given id.</p>
+<p>Stop agents.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>id</code>: the id of the crypto class.</li>
-<li><code>module</code>: see 'module' parameter to 'make'.</li>
-<li><code>kwargs</code>: keyword arguments to be forwarded to the Crypto object.</li>
+<li><code>timeout</code>: timeout in seconds to wait thread stopped, only if started in thread mode.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
-<p>the new Crypto instance.</p>
-<p><a name=".aea.crypto.registry.CryptoRegistry.has_spec"></a></p>
-<h4 id="has_spec">has<code>_</code>spec</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">has_spec</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="n">CryptoId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+<p>None</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.num_failed"></a></p>
+<h4 id="num_failed_1">num<code>_</code>failed</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">num_failed</span><span class="p">()</span>
 </code></pre></div>
-<p>Check whether there exist a spec associated with a crypto id.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>id</code>: the crypto identifier.</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>True if it is registered, False otherwise.</p>
-<p><a name=".aea.crypto.registry.register"></a></p>
-<h4 id="register_1">register</h4>
-<div class="highlight"><pre><span></span><code><span class="n">register</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">CryptoId</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">entry_point</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EntryPoint</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<p>Return number of failed tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.failed"></a></p>
+<h4 id="failed_1">failed</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">failed</span><span class="p">()</span>
 </code></pre></div>
-<p>Register a crypto type.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>id</code>: the identifier for the crypto type.</li>
-<li><code>entry_point</code>: the entry point to load the crypto object.</li>
-<li><code>kwargs</code>: arguments to provide to the crypto class.</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>None.</p>
-<p><a name=".aea.crypto.registry.make"></a></p>
-<h4 id="make_2">make</h4>
-<div class="highlight"><pre><span></span><code><span class="n">make</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">CryptoId</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">module</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Crypto</span>
+<p>Return sequence failed tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.not_failed"></a></p>
+<h4 id="not_failed">not<code>_</code>failed</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">not_failed</span><span class="p">()</span>
 </code></pre></div>
-<p>Create a crypto instance.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>id</code>: the id of the crypto object. Make sure it has been registered earlier
-before calling this function.</li>
-<li><code>module</code>: dotted path to a module.
-whether a module should be loaded before creating the object.
-this argument is useful when the item might not be registered
-beforehand, and loading the specified module will make the
-registration.
-E.g. suppose the call to 'register' for a custom crypto object
-is located in some_package/<strong>init</strong>.py. By providing module="some_package",
-the call to 'register' in such module gets triggered and
-the make can then find the identifier.</li>
-<li><code>kwargs</code>: keyword arguments to be forwarded to the Crypto object.</li>
-</ul>
-<p><strong>Returns</strong>:</p>
+<p>Return sequence successful tasks.</p>
+<p><a name=".aea.helpers.multiple_executor.AbstractMultipleRunner.join_thread"></a></p>
+<h4 id="join_thread">join<code>_</code>thread</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">join_thread</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Join thread if running in thread mode.</p>
 </article>
 </div>
 </div>
@@ -1510,7 +1778,7 @@ the make can then find the identifier.</li>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../ledger_apis/" rel="prev" title="LedgerApis">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../ipfs/base/" rel="prev" title="Base">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -1519,17 +1787,17 @@ the make can then find the identifier.</li>
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                LedgerApis
+                Base
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../wallet/" rel="next" title="Wallet">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../preference_representations/base/" rel="next" title="Base">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Wallet
+                Base
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
