@@ -1635,9 +1635,9 @@
 </code></pre></div></p>
 <h4 id="add-and-configure-the-connections">Add and Configure the Connections</h4>
 <p>Add <code>http_client</code>, <code>oef</code> and <code>webhook</code> connections:</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_client:0.4.0
-aea add connection fetchai/webhook:0.3.0
-aea add connection fetchai/oef:0.5.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_client:0.5.0
+aea add connection fetchai/webhook:0.4.0
+aea add connection fetchai/oef:0.6.0
 </code></pre></div>
 <p>You now need to configure the <code>webhook</code> connection.</p>
 <p>First is ensuring the value of <code>webhook_port</code> in <code>webhook</code> connection's configuration file <code>alice/vendor/fetchai/connections/webhook/connection.yaml</code> matches with what you used above for <strong>Alice_ACA</strong>.</p>
@@ -1648,11 +1648,11 @@ aea add connection fetchai/oef:0.5.0
 </code></pre></div>
 <h4 id="configure-alice_aea">Configure Alice_AEA:</h4>
 <p>Now you must ensure <strong>Alice_AEA</strong>'s default connection is <code>oef</code>.</p>
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.6.0
 </code></pre></div>
 <h3 id="alice_aea-method-2-fetch-the-agent">Alice_AEA -- Method 2: Fetch the Agent</h3>
 <p>Alternatively, in the third terminal, fetch <strong>Alice_AEA</strong> and move into its project folder:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_alice:0.4.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_alice:0.6.0
 <span class="nb">cd</span> aries_alice
 </code></pre></div>
 <h4 id="configure-the-skill-and-connections">Configure the skill and connections:</h4>
@@ -1707,9 +1707,9 @@ You now need to configure this skill to ensure <code>admin_host</code> and <code
 </code></pre></div>
 <h4 id="add-and-configure-the-connections_1">Add and Configure the Connections:</h4>
 <p>Add <code>http_client</code>, <code>oef</code> and <code>webhook</code> connections:</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_client:0.4.0
-aea add connection fetchai/webhook:0.3.0
-aea add connection fetchai/oef:0.5.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/http_client:0.5.0
+aea add connection fetchai/webhook:0.4.0
+aea add connection fetchai/oef:0.6.0
 </code></pre></div>
 <p>You now need to configure the <code>webhook</code> connection.</p>
 <p>First is ensuring the value of <code>webhook_port</code> in <code>webhook</code> connection's configuration file <code>faber/vendor/fetchai/connections/webhook/connection.yaml</code> matches with what you used above for <strong>Faber_ACA</strong>.</p>
@@ -1720,11 +1720,11 @@ aea add connection fetchai/oef:0.5.0
 </code></pre></div>
 <h4 id="configure-faber_aea">Configure Faber_AEA:</h4>
 <p>Now you must ensure <strong>Faber_AEA</strong>'s default connection is <code>http_client</code>.</p>
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/http_client:0.4.0
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_connection fetchai/http_client:0.5.0
 </code></pre></div>
 <h3 id="alice_aea-method-2-fetch-the-agent_1">Alice_AEA -- Method 2: Fetch the Agent</h3>
 <p>Alternatively, in the fourth terminal, fetch <strong>Faber_AEA</strong> and move into its project folder:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_faber:0.4.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_faber:0.6.0
 <span class="nb">cd</span> aries_faber
 </code></pre></div>
 <h4 id="configure-the-skill-and-connections_1">Configure the skill and connections:</h4>

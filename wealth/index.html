@@ -1234,25 +1234,6 @@ or
 <div class="highlight"><pre><span></span><code>aea generate-key ethereum
 aea add-key ethereum eth_private_key.txt
 </code></pre></div></p>
-<p>Ensure the ledger apis are set in the aea config:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">fetchai</span><span class="p">:</span>
-    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
-</code></pre></div>
-for Fetch.ai, or
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">ethereum</span><span class="p">:</span>
-    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
-    <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div>
-for Ethereum, or both
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">ethereum</span><span class="p">:</span>
-    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
-    <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-  <span class="nt">fetchai</span><span class="p">:</span>
-    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
-</code></pre></div></p>
 <h2 id="using-a-faucet-website">Using a faucet website</h2>
 <p>First, print the address:
 <div class="highlight"><pre><span></span><code>aea get-address fetchai

@@ -1305,8 +1305,8 @@
 <p>Then, import the application specific libraries.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">aea.aea_builder</span> <span class="kn">import</span> <span class="n">AEABuilder</span>
 <span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">SkillConfig</span>
-<span class="kn">from</span> <span class="nn">aea.crypto.fetchai</span> <span class="kn">import</span> <span class="n">FetchAICrypto</span>
-<span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">,</span> <span class="n">create_private_key</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.cosmos</span> <span class="kn">import</span> <span class="n">CosmosCrypto</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">COSMOS_PRIVATE_KEY_FILE</span><span class="p">,</span> <span class="n">create_private_key</span>
 <span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Skill</span>
 </code></pre></div>
 <p>Set up a variable pointing to where the packages directory is located - this should be our current directory - and where the input and output files are located.
@@ -1317,7 +1317,7 @@
 <h2 id="create-a-private-key">Create a private key</h2>
 <p>We need a private key to populate the AEA's wallet.
 <div class="highlight"><pre><span></span><code>    <span class="c1"># Create a private key</span>
-    <span class="n">create_private_key</span><span class="p">(</span><span class="n">FetchAICrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="n">create_private_key</span><span class="p">(</span><span class="n">CosmosCrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="clearing-the-input-and-output-files">Clearing the input and output files</h2>
 <p>We will use the stub connection to pass envelopes in and out of the AEA. Ensure that any input and output text files are removed before we start.
@@ -1336,9 +1336,7 @@
 <p>We set the name, add the private key for the AEA to use and set the ledger configurations for the AEA to use.
 <div class="highlight"><pre><span></span><code>    <span class="n">builder</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">"my_aea"</span><span class="p">)</span>
 
-    <span class="n">builder</span><span class="o">.</span><span class="n">add_private_key</span><span class="p">(</span><span class="n">FetchAICrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">)</span>
-
-    <span class="n">builder</span><span class="o">.</span><span class="n">add_ledger_api_config</span><span class="p">(</span><span class="n">FetchAICrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="p">{</span><span class="s2">"network"</span><span class="p">:</span> <span class="s2">"testnet"</span><span class="p">})</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">add_private_key</span><span class="p">(</span><span class="n">CosmosCrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">COSMOS_PRIVATE_KEY_FILE</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Next, we add the echo skill which will bounce our messages back to us. We first need to place the echo skill into a relevant directory (see path), either by downloading the <code>packages</code> directory from the AEA repo or by getting the package from the registry.
 <div class="highlight"><pre><span></span><code>    <span class="c1"># Add the echo skill (assuming it is present in the local directory 'packages')</span>
@@ -1427,8 +1425,8 @@ output message: other_agent,my_aea,fetchai/default:0.3.0,\x08\x01*\x07\n\x05hell
 
 <span class="kn">from</span> <span class="nn">aea.aea_builder</span> <span class="kn">import</span> <span class="n">AEABuilder</span>
 <span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">SkillConfig</span>
-<span class="kn">from</span> <span class="nn">aea.crypto.fetchai</span> <span class="kn">import</span> <span class="n">FetchAICrypto</span>
-<span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">,</span> <span class="n">create_private_key</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.cosmos</span> <span class="kn">import</span> <span class="n">CosmosCrypto</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.helpers</span> <span class="kn">import</span> <span class="n">COSMOS_PRIVATE_KEY_FILE</span><span class="p">,</span> <span class="n">create_private_key</span>
 <span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Skill</span>
 
 <span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="s2">"./"</span>
@@ -1438,7 +1436,7 @@ output message: other_agent,my_aea,fetchai/default:0.3.0,\x08\x01*\x07\n\x05hell
 
 <span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
     <span class="c1"># Create a private key</span>
-    <span class="n">create_private_key</span><span class="p">(</span><span class="n">FetchAICrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+    <span class="n">create_private_key</span><span class="p">(</span><span class="n">CosmosCrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
 
     <span class="c1"># Ensure the input and output files do not exist initially</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">):</span>
@@ -1452,9 +1450,7 @@ output message: other_agent,my_aea,fetchai/default:0.3.0,\x08\x01*\x07\n\x05hell
 
     <span class="n">builder</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">"my_aea"</span><span class="p">)</span>
 
-    <span class="n">builder</span><span class="o">.</span><span class="n">add_private_key</span><span class="p">(</span><span class="n">FetchAICrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">FETCHAI_PRIVATE_KEY_FILE</span><span class="p">)</span>
-
-    <span class="n">builder</span><span class="o">.</span><span class="n">add_ledger_api_config</span><span class="p">(</span><span class="n">FetchAICrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="p">{</span><span class="s2">"network"</span><span class="p">:</span> <span class="s2">"testnet"</span><span class="p">})</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">add_private_key</span><span class="p">(</span><span class="n">CosmosCrypto</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">COSMOS_PRIVATE_KEY_FILE</span><span class="p">)</span>
 
     <span class="c1"># Add the echo skill (assuming it is present in the local directory 'packages')</span>
     <span class="n">builder</span><span class="o">.</span><span class="n">add_skill</span><span class="p">(</span><span class="s2">"./packages/fetchai/skills/echo"</span><span class="p">)</span>

@@ -218,11 +218,6 @@
     Dependencies
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launch-an-oef-search-and-communication-node">
-    Launch an OEF search and communication node
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -243,13 +238,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#generate-wealth-for-the-model-trainer-aea">
-    Generate wealth for the model trainer AEA
+<a class="md-nav__link" href="#add-keys-for-the-data-provider-aea">
+    Add keys for the data provider AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-skill-configs">
-    Update the skill configs
+<a class="md-nav__link" href="#add-keys-and-generate-wealth-for-the-model-trainer-aea">
+    Add keys and generate wealth for the model trainer AEA
   </a>
 </li>
 <li class="md-nav__item">
@@ -1286,11 +1281,6 @@
     Dependencies
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#launch-an-oef-search-and-communication-node">
-    Launch an OEF search and communication node
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -1311,13 +1301,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#generate-wealth-for-the-model-trainer-aea">
-    Generate wealth for the model trainer AEA
+<a class="md-nav__link" href="#add-keys-for-the-data-provider-aea">
+    Add keys for the data provider AEA
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#update-the-skill-configs">
-    Update the skill configs
+<a class="md-nav__link" href="#add-keys-and-generate-wealth-for-the-model-trainer-aea">
+    Add keys and generate wealth for the model trainer AEA
   </a>
 </li>
 <li class="md-nav__item">
@@ -1389,15 +1379,10 @@ The <code>aea install</code> command will install each dependency that the speci
 <h2 id="preparation-instructions">Preparation instructions</h2>
 <h3 id="dependencies">Dependencies</h3>
 <p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
-<h3 id="launch-an-oef-search-and-communication-node">Launch an OEF search and communication node</h3>
-<p>In a separate terminal, launch a local <a href="../oef-ledger">OEF search and communication node</a>.
-<div class="highlight"><pre><span></span><code>python scripts/oef/launch.py -c ./scripts/oef/launch_config.json
-</code></pre></div></p>
-<p>Keep it running for the following demo.</p>
 <h2 id="demo-instructions">Demo instructions</h2>
 <h3 id="create-data-provider-aea">Create data provider AEA</h3>
 <p>First, fetch the data provider AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/ml_data_provider:0.6.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/ml_data_provider:0.8.0
 <span class="nb">cd</span> ml_data_provider
 aea install
 </code></pre></div></p>
@@ -1407,27 +1392,24 @@ aea install
 The following steps create the data provider from scratch:
 <div class="highlight"><pre><span></span><code>aea create ml_data_provider
 <span class="nb">cd</span> ml_data_provider
-aea add connection fetchai/oef:0.5.0
-aea add connection fetchai/ledger:0.1.0
-aea add skill fetchai/ml_data_provider:0.5.0
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
+aea add connection fetchai/p2p_libp2p:0.5.0
+aea add connection fetchai/soef:0.5.0
+aea add connection fetchai/ledger:0.2.0
+aea add skill fetchai/ml_data_provider:0.7.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.5.0
 aea install
 </code></pre></div>
 
-In `ml_data_provider/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect. To connect to Fetchai:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">fetchai</span><span class="p">:</span>
-    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
-</code></pre></div>
-and add 
+In `ml_data_provider/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.1.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.1.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.1.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.2.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.3.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.5.0</span>
 </code></pre></div>
 </p>
 </details>
 <h3 id="create-model-trainer-aea">Create model trainer AEA</h3>
 <p>Then, fetch the model trainer AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/ml_model_trainer:0.6.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/ml_model_trainer:0.8.0
 <span class="nb">cd</span> ml_model_trainer
 aea install
 </code></pre></div></p>
@@ -1437,118 +1419,53 @@ aea install
 The following steps create the model trainer from scratch:
 <div class="highlight"><pre><span></span><code>aea create ml_model_trainer
 <span class="nb">cd</span> ml_model_trainer
-aea add connection fetchai/oef:0.5.0
-aea add connection fetchai/ledger:0.1.0
-aea add skill fetchai/ml_train:0.5.0
-aea config <span class="nb">set</span> agent.default_connection fetchai/oef:0.5.0
+aea add connection fetchai/p2p_libp2p:0.5.0
+aea add connection fetchai/soef:0.5.0
+aea add connection fetchai/ledger:0.2.0
+aea add skill fetchai/ml_train:0.7.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.5.0
 aea install
 </code></pre></div>
 
-In `ml_model_trainer/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect.
-
-To connect to Fetchai:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">fetchai</span><span class="p">:</span>
-    <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testnet</span>
-</code></pre></div>
-and add 
+In `ml_model_trainer/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.1.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.1.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.1.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.2.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.3.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.5.0</span>
 </code></pre></div>
 </p>
 </details>
-<h3 id="generate-wealth-for-the-model-trainer-aea">Generate wealth for the model trainer AEA</h3>
-<p>The model trainer needs to have some wealth to purchase the training data.</p>
-<p>First, create the private key for the model trainer AEA based on the network you want to transact. To generate and add a private-public key pair for Fetch.ai use:
-<div class="highlight"><pre><span></span><code>aea generate-key fetchai
-aea add-key fetchai fet_private_key.txt
-</code></pre></div></p>
-<p>Then, create some wealth for your model trainer based on the network you want to transact with. On the Fetch.ai <code>testnet</code> network:
-<div class="highlight"><pre><span></span><code>aea generate-wealth fetchai
-</code></pre></div></p>
-<details><summary>Alternatively, create wealth for other test networks.</summary>
-<p>
-<strong>Ledger Config:</strong>
-<br/>
-
-In `ml_model_trainer/aea-config.yaml` and `ml_data_provider/aea-config.yaml` replace `ledger_apis: {}` with the following based on the network you want to connect.
-
-To connect to Ethereum:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">ethereum</span><span class="p">:</span>
-    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://ropsten.infura.io/v3/f00f7b3ba0e848ddbdc8941c527447fe</span>
-    <span class="nt">chain_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-    <span class="nt">gas_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
-</code></pre></div>
-
-Alternatively, to connect to Cosmos:
-<div class="highlight"><pre><span></span><code><span class="nt">ledger_apis</span><span class="p">:</span>
-  <span class="nt">cosmos</span><span class="p">:</span>
-    <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://rest-agent-land.prod.fetch-ai.com:443</span>
-</code></pre></div>
-<strong>Wealth:</strong>
-<br/>
-
-To generate and add a private-public key pair for Ethereum use:
-<div class="highlight"><pre><span></span><code>aea generate-key ethereum
-aea add-key ethereum eth_private_key.txt
-</code></pre></div>
-
-On the Ethereum `ropsten` network.
-<div class="highlight"><pre><span></span><code>aea generate-wealth ethereum
-</code></pre></div>
-
-Alternatively, to generate and add a private-public key pair for Cosmos use:
+<h3 id="add-keys-for-the-data-provider-aea">Add keys for the data provider AEA</h3>
+<p>First, create the private key for the data provider AEA based on the network you want to transact. To generate and add a private-public key pair for Fetch.ai <code>AgentLand</code> use:
 <div class="highlight"><pre><span></span><code>aea generate-key cosmos
 aea add-key cosmos cosmos_private_key.txt
-</code></pre></div>
-
-On the Cosmos `testnet` network.
+aea add-key cosmos cosmos_private_key.txt --connection
+</code></pre></div></p>
+<h3 id="add-keys-and-generate-wealth-for-the-model-trainer-aea">Add keys and generate wealth for the model trainer AEA</h3>
+<p>The model trainer needs to have some wealth to purchase the data from the data provider.</p>
+<p>First, create the private key for the model trainer AEA based on the network you want to transact. To generate and add a private-public key pair for Fetch.ai <code>AgentLand</code> use:
+<div class="highlight"><pre><span></span><code>aea generate-key cosmos
+aea add-key cosmos cosmos_private_key.txt
+aea add-key cosmos cosmos_private_key.txt --connection
+</code></pre></div></p>
+<p>Then, create some wealth for your model trainer based on the network you want to transact with. On the Fetch.ai <code>AgentLand</code> network:
 <div class="highlight"><pre><span></span><code>aea generate-wealth cosmos
-</code></pre></div>
-</p>
-</details>
-<h3 id="update-the-skill-configs">Update the skill configs</h3>
-<p>The default skill configs assume that the transaction is settled against the fetchai ledger.</p>
-<details><summary>Alternatively, configure skills for other test networks.</summary>
-<p>
-<strong>Data provider:</strong>
-<br/>
-Ensure you are in the ml_data_provider project directory.
-
-For ethereum, update the skill config of the data provider via the `aea config get/set` command like so:
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills. ml_data_provider.models.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> vendor.fetchai.skills.ml_data_provider.models.strategy.args.ledger_id ethereum
-</code></pre></div>
-
-Or for cosmos, like so:
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.ml_data_provider.models.strategy.args.currency_id ATOM
-aea config <span class="nb">set</span> vendor.fetchai.skills.ml_data_provider.models.strategy.args.ledger_id cosmos
-</code></pre></div>
-
-This updates the ml_data_provider skill config (`ml_data_provider/vendor/fetchai/skills/ml_data_provider/skill.yaml`).
-
-
-<strong>Model trainer:</strong>
-<br/>
-Ensure you are in the ml_model_trainer project directory.
-
-For ethereum, update the skill config of the ml_model_trainer via the `aea config get/set` command like so:
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.ml_trainer.models.strategy.args.currency_id ETH
-aea config <span class="nb">set</span> vendor.fetchai.skills.ml_trainer.models.strategy.args.ledger_id ethereum
-</code></pre></div>
-
-Or for cosmos, like so:
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.ml_train.models.strategy.args.currency_id ATOM
-aea config <span class="nb">set</span> vendor.fetchai.skills.ml_train.models.strategy.args.ledger_id cosmos
-</code></pre></div>
-
-This updates the ml_nodel_trainer skill config (`ml_model_trainer/vendor/fetchai/skills/ml_train/skill.yaml`).
-
-</p>
-</details>
+</code></pre></div></p>
 <h3 id="run-both-aeas">Run both AEAs</h3>
-<p>Finally, run both AEAs from their respective directories:
+<p>Run both AEAs from their respective terminals.</p>
+<p>First, run the data provider AEA:</p>
+<div class="highlight"><pre><span></span><code>aea run
+</code></pre></div>
+<p>Once you see a message of the form <code>My libp2p addresses: ['SOME_ADDRESS']</code> take note of the address.</p>
+<p>Then, update the configuration of the model trainer AEA's p2p connection (in <code>vendor/fetchai/connections/p2p_libp2p/connection.yaml</code>) replace the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">delegate_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1:11001</span>
+  <span class="nt">entry_peers</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">'SOME_ADDRESS'</span><span class="p p-Indicator">]</span>
+  <span class="nt">local_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1:9001</span>
+  <span class="nt">log_file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libp2p_node.log</span>
+  <span class="nt">public_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1:9001</span>
+</code></pre></div>
+<p>where <code>SOME_ADDRESS</code> is replaced accordingly.</p>
+<p>Then run the model trainer AEA:
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div></p>
 <p>You can see that the AEAs find each other, negotiate and eventually trade.</p>
