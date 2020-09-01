@@ -167,6 +167,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../demos/" title="Demos">
+      Demos
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../aries-cloud-agent-demo/" title="Aries Cloud Agents Demo">
       Aries Cloud Agents Demo
     </a>
@@ -602,6 +607,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../abstract_agent/" title="AbstractAgent">
+      AbstractAgent
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../aea/" title="AEA">
       AEA
     </a>
@@ -634,6 +644,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#connections">
+    connections
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#active_connections">
+    active_connections
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#is_running">
     is_running
   </a>
@@ -644,13 +664,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#identity">
-    identity
+<a class="md-nav__link" href="#get_multiplexer_setup_options">
+    get_multiplexer_setup_options
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#multiplexer">
-    multiplexer
+<a class="md-nav__link" href="#identity">
+    identity
   </a>
 </li>
 <li class="md-nav__item">
@@ -674,18 +694,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#timeout">
-    timeout
+<a class="md-nav__link" href="#handle_envelope">
+    handle_envelope
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#loop_mode">
-    loop_mode
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main_loop">
-    main_loop
+<a class="md-nav__link" href="#period">
+    period
   </a>
 </li>
 <li class="md-nav__item">
@@ -694,18 +709,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup_multiplexer">
-    setup_multiplexer
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#start">
     start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#start_setup">
-    start_setup
   </a>
 </li>
 <li class="md-nav__item">
@@ -714,33 +719,23 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup">
-    setup
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#act">
-    act
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#react">
-    react
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#update">
-    update
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teardown">
-    teardown
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#state">
     state
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_periodic_tasks">
+    get_periodic_tasks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_message_handlers">
+    get_message_handlers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exception_handler">
+    exception_handler
   </a>
 </li>
 </ul>
@@ -752,6 +747,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../agent_loop/" title="Agent Loop">
       Agent Loop
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common/" title="Common">
+      Common
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../exceptions/" title="Exceptions">
+      Exceptions
     </a>
 </li>
 <li class="md-nav__item">
@@ -775,12 +780,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-9" id="nav-1-5-9-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-12" id="nav-1-5-9-12" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-12">
       Components
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-9">
+<label class="md-nav__title" for="nav-1-5-9-12">
         Components
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -798,23 +803,18 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-10" id="nav-1-5-9-10" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-10">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-13" id="nav-1-5-9-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-13">
       Configurations
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-10">
+<label class="md-nav__title" for="nav-1-5-9-13">
         Configurations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../configurations/base/" title="Base">
       Base
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../configurations/components/" title="Components">
-      Components
     </a>
 </li>
 <li class="md-nav__item">
@@ -827,16 +827,21 @@
       Loader
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configurations/pypi/" title="Pypi">
+      Pypi
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-11" id="nav-1-5-9-11" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-11">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14" id="nav-1-5-9-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-14">
       Connections
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-11">
+<label class="md-nav__title" for="nav-1-5-9-14">
         Connections
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -859,12 +864,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-13" id="nav-1-5-9-13" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-13">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16" id="nav-1-5-9-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-16">
       Contracts
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-13">
+<label class="md-nav__title" for="nav-1-5-9-16">
         Contracts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -877,12 +882,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14" id="nav-1-5-9-14" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-14">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-17" id="nav-1-5-9-17" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-17">
       Crypto
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-14">
+<label class="md-nav__title" for="nav-1-5-9-17">
         Crypto
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -922,12 +927,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14-8" id="nav-1-5-9-14-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-14-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-17-8" id="nav-1-5-9-17-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-17-8">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-14-8">
+<label class="md-nav__title" for="nav-1-5-9-17-8">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -943,12 +948,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-15" id="nav-1-5-9-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-15">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-18" id="nav-1-5-9-18" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-18">
       Decision Maker
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-15">
+<label class="md-nav__title" for="nav-1-5-9-18">
         Decision Maker
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -962,44 +967,16 @@
       Default
     </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-15-3" id="nav-1-5-9-15-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-15-3">
-      Messages
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-15-3">
-        Messages
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../decision_maker/messages/base/" title="Base">
-      Base
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../decision_maker/messages/state_update/" title="State Update">
-      State Update
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../decision_maker/messages/transaction/" title="Transaction">
-      Transaction
-    </a>
-</li>
-</ul>
-</nav>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16" id="nav-1-5-9-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19" id="nav-1-5-9-19" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19">
       Helpers
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-16">
+<label class="md-nav__title" for="nav-1-5-9-19">
         Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1019,12 +996,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-4" id="nav-1-5-9-16-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-4" id="nav-1-5-9-19-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-4">
       Dialogue
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-4">
+<label class="md-nav__title" for="nav-1-5-9-19-4">
         Dialogue
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1052,12 +1029,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-8" id="nav-1-5-9-16-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-8" id="nav-1-5-9-19-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-8">
       IPFS
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-8">
+<label class="md-nav__title" for="nav-1-5-9-19-8">
         IPFS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1074,6 +1051,24 @@
       Logging
     </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-10" id="nav-1-5-9-19-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-10">
+      MultiAddress
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-9-19-10">
+        MultiAddress
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../helpers/multiaddr/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../helpers/multiple_executor/" title="MultipleExecutor">
       MultipleExecutor
@@ -1085,12 +1080,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-12" id="nav-1-5-9-16-12" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-12">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-13" id="nav-1-5-9-19-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-13">
       Preferences
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-12">
+<label class="md-nav__title" for="nav-1-5-9-19-13">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1102,18 +1097,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../helpers/pypi/" title="Pypi">
-      Pypi
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-14" id="nav-1-5-9-16-14" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-14">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-14" id="nav-1-5-9-19-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-14">
       Search
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-14">
+<label class="md-nav__title" for="nav-1-5-9-19-14">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1136,12 +1126,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-16" id="nav-1-5-9-16-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-16" id="nav-1-5-9-19-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-16">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-16">
+<label class="md-nav__title" for="nav-1-5-9-19-16">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1172,12 +1162,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19" id="nav-1-5-9-19" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22" id="nav-1-5-9-22" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22">
       Protocols
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-19">
+<label class="md-nav__title" for="nav-1-5-9-22">
         Protocols
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1187,12 +1177,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-2" id="nav-1-5-9-19-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-2" id="nav-1-5-9-22-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-2">
       Generator
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-2">
+<label class="md-nav__title" for="nav-1-5-9-22-2">
         Generator
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1220,12 +1210,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-3" id="nav-1-5-9-19-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-3" id="nav-1-5-9-22-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-3">
       Default Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-3">
+<label class="md-nav__title" for="nav-1-5-9-22-3">
         Default Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1253,12 +1243,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-4" id="nav-1-5-9-19-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-4" id="nav-1-5-9-22-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-4">
       Signing Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-4">
+<label class="md-nav__title" for="nav-1-5-9-22-4">
         Signing Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1286,12 +1276,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-5" id="nav-1-5-9-19-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-5" id="nav-1-5-9-22-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-5">
       State Update Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-5">
+<label class="md-nav__title" for="nav-1-5-9-22-5">
         State Update Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1317,12 +1307,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20" id="nav-1-5-9-20" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23" id="nav-1-5-9-23" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-23">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-20">
+<label class="md-nav__title" for="nav-1-5-9-23">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1345,12 +1335,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-21" id="nav-1-5-9-21" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-21">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-24" id="nav-1-5-9-24" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-24">
       Skills
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-21">
+<label class="md-nav__title" for="nav-1-5-9-24">
         Skills
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1389,6 +1379,11 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../glossary/" title="Glossary">
+      Glossary
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../questions-and-answers/" title="Q&amp;A">
       Q&amp;A
     </a>
@@ -1419,6 +1414,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#connections">
+    connections
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#active_connections">
+    active_connections
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#is_running">
     is_running
   </a>
@@ -1429,13 +1434,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#identity">
-    identity
+<a class="md-nav__link" href="#get_multiplexer_setup_options">
+    get_multiplexer_setup_options
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#multiplexer">
-    multiplexer
+<a class="md-nav__link" href="#identity">
+    identity
   </a>
 </li>
 <li class="md-nav__item">
@@ -1459,18 +1464,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#timeout">
-    timeout
+<a class="md-nav__link" href="#handle_envelope">
+    handle_envelope
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#loop_mode">
-    loop_mode
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#main_loop">
-    main_loop
+<a class="md-nav__link" href="#period">
+    period
   </a>
 </li>
 <li class="md-nav__item">
@@ -1479,18 +1479,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup_multiplexer">
-    setup_multiplexer
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#start">
     start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#start_setup">
-    start_setup
   </a>
 </li>
 <li class="md-nav__item">
@@ -1499,33 +1489,23 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup">
-    setup
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#act">
-    act
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#react">
-    react
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#update">
-    update
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teardown">
-    teardown
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#state">
     state
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_periodic_tasks">
+    get_periodic_tasks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_message_handlers">
+    get_message_handlers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exception_handler">
+    exception_handler
   </a>
 </li>
 </ul>
@@ -1543,12 +1523,12 @@
 <p>This module contains the implementation of a generic agent.</p>
 <p><a name="aea.agent.Agent"></a></p>
 <h2 id="agent-objects">Agent Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Agent</span><span class="p">(</span><span class="n">ABC</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Agent</span><span class="p">(</span><span class="n">AbstractAgent</span><span class="p">)</span>
 </code></pre></div>
 <p>This class provides an abstract base class for a generic agent.</p>
 <p><a name="aea.agent.Agent.__init__"></a></p>
 <h4 id="__init__"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">identity</span><span class="p">:</span> <span class="n">Identity</span><span class="p">,</span> <span class="n">connections</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Connection</span><span class="p">],</span> <span class="n">loop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AbstractEventLoop</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">loop_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">runtime_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">identity</span><span class="p">:</span> <span class="n">Identity</span><span class="p">,</span> <span class="n">connections</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Connection</span><span class="p">],</span> <span class="n">loop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AbstractEventLoop</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">period</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">loop_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">runtime_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Instantiate the agent.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1556,36 +1536,49 @@
 <li><code>identity</code>: the identity of the agent.</li>
 <li><code>connections</code>: the list of connections of the agent.</li>
 <li><code>loop</code>: the event loop to run the connections.</li>
-<li><code>timeout</code>: the time in (fractions of) seconds to time out an agent between act and react</li>
+<li><code>period</code>: period to call agent's act</li>
 <li><code>loop_mode</code>: loop_mode to choose agent run loop.</li>
 <li><code>runtime_mode</code>: runtime mode to up agent.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
+<p><a name="aea.agent.Agent.connections"></a></p>
+<h4 id="connections">connections</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">connections</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Connection</span><span class="p">]</span>
+</code></pre></div>
+<p>Return list of connections.</p>
+<p><a name="aea.agent.Agent.active_connections"></a></p>
+<h4 id="active_connections">active<code>_</code>connections</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">active_connections</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Connection</span><span class="p">]</span>
+</code></pre></div>
+<p>Return list of active connections.</p>
 <p><a name="aea.agent.Agent.is_running"></a></p>
 <h4 id="is_running">is<code>_</code>running</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">is_running</span><span class="p">()</span>
+ <span class="o">|</span> <span class="n">is_running</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 <p>Get running state of the runtime and agent.</p>
 <p><a name="aea.agent.Agent.is_stopped"></a></p>
 <h4 id="is_stopped">is<code>_</code>stopped</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">is_stopped</span><span class="p">()</span>
+ <span class="o">|</span> <span class="n">is_stopped</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 <p>Get running state of the runtime and agent.</p>
+<p><a name="aea.agent.Agent.get_multiplexer_setup_options"></a></p>
+<h4 id="get_multiplexer_setup_options">get<code>_</code>multiplexer<code>_</code>setup<code>_</code>options</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_multiplexer_setup_options</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span>
+</code></pre></div>
+<p>Get options to pass to Multiplexer.setup.</p>
+<p><strong>Returns</strong>:</p>
+<p>dict of kwargs</p>
 <p><a name="aea.agent.Agent.identity"></a></p>
 <h4 id="identity">identity</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
  <span class="o">|</span> <span class="n">identity</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Identity</span>
 </code></pre></div>
 <p>Get the identity.</p>
-<p><a name="aea.agent.Agent.multiplexer"></a></p>
-<h4 id="multiplexer">multiplexer</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">multiplexer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Multiplexer</span>
-</code></pre></div>
-<p>Get the multiplexer.</p>
 <p><a name="aea.agent.Agent.inbox"></a></p>
 <h4 id="inbox">inbox</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -1615,35 +1608,29 @@ Envelopes placed in the Outbox are processed by the Multiplexer.</p>
 </code></pre></div>
 <p>Get the tick or agent loop count.</p>
 <p>Each agent loop (one call to each one of act(), react(), update()) increments the tick.</p>
-<p><a name="aea.agent.Agent.timeout"></a></p>
-<h4 id="timeout">timeout</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">timeout</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">float</span>
+<p><a name="aea.agent.Agent.handle_envelope"></a></p>
+<h4 id="handle_envelope">handle<code>_</code>envelope</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">handle_envelope</span><span class="p">(</span><span class="n">envelope</span><span class="p">:</span> <span class="n">Envelope</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Get the time in (fractions of) seconds to time out an agent between act and react.</p>
-<p><a name="aea.agent.Agent.loop_mode"></a></p>
-<h4 id="loop_mode">loop<code>_</code>mode</h4>
+<p>Handle an envelope.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>envelope</code>: the envelope to handle.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="aea.agent.Agent.period"></a></p>
+<h4 id="period">period</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">loop_mode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+ <span class="o">|</span> <span class="n">period</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">float</span>
 </code></pre></div>
-<p>Get the agent loop mode.</p>
-<p><a name="aea.agent.Agent.main_loop"></a></p>
-<h4 id="main_loop">main<code>_</code>loop</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">main_loop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">BaseAgentLoop</span>
-</code></pre></div>
-<p>Get the main agent loop.</p>
+<p>Get a period to call act.</p>
 <p><a name="aea.agent.Agent.runtime"></a></p>
 <h4 id="runtime">runtime</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
  <span class="o">|</span> <span class="n">runtime</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">BaseRuntime</span>
 </code></pre></div>
 <p>Get the runtime.</p>
-<p><a name="aea.agent.Agent.setup_multiplexer"></a></p>
-<h4 id="setup_multiplexer">setup<code>_</code>multiplexer</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">setup_multiplexer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Set up the multiplexer.</p>
 <p><a name="aea.agent.Agent.start"></a></p>
 <h4 id="start">start</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">start</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -1666,18 +1653,6 @@ Envelopes placed in the Outbox are processed by the Multiplexer.</p>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
-<p><a name="aea.agent.Agent.start_setup"></a></p>
-<h4 id="start_setup">start<code>_</code>setup</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">start_setup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Set up Agent on start.</p>
-<ul>
-<li>connect Multiplexer</li>
-<li>call agent.setup</li>
-<li>set liveness to started</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.agent.Agent.stop"></a></p>
 <h4 id="stop">stop</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">stop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -1691,45 +1666,6 @@ Envelopes placed in the Outbox are processed by the Multiplexer.</p>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
-<p><a name="aea.agent.Agent.setup"></a></p>
-<h4 id="setup">setup</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">setup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Set up the agent.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
-<p><a name="aea.agent.Agent.act"></a></p>
-<h4 id="act">act</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">act</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Perform actions.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
-<p><a name="aea.agent.Agent.react"></a></p>
-<h4 id="react">react</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">react</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>React to events.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
-<p><a name="aea.agent.Agent.update"></a></p>
-<h4 id="update">update</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">update</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Update the internals of the agent which are not exposed to the skills.</p>
-<p>:return None</p>
-<p><a name="aea.agent.Agent.teardown"></a></p>
-<h4 id="teardown">teardown</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">teardown</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Tear down the agent.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.agent.Agent.state"></a></p>
 <h4 id="state">state</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -1738,6 +1674,32 @@ Envelopes placed in the Outbox are processed by the Multiplexer.</p>
 <p>Get state of the agent's runtime.</p>
 <p><strong>Returns</strong>:</p>
 <p>RuntimeStates</p>
+<p><a name="aea.agent.Agent.get_periodic_tasks"></a></p>
+<h4 id="get_periodic_tasks">get<code>_</code>periodic<code>_</code>tasks</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_periodic_tasks</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">]]]</span>
+</code></pre></div>
+<p>Get all periodic tasks for agent.</p>
+<p><strong>Returns</strong>:</p>
+<p>dict of callable with period specified</p>
+<p><a name="aea.agent.Agent.get_message_handlers"></a></p>
+<h4 id="get_message_handlers">get<code>_</code>message<code>_</code>handlers</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_message_handlers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">Callable</span><span class="p">]]</span>
+</code></pre></div>
+<p>Get handlers with message getters.</p>
+<p><strong>Returns</strong>:</p>
+<p>List of tuples of callables: handler and coroutine to get a message</p>
+<p><a name="aea.agent.Agent.exception_handler"></a></p>
+<h4 id="exception_handler">exception<code>_</code>handler</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">exception_handler</span><span class="p">(</span><span class="n">exception</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Handle exception raised during agent main loop execution.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>exception</code>: exception raised</li>
+<li><code>function</code>: a callable exception raised in.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>bool, propagate exception if True otherwise skip it.</p>
 </article>
 </div>
 </div>

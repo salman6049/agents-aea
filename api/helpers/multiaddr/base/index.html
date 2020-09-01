@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about Fetch.AI." name="description"/>
-<link href="https://docs.fetch.ai/api/decision_maker/messages/transaction/" rel="canonical"/>
+<link href="https://docs.fetch.ai/api/helpers/multiaddr/base/" rel="canonical"/>
 <meta content="diarmid.campbell@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
-<title>Transaction - AEA Developer Documentation</title>
+<title>Base - AEA Developer Documentation</title>
 <link href="../../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#aeadecision_makermessagestransaction" tabindex="0">
+<a class="md-skip" href="#aeahelpersmultiaddrbase" tabindex="0">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -58,7 +58,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Transaction
+                Base
               
             </span>
 </div>
@@ -166,6 +166,11 @@
         Demos
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../demos/" title="Demos">
+      Demos
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../aries-cloud-agent-demo/" title="Aries Cloud Agents Demo">
       Aries Cloud Agents Demo
@@ -602,6 +607,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../abstract_agent/" title="AbstractAgent">
+      AbstractAgent
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../aea/" title="AEA">
       AEA
     </a>
@@ -619,6 +629,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../agent_loop/" title="Agent Loop">
       Agent Loop
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../common/" title="Common">
+      Common
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../exceptions/" title="Exceptions">
+      Exceptions
     </a>
 </li>
 <li class="md-nav__item">
@@ -642,12 +662,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-9" id="nav-1-5-9-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-12" id="nav-1-5-9-12" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-12">
       Components
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-9">
+<label class="md-nav__title" for="nav-1-5-9-12">
         Components
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -665,23 +685,18 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-10" id="nav-1-5-9-10" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-10">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-13" id="nav-1-5-9-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-13">
       Configurations
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-10">
+<label class="md-nav__title" for="nav-1-5-9-13">
         Configurations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../configurations/base/" title="Base">
       Base
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../configurations/components/" title="Components">
-      Components
     </a>
 </li>
 <li class="md-nav__item">
@@ -694,16 +709,21 @@
       Loader
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../configurations/pypi/" title="Pypi">
+      Pypi
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-11" id="nav-1-5-9-11" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-11">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14" id="nav-1-5-9-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-14">
       Connections
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-11">
+<label class="md-nav__title" for="nav-1-5-9-14">
         Connections
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -726,12 +746,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-13" id="nav-1-5-9-13" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-13">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16" id="nav-1-5-9-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-16">
       Contracts
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-13">
+<label class="md-nav__title" for="nav-1-5-9-16">
         Contracts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -744,12 +764,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14" id="nav-1-5-9-14" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-14">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-17" id="nav-1-5-9-17" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-17">
       Crypto
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-14">
+<label class="md-nav__title" for="nav-1-5-9-17">
         Crypto
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -789,12 +809,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14-8" id="nav-1-5-9-14-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-14-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-17-8" id="nav-1-5-9-17-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-17-8">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-14-8">
+<label class="md-nav__title" for="nav-1-5-9-17-8">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -809,65 +829,134 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-15" id="nav-1-5-9-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-15">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-18" id="nav-1-5-9-18" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-18">
       Decision Maker
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-15">
+<label class="md-nav__title" for="nav-1-5-9-18">
         Decision Maker
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../decision_maker/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../decision_maker/default/" title="Default">
+      Default
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19" id="nav-1-5-9-19" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19">
+      Helpers
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-19">
+        Helpers
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../async_friendly_queue/" title="Async Friendly Queue">
+      Async Friendly Queue
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../async_utils/" title="Async Utils">
+      Async Utils
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../base/" title="Base">
       Base
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../default/" title="Default">
-      Default
-    </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-15-3" id="nav-1-5-9-15-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-15-3">
-      Messages
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-4" id="nav-1-5-9-19-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-4">
+      Dialogue
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-15-3">
-        Messages
+<label class="md-nav__title" for="nav-1-5-9-19-4">
+        Dialogue
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../base/" title="Base">
+<a class="md-nav__link" href="../../dialogue/base/" title="Base">
       Base
     </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../state_update/" title="State Update">
-      State Update
+<a class="md-nav__link" href="../../exception_policy/" title="Exception Policy">
+      Exception Policy
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../exec_timeout/" title="Exec Timeout">
+      Exec Timeout
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../file_lock/" title="File Lock">
+      File Lock
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-8" id="nav-1-5-9-19-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-8">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-9-19-8">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ipfs/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../logging/" title="Logging">
+      Logging
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-10" id="nav-1-5-9-19-10" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-10">
+      MultiAddress
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-1-5-9-19-10">
+        MultiAddress
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-        Transaction
+        Base
       </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Transaction">
-      Transaction
+<a class="md-nav__link md-nav__link--active" href="./" title="Base">
+      Base
     </a>
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transactionmessage-objects">
-    TransactionMessage Objects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#performative-objects">
-    Performative Objects
+<a class="md-nav__link" href="#multiaddr-objects">
+    MultiAddr Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -877,113 +966,28 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#performative">
-    performative
+<a class="md-nav__link" href="#compute_peerid">
+    compute_peerid
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#skill_callback_ids">
-    skill_callback_ids
+<a class="md-nav__link" href="#public_key">
+    public_key
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tx_id">
-    tx_id
+<a class="md-nav__link" href="#peer_id">
+    peer_id
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tx_sender_addr">
-    tx_sender_addr
+<a class="md-nav__link" href="#format">
+    format
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tx_counterparty_addr">
-    tx_counterparty_addr
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_amount_by_currency_id">
-    tx_amount_by_currency_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_sender_fee">
-    tx_sender_fee
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_counterparty_fee">
-    tx_counterparty_fee
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_quantities_by_good_id">
-    tx_quantities_by_good_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ledger_id">
-    ledger_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#info">
-    info
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_nonce">
-    tx_nonce
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_digest">
-    tx_digest
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signing_payload">
-    signing_payload
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signed_payload">
-    signed_payload
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#amount">
-    amount
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#currency_id">
-    currency_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sender_amount">
-    sender_amount
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#counterparty_amount">
-    counterparty_amount
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fees">
-    fees
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#respond_settlement">
-    respond_settlement
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#respond_signing">
-    respond_signing
+<a class="md-nav__link" href="#__str__">
+    __str__
   </a>
 </li>
 </ul>
@@ -995,140 +999,51 @@
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16" id="nav-1-5-9-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16">
-      Helpers
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-16">
-        Helpers
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/async_friendly_queue/" title="Async Friendly Queue">
-      Async Friendly Queue
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/async_utils/" title="Async Utils">
-      Async Utils
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/base/" title="Base">
-      Base
-    </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-4" id="nav-1-5-9-16-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-4">
-      Dialogue
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-4">
-        Dialogue
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/dialogue/base/" title="Base">
-      Base
-    </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/exception_policy/" title="Exception Policy">
-      Exception Policy
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/exec_timeout/" title="Exec Timeout">
-      Exec Timeout
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/file_lock/" title="File Lock">
-      File Lock
-    </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-8" id="nav-1-5-9-16-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-8">
-      IPFS
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-8">
-        IPFS
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/ipfs/base/" title="Base">
-      Base
-    </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/logging/" title="Logging">
-      Logging
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/multiple_executor/" title="MultipleExecutor">
+<a class="md-nav__link" href="../../multiple_executor/" title="MultipleExecutor">
       MultipleExecutor
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/pipe/" title="Pipe">
+<a class="md-nav__link" href="../../pipe/" title="Pipe">
       Pipe
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-12" id="nav-1-5-9-16-12" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-12">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-13" id="nav-1-5-9-19-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-13">
       Preferences
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-12">
+<label class="md-nav__title" for="nav-1-5-9-19-13">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/preference_representations/base/" title="Base">
+<a class="md-nav__link" href="../../preference_representations/base/" title="Base">
       Base
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/pypi/" title="Pypi">
-      Pypi
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-14" id="nav-1-5-9-16-14" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-14">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-14" id="nav-1-5-9-19-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-14">
       Search
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-14">
+<label class="md-nav__title" for="nav-1-5-9-19-14">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/search/generic/" title="Generic">
+<a class="md-nav__link" href="../../search/generic/" title="Generic">
       Generic
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/search/models/" title="Models">
+<a class="md-nav__link" href="../../search/models/" title="Models">
       Models
     </a>
 </li>
@@ -1136,22 +1051,22 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/test_cases/" title="Test Cases">
+<a class="md-nav__link" href="../../test_cases/" title="Test Cases">
       Test Cases
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-16-16" id="nav-1-5-9-16-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-16-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-16" id="nav-1-5-9-19-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-19-16">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-16-16">
+<label class="md-nav__title" for="nav-1-5-9-19-16">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/transaction/base/" title="Base">
+<a class="md-nav__link" href="../../transaction/base/" title="Base">
       Base
     </a>
 </li>
@@ -1159,7 +1074,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../helpers/win32/" title="Win32">
+<a class="md-nav__link" href="../../win32/" title="Win32">
       Win32
     </a>
 </li>
@@ -1177,12 +1092,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19" id="nav-1-5-9-19" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22" id="nav-1-5-9-22" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22">
       Protocols
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-19">
+<label class="md-nav__title" for="nav-1-5-9-22">
         Protocols
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1192,12 +1107,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-2" id="nav-1-5-9-19-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-2" id="nav-1-5-9-22-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-2">
       Generator
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-2">
+<label class="md-nav__title" for="nav-1-5-9-22-2">
         Generator
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1225,12 +1140,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-3" id="nav-1-5-9-19-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-3" id="nav-1-5-9-22-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-3">
       Default Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-3">
+<label class="md-nav__title" for="nav-1-5-9-22-3">
         Default Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1258,12 +1173,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-4" id="nav-1-5-9-19-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-4" id="nav-1-5-9-22-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-4">
       Signing Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-4">
+<label class="md-nav__title" for="nav-1-5-9-22-4">
         Signing Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1291,12 +1206,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19-5" id="nav-1-5-9-19-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-22-5" id="nav-1-5-9-22-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-22-5">
       State Update Protocol
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-19-5">
+<label class="md-nav__title" for="nav-1-5-9-22-5">
         State Update Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1322,12 +1237,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20" id="nav-1-5-9-20" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23" id="nav-1-5-9-23" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-23">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-20">
+<label class="md-nav__title" for="nav-1-5-9-23">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1350,12 +1265,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-21" id="nav-1-5-9-21" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-21">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-24" id="nav-1-5-9-24" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-24">
       Skills
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-21">
+<label class="md-nav__title" for="nav-1-5-9-24">
         Skills
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1394,6 +1309,11 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../glossary/" title="Glossary">
+      Glossary
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../questions-and-answers/" title="Q&amp;A">
       Q&amp;A
     </a>
@@ -1413,13 +1333,8 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transactionmessage-objects">
-    TransactionMessage Objects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#performative-objects">
-    Performative Objects
+<a class="md-nav__link" href="#multiaddr-objects">
+    MultiAddr Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
@@ -1429,113 +1344,28 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#performative">
-    performative
+<a class="md-nav__link" href="#compute_peerid">
+    compute_peerid
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#skill_callback_ids">
-    skill_callback_ids
+<a class="md-nav__link" href="#public_key">
+    public_key
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tx_id">
-    tx_id
+<a class="md-nav__link" href="#peer_id">
+    peer_id
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tx_sender_addr">
-    tx_sender_addr
+<a class="md-nav__link" href="#format">
+    format
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tx_counterparty_addr">
-    tx_counterparty_addr
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_amount_by_currency_id">
-    tx_amount_by_currency_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_sender_fee">
-    tx_sender_fee
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_counterparty_fee">
-    tx_counterparty_fee
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_quantities_by_good_id">
-    tx_quantities_by_good_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ledger_id">
-    ledger_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#info">
-    info
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_nonce">
-    tx_nonce
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tx_digest">
-    tx_digest
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signing_payload">
-    signing_payload
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signed_payload">
-    signed_payload
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#amount">
-    amount
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#currency_id">
-    currency_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sender_amount">
-    sender_amount
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#counterparty_amount">
-    counterparty_amount
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fees">
-    fees
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#respond_settlement">
-    respond_settlement
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#respond_signing">
-    respond_signing
+<a class="md-nav__link" href="#__str__">
+    __str__
   </a>
 </li>
 </ul>
@@ -1548,186 +1378,61 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<p><a name=".aea.decision_maker.messages.transaction"></a></p>
-<h1 id="aeadecision_makermessagestransaction">aea.decision<code>_</code>maker.messages.transaction</h1>
-<p>The transaction message module.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage"></a></p>
-<h2 id="transactionmessage-objects">TransactionMessage Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">TransactionMessage</span><span class="p">(</span><span class="n">InternalMessage</span><span class="p">)</span>
+<p><a name="aea.helpers.multiaddr.base"></a></p>
+<h1 id="aeahelpersmultiaddrbase">aea.helpers.multiaddr.base</h1>
+<p>This module contains multiaddress class.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr"></a></p>
+<h2 id="multiaddr-objects">MultiAddr Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MultiAddr</span><span class="p">()</span>
 </code></pre></div>
-<p>The transaction message class.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.Performative"></a></p>
-<h2 id="performative-objects">Performative Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Performative</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
-</code></pre></div>
-<p>Transaction performative.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.__init__"></a></p>
+<p>Protocol Labs' Multiaddress representation of a network address</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.__init__"></a></p>
 <h4 id="__init__"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">performative</span><span class="p">:</span> <span class="n">Performative</span><span class="p">,</span> <span class="n">skill_callback_ids</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">PublicId</span><span class="p">],</span> <span class="n">tx_id</span><span class="p">:</span> <span class="n">TransactionId</span><span class="p">,</span> <span class="n">tx_sender_addr</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">tx_counterparty_addr</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">tx_amount_by_currency_id</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">tx_sender_fee</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tx_counterparty_fee</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tx_quantities_by_good_id</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">ledger_id</span><span class="p">:</span> <span class="n">LedgerId</span><span class="p">,</span> <span class="n">info</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </code></pre></div>
-<p>Instantiate transaction message.</p>
+<p>Initialize a multiaddress</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>performative</code>: the performative</li>
-<li><code>skill_callback_ids</code>: the list public ids of skills to receive the transaction message response</li>
-<li><code>tx_id</code>: the id of the transaction.</li>
-<li><code>tx_sender_addr</code>: the sender address of the transaction.</li>
-<li><code>tx_counterparty_addr</code>: the counterparty address of the transaction.</li>
-<li><code>tx_amount_by_currency_id</code>: the amount by the currency of the transaction.</li>
-<li><code>tx_sender_fee</code>: the part of the tx fee paid by the sender</li>
-<li><code>tx_counterparty_fee</code>: the part of the tx fee paid by the counterparty</li>
-<li><code>tx_quantities_by_good_id</code>: a map from good id to the quantity of that good involved in the transaction.</li>
-<li><code>ledger_id</code>: the ledger id</li>
-<li><code>info</code>: a dictionary for arbitrary information</li>
+<li><code>host</code>: ip host of the address</li>
+<li><code>host</code>: port number of the address</li>
+<li><code>host</code>: hex encoded public key. Must conform to Bitcoin EC encoding standard for Secp256k1</li>
 </ul>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.performative"></a></p>
-<h4 id="performative">performative</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">performative</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Performative</span>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.compute_peerid"></a></p>
+<h4 id="compute_peerid">compute<code>_</code>peerid</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
+ <span class="o">|</span> <span class="n">compute_peerid</span><span class="p">(</span><span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p>Get the performative of the message.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.skill_callback_ids"></a></p>
-<h4 id="skill_callback_ids">skill<code>_</code>callback<code>_</code>ids</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">skill_callback_ids</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the list of skill_callback_ids from the message.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_id"></a></p>
-<h4 id="tx_id">tx<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get the transaction id.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_sender_addr"></a></p>
-<h4 id="tx_sender_addr">tx<code>_</code>sender<code>_</code>addr</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_sender_addr</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Address</span>
-</code></pre></div>
-<p>Get the address of the sender.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_counterparty_addr"></a></p>
-<h4 id="tx_counterparty_addr">tx<code>_</code>counterparty<code>_</code>addr</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_counterparty_addr</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Address</span>
-</code></pre></div>
-<p>Get the counterparty of the message.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_amount_by_currency_id"></a></p>
-<h4 id="tx_amount_by_currency_id">tx<code>_</code>amount<code>_</code>by<code>_</code>currency<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_amount_by_currency_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the currency id.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_sender_fee"></a></p>
-<h4 id="tx_sender_fee">tx<code>_</code>sender<code>_</code>fee</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_sender_fee</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
-</code></pre></div>
-<p>Get the fee for the sender from the messgae.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_counterparty_fee"></a></p>
-<h4 id="tx_counterparty_fee">tx<code>_</code>counterparty<code>_</code>fee</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_counterparty_fee</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
-</code></pre></div>
-<p>Get the fee for the counterparty from the messgae.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_quantities_by_good_id"></a></p>
-<h4 id="tx_quantities_by_good_id">tx<code>_</code>quantities<code>_</code>by<code>_</code>good<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_quantities_by_good_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the quantities by good ids.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.ledger_id"></a></p>
-<h4 id="ledger_id">ledger<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">ledger_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">LedgerId</span>
-</code></pre></div>
-<p>Get the ledger_id.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.info"></a></p>
-<h4 id="info">info</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">info</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the infos from the message.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_nonce"></a></p>
-<h4 id="tx_nonce">tx<code>_</code>nonce</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_nonce</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get the tx_nonce from the message.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.tx_digest"></a></p>
-<h4 id="tx_digest">tx<code>_</code>digest</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">tx_digest</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get the transaction digest.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.signing_payload"></a></p>
-<h4 id="signing_payload">signing<code>_</code>payload</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">signing_payload</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the signing payload.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.signed_payload"></a></p>
-<h4 id="signed_payload">signed<code>_</code>payload</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">signed_payload</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the signed payload.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.amount"></a></p>
-<h4 id="amount">amount</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">amount</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
-</code></pre></div>
-<p>Get the amount.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.currency_id"></a></p>
-<h4 id="currency_id">currency<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">currency_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get the currency id.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.sender_amount"></a></p>
-<h4 id="sender_amount">sender<code>_</code>amount</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">sender_amount</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
-</code></pre></div>
-<p>Get the amount which the sender gets/pays as part of the tx.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.counterparty_amount"></a></p>
-<h4 id="counterparty_amount">counterparty<code>_</code>amount</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">counterparty_amount</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
-</code></pre></div>
-<p>Get the amount which the counterparty gets/pays as part of the tx.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.fees"></a></p>
-<h4 id="fees">fees</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">fees</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
-</code></pre></div>
-<p>Get the tx fees.</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.respond_settlement"></a></p>
-<h4 id="respond_settlement">respond<code>_</code>settlement</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
- <span class="o">|</span> <span class="n">respond_settlement</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">"TransactionMessage"</span><span class="p">,</span> <span class="n">performative</span><span class="p">:</span> <span class="n">Performative</span><span class="p">,</span> <span class="n">tx_digest</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"TransactionMessage"</span>
-</code></pre></div>
-<p>Create response message.</p>
+<p>Compute the peer id from a public key.</p>
+<p>In particular, compute the base58 representation of
+libp2p PeerID from Bitcoin EC encoded Secp256k1 public key.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>other</code>: TransactionMessage</li>
-<li><code>performative</code>: the performative</li>
-<li><code>tx_digest</code>: the transaction digest</li>
+<li><code>public_key</code>: the public key.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
-<p>a transaction message object</p>
-<p><a name=".aea.decision_maker.messages.transaction.TransactionMessage.respond_signing"></a></p>
-<h4 id="respond_signing">respond<code>_</code>signing</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
- <span class="o">|</span> <span class="n">respond_signing</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">"TransactionMessage"</span><span class="p">,</span> <span class="n">performative</span><span class="p">:</span> <span class="n">Performative</span><span class="p">,</span> <span class="n">signed_payload</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"TransactionMessage"</span>
+<p>the peer id.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.public_key"></a></p>
+<h4 id="public_key">public<code>_</code>key</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">public_key</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p>Create response message.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>other</code>: TransactionMessage</li>
-<li><code>performative</code>: the performative</li>
-<li><code>signed_payload</code>: the signed payload</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>a transaction message object</p>
+<p>Get the public key.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.peer_id"></a></p>
+<h4 id="peer_id">peer<code>_</code>id</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">peer_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Get the peer id.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.format"></a></p>
+<h4 id="format">format</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nb">format</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Canonical representation of a multiaddress</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.__str__"></a></p>
+<h4 id="__str__"><code>__</code>str<code>__</code></h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__str__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Default string representation of a mutliaddress.</p>
 </article>
 </div>
 </div>
@@ -1735,7 +1440,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../state_update/" rel="prev" title="State Update">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../../logging/" rel="prev" title="Logging">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -1744,17 +1449,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                State Update
+                Logging
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../../../helpers/async_friendly_queue/" rel="next" title="Async Friendly Queue">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../../multiple_executor/" rel="next" title="MultipleExecutor">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Async Friendly Queue
+                MultipleExecutor
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
