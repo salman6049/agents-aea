@@ -480,8 +480,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fetchaioef_search050-protocol">
-    fetchai/oef_search:0.5.0 protocol
+<a class="md-nav__link" href="#fetchaioef_search060-protocol">
+    fetchai/oef_search:0.6.0 protocol
   </a>
 </li>
 <li class="md-nav__item">
@@ -1373,8 +1373,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fetchaioef_search050-protocol">
-    fetchai/oef_search:0.5.0 protocol
+<a class="md-nav__link" href="#fetchaioef_search060-protocol">
+    fetchai/oef_search:0.6.0 protocol
   </a>
 </li>
 <li class="md-nav__item">
@@ -1500,9 +1500,9 @@ An example is:
 </li>
 </ul>
 <p>Each AEA's <code>fetchai/error:0.5.0</code> skill utilises the <code>fetchai/default:0.5.0</code> protocol for error handling.</p>
-<h2 id="fetchaioef_search050-protocol"><code>fetchai/oef_search:0.5.0</code> protocol</h2>
-<p>The <code>fetchai/oef_search:0.5.0</code> protocol is used by AEAs to interact with an <a href="../simple-oef">SOEF search node</a> to register and unregister their own services and search for services registered by other agents.</p>
-<p>The <code>fetchai/oef_search:0.5.0</code> protocol definition includes an <code>OefSearchMessage</code> with the following message types:</p>
+<h2 id="fetchaioef_search060-protocol"><code>fetchai/oef_search:0.6.0</code> protocol</h2>
+<p>The <code>fetchai/oef_search:0.6.0</code> protocol is used by AEAs to interact with an <a href="../simple-oef">SOEF search node</a> to register and unregister their own services and search for services registered by other agents.</p>
+<p>The <code>fetchai/oef_search:0.6.0</code> protocol definition includes an <code>OefSearchMessage</code> with the following message types:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Performative</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
     <span class="sd">"""Performatives for the oef_search protocol."""</span>
@@ -1511,6 +1511,7 @@ An example is:
     <span class="n">SEARCH_SERVICES</span> <span class="o">=</span> <span class="s2">"search_services"</span>
     <span class="n">OEF_ERROR</span> <span class="o">=</span> <span class="s2">"oef_error"</span>
     <span class="n">SEARCH_RESULT</span> <span class="o">=</span> <span class="s2">"search_result"</span>
+    <span class="n">SUCCESS</span> <span class="o">=</span> <span class="s2">"success"</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">"""Get string representation."""</span>
@@ -1603,7 +1604,7 @@ We can then create the message to search these services:
 </code></pre></div></p>
 </li>
 <li>
-<p>The <a href="../simple-oef">SOEF search node</a> will respond with a message, say <code>msg</code> of type <code>OefSearchMessage</code>, of performative <code>OefSearchMessage.Performative.SEARCH_RESULT</code>. To access the tuple of agents which match the query, simply use <code>msg.agents</code>. In particular, this will return the agent addresses matching the query. The <a href="../identity">agent address</a> can then be used to send a message to the agent utilising the <a href="../oef-ledger">P2P agent communication network</a> and any protocol other than <code>fetchai/oef_search:0.5.0</code>.</p>
+<p>The <a href="../simple-oef">SOEF search node</a> will respond with a message, say <code>msg</code> of type <code>OefSearchMessage</code>, of performative <code>OefSearchMessage.Performative.SEARCH_RESULT</code>. To access the tuple of agents which match the query, simply use <code>msg.agents</code>. In particular, this will return the agent addresses matching the query. The <a href="../identity">agent address</a> can then be used to send a message to the agent utilising the <a href="../oef-ledger">P2P agent communication network</a> and any protocol other than <code>fetchai/oef_search:0.6.0</code>.</p>
 </li>
 <li>
 <p>If the <a href="../simple-oef">SOEF search node</a> encounters any errors with the messages you send, it will return an <code>OefSearchMessage</code> of performative <code>OefSearchMessage.Performative.OEF_ERROR</code> and indicate the error operation encountered:
