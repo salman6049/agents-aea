@@ -453,6 +453,11 @@
       Modes of running an AEA
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
+      Multi agent manager
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1547,7 +1552,7 @@
 <h2 id="demo-instructions">Demo instructions:</h2>
 <h3 id="create-tac-controller-aea">Create TAC controller AEA</h3>
 <p>In the root directory, fetch the controller AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/tac_controller:0.9.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/tac_controller:0.10.0
 <span class="nb">cd</span> tac_controller
 aea install
 </code></pre></div></p>
@@ -1557,25 +1562,25 @@ aea install
 The following steps create the controller from scratch:
 <div class="highlight"><pre><span></span><code>aea create tac_controller
 <span class="nb">cd</span> tac_controller
-aea add connection fetchai/p2p_libp2p:0.9.0
-aea add connection fetchai/soef:0.8.0
-aea add connection fetchai/ledger:0.5.0
-aea add skill fetchai/tac_control:0.7.0
+aea add connection fetchai/p2p_libp2p:0.10.0
+aea add connection fetchai/soef:0.9.0
+aea add connection fetchai/ledger:0.6.0
+aea add skill fetchai/tac_control:0.8.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.9.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.10.0
 aea config <span class="nb">set</span> agent.default_ledger fetchai
 </code></pre></div>
 
 In `tac_controller/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.7.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.9.0</span>
 </code></pre></div>
 </p>
 </details>
 <h3 id="create-the-tac-participant-aeas">Create the TAC participant AEAs</h3>
 <p>In a separate terminal, in the root directory, fetch at least two participants:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/tac_participant:0.10.0 --alias tac_participant_one
-aea fetch fetchai/tac_participant:0.10.0 --alias tac_participant_two
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/tac_participant:0.11.0 --alias tac_participant_one
+aea fetch fetchai/tac_participant:0.11.0 --alias tac_participant_two
 <span class="nb">cd</span> tac_participant_two
 aea install
 </code></pre></div></p>
@@ -1589,38 +1594,38 @@ aea create tac_participant_two
 
 Build participant one:
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> tac_participant_one
-aea add connection fetchai/p2p_libp2p:0.9.0
-aea add connection fetchai/soef:0.8.0
-aea add connection fetchai/ledger:0.5.0
-aea add skill fetchai/tac_participation:0.8.0
-aea add skill fetchai/tac_negotiation:0.9.0
+aea add connection fetchai/p2p_libp2p:0.10.0
+aea add connection fetchai/soef:0.9.0
+aea add connection fetchai/ledger:0.6.0
+aea add skill fetchai/tac_participation:0.9.0
+aea add skill fetchai/tac_negotiation:0.10.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.9.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.10.0
 aea config <span class="nb">set</span> agent.default_ledger fetchai
 </code></pre></div>
 
 In `tac_participant_one/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.3.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.5.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.4.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.6.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.7.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.9.0</span>
 </code></pre></div>
 
 Then, build participant two:
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> tac_participant_two
-aea add connection fetchai/p2p_libp2p:0.9.0
-aea add connection fetchai/soef:0.8.0
-aea add connection fetchai/ledger:0.5.0
-aea add skill fetchai/tac_participation:0.8.0
-aea add skill fetchai/tac_negotiation:0.9.0
+aea add connection fetchai/p2p_libp2p:0.10.0
+aea add connection fetchai/soef:0.9.0
+aea add connection fetchai/ledger:0.6.0
+aea add skill fetchai/tac_participation:0.9.0
+aea add skill fetchai/tac_negotiation:0.10.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.9.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.10.0
 aea config <span class="nb">set</span> agent.default_ledger fetchai
 </code></pre></div>
 
 In `tac_participant_two/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.3.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.5.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.4.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.6.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.7.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.9.0</span>
 </code></pre></div>
 </p>
 </details>
@@ -1632,8 +1637,8 @@ aea add-key fetchai fetchai_private_key.txt --connection
 </code></pre></div></p>
 <h3 id="update-the-game-parameters-in-the-controller">Update the game parameters in the controller</h3>
 <p>Navigate to the tac controller project, then use the command line to get and set the start time (set it to at least two minutes in the future):</p>
-<div class="highlight"><pre><span></span><code>aea config get vendor.fetchai.skills.tac_control.models.parameters.args.start_time
-aea config <span class="nb">set</span> vendor.fetchai.skills.tac_control.models.parameters.args.start_time <span class="s1">'01 01 2020  00:01'</span>
+<div class="highlight"><pre><span></span><code>aea config get vendor.fetchai.skills.tac_control.models.parameters.args.registration_start_time
+aea config <span class="nb">set</span> vendor.fetchai.skills.tac_control.models.parameters.args.registration_start_time <span class="s1">'01 01 2020  00:01'</span>
 </code></pre></div>
 <h3 id="update-the-connection-params">Update the connection params</h3>
 <p>Briefly run the controller AEA:</p>

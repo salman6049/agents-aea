@@ -362,6 +362,11 @@
       Modes of running an AEA
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../multi-agent-manager/" title="Multi agent manager">
+      Multi agent manager
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1383,8 +1388,8 @@
 <h4 id="generate_protobuf_only_mode">generate<code>_</code>protobuf<code>_</code>only<code>_</code>mode</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">generate_protobuf_only_mode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Run the generator in "protobuf only" mode:
-a) validate the protocol specification.
+<p>Run the generator in "protobuf only" mode:</p>
+<p>a) validate the protocol specification.
 b) create the protocol buffer schema file.</p>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
@@ -1392,22 +1397,24 @@ b) create the protocol buffer schema file.</p>
 <h4 id="generate_full_mode">generate<code>_</code>full<code>_</code>mode</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">generate_full_mode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Run the generator in "full" mode:
-a) validates the protocol specification.
+<p>Run the generator in "full" mode:</p>
+<p>a) validates the protocol specification.
 b) creates the protocol buffer schema file.
 c) generates python modules.
-d) applies black formatting</p>
+d) applies black formatting
+e) applies isort formatting</p>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
 <p><a name="aea.protocols.generator.base.ProtocolGenerator.generate"></a></p>
 <h4 id="generate">generate</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">generate</span><span class="p">(</span><span class="n">protobuf_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Run the generator. If in "full" mode (protobuf_only is False), it:
-a) validates the protocol specification.
+<p>Run the generator. If in "full" mode (protobuf_only is False), it:</p>
+<p>a) validates the protocol specification.
 b) creates the protocol buffer schema file.
 c) generates python modules.
-d) applies black formatting</p>
+d) applies black formatting
+e) applies isort formatting</p>
 <p>If in "protobuf only" mode (protobuf_only is True), it only does a) and b).</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
