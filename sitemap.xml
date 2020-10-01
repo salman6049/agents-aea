@@ -308,6 +308,10 @@
      <lastmod>2020-10-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://docs.fetch.ai/api/manager/</loc>
+     <lastmod>2020-10-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://docs.fetch.ai/api/multiplexer/</loc>
      <lastmod>2020-10-01</lastmod>
      <changefreq>daily</changefreq>
@@ -337,6 +341,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.fetch.ai/api/configurations/loader/</loc>
+     <lastmod>2020-10-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.fetch.ai/api/configurations/project/</loc>
      <lastmod>2020-10-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
