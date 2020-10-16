@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1075,18 +1085,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1101,6 +1106,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1322,10 +1332,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1611,7 +1644,7 @@ not be updated.</p>
 <span class="nt">models</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 <span class="nt">dependencies</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.6.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.7.0</span>
 </code></pre></div>
 <h2 id="error-skill">Error skill</h2>
 <p>All AEAs have a default <code>error</code> skill that contains error handling code for a number of scenarios:</p>
@@ -1621,7 +1654,7 @@ not be updated.</p>
 <li>Envelopes with decoding errors</li>
 <li>Invalid messages with respect to the registered protocol</li>
 </ul>
-<p>The error skill relies on the <code>fetchai/default:0.6.0</code> protocol which provides error codes for the above.</p>
+<p>The error skill relies on the <code>fetchai/default:0.7.0</code> protocol which provides error codes for the above.</p>
 <p><br/></p>
 </article>
 </div>

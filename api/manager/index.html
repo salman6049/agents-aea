@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -826,6 +836,11 @@
     get_agent_alias
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install_pypi_dependencies">
+    install_pypi_dependencies
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1193,18 +1208,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1219,6 +1229,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1440,10 +1455,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1637,6 +1675,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#get_agent_alias">
     get_agent_alias
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install_pypi_dependencies">
+    install_pypi_dependencies
   </a>
 </li>
 </ul>
@@ -1862,6 +1905,11 @@
 <p>Return details about agent alias definition.</p>
 <p><strong>Returns</strong>:</p>
 <p>AgentAlias</p>
+<p><a name="aea.manager.MultiAgentManager.install_pypi_dependencies"></a></p>
+<h4 id="install_pypi_dependencies">install<code>_</code>pypi<code>_</code>dependencies</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">install_pypi_dependencies</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Install dependencies for every project has at least one agent alias.</p>
 </article>
 </div>
 </div>

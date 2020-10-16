@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1036,18 +1046,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1062,6 +1067,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1283,10 +1293,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1339,9 +1372,9 @@
 <p>This demo discusses the options we have to connect a front-end to the AEA. The following diagram illustrates the two options we are going to discuss.</p>
 <p><img alt="How to connect frontend to your AEA" class="center" src="../assets/http-integration.png" style="display: block; margin-left: auto; margin-right: auto;width:80%;"/></p>
 <h2 id="case-1">Case 1</h2>
-<p>The first option we have is to create a <code>Connection</code> that will handle the incoming requests from the rest API. In this scenario, the rest API communicates with the AEA and requests are handled by the <code>HTTP Server</code> Connection package. The rest API should send CRUD requests to the <code>HTTP Server</code> Connection (<code>fetchai/http_server:0.9.0</code>) which translates these into Envelopes to be consumed by the correct skill.</p>
+<p>The first option we have is to create a <code>Connection</code> that will handle the incoming requests from the rest API. In this scenario, the rest API communicates with the AEA and requests are handled by the <code>HTTP Server</code> Connection package. The rest API should send CRUD requests to the <code>HTTP Server</code> Connection (<code>fetchai/http_server:0.10.0</code>) which translates these into Envelopes to be consumed by the correct skill.</p>
 <h2 id="case-2">Case 2</h2>
-<p>The other option we have is to create a stand-alone <code>Multiplexer</code> with a <code>P2P</code> connection (<code>fetchai/p2p_libp2p:0.10.0</code>). In this scenario, the front-end needs to incorporate a Multiplexer with an <code>P2P</code> Connection. Then the <a href="../acn">Agent Communication Network</a> can be used to send Envelopes from the AEA to the front-end.</p>
+<p>The other option we have is to create a stand-alone <code>Multiplexer</code> with a <code>P2P</code> connection (<code>fetchai/p2p_libp2p:0.11.0</code>). In this scenario, the front-end needs to incorporate a Multiplexer with an <code>P2P</code> Connection. Then the <a href="../acn">Agent Communication Network</a> can be used to send Envelopes from the AEA to the front-end.</p>
 </article>
 </div>
 </div>

@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -805,6 +815,11 @@
     load_agent_config_from_json
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validate_component_configuration">
+    validate_component_configuration
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1128,18 +1143,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1154,6 +1164,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1375,10 +1390,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1488,6 +1526,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#load_agent_config_from_json">
     load_agent_config_from_json
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validate_component_configuration">
+    validate_component_configuration
   </a>
 </li>
 </ul>
@@ -1609,7 +1652,7 @@
 <h4 id="validate_1">validate</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">validate</span><span class="p">(</span><span class="n">json_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Validate a JSON object.</p>
+<p>Validate a JSON object against the right JSON schema.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>json_data</code>: the JSON data.</li>
@@ -1656,6 +1699,24 @@
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>AgentConfig instance</p>
+<p><a name="aea.configurations.loader.ConfigLoader.validate_component_configuration"></a></p>
+<h4 id="validate_component_configuration">validate<code>_</code>component<code>_</code>configuration</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
+ <span class="o">|</span> <span class="n">validate_component_configuration</span><span class="p">(</span><span class="n">component_id</span><span class="p">:</span> <span class="n">ComponentId</span><span class="p">,</span> <span class="n">configuration</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Validate the component configuration of an agent configuration file.</p>
+<p>This check is to detect inconsistencies in the specified fields.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>component_id</code>: the component id.</li>
+<li><code>configuration</code>: the configuration dictionary.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><strong>Raises</strong>:</p>
+<ul>
+<li><code>ValueError</code>: if the configuration is not valid.</li>
+</ul>
 <p><a name="aea.configurations.loader.ConfigLoaders"></a></p>
 <h2 id="configloaders-objects">ConfigLoaders Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ConfigLoaders</span><span class="p">()</span>

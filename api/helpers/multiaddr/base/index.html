@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -986,6 +996,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#from_string">
+    from_string
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#public_key">
     public_key
   </a>
@@ -993,6 +1008,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#peer_id">
     peer_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#host">
+    host
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#port">
+    port
   </a>
 </li>
 <li class="md-nav__item">
@@ -1065,18 +1090,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1091,6 +1111,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1312,10 +1337,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1364,6 +1412,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#from_string">
+    from_string
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#public_key">
     public_key
   </a>
@@ -1371,6 +1424,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#peer_id">
     peer_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#host">
+    host
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#port">
+    port
   </a>
 </li>
 <li class="md-nav__item">
@@ -1403,14 +1466,15 @@
 <p>Protocol Labs' Multiaddress representation of a network address.</p>
 <p><a name="aea.helpers.multiaddr.base.MultiAddr.__init__"></a></p>
 <h4 id="__init__"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">public_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">multihash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <p>Initialize a multiaddress.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>host</code>: ip host of the address</li>
-<li><code>host</code>: port number of the address</li>
-<li><code>host</code>: hex encoded public key. Must conform to Bitcoin EC encoding standard for Secp256k1</li>
+<li><code>port</code>: port number of the address</li>
+<li><code>public_key</code>: hex encoded public key. Must conform to Bitcoin EC encoding standard for Secp256k1</li>
+<li><code>multihash_id</code>: a multihash of the public key</li>
 </ul>
 <p><a name="aea.helpers.multiaddr.base.MultiAddr.compute_peerid"></a></p>
 <h4 id="compute_peerid">compute<code>_</code>peerid</h4>
@@ -1426,6 +1490,16 @@ libp2p PeerID from Bitcoin EC encoded Secp256k1 public key.</p>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the peer id.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.from_string"></a></p>
+<h4 id="from_string">from<code>_</code>string</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">from_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">maddr</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAddr"</span>
+</code></pre></div>
+<p>Construct a MultiAddr object from its string format</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>maddr</code>: multiaddress string</li>
+</ul>
 <p><a name="aea.helpers.multiaddr.base.MultiAddr.public_key"></a></p>
 <h4 id="public_key">public<code>_</code>key</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -1438,6 +1512,18 @@ libp2p PeerID from Bitcoin EC encoded Secp256k1 public key.</p>
  <span class="o">|</span> <span class="n">peer_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 <p>Get the peer id.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.host"></a></p>
+<h4 id="host">host</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">host</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Get the peer host.</p>
+<p><a name="aea.helpers.multiaddr.base.MultiAddr.port"></a></p>
+<h4 id="port">port</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">port</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+</code></pre></div>
+<p>Get the peer port.</p>
 <p><a name="aea.helpers.multiaddr.base.MultiAddr.format"></a></p>
 <h4 id="format">format</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nb">format</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>

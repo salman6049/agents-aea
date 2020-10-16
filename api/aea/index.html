@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1120,18 +1130,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1146,6 +1151,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1367,10 +1377,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1508,7 +1541,7 @@
 <p>This module contains the implementation of an autonomous economic agent (AEA).</p>
 <p><a name="aea.aea.AEA"></a></p>
 <h2 id="aea-objects">AEA Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AEA</span><span class="p">(</span><span class="n">Agent</span><span class="p">,</span>  <span class="n">WithLogger</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AEA</span><span class="p">(</span><span class="n">Agent</span><span class="p">)</span>
 </code></pre></div>
 <p>This class implements an autonomous economic agent.</p>
 <p><a name="aea.aea.AEA.__init__"></a></p>
@@ -1525,7 +1558,7 @@
 <li><code>resources</code>: the resources (protocols and skills) of the agent.</li>
 <li><code>loop</code>: the event loop to run the connections.</li>
 <li><code>period</code>: period to call agent's act</li>
-<li><code>exeution_timeout</code>: amount of time to limit single act/handle to execute.</li>
+<li><code>execution_timeout</code>: amount of time to limit single act/handle to execute.</li>
 <li><code>max_reactions</code>: the processing rate of envelopes per tick (i.e. single loop).</li>
 <li><code>decision_maker_handler_class</code>: the class implementing the decision maker handler to be used.</li>
 <li><code>skill_exception_policy</code>: the skill exception policy enum</li>

@@ -125,6 +125,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#why-build-with-the-aea-framework">
+    Why build with the AEA Framework?
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#next-steps">
     Next steps
   </a>
@@ -357,6 +362,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="deployment/" title="Deployment">
       Deployment
     </a>
@@ -394,6 +404,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1046,18 +1061,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="api/helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1072,6 +1082,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="api/helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="api/helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1293,10 +1308,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="api/test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="api/test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="api/test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="api/test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1339,6 +1377,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#why-build-with-the-aea-framework">
+    Why build with the AEA Framework?
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#next-steps">
     Next steps
   </a>
@@ -1375,11 +1418,21 @@
 </ul>
 <h2 id="what-is-the-aea-framework">What is the AEA Framework?</h2>
 <p>The AEA framework is a Python-based development suite which equips you with an efficient and accessible set of tools for building AEAs. The framework is modular, extensible, and composable. It attempts to make agent development as straightforward an experience as possible, similar to web development using popular web frameworks.</p>
+<p>AEAs achieve their goals with the help of the <a href="oef-ledger">Open Economic Framework (OEF)</a> - a decentralized communication and search &amp; discovery system for agents - and using <a href="oef-ledger">Fetch.ai's blockchain</a> as a financial settlement and commitment layer. Third-party blockchains, such as <a href="https://ethereum.org/en/" target="_blank">Ethereum</a>, may also allow AEA integration.</p>
+<h2 id="why-build-with-the-aea-framework">Why build with the AEA Framework?</h2>
+<p>The AEA framework provides the developer with a number of features which cannot be found in this combination anywhere else:</p>
+<ul>
+<li>the peer-to-peer <a href="acn">agent communication network</a> allows your AEAs to interact with all other AEAs over the public internet</li>
+<li>the search and discovery system <a href="simple-oef">sOEF</a> allows your AEAs find other agents</li>
+<li>the <a href="https://aea-registry.fetch.ai/" target="_blank">AEA registry</a> enables code sharing and re-use</li>
+<li>the framework's <a href="ledger-integration">crypto and ledger APIs</a> make it possible for AEAs to interact with blockchains</li>
+<li>reusability of code for interacting with blockchains is enabled via the <a href="contract">contract</a> packages</li>
+</ul>
 <h2 id="next-steps">Next steps</h2>
 <p>To get started developing your own AEA, check out the <a href="quickstart">getting started</a> section.</p>
 <p>To learn more about some of the distinctive characteristics of agent-oriented development, check out the guide on <a href="agent-oriented-development">agent-oriented development</a>.</p>
 <p>If you would like to develop an AEA in a language different to Python then check out our <a href="language-agnostic-definition">language agnostic AEA definition</a>.</p>
-<p>AEAs achieve their goals with the help of the <a href="oef-ledger">Open Economic Framework (OEF)</a> - a decentralized communication and search &amp; discovery system for agents - and using <a href="oef-ledger">Fetch.ai's blockchain</a> as a financial settlement and commitment layer. Third-party blockchains, such as <a href="https://ethereum.org/en/" target="_blank">Ethereum</a>, may also allow AEA integration.</p>
+<p>If you would run a demo, check out the <a href="demos">demo guides</a>.</p>
 <h2 id="help-us-improve">Help us improve</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

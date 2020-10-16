@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/" title="Deployment">
       Deployment
     </a>
@@ -419,6 +424,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1071,18 +1081,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1097,6 +1102,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1318,10 +1328,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1441,7 +1474,7 @@
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="initialise-the-aea">Initialise the AEA</h2>
-<p>We use the <a href="../api/aea_builder#aeabuilder-objects"><code>AEABuilder</code></a> to readily build an AEA. By default, the <code>AEABuilder</code> adds the <code>fetchai/default:0.6.0</code> protocol, the <code>fetchai/stub:0.10.0</code> connection and the <code>fetchai/error:0.6.0</code> skill.
+<p>We use the <a href="../api/aea_builder#aeabuilder-objects"><code>AEABuilder</code></a> to readily build an AEA. By default, the <code>AEABuilder</code> adds the <code>fetchai/default:0.7.0</code> protocol, the <code>fetchai/stub:0.11.0</code> connection and the <code>fetchai/error:0.7.0</code> skill.
 <div class="highlight"><pre><span></span><code>    <span class="c1"># Instantiate the builder and build the AEA</span>
     <span class="c1"># By default, the default protocol, error skill and stub connection are added</span>
     <span class="n">builder</span> <span class="o">=</span> <span class="n">AEABuilder</span><span class="p">()</span>
@@ -1501,7 +1534,7 @@
 <h2 id="send-and-receive-an-envelope">Send and receive an envelope</h2>
 <p>We use the input and output text files to send an envelope to our AEA and receive a response (from the echo skill)
 <div class="highlight"><pre><span></span><code>        <span class="c1"># Create a message inside an envelope and get the stub connection to pass it on to the echo skill</span>
-        <span class="n">message_text</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"my_aea,other_agent,fetchai/default:0.6.0,</span><span class="se">\x08\x01\x12\x01</span><span class="s2">1*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
+        <span class="n">message_text</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"my_aea,other_agent,fetchai/default:0.7.0,</span><span class="se">\x08\x01\x12\x01</span><span class="s2">1*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">write_with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">message_text</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">"input message: "</span> <span class="o">+</span> <span class="n">message_text</span><span class="p">)</span>
@@ -1523,8 +1556,8 @@
 </code></pre></div></p>
 <h2 id="running-the-aea">Running the AEA</h2>
 <p>If you now run this python script file, you should see this output:</p>
-<pre><code>input message: my_aea,other_agent,fetchai/default:0.6.0,\x08\x01*\x07\n\x05hello
-output message: other_agent,my_aea,fetchai/default:0.6.0,...\x05hello
+<pre><code>input message: my_aea,other_agent,fetchai/default:0.7.0,\x08\x01*\x07\n\x05hello
+output message: other_agent,my_aea,fetchai/default:0.7.0,...\x05hello
 </code></pre>
 <h2 id="entire-code-listing">Entire code listing</h2>
 <p>If you just want to copy and past the entire script in you can find it here:</p>
@@ -1611,7 +1644,7 @@ output message: other_agent,my_aea,fetchai/default:0.6.0,...\x05hello
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
         <span class="c1"># Create a message inside an envelope and get the stub connection to pass it on to the echo skill</span>
-        <span class="n">message_text</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"my_aea,other_agent,fetchai/default:0.6.0,</span><span class="se">\x08\x01\x12\x01</span><span class="s2">1*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
+        <span class="n">message_text</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"my_aea,other_agent,fetchai/default:0.7.0,</span><span class="se">\x08\x01\x12\x01</span><span class="s2">1*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">write_with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">message_text</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">"input message: "</span> <span class="o">+</span> <span class="n">message_text</span><span class="p">)</span>

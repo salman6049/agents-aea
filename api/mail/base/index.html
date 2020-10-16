@@ -328,6 +328,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../deployment/" title="Deployment">
       Deployment
     </a>
@@ -365,6 +370,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1017,18 +1027,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1043,6 +1048,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1297,6 +1307,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#is_sender_public_id">
+    is_sender_public_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_to_public_id">
+    is_to_public_id
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#__eq___2">
     __eq__
   </a>
@@ -1528,10 +1548,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1793,6 +1836,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#connection_id_1">
     connection_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_sender_public_id">
+    is_sender_public_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_to_public_id">
+    is_to_public_id
   </a>
 </li>
 <li class="md-nav__item">
@@ -2121,6 +2174,18 @@
 <p>Get the connection id from an envelope context, if set.</p>
 <p><strong>Returns</strong>:</p>
 <p>connection id</p>
+<p><a name="aea.mail.base.Envelope.is_sender_public_id"></a></p>
+<h4 id="is_sender_public_id">is<code>_</code>sender<code>_</code>public<code>_</code>id</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">is_sender_public_id</span><span class="p">()</span>
+</code></pre></div>
+<p>Check if sender is a public id.</p>
+<p><a name="aea.mail.base.Envelope.is_to_public_id"></a></p>
+<h4 id="is_to_public_id">is<code>_</code>to<code>_</code>public<code>_</code>id</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">is_to_public_id</span><span class="p">()</span>
+</code></pre></div>
+<p>Check if to is a public id.</p>
 <p><a name="aea.mail.base.Envelope.__eq__"></a></p>
 <h4 id="__eq___2"><code>__</code>eq<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>

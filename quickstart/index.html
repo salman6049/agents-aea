@@ -415,6 +415,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/" title="Deployment">
       Deployment
     </a>
@@ -452,6 +457,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1104,18 +1114,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1130,6 +1135,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1351,10 +1361,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1513,7 +1546,8 @@ you can use the Fetch.ai AEA framework.</p>
 </li>
 </ul>
 <h2 id="setup-author-name">Setup author name</h2>
-<p>You can now setup your author name:
+<p>AEAs are composed from components. The components can be developed by anyone and are available on the <a href="https://aea-registry.fetch.ai" target="_blank">AEA registry</a>. To use the registry we need to register an author name.</p>
+<p>You can setup your author name using the <code>init</code> command:
 <div class="highlight"><pre><span></span><code>aea init
 </code></pre></div></p>
 <p>This is your unique author name in the Fetch.ai ecosystem.</p>
@@ -1531,7 +1565,7 @@ Confirm password:
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.6.2
+v0.6.3
 
 AEA configurations successfully initialized: <span class="o">{</span><span class="s1">'author'</span>: <span class="s1">'fetchai'</span><span class="o">}</span>
 </code></pre></div></p>
@@ -1540,8 +1574,9 @@ AEA configurations successfully initialized: <span class="o">{</span><span class
 <p>If you would rather not create an account on the registry at this point, then run `aea init --local` instead.</p>
 </div>
 <h2 id="echo-skill-demo">Echo skill demo</h2>
-<p>The echo skill is a simple demo that introduces you to the main business logic components of an AEA. The fastest way to create your first AEA is to fetch it!</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/my_first_aea:0.12.0
+<p>The echo skill demo is a simple demo that introduces you to the main business logic components of an AEA. The <a href="https://aea-registry.fetch.ai/details/skill/fetchai/echo/latest" target="_blank">echo skill</a> simply echoes received messages back to the sender.</p>
+<p>The fastest way to create your first AEA is to fetch it!</p>
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/my_first_aea:0.13.0
 <span class="nb">cd</span> my_first_aea
 </code></pre></div>
 <p>To learn more about the folder structure of an AEA project read on <a href="../package-imports/">here</a>.</p>
@@ -1556,9 +1591,9 @@ First, create a new AEA project and enter it.
 <b>Add the echo skill</b>
 <br/>
 Second, add the echo skill to the project.
-<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.8.0
+<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.9.0
 </code></pre></div>
-This copies the `fetchai/echo:0.8.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.8.0` consists of the name of the author of the skill, followed by the skill name and its version.
+This copies the `fetchai/echo:0.9.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.9.0` consists of the name of the author of the skill, followed by the skill name and its version.
 </details>
 <h2 id="communication-via-envelopes-and-messages">Communication via envelopes and messages</h2>
 <p>AEAs use envelopes containing messages for communication. To learn more check out the next section in the getting started series.</p>
@@ -1571,14 +1606,14 @@ This copies the `fetchai/echo:0.8.0` skill code containing the "behaviours", and
 <div class="highlight"><pre><span></span><code>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE,
 </code></pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.6.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span><span class="se">\x</span><span class="m">12</span><span class="se">\x</span><span class="m">011</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
+<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.7.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span><span class="se">\x</span><span class="m">12</span><span class="se">\x</span><span class="m">011</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
 </code></pre></div>
 <h2 id="run-the-aea">Run the AEA</h2>
-<p>Run the AEA with the default <code>fetchai/stub:0.10.0</code> connection.</p>
+<p>Run the AEA with the default <code>fetchai/stub:0.11.0</code> connection.</p>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span><code>aea run --connections fetchai/stub:0.10.0
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/stub:0.11.0
 </code></pre></div>
 <p>You will see the echo skill running in the terminal window.</p>
 <div class="highlight"><pre><span></span><code>    _     _____     _
@@ -1587,7 +1622,7 @@ This copies the `fetchai/echo:0.8.0` skill code containing the "behaviours", and
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.6.2
+v0.6.3
 
 Starting AEA <span class="s1">'my_first_aea'</span> in <span class="s1">'async'</span> mode ...
 info: Echo Handler: setup method called.
@@ -1610,11 +1645,11 @@ info: Echo Handler: <span class="nv">message</span><span class="o">=</span>Messa
 info: Echo Behaviour: act method called.
 info: Echo Behaviour: act method called.
 </code></pre></div>
-<details><summary>CLI interact command</summary>
+<details><summary>Manual approach</summary>
 
 Optionally, from a different terminal and same directory (i.e. the `my_first_aea` project), we send the AEA a message wrapped in an envelope via the input file.
 
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.6.0,\x08\x01\x12\x011*\x07\n\x05hello,'</span> &gt;&gt; input_file
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.7.0,\x08\x01\x12\x011*\x07\n\x05hello,'</span> &gt;&gt; input_file
 </code></pre></div>
 
 You will see the `Echo Handler` dealing with the envelope and responding with the same message to the `output_file`, and also decoding the Base64 encrypted message in this case.
@@ -1625,7 +1660,7 @@ info: Echo Behaviour: act method called.
 info: Echo Behaviour: act method called.
 </code></pre></div>
 
-Note, due to the dialogue reference having to be incremented, you can only send the above envelope once!
+Note, due to the dialogue reference having to be incremented, you can only send the above envelope once! This approach does not work in conjunction with the `aea interact` command.
 
 </details>
 <h2 id="stop-the-aea">Stop the AEA</h2>

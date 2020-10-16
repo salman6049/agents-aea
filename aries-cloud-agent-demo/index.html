@@ -462,6 +462,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../skill-testing/" title="Testing Skills">
+      Testing Skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/" title="Deployment">
       Deployment
     </a>
@@ -499,6 +504,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../debug/" title="Debugging">
+      Debugging
     </a>
 </li>
 </ul>
@@ -1151,18 +1161,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/test_cases/" title="Test Cases">
-      Test Cases
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-16" id="nav-1-5-9-20-16" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-16">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-20-15">
       Transaction
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-16">
+<label class="md-nav__title" for="nav-1-5-9-20-15">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1177,6 +1182,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/win32/" title="Win32">
       Win32
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/yaml_utils/" title="YamlUtils">
+      YamlUtils
     </a>
 </li>
 </ul>
@@ -1398,10 +1408,33 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/test_tools/generic/" title="Test Tools">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-1-5-9-26">
       Test Tools
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-1-5-9-26">
+        Test Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
+      Generic
     </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_cases/" title="Test Cases">
+      Test Cases
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/test_skill/" title="Test Skill">
+      Test Skill
+    </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1701,7 +1734,7 @@ Once the ledger is running, you can see the ledger by going to the web server ru
 <p>Now you can create <strong>Alice_AEA</strong> and <strong>Faber_AEA</strong> in terminals 3 and 4 respectively.</p>
 <h3 id="alice_aea">Alice_AEA</h3>
 <p>In the third terminal, fetch <strong>Alice_AEA</strong> and move into its project folder:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_alice:0.11.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_alice:0.12.0
 <span class="nb">cd</span> aries_alice
 </code></pre></div>
 <details><summary>Alternatively, create from scratch.</summary>
@@ -1710,11 +1743,11 @@ Once the ledger is running, you can see the ledger by going to the web server ru
 The following steps create **Alice_AEA** from scratch:
 <div class="highlight"><pre><span></span><code>aea create aries_alice
 <span class="nb">cd</span> aries_alice
-aea add connection fetchai/p2p_libp2p:0.10.0
-aea add connection fetchai/soef:0.9.0
-aea add connection fetchai/http_client:0.9.0
-aea add connection fetchai/webhook:0.7.0
-aea add skill fetchai/aries_alice:0.8.0
+aea add connection fetchai/p2p_libp2p:0.11.0
+aea add connection fetchai/soef:0.10.0
+aea add connection fetchai/http_client:0.10.0
+aea add connection fetchai/webhook:0.8.0
+aea add skill fetchai/aries_alice:0.9.0
 </code></pre></div>
 </p>
 </details>
@@ -1753,7 +1786,7 @@ aea add skill fetchai/aries_alice:0.8.0
 <p>Once you see a message of the form <code>My libp2p addresses: ['SOME_ADDRESS']</code> take note of the address. We will refer to this as <strong>Alice_AEA's p2p address</strong>.</p>
 <h3 id="faber_aea">Faber_AEA</h3>
 <p>In the fourth terminal, fetch <strong>Faber_AEA</strong> and move into its project folder:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_faber:0.11.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_faber:0.12.0
 <span class="nb">cd</span> aries_faber
 </code></pre></div>
 <details><summary>Alternatively, create from scratch.</summary>
@@ -1762,11 +1795,11 @@ aea add skill fetchai/aries_alice:0.8.0
 The following steps create **Faber_AEA** from scratch:
 <div class="highlight"><pre><span></span><code>aea create aries_faber
 <span class="nb">cd</span> aries_faber
-aea add connection fetchai/p2p_libp2p:0.10.0
-aea add connection fetchai/soef:0.9.0
-aea add connection fetchai/http_client:0.9.0
-aea add connection fetchai/webhook:0.7.0
-aea add skill fetchai/aries_faber:0.7.0
+aea add connection fetchai/p2p_libp2p:0.11.0
+aea add connection fetchai/soef:0.10.0
+aea add connection fetchai/http_client:0.10.0
+aea add connection fetchai/webhook:0.8.0
+aea add skill fetchai/aries_faber:0.8.0
 </code></pre></div>
 </p>
 </details>
