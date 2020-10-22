@@ -1463,7 +1463,7 @@ This demo does not utilize a smart contract or a ledger interaction. </p>
 <p>If you want to create the weather station AEA step by step you can follow this guide <a href="/weather-skills/">here</a></p>
 <h3 id="create-the-weather-station-aea">Create the weather station AEA</h3>
 <p>Fetch the weather station AEA with the following command :</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/weather_station:0.14.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/weather_station:0.15.0
 <span class="nb">cd</span> weather_station
 </code></pre></div>
 <h3 id="update-the-aea-configs">Update the AEA configs</h3>
@@ -1480,7 +1480,7 @@ aea add-key fetchai fetchai_private_key.txt --connection
 <h3 id="run-the-weather-station-aea">Run the weather station AEA</h3>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div>
-<p>Once you see a message of the form <code>My libp2p addresses: ['SOME_ADDRESS']</code> take note of the address.</p>
+<p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address.</p>
 <h3 id="create-the-weather-client-aea">Create the weather client AEA</h3>
 <p>Since we want to show the interaction between a programmatically created AEA with a CLI based AEA we are going to write some code for the client.</p>
 <p>Create a new python file and name it <code>weather_client.py</code> and add the following code</p>
@@ -1490,7 +1490,6 @@ aea add-key fetchai fetchai_private_key.txt --connection
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
 
-<span class="kn">from</span> <span class="nn">aea</span> <span class="kn">import</span> <span class="n">AEA_DIR</span>
 <span class="kn">from</span> <span class="nn">aea.aea</span> <span class="kn">import</span> <span class="n">AEA</span>
 <span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">ConnectionConfig</span><span class="p">,</span> <span class="n">PublicId</span>
 <span class="kn">from</span> <span class="nn">aea.crypto.fetchai</span> <span class="kn">import</span> <span class="n">FetchAICrypto</span>
@@ -1544,8 +1543,8 @@ aea add-key fetchai fetchai_private_key.txt --connection
 
     <span class="c1"># specify the default routing for some protocols</span>
     <span class="n">default_routing</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/ledger_api:0.5.0"</span><span class="p">):</span> <span class="n">LedgerConnection</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
-        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/oef_search:0.8.0"</span><span class="p">):</span> <span class="n">SOEFConnection</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/ledger_api:0.6.0"</span><span class="p">):</span> <span class="n">LedgerConnection</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
+        <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/oef_search:0.9.0"</span><span class="p">):</span> <span class="n">SOEFConnection</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
     <span class="p">}</span>
     <span class="n">default_connection</span> <span class="o">=</span> <span class="n">P2PLibp2pConnection</span><span class="o">.</span><span class="n">connection_id</span>
 
@@ -1559,11 +1558,15 @@ aea add-key fetchai fetchai_private_key.txt --connection
     <span class="p">)</span>
 
     <span class="c1"># Add the default protocol (which is part of the AEA distribution)</span>
-    <span class="n">default_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"default"</span><span class="p">))</span>
+    <span class="n">default_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"default"</span><span class="p">)</span>
+    <span class="p">)</span>
     <span class="n">resources</span><span class="o">.</span><span class="n">add_protocol</span><span class="p">(</span><span class="n">default_protocol</span><span class="p">)</span>
 
     <span class="c1"># Add the signing protocol (which is part of the AEA distribution)</span>
-    <span class="n">signing_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"signing"</span><span class="p">))</span>
+    <span class="n">signing_protocol</span> <span class="o">=</span> <span class="n">Protocol</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"protocols"</span><span class="p">,</span> <span class="s2">"signing"</span><span class="p">)</span>
+    <span class="p">)</span>
     <span class="n">resources</span><span class="o">.</span><span class="n">add_protocol</span><span class="p">(</span><span class="n">signing_protocol</span><span class="p">)</span>
 
     <span class="c1"># Add the ledger_api protocol</span>
@@ -1612,7 +1615,7 @@ aea add-key fetchai fetchai_private_key.txt --connection
         <span class="n">api_key</span><span class="o">=</span><span class="n">API_KEY</span><span class="p">,</span>
         <span class="n">soef_addr</span><span class="o">=</span><span class="n">SOEF_ADDR</span><span class="p">,</span>
         <span class="n">soef_port</span><span class="o">=</span><span class="n">SOEF_PORT</span><span class="p">,</span>
-        <span class="n">restricted_to_protocols</span><span class="o">=</span><span class="p">{</span><span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/oef_search:0.8.0"</span><span class="p">)},</span>
+        <span class="n">restricted_to_protocols</span><span class="o">=</span><span class="p">{</span><span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/oef_search:0.9.0"</span><span class="p">)},</span>
         <span class="n">connection_id</span><span class="o">=</span><span class="n">SOEFConnection</span><span class="o">.</span><span class="n">connection_id</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">soef_connection</span> <span class="o">=</span> <span class="n">SOEFConnection</span><span class="p">(</span><span class="n">configuration</span><span class="o">=</span><span class="n">configuration</span><span class="p">,</span> <span class="n">identity</span><span class="o">=</span><span class="n">identity</span><span class="p">)</span>
@@ -1620,7 +1623,8 @@ aea add-key fetchai fetchai_private_key.txt --connection
 
     <span class="c1"># Add the error and weather_client skills</span>
     <span class="n">error_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">AEA_DIR</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"error"</span><span class="p">),</span> <span class="n">agent_context</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">context</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"error"</span><span class="p">),</span>
+        <span class="n">agent_context</span><span class="o">=</span><span class="n">my_aea</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">weather_skill</span> <span class="o">=</span> <span class="n">Skill</span><span class="o">.</span><span class="n">from_dir</span><span class="p">(</span>
         <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ROOT_DIR</span><span class="p">,</span> <span class="s2">"packages"</span><span class="p">,</span> <span class="s2">"fetchai"</span><span class="p">,</span> <span class="s2">"skills"</span><span class="p">,</span> <span class="s2">"weather_client"</span><span class="p">),</span>

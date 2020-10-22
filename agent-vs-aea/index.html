@@ -1423,7 +1423,7 @@
 <p><img alt="AEA vs Agent vs Multiplexer" class="center" src="../assets/aea-vs-agent-vs-multiplexer.png" style="display: block; margin-left: auto; margin-right: auto;width:100%;"/></p>
 <p>In this guide we show some of the differences in terms of code.</p>
 <p>The <a href="../build-aea-programmatically">Build an AEA programmatically</a> guide shows how to programmatically build an AEA. We can build an agent of the <a href="../api/agent#agent-objects"><code>Agent</code></a> class programmatically as well.</p>
-<p>First, import the python and application specific libraries.
+<p>First, import the python and application specific libraries. (Get the packages directory from the AEA repository <code>svn export https://github.com/fetchai/agents-aea.git/trunk/packages</code>.)
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
@@ -1432,10 +1432,12 @@
 <span class="kn">from</span> <span class="nn">aea.agent</span> <span class="kn">import</span> <span class="n">Agent</span>
 <span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">ConnectionConfig</span>
 <span class="kn">from</span> <span class="nn">aea.connections.base</span> <span class="kn">import</span> <span class="n">Connection</span>
-<span class="kn">from</span> <span class="nn">aea.connections.stub.connection</span> <span class="kn">import</span> <span class="n">StubConnection</span><span class="p">,</span> <span class="n">write_with_lock</span>
+<span class="kn">from</span> <span class="nn">aea.helpers.file_io</span> <span class="kn">import</span> <span class="n">write_with_lock</span>
 <span class="kn">from</span> <span class="nn">aea.identity.base</span> <span class="kn">import</span> <span class="n">Identity</span>
 <span class="kn">from</span> <span class="nn">aea.mail.base</span> <span class="kn">import</span> <span class="n">Envelope</span>
-<span class="kn">from</span> <span class="nn">aea.protocols.default.message</span> <span class="kn">import</span> <span class="n">DefaultMessage</span>
+
+<span class="kn">from</span> <span class="nn">packages.fetchai.connections.stub.connection</span> <span class="kn">import</span> <span class="n">StubConnection</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.default.message</span> <span class="kn">import</span> <span class="n">DefaultMessage</span>
 </code></pre></div></p>
 <p>Unlike an <code>AEA</code>, an <code>Agent</code> does not require a <code>Wallet</code>, <code>LedgerApis</code> or <code>Resources</code> module.</p>
 <p>However, we need to implement 4 abstract methods:
@@ -1527,9 +1529,8 @@
 <h2 id="send-and-receive-an-envelope">Send and receive an envelope</h2>
 <p>We use the input and output text files to send an envelope to our agent and receive a response
 <div class="highlight"><pre><span></span><code>        <span class="c1"># Create a message inside an envelope and get the stub connection to pass it into the agent</span>
-        <span class="n">message_text</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="sa">b</span><span class="s2">"my_agent,other_agent,fetchai/default:0.7.0,</span><span class="se">\x08\x01</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
-        <span class="p">)</span>
+        <span class="n">message_text</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"my_agent,other_agent,fetchai/default:0.8.0,</span><span class="se">\x12\r\x08\x01</span><span class="s2">*</span><span class="se">\t</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
+
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">write_with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">message_text</span><span class="p">)</span>
 
@@ -1561,10 +1562,12 @@
 <span class="kn">from</span> <span class="nn">aea.agent</span> <span class="kn">import</span> <span class="n">Agent</span>
 <span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">ConnectionConfig</span>
 <span class="kn">from</span> <span class="nn">aea.connections.base</span> <span class="kn">import</span> <span class="n">Connection</span>
-<span class="kn">from</span> <span class="nn">aea.connections.stub.connection</span> <span class="kn">import</span> <span class="n">StubConnection</span><span class="p">,</span> <span class="n">write_with_lock</span>
+<span class="kn">from</span> <span class="nn">aea.helpers.file_io</span> <span class="kn">import</span> <span class="n">write_with_lock</span>
 <span class="kn">from</span> <span class="nn">aea.identity.base</span> <span class="kn">import</span> <span class="n">Identity</span>
 <span class="kn">from</span> <span class="nn">aea.mail.base</span> <span class="kn">import</span> <span class="n">Envelope</span>
-<span class="kn">from</span> <span class="nn">aea.protocols.default.message</span> <span class="kn">import</span> <span class="n">DefaultMessage</span>
+
+<span class="kn">from</span> <span class="nn">packages.fetchai.connections.stub.connection</span> <span class="kn">import</span> <span class="n">StubConnection</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.default.message</span> <span class="kn">import</span> <span class="n">DefaultMessage</span>
 
 
 <span class="n">INPUT_FILE</span> <span class="o">=</span> <span class="s2">"input_file"</span>
@@ -1646,9 +1649,8 @@
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
         <span class="c1"># Create a message inside an envelope and get the stub connection to pass it into the agent</span>
-        <span class="n">message_text</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="sa">b</span><span class="s2">"my_agent,other_agent,fetchai/default:0.7.0,</span><span class="se">\x08\x01</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
-        <span class="p">)</span>
+        <span class="n">message_text</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"my_agent,other_agent,fetchai/default:0.8.0,</span><span class="se">\x12\r\x08\x01</span><span class="s2">*</span><span class="se">\t</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
+
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">write_with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">message_text</span><span class="p">)</span>
 

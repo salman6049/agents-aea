@@ -1738,7 +1738,7 @@
 <p>None</p>
 <p><a name="aea.registries.resources.Resources.get_protocol"></a></p>
 <h4 id="get_protocol">get<code>_</code>protocol</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_protocol</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">ProtocolId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Protocol</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_protocol</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Protocol</span><span class="p">]</span>
 </code></pre></div>
 <p>Get protocol for given protocol id.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1756,7 +1756,7 @@
 <p>the list of protocols.</p>
 <p><a name="aea.registries.resources.Resources.remove_protocol"></a></p>
 <h4 id="remove_protocol">remove<code>_</code>protocol</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_protocol</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">ProtocolId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_protocol</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Remove a protocol from the set of resources.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1778,7 +1778,7 @@
 <p>None</p>
 <p><a name="aea.registries.resources.Resources.get_contract"></a></p>
 <h4 id="get_contract">get<code>_</code>contract</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_contract</span><span class="p">(</span><span class="n">contract_id</span><span class="p">:</span> <span class="n">ContractId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Contract</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_contract</span><span class="p">(</span><span class="n">contract_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Contract</span><span class="p">]</span>
 </code></pre></div>
 <p>Get contract for given contract id.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1796,7 +1796,7 @@
 <p>the list of contracts.</p>
 <p><a name="aea.registries.resources.Resources.remove_contract"></a></p>
 <h4 id="remove_contract">remove<code>_</code>contract</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_contract</span><span class="p">(</span><span class="n">contract_id</span><span class="p">:</span> <span class="n">ContractId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_contract</span><span class="p">(</span><span class="n">contract_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Remove a contract from the set of resources.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1818,7 +1818,7 @@
 <p>None</p>
 <p><a name="aea.registries.resources.Resources.get_connection"></a></p>
 <h4 id="get_connection">get<code>_</code>connection</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_connection</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">ConnectionId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Connection</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_connection</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Connection</span><span class="p">]</span>
 </code></pre></div>
 <p>Get connection for given connection id.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1836,7 +1836,7 @@
 <p>the list of connections.</p>
 <p><a name="aea.registries.resources.Resources.remove_connection"></a></p>
 <h4 id="remove_connection">remove<code>_</code>connection</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_connection</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">ConnectionId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_connection</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Remove a connection from the set of resources.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1858,7 +1858,7 @@
 <p>None</p>
 <p><a name="aea.registries.resources.Resources.get_skill"></a></p>
 <h4 id="get_skill">get<code>_</code>skill</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_skill</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">SkillId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Skill</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_skill</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Skill</span><span class="p">]</span>
 </code></pre></div>
 <p>Get the skill for a given skill id.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1876,7 +1876,7 @@
 <p>the list of skills.</p>
 <p><a name="aea.registries.resources.Resources.remove_skill"></a></p>
 <h4 id="remove_skill">remove<code>_</code>skill</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_skill</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">SkillId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_skill</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Remove a skill from the set of resources.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1887,7 +1887,7 @@
 <p>None</p>
 <p><a name="aea.registries.resources.Resources.get_handler"></a></p>
 <h4 id="get_handler">get<code>_</code>handler</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_handler</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">ProtocolId</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">:</span> <span class="n">SkillId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Handler</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_handler</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Handler</span><span class="p">]</span>
 </code></pre></div>
 <p>Get a specific handler.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1899,7 +1899,7 @@
 <p>the handler</p>
 <p><a name="aea.registries.resources.Resources.get_handlers"></a></p>
 <h4 id="get_handlers">get<code>_</code>handlers</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_handlers</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">ProtocolId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Handler</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_handlers</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Handler</span><span class="p">]</span>
 </code></pre></div>
 <p>Get all handlers for a given protocol.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1917,7 +1917,7 @@
 <p>the list of handlers</p>
 <p><a name="aea.registries.resources.Resources.get_behaviour"></a></p>
 <h4 id="get_behaviour">get<code>_</code>behaviour</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_behaviour</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">SkillId</span><span class="p">,</span> <span class="n">behaviour_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Behaviour</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_behaviour</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">behaviour_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Behaviour</span><span class="p">]</span>
 </code></pre></div>
 <p>Get a specific behaviours for a given skill.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1929,7 +1929,7 @@
 <p>the behaviour, if it is present, else None</p>
 <p><a name="aea.registries.resources.Resources.get_behaviours"></a></p>
 <h4 id="get_behaviours">get<code>_</code>behaviours</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_behaviours</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">SkillId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Behaviour</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_behaviours</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Behaviour</span><span class="p">]</span>
 </code></pre></div>
 <p>Get all behaviours for a given skill.</p>
 <p><strong>Arguments</strong>:</p>

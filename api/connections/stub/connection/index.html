@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#aeaconnectionsstubconnection" tabindex="0">
+<a class="md-skip" href="#packagesfetchaiconnectionsstubconnection" tabindex="0">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -769,21 +769,6 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#lock_file">
-    lock_file
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#write_envelope">
-    write_envelope
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#write_with_lock">
-    write_with_lock
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#stubconnection-objects">
     StubConnection Objects
   </a>
@@ -1396,21 +1381,6 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#lock_file">
-    lock_file
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#write_envelope">
-    write_envelope
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#write_with_lock">
-    write_with_lock
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#stubconnection-objects">
     StubConnection Objects
   </a>
@@ -1456,60 +1426,40 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<p><a name="aea.connections.stub.connection"></a></p>
-<h1 id="aeaconnectionsstubconnection">aea.connections.stub.connection</h1>
+<p><a name="packages.fetchai.connections.stub.connection"></a></p>
+<h1 id="packagesfetchaiconnectionsstubconnection">packages.fetchai.connections.stub.connection</h1>
 <p>This module contains the stub connection.</p>
-<p><a name="aea.connections.stub.connection.lock_file"></a></p>
-<h4 id="lock_file">lock<code>_</code>file</h4>
-<div class="highlight"><pre><span></span><code><span class="nd">@contextmanager</span>
-<span class="n">lock_file</span><span class="p">(</span><span class="n">file_descriptor</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">bytes</span><span class="p">])</span>
-</code></pre></div>
-<p>Lock file in context manager.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>file_descriptor</code>: file descriptio of file to lock.</li>
-</ul>
-<p><a name="aea.connections.stub.connection.write_envelope"></a></p>
-<h4 id="write_envelope">write<code>_</code>envelope</h4>
-<div class="highlight"><pre><span></span><code><span class="n">write_envelope</span><span class="p">(</span><span class="n">envelope</span><span class="p">:</span> <span class="n">Envelope</span><span class="p">,</span> <span class="n">file_pointer</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">bytes</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Write envelope to file.</p>
-<p><a name="aea.connections.stub.connection.write_with_lock"></a></p>
-<h4 id="write_with_lock">write<code>_</code>with<code>_</code>lock</h4>
-<div class="highlight"><pre><span></span><code><span class="n">write_with_lock</span><span class="p">(</span><span class="n">file_pointer</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">bytes</span><span class="p">],</span> <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Write bytes to file protected with file lock.</p>
-<p><a name="aea.connections.stub.connection.StubConnection"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection"></a></p>
 <h2 id="stubconnection-objects">StubConnection Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">StubConnection</span><span class="p">(</span><span class="n">Connection</span><span class="p">)</span>
 </code></pre></div>
-<p><a name="aea.connections.stub.connection.StubConnection.__init__"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection.__init__"></a></p>
 <h4 id="__init__"><code>__</code>init<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div>
 <p>Initialize a stub connection.</p>
-<p><a name="aea.connections.stub.connection.StubConnection.read_envelopes"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection.read_envelopes"></a></p>
 <h4 id="read_envelopes">read<code>_</code>envelopes</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">read_envelopes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Read envelopes from inptut file, decode and put into in_queue.</p>
-<p><a name="aea.connections.stub.connection.StubConnection.receive"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection.receive"></a></p>
 <h4 id="receive">receive</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">receive</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">"Envelope"</span><span class="p">]</span>
 </code></pre></div>
 <p>Receive an envelope.</p>
-<p><a name="aea.connections.stub.connection.StubConnection.connect"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection.connect"></a></p>
 <h4 id="connect">connect</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">connect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Set up the connection.</p>
-<p><a name="aea.connections.stub.connection.StubConnection.disconnect"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection.disconnect"></a></p>
 <h4 id="disconnect">disconnect</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">disconnect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Disconnect from the channel.</p>
 <p>In this type of connection there's no channel to disconnect.</p>
-<p><a name="aea.connections.stub.connection.StubConnection.send"></a></p>
+<p><a name="packages.fetchai.connections.stub.connection.StubConnection.send"></a></p>
 <h4 id="send">send</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">send</span><span class="p">(</span><span class="n">envelope</span><span class="p">:</span> <span class="n">Envelope</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>

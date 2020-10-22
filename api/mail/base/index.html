@@ -2074,6 +2074,7 @@
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">decode</span><span class="p">(</span><span class="n">envelope_bytes</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"Envelope"</span>
 </code></pre></div>
 <p>Decode the envelope.</p>
+<p>The default serializer doesn't decode the message field.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>envelope_bytes</code>: the encoded envelope</li>
@@ -2087,7 +2088,7 @@
 <p>The top level message class for agent to agent communication.</p>
 <p><a name="aea.mail.base.Envelope.__init__"></a></p>
 <h4 id="__init___2"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">protocol_id</span><span class="p">:</span> <span class="n">ProtocolId</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Message</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">],</span> <span class="n">context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">EnvelopeContext</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Message</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">],</span> <span class="n">context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">EnvelopeContext</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <p>Initialize a Message object.</p>
 <p><strong>Arguments</strong>:</p>
@@ -2125,13 +2126,13 @@
 <p><a name="aea.mail.base.Envelope.protocol_id"></a></p>
 <h4 id="protocol_id">protocol<code>_</code>id</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">protocol_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">ProtocolId</span>
+ <span class="o">|</span> <span class="n">protocol_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">PublicId</span>
 </code></pre></div>
 <p>Get protocol id.</p>
 <p><a name="aea.mail.base.Envelope.protocol_id"></a></p>
 <h4 id="protocol_id_1">protocol<code>_</code>id</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@protocol_id</span><span class="o">.</span><span class="n">setter</span>
- <span class="o">|</span> <span class="n">protocol_id</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">ProtocolId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+ <span class="o">|</span> <span class="n">protocol_id</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Set the protocol id.</p>
 <p><a name="aea.mail.base.Envelope.message"></a></p>

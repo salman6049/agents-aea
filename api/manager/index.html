@@ -1763,7 +1763,7 @@
 <p>Multi agents manager.</p>
 <p><a name="aea.manager.MultiAgentManager.__init__"></a></p>
 <h4 id="__init___2"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">working_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"async"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">working_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"async"</span><span class="p">,</span> <span class="n">registry_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"packages"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Initialize manager.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1796,9 +1796,14 @@
 <p>None</p>
 <p><a name="aea.manager.MultiAgentManager.add_project"></a></p>
 <h4 id="add_project">add<code>_</code>project</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_project</span><span class="p">(</span><span class="n">public_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_project</span><span class="p">(</span><span class="n">public_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">local</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
 </code></pre></div>
 <p>Fetch agent project and all dependencies to working_dir.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>public_id</code>: the public if of the agent project.</li>
+<li><code>local</code>: whether or not to fetch from local registry.</li>
+</ul>
 <p><a name="aea.manager.MultiAgentManager.remove_project"></a></p>
 <h4 id="remove_project">remove<code>_</code>project</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_project</span><span class="p">(</span><span class="n">public_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>

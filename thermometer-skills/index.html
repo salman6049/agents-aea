@@ -1526,7 +1526,7 @@ The AEA must run inside a Raspberry Pi or any other Linux system, and the sensor
 <p>A demo to run the thermometer scenario with a true ledger transaction This demo assumes the buyer trusts the seller AEA to send the data upon successful payment.</p>
 <h3 id="create-thermometer-aea">Create thermometer AEA</h3>
 <p>First, fetch the thermometer AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_aea:0.12.0 --alias my_thermometer_aea
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_aea:0.13.0 --alias my_thermometer_aea
 <span class="nb">cd</span> my_thermometer_aea
 aea install
 </code></pre></div></p>
@@ -1536,24 +1536,24 @@ aea install
 The following steps create the thermometer AEA from scratch:
 <div class="highlight"><pre><span></span><code>aea create my_thermometer_aea
 <span class="nb">cd</span> my_thermometer_aea
-aea add connection fetchai/p2p_libp2p:0.11.0
-aea add connection fetchai/soef:0.10.0
-aea add connection fetchai/ledger:0.7.0
-aea add skill fetchai/thermometer:0.13.0
+aea add connection fetchai/p2p_libp2p:0.12.0
+aea add connection fetchai/soef:0.11.0
+aea add connection fetchai/ledger:0.8.0
+aea add skill fetchai/thermometer:0.14.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.11.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
 </code></pre></div>
 
 In `my_thermometer_aea/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.5.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.7.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.8.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.10.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.9.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.11.0</span>
 </code></pre></div>
 </p>
 </details>
 <h3 id="create-thermometer-client">Create thermometer client</h3>
 <p>Then, fetch the thermometer client AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_client:0.12.0 --alias my_thermometer_client
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/thermometer_client:0.13.0 --alias my_thermometer_client
 <span class="nb">cd</span> my_thermometer_client
 aea install
 </code></pre></div></p>
@@ -1563,18 +1563,18 @@ aea install
 The following steps create the thermometer client from scratch:
 <div class="highlight"><pre><span></span><code>aea create my_thermometer_client
 <span class="nb">cd</span> my_thermometer_client
-aea add connection fetchai/p2p_libp2p:0.11.0
-aea add connection fetchai/soef:0.10.0
-aea add connection fetchai/ledger:0.7.0
-aea add skill fetchai/thermometer_client:0.12.0
+aea add connection fetchai/p2p_libp2p:0.12.0
+aea add connection fetchai/soef:0.11.0
+aea add connection fetchai/ledger:0.8.0
+aea add skill fetchai/thermometer_client:0.13.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.11.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
 </code></pre></div>
 
 In `my_thermometer_aea/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.5.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.7.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.8.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.10.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.9.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.11.0</span>
 </code></pre></div>
 </p>
 </details>
@@ -1599,7 +1599,7 @@ aea add-key fetchai fetchai_private_key.txt --connection
 <p>First, run the thermometer AEA:</p>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div>
-<p>Once you see a message of the form <code>My libp2p addresses: ['SOME_ADDRESS']</code> take note of the address.</p>
+<p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address.</p>
 <p>Then, update the configuration of the thermometer client AEA's p2p connection (in <code>vendor/fetchai/connections/p2p_libp2p/connection.yaml</code>) replace the following:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">config</span><span class="p">:</span>
   <span class="nt">delegate_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1:11001</span>

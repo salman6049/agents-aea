@@ -1625,7 +1625,7 @@ builder.add_component_instance(...)
 <p>my_aea_2 = builder.builder()</p>
 <p><a name="aea.aea_builder.AEABuilder.__init__"></a></p>
 <h4 id="__init___1"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">with_default_packages</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">with_default_packages</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">registry_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"packages"</span><span class="p">)</span>
 </code></pre></div>
 <p>Initialize the builder.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1988,6 +1988,12 @@ via 'add_component_instance' and the private keys.</p>
 <ul>
 <li><code>ValueError</code>: if we cannot</li>
 </ul>
+<p><a name="aea.aea_builder.AEABuilder.find_component_directory_from_component_id"></a></p>
+<h4 id="find_component_directory_from_component_id">find<code>_</code>component<code>_</code>directory<code>_</code>from<code>_</code>component<code>_</code>id</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
+ <span class="o">|</span> <span class="n">find_component_directory_from_component_id</span><span class="p">(</span><span class="n">aea_project_directory</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">component_id</span><span class="p">:</span> <span class="n">ComponentId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span>
+</code></pre></div>
+<p>Find a component directory from component id.</p>
 <p><a name="aea.aea_builder.AEABuilder.set_from_configuration"></a></p>
 <h4 id="set_from_configuration">set<code>_</code>from<code>_</code>configuration</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">set_from_configuration</span><span class="p">(</span><span class="n">agent_configuration</span><span class="p">:</span> <span class="n">AgentConfig</span><span class="p">,</span> <span class="n">aea_project_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">skip_consistency_check</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>

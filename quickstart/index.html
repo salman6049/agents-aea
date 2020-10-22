@@ -1565,7 +1565,7 @@ Confirm password:
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.6.3
+v0.7.0
 
 AEA configurations successfully initialized: <span class="o">{</span><span class="s1">'author'</span>: <span class="s1">'fetchai'</span><span class="o">}</span>
 </code></pre></div></p>
@@ -1576,7 +1576,7 @@ AEA configurations successfully initialized: <span class="o">{</span><span class
 <h2 id="echo-skill-demo">Echo skill demo</h2>
 <p>The echo skill demo is a simple demo that introduces you to the main business logic components of an AEA. The <a href="https://aea-registry.fetch.ai/details/skill/fetchai/echo/latest" target="_blank">echo skill</a> simply echoes received messages back to the sender.</p>
 <p>The fastest way to create your first AEA is to fetch it!</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/my_first_aea:0.13.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/my_first_aea:0.14.0
 <span class="nb">cd</span> my_first_aea
 </code></pre></div>
 <p>To learn more about the folder structure of an AEA project read on <a href="../package-imports/">here</a>.</p>
@@ -1591,9 +1591,9 @@ First, create a new AEA project and enter it.
 <b>Add the echo skill</b>
 <br/>
 Second, add the echo skill to the project.
-<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.9.0
+<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.10.0
 </code></pre></div>
-This copies the `fetchai/echo:0.9.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.9.0` consists of the name of the author of the skill, followed by the skill name and its version.
+This copies the `fetchai/echo:0.10.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.10.0` consists of the name of the author of the skill, followed by the skill name and its version.
 </details>
 <h2 id="communication-via-envelopes-and-messages">Communication via envelopes and messages</h2>
 <p>AEAs use envelopes containing messages for communication. To learn more check out the next section in the getting started series.</p>
@@ -1606,14 +1606,14 @@ This copies the `fetchai/echo:0.9.0` skill code containing the "behaviours", and
 <div class="highlight"><pre><span></span><code>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE,
 </code></pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.7.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span><span class="se">\x</span><span class="m">12</span><span class="se">\x</span><span class="m">011</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
+<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.8.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span><span class="se">\x</span><span class="m">12</span><span class="se">\x</span><span class="m">011</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
 </code></pre></div>
 <h2 id="run-the-aea">Run the AEA</h2>
-<p>Run the AEA with the default <code>fetchai/stub:0.11.0</code> connection.</p>
+<p>Run the AEA with the default <code>fetchai/stub:0.12.0</code> connection.</p>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span><code>aea run --connections fetchai/stub:0.11.0
+<div class="highlight"><pre><span></span><code>aea run --connections fetchai/stub:0.12.0
 </code></pre></div>
 <p>You will see the echo skill running in the terminal window.</p>
 <div class="highlight"><pre><span></span><code>    _     _____     _
@@ -1622,7 +1622,7 @@ This copies the `fetchai/echo:0.9.0` skill code containing the "behaviours", and
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.6.3
+v0.7.0
 
 Starting AEA <span class="s1">'my_first_aea'</span> in <span class="s1">'async'</span> mode ...
 info: Echo Handler: setup method called.
@@ -1649,7 +1649,7 @@ info: Echo Behaviour: act method called.
 
 Optionally, from a different terminal and same directory (i.e. the `my_first_aea` project), we send the AEA a message wrapped in an envelope via the input file.
 
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.7.0,\x08\x01\x12\x011*\x07\n\x05hello,'</span> &gt;&gt; input_file
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.8.0,\x08\x01\x12\x011*\x07\n\x05hello,'</span> &gt;&gt; input_file
 </code></pre></div>
 
 You will see the `Echo Handler` dealing with the envelope and responding with the same message to the `output_file`, and also decoding the Base64 encrypted message in this case.
@@ -1679,13 +1679,19 @@ info: Echo Behaviour: teardown method called.
 
 The following test class replicates the preceding demo and tests it's correct behaviour. The `AEATestCase` classes are a tool for AEA developers to write useful end-to-end tests of their AEAs.
 
+First, get the packages directory from the AEA repository:
+<div class="highlight"><pre><span></span><code>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/packages
+</code></pre></div>
+
+Then write the test:
+
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">signal</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">from</span> <span class="nn">aea.mail.base</span> <span class="kn">import</span> <span class="n">Envelope</span>
-<span class="kn">from</span> <span class="nn">aea.protocols.default.dialogues</span> <span class="kn">import</span> <span class="n">DefaultDialogues</span>
-<span class="kn">from</span> <span class="nn">aea.protocols.default.message</span> <span class="kn">import</span> <span class="n">DefaultMessage</span>
-<span class="kn">from</span> <span class="nn">aea.protocols.default.serialization</span> <span class="kn">import</span> <span class="n">DefaultSerializer</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.default.dialogues</span> <span class="kn">import</span> <span class="n">DefaultDialogues</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.default.message</span> <span class="kn">import</span> <span class="n">DefaultMessage</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.protocols.default.serialization</span> <span class="kn">import</span> <span class="n">DefaultSerializer</span>
 <span class="kn">from</span> <span class="nn">aea.test_tools.test_cases</span> <span class="kn">import</span> <span class="n">AEATestCase</span>
 
 

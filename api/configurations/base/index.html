@@ -1290,6 +1290,11 @@
     check_aea_version
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check_public_id_consistency">
+    check_public_id_consistency
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1307,6 +1312,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#package_dependencies_1">
     package_dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_abstract_component_1">
+    is_abstract_component
   </a>
 </li>
 <li class="md-nav__item">
@@ -1392,7 +1402,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#is_abstract_component_1">
+<a class="md-nav__link" href="#is_abstract_component_2">
     is_abstract_component
   </a>
 </li>
@@ -2771,6 +2781,11 @@
     check_aea_version
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check_public_id_consistency">
+    check_public_id_consistency
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2788,6 +2803,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#package_dependencies_1">
     package_dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_abstract_component_1">
+    is_abstract_component
   </a>
 </li>
 <li class="md-nav__item">
@@ -2873,7 +2893,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#is_abstract_component_1">
+<a class="md-nav__link" href="#is_abstract_component_2">
     is_abstract_component
   </a>
 </li>
@@ -3944,6 +3964,14 @@ The fixed version is interpreted with the specifier '=='.</li>
 </code></pre></div>
 <p>Check that the AEA version matches the specifier set.</p>
 <p>:raises ValueError if the version of the aea framework falls within a specifier.</p>
+<p><a name="aea.configurations.base.ComponentConfiguration.check_public_id_consistency"></a></p>
+<h4 id="check_public_id_consistency">check<code>_</code>public<code>_</code>id<code>_</code>consistency</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">check_public_id_consistency</span><span class="p">(</span><span class="n">directory</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Check that the public ids in the init file match the config.</p>
+<p>:raises ValueError if:
+- the argument is not a valid package directory
+- the public ids do not match.</p>
 <p><a name="aea.configurations.base.ConnectionConfig"></a></p>
 <h2 id="connectionconfig-objects">ConnectionConfig Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ConnectionConfig</span><span class="p">(</span><span class="n">ComponentConfiguration</span><span class="p">)</span>
@@ -3951,7 +3979,7 @@ The fixed version is interpreted with the specifier '=='.</li>
 <p>Handle connection configuration.</p>
 <p><a name="aea.configurations.base.ConnectionConfig.__init__"></a></p>
 <h4 id="__init___9"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">license_</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">aea_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">fingerprint</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">restricted_to_protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">excluded_protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dependencies</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">connection_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">config</span><span class="p">,</span> <span class="p">,)</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">license_</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">aea_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">fingerprint</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">connections</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">restricted_to_protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">excluded_protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dependencies</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">connection_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">is_abstract</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">config</span><span class="p">,</span> <span class="p">,)</span>
 </code></pre></div>
 <p>Initialize a connection configuration object.</p>
 <p><a name="aea.configurations.base.ConnectionConfig.package_dependencies"></a></p>
@@ -3960,6 +3988,12 @@ The fixed version is interpreted with the specifier '=='.</li>
  <span class="o">|</span> <span class="n">package_dependencies</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">ComponentId</span><span class="p">]</span>
 </code></pre></div>
 <p>Get the connection dependencies.</p>
+<p><a name="aea.configurations.base.ConnectionConfig.is_abstract_component"></a></p>
+<h4 id="is_abstract_component_1">is<code>_</code>abstract<code>_</code>component</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">is_abstract_component</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Check whether the component is abstract.</p>
 <p><a name="aea.configurations.base.ConnectionConfig.json"></a></p>
 <h4 id="json_3">json</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -4041,7 +4075,7 @@ The fixed version is interpreted with the specifier '=='.</li>
 <p>Class to represent a skill configuration file.</p>
 <p><a name="aea.configurations.base.SkillConfig.__init__"></a></p>
 <h4 id="__init___12"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">license_</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">aea_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">fingerprint</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">protocols</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">contracts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">skills</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dependencies</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">is_abstract</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">license_</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">aea_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">fingerprint</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">protocols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">contracts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">skills</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dependencies</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">is_abstract</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <p>Initialize a skill configuration.</p>
 <p><a name="aea.configurations.base.SkillConfig.package_dependencies"></a></p>
@@ -4051,7 +4085,7 @@ The fixed version is interpreted with the specifier '=='.</li>
 </code></pre></div>
 <p>Get the skill dependencies.</p>
 <p><a name="aea.configurations.base.SkillConfig.is_abstract_component"></a></p>
-<h4 id="is_abstract_component_1">is<code>_</code>abstract<code>_</code>component</h4>
+<h4 id="is_abstract_component_2">is<code>_</code>abstract<code>_</code>component</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
  <span class="o">|</span> <span class="n">is_abstract_component</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>

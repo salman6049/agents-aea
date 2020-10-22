@@ -1543,7 +1543,7 @@ trusts the seller AEA to send the data upon successful payment.</p>
 <h2 id="demo-instructions">Demo instructions</h2>
 <h3 id="create-the-seller-aea">Create the seller AEA</h3>
 <p>First, fetch the seller AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_seller:0.11.0 --alias my_seller_aea
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_seller:0.12.0 --alias my_seller_aea
 <span class="nb">cd</span> my_seller_aea
 aea install
 </code></pre></div></p>
@@ -1553,24 +1553,24 @@ aea install
 The following steps create the seller from scratch:
 <div class="highlight"><pre><span></span><code>aea create my_seller_aea
 <span class="nb">cd</span> my_seller_aea
-aea add connection fetchai/p2p_libp2p:0.11.0
-aea add connection fetchai/soef:0.10.0
-aea add connection fetchai/ledger:0.7.0
-aea add skill fetchai/generic_seller:0.14.0
+aea add connection fetchai/p2p_libp2p:0.12.0
+aea add connection fetchai/soef:0.11.0
+aea add connection fetchai/ledger:0.8.0
+aea add skill fetchai/generic_seller:0.15.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.11.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
 </code></pre></div>
 
 In `my_seller_aea/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.5.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.7.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.8.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.10.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.9.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.11.0</span>
 </code></pre></div>
 </p>
 </details>
 <h3 id="create-the-buyer-aea">Create the buyer AEA</h3>
 <p>Then, fetch the buyer AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_buyer:0.11.0 --alias my_buyer_aea
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_buyer:0.12.0 --alias my_buyer_aea
 <span class="nb">cd</span> my_buyer_aea
 aea install
 </code></pre></div></p>
@@ -1580,18 +1580,18 @@ aea install
 The following steps create the buyer from scratch:
 <div class="highlight"><pre><span></span><code>aea create my_buyer_aea
 <span class="nb">cd</span> my_buyer_aea
-aea add connection fetchai/p2p_libp2p:0.11.0
-aea add connection fetchai/soef:0.10.0
-aea add connection fetchai/ledger:0.7.0
-aea add skill fetchai/generic_buyer:0.13.0
+aea add connection fetchai/p2p_libp2p:0.12.0
+aea add connection fetchai/soef:0.11.0
+aea add connection fetchai/ledger:0.8.0
+aea add skill fetchai/generic_buyer:0.14.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.11.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
 </code></pre></div>
 
 In `my_buyer_aea/aea-config.yaml` add 
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.5.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.7.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.8.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.10.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.6.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.9.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.11.0</span>
 </code></pre></div>
 </p>
 </details>
@@ -1625,8 +1625,8 @@ aea add-key fetchai fetchai_private_key.txt --connection
       <span class="nt">is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">ledger_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
       <span class="nt">location</span><span class="p">:</span>
-        <span class="nt">latitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.127</span>
-        <span class="nt">longitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">51.5194</span>
+        <span class="nt">latitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">51.5194</span>
+        <span class="nt">longitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.127</span>
       <span class="nt">service_data</span><span class="p">:</span>
         <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seller_service</span>
         <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generic_service</span>
@@ -1644,8 +1644,8 @@ The <code>data_model</code>, <code>data_model_name</code> and the <code>service_
       <span class="nt">is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">ledger_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
       <span class="nt">location</span><span class="p">:</span>
-        <span class="nt">latitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.127</span>
-        <span class="nt">longitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">51.5194</span>
+        <span class="nt">latitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">51.5194</span>
+        <span class="nt">longitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.127</span>
       <span class="nt">max_negotiations</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
       <span class="nt">max_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
       <span class="nt">max_unit_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">20</span>
@@ -1670,7 +1670,7 @@ aea config <span class="nb">set</span> vendor.fetchai.skills.generic_buyer.is_ab
 <p>First, run the seller AEA:</p>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div>
-<p>Once you see a message of the form <code>My libp2p addresses: ['SOME_ADDRESS']</code> take note of the address.</p>
+<p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address.</p>
 <p>Then, update the configuration of the buyer AEA's p2p connection (in <code>vendor/fetchai/connections/p2p_libp2p/connection.yaml</code>) replace the following:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">config</span><span class="p">:</span>
   <span class="nt">delegate_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1:11001</span>
