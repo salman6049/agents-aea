@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#v063-to-v070" tabindex="0">
+<a class="md-skip" href="#v071-to-v072" tabindex="0">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -368,6 +368,16 @@
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v071-to-v072">
+    v0.7.1 to v0.7.2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v070-to-v071">
+    v0.7.0 to v0.7.1
+  </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#v063-to-v070">
     v0.6.3 to v0.7.0
@@ -1431,6 +1441,16 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#v071-to-v072">
+    v0.7.1 to v0.7.2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v070-to-v071">
+    v0.7.0 to v0.7.1
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#v063-to-v070">
     v0.6.3 to v0.7.0
   </a>
@@ -1528,6 +1548,10 @@
 <article class="md-content__inner md-typeset">
 <h1>Upgrading versions</h1>
 <p>This page provides some tipps of how to upgrade between versions.</p>
+<h2 id="v071-to-v072">v0.7.1 to v0.7.2</h2>
+<p>No backwards incompatible changes for skill and connection development.</p>
+<h2 id="v070-to-v071">v0.7.0 to v0.7.1</h2>
+<p>To improve performance, in particular optimize memory usage, we refactored the <code>Message</code> and <code>Dialogue</code> classes. This means all protocols need to be bumped to the latest version or regenerated using the generate command.</p>
 <h2 id="v063-to-v070">v0.6.3 to v0.7.0</h2>
 <p>Multiple breaking changes require action in this order:
 - Custom configuration overrides in <code>aea-config.yaml</code> are now identified via <code>public_id</code> rather than <code>author</code>, <code>name</code> and <code>version</code> individually. Please replace the three fields with the equivalent <code>public_id</code>.

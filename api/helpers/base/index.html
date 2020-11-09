@@ -949,6 +949,15 @@
     __init__
   </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simpleid-objects">
+    SimpleId Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#cd">
     cd
@@ -1470,6 +1479,15 @@
     __init__
   </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simpleid-objects">
+    SimpleId Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#cd">
     cd
@@ -1607,6 +1625,40 @@ attribute to implement a different behaviour.</p>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
 </code></pre></div>
 <p>Initialize a regex constrained string.</p>
+<p><a name="aea.helpers.base.SimpleId"></a></p>
+<h2 id="simpleid-objects">SimpleId Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SimpleId</span><span class="p">(</span><span class="n">RegexConstrainedString</span><span class="p">)</span>
+</code></pre></div>
+<p>A simple identifier.</p>
+<p>The allowed strings are all the strings that:
+- have at least length 1
+- have at most length 128
+- the first character must be between a-z,A-Z or underscore
+- the other characters must be either the above or digits.</p>
+<p>Examples of allowed strings:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>SimpleId("an_identifier")
+'an_identifier'</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Examples of not allowed strings:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>SimpleId("0an_identifier")
+Traceback (most recent call last):
+...
+ValueError: Value 0an_identifier does not match the regular expression re.compile('[a-zA-Z_][a-zA-Z0-9_]{0,127}')</p>
+<p>SimpleId("")
+Traceback (most recent call last):
+...
+ValueError: Value  does not match the regular expression re.compile('[a-zA-Z_][a-zA-Z0-9_]{0,127}')</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p><a name="aea.helpers.base.cd"></a></p>
 <h4 id="cd">cd</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>

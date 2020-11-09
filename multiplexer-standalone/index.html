@@ -1462,7 +1462,7 @@
 <p>We use the input and output text files to send an envelope to our agent and receive a response
 <div class="highlight"><pre><span></span><code>        <span class="c1"># Create a message inside an envelope and get the stub connection to pass it into the multiplexer</span>
         <span class="n">message_text</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="s2">"multiplexer,some_agent,fetchai/default:0.8.0,</span><span class="se">\x08\x01</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
+            <span class="s2">"multiplexer,some_agent,fetchai/default:0.9.0,</span><span class="se">\x08\x01</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
         <span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">write_with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">message_text</span><span class="p">)</span>
@@ -1554,7 +1554,7 @@
 
         <span class="c1"># Create a message inside an envelope and get the stub connection to pass it into the multiplexer</span>
         <span class="n">message_text</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="s2">"multiplexer,some_agent,fetchai/default:0.8.0,</span><span class="se">\x08\x01</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
+            <span class="s2">"multiplexer,some_agent,fetchai/default:0.9.0,</span><span class="se">\x08\x01</span><span class="s2">*</span><span class="se">\x07\n\x05</span><span class="s2">hello,"</span>
         <span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">write_with_lock</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">message_text</span><span class="p">)</span>
