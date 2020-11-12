@@ -427,6 +427,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../development-setup/" title="Development setup">
+      Development setup
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../build-aea-step-by-step/" title="Build an AEA with the CLI">
       Build an AEA with the CLI
     </a>
@@ -1734,7 +1739,7 @@ Once the ledger is running, you can see the ledger by going to the web server ru
 <p>Now you can create <strong>Alice_AEA</strong> and <strong>Faber_AEA</strong> in terminals 3 and 4 respectively.</p>
 <h3 id="alice_aea">Alice_AEA</h3>
 <p>In the third terminal, fetch <strong>Alice_AEA</strong> and move into its project folder:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_alice:0.14.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_alice:0.15.0
 <span class="nb">cd</span> aries_alice
 </code></pre></div>
 <details><summary>Alternatively, create from scratch.</summary>
@@ -1745,9 +1750,9 @@ The following steps create **Alice_AEA** from scratch:
 <span class="nb">cd</span> aries_alice
 aea add connection fetchai/p2p_libp2p:0.12.0
 aea add connection fetchai/soef:0.12.0
-aea add connection fetchai/http_client:0.12.0
+aea add connection fetchai/http_client:0.13.0
 aea add connection fetchai/webhook:0.10.0
-aea add skill fetchai/aries_alice:0.11.0
+aea add skill fetchai/aries_alice:0.12.0
 </code></pre></div>
 </p>
 </details>
@@ -1786,7 +1791,7 @@ aea add skill fetchai/aries_alice:0.11.0
 <p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address. We will refer to this as <strong>Alice_AEA's p2p address</strong>.</p>
 <h3 id="faber_aea">Faber_AEA</h3>
 <p>In the fourth terminal, fetch <strong>Faber_AEA</strong> and move into its project folder:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_faber:0.14.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/aries_faber:0.15.0
 <span class="nb">cd</span> aries_faber
 </code></pre></div>
 <details><summary>Alternatively, create from scratch.</summary>
@@ -1797,9 +1802,9 @@ The following steps create **Faber_AEA** from scratch:
 <span class="nb">cd</span> aries_faber
 aea add connection fetchai/p2p_libp2p:0.12.0
 aea add connection fetchai/soef:0.12.0
-aea add connection fetchai/http_client:0.12.0
+aea add connection fetchai/http_client:0.13.0
 aea add connection fetchai/webhook:0.10.0
-aea add skill fetchai/aries_faber:0.10.0
+aea add skill fetchai/aries_faber:0.11.0
 </code></pre></div>
 </p>
 </details>

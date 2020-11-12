@@ -262,8 +262,13 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#optional-using-the-docker-image">
-    Optional: using the Docker image.
+<a class="md-nav__link" href="#option-1-manual-system-preparation">
+    Option 1: Manual system preparation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-2-using-docker">
+    Option 2: Using Docker
   </a>
 </li>
 </ul>
@@ -278,15 +283,6 @@
 <a class="md-nav__link" href="#installation">
     Installation
   </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#known-issues">
-    Known issues
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#setup-author-name">
@@ -386,6 +382,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../development-setup/" title="Development setup">
+      Development setup
     </a>
 </li>
 <li class="md-nav__item">
@@ -1435,8 +1436,13 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#optional-using-the-docker-image">
-    Optional: using the Docker image.
+<a class="md-nav__link" href="#option-1-manual-system-preparation">
+    Option 1: Manual system preparation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-2-using-docker">
+    Option 2: Using Docker
   </a>
 </li>
 </ul>
@@ -1451,15 +1457,6 @@
 <a class="md-nav__link" href="#installation">
     Installation
   </a>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#known-issues">
-    Known issues
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#setup-author-name">
@@ -1531,65 +1528,10 @@ you can use the Fetch.ai AEA framework.</p>
 <p>The AEA framework can be used on <code>Windows</code>, <code>Ubuntu/Debian</code> and <code>MacOS</code>.</p>
 <p>You need <a href="https://www.python.org/downloads/" target="_blank">Python 3.6</a> or higher as well as <a href="https://golang.org/dl/" target="_blank">Go 1.14.2</a> or higher installed.
 ​</p>
-<h3 id="optional-using-the-docker-image">Optional: using the Docker image.</h3>
-<p>​
-We also provide a Docker image with all the needed dependencies.</p>
-<details><summary>Manual approach</summary>
-
-To use the image you will first have to pull it and than run it with your current local directory mounted as a docker volume. This allows you to keep your agents local while working on them from within the docker container.
-
-To pull:
-
-<div class="highlight"><pre><span></span><code>docker pull fetchai/aea-user:latest
-</code></pre></div>
-
-To run the image
-​
-- Linux and MacOs
-  <div class="highlight"><pre><span></span><code>docker run -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/agents --workdir<span class="o">=</span>/agents fetchai/aea-user:latest 
-</code></pre></div>
-- Windows
-  <div class="highlight"><pre><span></span><code>docker run -it -v %cd%:/agents --workdir<span class="o">=</span>/agents fetchai/aea-user:latest 
-</code></pre></div>
-
-Once successfully logged into the docker container, 
-you can follow the rest of the guide the same way as if not using docker.
-​
-</details>
-<h2 id="preliminaries">Preliminaries</h2>
-<p>Create and enter into a new working directory.</p>
-<div class="highlight"><pre><span></span><code>mkdir my_aea_projects/
-<span class="nb">cd</span> my_aea_projects/
-</code></pre></div>
-<p>Unless you are using the docker image, we highly recommend using a virtual environment to ensure consistency across dependencies.</p>
-<p>Check that you have <a href="https://github.com/pypa/pipenv" target="_blank"><code>pipenv</code></a>.</p>
-<div class="highlight"><pre><span></span><code>which pipenv
-</code></pre></div>
-<p>If you don't have it, install it. Instructions are <a href="https://pypi.org/project/pipenv/" target="_blank">here</a>.</p>
-<p>Once installed, create a new environment and open it (here we use Python 3.7 but the AEA framework supports any Python &gt;= 3.6).</p>
-<div class="highlight"><pre><span></span><code>touch Pipfile <span class="o">&amp;&amp;</span> pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
-</code></pre></div>
-<h2 id="installation">Installation</h2>
-<p>The following installs the entire AEA package which also includes a <a href="../cli-commands">command-line interface (CLI)</a>.</p>
-<div class="highlight"><pre><span></span><code>pip install aea<span class="o">[</span>all<span class="o">]</span>
-</code></pre></div>
-<p>If you are using <code>zsh</code> rather than <code>bash</code> type
-<div class="highlight"><pre><span></span><code>pip install <span class="s1">'aea[all]'</span>
-</code></pre></div></p>
-<h3 id="known-issues">Known issues</h3>
-<p>If the installation steps fail, it might be a dependency issue.</p>
+<h3 id="option-1-manual-system-preparation">Option 1: Manual system preparation</h3>
+<p>Install a compatible Python and Go version on your system.</p>
 <p>The following hints can help:</p>
 <ul>
-<li>
-<p>Ubuntu/Debian systems only: install Python headers,
-  depending on the Python version you have installed on your machine.
-  E.g. for Python 3.7: 
-<div class="highlight"><pre><span></span><code>sudo apt-get install python3.7-dev
-</code></pre></div></p>
-</li>
-<li>
-<p>Windows users: install <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019" target="_blank">tools for Visual Studio</a>.</p>
-</li>
 <li>
 <p>To install Go, follow the
  official guide, depending on your platform <a href="https://golang.org/doc/install" target="_blank">here</a></p>
@@ -1605,7 +1547,66 @@ To check you have the right version, open a terminal and run:
 <p>To install Python on Windows machines, 
 you can download a specific release <a href="https://www.python.org/downloads/" target="_blank">here</a>.</p>
 </li>
+<li>
+<p>Ubuntu/Debian systems only: install Python headers,
+  depending on the Python version you have installed on your machine.
+  E.g. for Python 3.7: 
+<div class="highlight"><pre><span></span><code>sudo apt-get install python3.7-dev
+</code></pre></div></p>
+</li>
+<li>
+<p>Windows users: install <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019" target="_blank">tools for Visual Studio</a>.</p>
+</li>
 </ul>
+<h3 id="option-2-using-docker">Option 2: Using Docker</h3>
+<p>​
+We also provide a Docker image with all the needed dependencies.</p>
+<details><summary>Docker approach</summary>
+
+To use the image you will first have to pull it and than run it with your current local directory mounted as a docker volume. This allows you to keep your agents local while working on them from within the docker container.
+
+To pull:
+
+<div class="highlight"><pre><span></span><code>docker pull fetchai/aea-user:latest
+</code></pre></div>
+
+To run the image on Linux and MacOs:
+
+<div class="highlight"><pre><span></span><code>docker run -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/agents --workdir<span class="o">=</span>/agents fetchai/aea-user:latest 
+</code></pre></div>
+
+And on Windows:
+
+<div class="highlight"><pre><span></span><code>docker run -it -v %cd%:/agents --workdir<span class="o">=</span>/agents fetchai/aea-user:latest 
+</code></pre></div>
+
+Once successfully logged into the docker container, 
+you can follow the rest of the guide the same way as if not using docker.
+​
+</details>
+<h2 id="preliminaries">Preliminaries</h2>
+<p>We have created a  <a href="https://github.com/fetchai/agents-template" target="_blank">template repo for AEA development</a> here which you can optionally fork and use immediately.</p>
+<p>Alternatively, create and enter into a new working directory:</p>
+<div class="highlight"><pre><span></span><code>mkdir my_aea_projects/
+<span class="nb">cd</span> my_aea_projects/
+</code></pre></div>
+<p>Unless you are using the docker image, we highly recommend using a virtual environment to ensure consistency across dependencies.</p>
+<p>Check that you have <a href="https://github.com/pypa/pipenv" target="_blank"><code>pipenv</code></a>.</p>
+<div class="highlight"><pre><span></span><code>which pipenv
+</code></pre></div>
+<p>If you don't have it, install it. Instructions are <a href="https://pypi.org/project/pipenv/" target="_blank">here</a>.</p>
+<p>Once installed, create a new environment and open it (here we use Python 3.7 but the AEA framework supports any Python &gt;= 3.6).</p>
+<div class="highlight"><pre><span></span><code>touch Pipfile <span class="o">&amp;&amp;</span> pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
+</code></pre></div>
+<p>For more guidance on setting up a development environment check out <a href="../development-setup">this guide</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>The following installs the entire AEA package which also includes a <a href="../cli-commands">command-line interface (CLI)</a>.</p>
+<div class="highlight"><pre><span></span><code>pip install aea<span class="o">[</span>all<span class="o">]</span>
+</code></pre></div>
+<p>If you are using <code>zsh</code> rather than <code>bash</code> type
+<div class="highlight"><pre><span></span><code>pip install <span class="s1">'aea[all]'</span>
+</code></pre></div></p>
+<p>If the installation steps fail, it might be a dependency issue. Make sure you have followed all the relevant system specific steps above under <code>System Requirements</code>.</p>
 <h2 id="setup-author-name">Setup author name</h2>
 <p>AEAs are composed from components. The components can be developed by anyone and are available on the <a href="https://aea-registry.fetch.ai" target="_blank">AEA registry</a>. To use the registry we need to register an author name.</p>
 <p>You can setup your author name using the <code>init</code> command:
@@ -1626,7 +1627,7 @@ Confirm password:
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.7.2
+v0.7.3
 
 AEA configurations successfully initialized: <span class="o">{</span><span class="s1">'author'</span>: <span class="s1">'fetchai'</span><span class="o">}</span>
 </code></pre></div></p>
@@ -1683,7 +1684,7 @@ This copies the `fetchai/echo:0.11.0` skill code containing the "behaviours", an
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.7.2
+v0.7.3
 
 Starting AEA <span class="s1">'my_first_aea'</span> in <span class="s1">'async'</span> mode ...
 info: Echo Handler: setup method called.
