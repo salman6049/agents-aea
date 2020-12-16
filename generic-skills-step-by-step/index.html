@@ -6,9 +6,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
-<meta content="Everything you need to know about Fetch.AI." name="description"/>
+<meta content="Everything you need to know about AEAs." name="description"/>
 <link href="https://docs.fetch.ai/generic-skills-step-by-step/" rel="canonical"/>
-<meta content="diarmid.campbell@fetch.ai" name="author"/>
+<meta content="developer@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
 <meta content="en" name="lang:search.language"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
-<title>Trade between two AEAs - AEA Developer Documentation</title>
+<title>Trade between two AEAs - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -32,6 +32,7 @@
 <body dir="ltr">
 <svg class="md-svg">
 <defs>
+<svg height="448" id="__github" viewbox="0 0 416 448" width="416" xmlns="http://www.w3.org/2000/svg"><path d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z" fill="currentColor"></path></svg>
 </defs>
 </svg>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -44,7 +45,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a aria-label="AEA Developer Documentation" class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<a aria-label="aea" class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="aea">
 <i class="md-icon">code</i>
 </a>
 </div>
@@ -54,7 +55,7 @@
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
 <span class="md-header-nav__topic">
-              AEA Developer Documentation
+              aea
             </span>
 <span class="md-header-nav__topic">
               
@@ -65,6 +66,20 @@
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
 </div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a class="md-source" data-md-source="github" href="https://github.com/agents-aea/docs/" title="Go to repository">
+<div class="md-source__icon">
+<svg height="24" viewbox="0 0 24 24" width="24">
+<use height="24" width="24" xlink:href="#__github"></use>
+</svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</div>
 </div>
 </nav>
 </header>
@@ -73,8 +88,23 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="..">
-          AEA Framework
+<a class="md-tabs__link" href="..">
+        Introduction
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../language-agnostic-definition/">
+          Concepts
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../demos/">
+          Demos
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../quickstart/">
+          Development
         </a>
 </li>
 </ul>
@@ -87,25 +117,27 @@
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="aea">
 <i class="md-icon">code</i>
 </a>
-    AEA Developer Documentation
+    aea
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1">
-      AEA Framework
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-<label class="md-nav__title" for="nav-1">
-        AEA Framework
-      </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-source="github" href="https://github.com/agents-aea/docs/" title="Go to repository">
+<div class="md-source__icon">
+<svg height="24" viewbox="0 0 24 24" width="24">
+<use height="24" width="24" xlink:href="#__github"></use>
+</svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href=".." title="Welcome">
-      Welcome
+<a class="md-nav__link" href=".." title="Introduction">
+      Introduction
     </a>
 </li>
 <li class="md-nav__item">
@@ -114,12 +146,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
       Concepts
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
         Concepts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -157,12 +189,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       Demos
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
         Demos
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -197,6 +229,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../oracle-demo/" title="Oracle skills">
+      Oracle skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../tac-skills/" title="TAC skills">
       TAC skills
     </a>
@@ -225,22 +262,22 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
       Development
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
         Development
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-1" id="nav-1-5-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-1">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" id="nav-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-1">
       Getting started
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-1">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-1">
         Getting started
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -437,12 +474,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-2" id="nav-1-5-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" id="nav-5-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-2">
       Topic guides
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-2">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-2">
         Topic guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -502,6 +539,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
+      Prometheus monitoring
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../known-limits/" title="Known limitations">
       Known limitations
     </a>
@@ -532,6 +574,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../generic-storage/" title="Generic Storage">
+      Generic Storage
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
     </a>
@@ -541,16 +588,21 @@
       Debugging
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../runtime-cost/" title="Profiling">
+      Profiling
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-3" id="nav-1-5-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" id="nav-5-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-3">
       Use case components
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-3">
         Use case components
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -593,12 +645,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" id="nav-1-5-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" id="nav-5-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-4">
       Architecture &amp; component deep-dives
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-4">
         Architecture &amp; component deep-dives
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -656,12 +708,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5" id="nav-1-5-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" id="nav-5-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-5">
       Agent Communication
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-5">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-5">
         Agent Communication
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -674,12 +726,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-6" id="nav-1-5-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-6">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" id="nav-5-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-6">
       Search &amp; Discovery
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-6">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-6">
         Search &amp; Discovery
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -707,22 +759,22 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-7" id="nav-1-5-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" id="nav-5-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-7">
       Developer Interfaces
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-7">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-7">
         Developer Interfaces
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-7-1" id="nav-1-5-7-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-7-1">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7-1" id="nav-5-7-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-7-1">
       CLI
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-7-1">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-7-1">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -758,12 +810,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8" id="nav-1-5-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" id="nav-5-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-8">
       Benchmarks
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-8">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-8">
         Benchmarks
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -776,12 +828,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9" id="nav-1-5-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" id="nav-5-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9">
       API
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-9">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-9">
         API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -846,12 +898,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-13" id="nav-1-5-9-13" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-13">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-13" id="nav-5-9-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-13">
       Components
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-13">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-13">
         Components
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -869,12 +921,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14" id="nav-1-5-9-14" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-14">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-14" id="nav-5-9-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-14">
       Configurations
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-14">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-14">
         Configurations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -912,12 +964,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-15" id="nav-1-5-9-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-15">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-15" id="nav-5-9-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-15">
       Connections
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-15">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-15">
         Connections
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -940,12 +992,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-17" id="nav-1-5-9-17" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-17">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-17" id="nav-5-9-17" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-17">
       Contracts
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-17">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-17">
         Contracts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -958,12 +1010,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-18" id="nav-1-5-9-18" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-18">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-18" id="nav-5-9-18" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-18">
       Crypto
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-18">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-18">
         Crypto
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1003,12 +1055,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-18-8" id="nav-1-5-9-18-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-18-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-18-8" id="nav-5-9-18-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-18-8">
       Registries
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-18-8">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-18-8">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1024,12 +1076,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19" id="nav-1-5-9-19" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-19" id="nav-5-9-19" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-19">
       Decision Maker
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-19">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-19">
         Decision Maker
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1047,12 +1099,35 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20" id="nav-1-5-9-20" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-20" id="nav-5-9-20" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-20">
+      Error Handler
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-20">
+        Error Handler
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/error_handler/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/error_handler/default/" title="Default">
+      Default
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21" id="nav-5-9-21" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21">
       Helpers
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-20">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-21">
         Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1070,24 +1145,6 @@
 <a class="md-nav__link" href="../api/helpers/base/" title="Base">
       Base
     </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-4" id="nav-1-5-9-20-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-4">
-      Dialogue
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-4">
-        Dialogue
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/dialogue/base/" title="Base">
-      Base
-    </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/exception_policy/" title="Exception Policy">
@@ -1115,12 +1172,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-10" id="nav-1-5-9-20-10" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-10">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-9" id="nav-5-9-21-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-9">
       IPFS
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-10">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-9">
         IPFS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1138,12 +1195,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-12" id="nav-1-5-9-20-12" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-12">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-11" id="nav-5-9-21-11" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-11">
       MultiAddress
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-12">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-11">
         MultiAddress
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1166,12 +1223,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-15">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-14" id="nav-5-9-21-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-14">
       Preferences
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-15">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-14">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1189,12 +1246,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-17" id="nav-1-5-9-20-17" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-17">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-16" id="nav-5-9-21-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-16">
       Search
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-17">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-16">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1212,22 +1269,63 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/serializers/" title="Serializers">
+      Serializers
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-18" id="nav-5-9-21-18" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-18">
+      Storage
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-18">
+        Storage
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/storage/generic_storage/" title="GenericStorage">
+      GenericStorage
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-18-2" id="nav-5-9-21-18-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-18-2">
+      Backends
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-5-9-21-18-2">
+        Backends
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/storage/backends/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/storage/backends/sqlite/" title="Sqlite">
+      Sqlite
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/sym_link/" title="Sym Link">
       Sym Link
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/temp_error_handler/" title="Temp Error Handler">
-      Temp Error Handler
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-20" id="nav-1-5-9-20-20" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-20">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-20" id="nav-5-9-21-20" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-20">
       Transaction
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-20">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-20">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1263,12 +1361,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23" id="nav-1-5-9-23" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24" id="nav-5-9-24" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24">
       Protocols
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-23">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-24">
         Protocols
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1278,12 +1376,30 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-2" id="nav-1-5-9-23-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-2" id="nav-5-9-24-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-2">
+      Dialogue
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-2">
+        Dialogue
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/dialogue/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-3" id="nav-5-9-24-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-3">
       Generator
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-2">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-3">
         Generator
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1311,12 +1427,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-3" id="nav-1-5-9-23-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-4" id="nav-5-9-24-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-4">
       Default Protocol
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-4">
         Default Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1344,12 +1460,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-4" id="nav-1-5-9-23-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-5" id="nav-5-9-24-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-5">
       Signing Protocol
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-5">
         Signing Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1377,12 +1493,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-5" id="nav-1-5-9-23-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-6" id="nav-5-9-24-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-6">
       State Update Protocol
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-5">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-6">
         State Update Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1408,12 +1524,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-24" id="nav-1-5-9-24" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-24">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-25" id="nav-5-9-25" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-25">
       Registries
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-24">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-25">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1436,12 +1552,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-25" id="nav-1-5-9-25" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-25">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-26" id="nav-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-26">
       Skills
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-25">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-26">
         Skills
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1469,15 +1585,25 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-26">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-27" id="nav-5-9-27" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-27">
       Test Tools
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-26">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-27">
         Test Tools
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/constants/" title="Constants">
+      Constants
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/exceptions/" title="Exceptions">
+      Exceptions
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
       Generic
@@ -1511,9 +1637,6 @@
 <a class="md-nav__link" href="../questions-and-answers/" title="Q&amp;A">
       Q&amp;A
     </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1683,6 +1806,7 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
+<a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/generic-skills-step-by-step.md" title="Edit this page"></a>
 <h1>Trade between two AEAs</h1>
 <p>This guide is a step-by-step introduction to building an AEA that represents static, and dynamic data to be advertised on the <a href="../oef-ledger">Open Economic Framework</a>.</p>
 <p>If you simply want to run the resulting AEAs <a href="../generic-skills">go here</a>.</p>
@@ -1717,14 +1841,14 @@ this assigns all devices coming out of the hidraw subsystem in the kernel to the
 <p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
 <h2 id="reference-optional">Reference (Optional)</h2>
 <p>This step-by-step guide recreates two AEAs already developed by Fetch.ai. You can get the finished AEAs to compare your code against by following the next steps:</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_seller:0.14.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_seller:0.16.0
 <span class="nb">cd</span> generic_seller
-aea eject skill fetchai/generic_seller:0.16.0
+aea eject skill fetchai/generic_seller:0.18.0
 <span class="nb">cd</span> ..
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_buyer:0.15.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/generic_buyer:0.17.0
 <span class="nb">cd</span> generic_buyer
-aea eject skill fetchai/generic_buyer:0.16.0
+aea eject skill fetchai/generic_buyer:0.18.0
 <span class="nb">cd</span> ..
 </code></pre></div>
 <h2 id="simplification-step">Simplification step</h2>
@@ -1800,7 +1924,7 @@ Our newly created AEA is inside the current working directory. Let’s create ou
             <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">ledger_api_msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_register_agent</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_register_service</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_service_personality_classification</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">act</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">"""</span>
@@ -1838,23 +1962,28 @@ Our newly created AEA is inside the current working directory. Let’s create ou
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">oef_search_msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"registering agent on SOEF."</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_register_service</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_register_service_personality_classification</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">"""</span>
-<span class="sd">        Register the agent's service.</span>
+<span class="sd">        Register the agent's service, personality and classification.</span>
 
 <span class="sd">        :return: None</span>
 <span class="sd">        """</span>
         <span class="n">strategy</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">GenericStrategy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">strategy</span><span class="p">)</span>
-        <span class="n">description</span> <span class="o">=</span> <span class="n">strategy</span><span class="o">.</span><span class="n">get_register_service_description</span><span class="p">()</span>
+        <span class="n">descriptions</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">strategy</span><span class="o">.</span><span class="n">get_register_service_description</span><span class="p">(),</span>
+            <span class="n">strategy</span><span class="o">.</span><span class="n">get_register_personality_description</span><span class="p">(),</span>
+            <span class="n">strategy</span><span class="o">.</span><span class="n">get_register_classification_description</span><span class="p">(),</span>
+        <span class="p">]</span>
         <span class="n">oef_search_dialogues</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
             <span class="n">OefSearchDialogues</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">oef_search_dialogues</span>
         <span class="p">)</span>
-        <span class="n">oef_search_msg</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">oef_search_dialogues</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-            <span class="n">counterparty</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">search_service_address</span><span class="p">,</span>
-            <span class="n">performative</span><span class="o">=</span><span class="n">OefSearchMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">REGISTER_SERVICE</span><span class="p">,</span>
-            <span class="n">service_description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">oef_search_msg</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">descriptions</span><span class="p">:</span>
+            <span class="n">oef_search_msg</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">oef_search_dialogues</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="n">counterparty</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">search_service_address</span><span class="p">,</span>
+                <span class="n">performative</span><span class="o">=</span><span class="n">OefSearchMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">REGISTER_SERVICE</span><span class="p">,</span>
+                <span class="n">service_description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">oef_search_msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"registering service on SOEF."</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_unregister_service</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -2474,6 +2603,7 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="kn">from</span> <span class="nn">aea.exceptions</span> <span class="kn">import</span> <span class="n">enforce</span>
 <span class="kn">from</span> <span class="nn">aea.helpers.search.generic</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">AGENT_LOCATION_MODEL</span><span class="p">,</span>
+    <span class="n">AGENT_PERSONALITY_MODEL</span><span class="p">,</span>
     <span class="n">AGENT_REMOVE_SERVICE_MODEL</span><span class="p">,</span>
     <span class="n">AGENT_SET_SERVICE_MODEL</span><span class="p">,</span>
     <span class="n">SIMPLE_SERVICE_MODEL</span><span class="p">,</span>
@@ -2490,6 +2620,8 @@ We are checking the inform message. If it contains the transaction digest we ver
 
 <span class="n">DEFAULT_LOCATION</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"longitude"</span><span class="p">:</span> <span class="mf">0.1270</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span> <span class="mf">51.5194</span><span class="p">}</span>
 <span class="n">DEFAULT_SERVICE_DATA</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"key"</span><span class="p">:</span> <span class="s2">"seller_service"</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"generic_service"</span><span class="p">}</span>
+<span class="n">DEFAULT_PERSONALITY_DATA</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"piece"</span><span class="p">:</span> <span class="s2">"genus"</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"data"</span><span class="p">}</span>
+<span class="n">DEFAULT_CLASSIFICATION</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"piece"</span><span class="p">:</span> <span class="s2">"classification"</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"seller"</span><span class="p">}</span>
 
 <span class="n">DEFAULT_HAS_DATA_SOURCE</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">DEFAULT_DATA_FOR_SALE</span> <span class="o">=</span> <span class="p">{</span>
@@ -2522,6 +2654,22 @@ We are checking the inform message. If it contains the transaction digest we ver
                 <span class="n">latitude</span><span class="o">=</span><span class="n">location</span><span class="p">[</span><span class="s2">"latitude"</span><span class="p">],</span> <span class="n">longitude</span><span class="o">=</span><span class="n">location</span><span class="p">[</span><span class="s2">"longitude"</span><span class="p">]</span>
             <span class="p">)</span>
         <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_personality_data</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span>
+            <span class="s2">"personality_data"</span><span class="p">,</span> <span class="n">DEFAULT_PERSONALITY_DATA</span>
+        <span class="p">)</span>
+        <span class="n">enforce</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_personality_data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+            <span class="ow">and</span> <span class="s2">"piece"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_personality_data</span>
+            <span class="ow">and</span> <span class="s2">"value"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_personality_data</span><span class="p">,</span>
+            <span class="s2">"personality_data must contain keys `key` and `value`"</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_classification</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"classification"</span><span class="p">,</span> <span class="n">DEFAULT_CLASSIFICATION</span><span class="p">)</span>
+        <span class="n">enforce</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_classification</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+            <span class="ow">and</span> <span class="s2">"piece"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_classification</span>
+            <span class="ow">and</span> <span class="s2">"value"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_classification</span><span class="p">,</span>
+            <span class="s2">"classification must contain keys `key` and `value`"</span><span class="p">,</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_service_data</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"service_data"</span><span class="p">,</span> <span class="n">DEFAULT_SERVICE_DATA</span><span class="p">)</span>
         <span class="n">enforce</span><span class="p">(</span>
             <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_service_data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
@@ -2595,6 +2743,28 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="sd">        """</span>
         <span class="n">description</span> <span class="o">=</span> <span class="n">Description</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_set_service_data</span><span class="p">,</span> <span class="n">data_model</span><span class="o">=</span><span class="n">AGENT_SET_SERVICE_MODEL</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">description</span>
+
+    <span class="k">def</span> <span class="nf">get_register_personality_description</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Description</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Get the register personality description.</span>
+
+<span class="sd">        :return: a description of the personality</span>
+<span class="sd">        """</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">Description</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_personality_data</span><span class="p">,</span> <span class="n">data_model</span><span class="o">=</span><span class="n">AGENT_PERSONALITY_MODEL</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">description</span>
+
+    <span class="k">def</span> <span class="nf">get_register_classification_description</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Description</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Get the register classification description.</span>
+
+<span class="sd">        :return: a description of the classification</span>
+<span class="sd">        """</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">Description</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_classification</span><span class="p">,</span> <span class="n">data_model</span><span class="o">=</span><span class="n">AGENT_PERSONALITY_MODEL</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="n">description</span>
 
@@ -2924,9 +3094,9 @@ We are checking the inform message. If it contains the transaction digest we ver
         <span class="p">)</span>
 </code></pre></div>
 <p>The <code>FipaDialogues</code> class stores dialogue with each <code>my_generic_buyer</code> (and other AEAs) and exposes a number of helpful methods to manage them. This helps us match messages to a dialogue, access previous messages and enable us to identify possible communications problems between the <code>my_generic_seller</code> AEA and the <code>my_generic_buyer</code> AEA. It also keeps track of the data that we offer for sale during the proposal phase.</p>
-<p>The <code>FipaDialogues</code> class extends <code>BaseFipaDialogues</code>, which itself derives from the base <a href="../api/helpers/dialogue/base#dialogues-objects"><code>Dialogues</code></a> class. Similarly, the <code>FipaDialogue</code> class extends <code>BaseFipaDialogue</code>, which itself derives from the base <a href="../api/helpers/dialogue/base#dialogue-objects"><code>Dialogue</code></a> class. To learn more about dialogues have a look <a href="../protocol">here</a>.</p>
+<p>The <code>FipaDialogues</code> class extends <code>BaseFipaDialogues</code>, which itself derives from the base <a href="../api/protocols/dialogue/base#dialogues-objects"><code>Dialogues</code></a> class. Similarly, the <code>FipaDialogue</code> class extends <code>BaseFipaDialogue</code>, which itself derives from the base <a href="../api/protocols/dialogue/base#dialogue-objects"><code>Dialogue</code></a> class. To learn more about dialogues have a look <a href="../protocol">here</a>.</p>
 <h3 id="step-6-update-the-yaml-files">Step 6: Update the YAML files</h3>
-<p>Since we made so many changes to our AEA we have to update the <code>skill.yaml</code> (at <code>my_generic_seller/skills/generic_seller/skill.yaml</code>). Make sure that your <code>skill.yaml</code> matches with the following code</p>
+<p>Since we made so many changes to our AEA we have to update the <code>skill.yaml</code> (at <code>my_generic_seller/skills/generic_seller/skill.yaml</code>). Make sure you update your <code>skill.yaml</code> with the following configuration:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generic_seller</span>
 <span class="nt">author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
@@ -2934,20 +3104,23 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The weather station skill implements the functionality to sell weather</span>
   <span class="l l-Scalar l-Scalar-Plain">data.</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache-2.0</span>
-<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.7.0,</span><span class="nv"> </span><span class="s">&lt;0.8.0'</span>
+<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.8.0,</span><span class="nv"> </span><span class="s">&lt;0.9.0'</span>
 <span class="nt">fingerprint</span><span class="p">:</span>
-  <span class="nt">__init__.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmNkZAetyctaZCUf6ACxP5onGWsSxu2hjSNoFmJ3ta6Lta</span>
-  <span class="nt">behaviours.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmcFahpL4DZ1rsTNEK1BT3e5T8TEJJg2hP4ytkzdqKuJnZ</span>
-  <span class="nt">dialogues.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmRmoFp9xi1p1THVBYym9xEwW88KgkBHgz45LgrYbBecQw</span>
-  <span class="nt">handlers.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmT4nvKikWXfGAEdRS8Qn8w89Gbh5zPb4EDB6EwPVP2YDJ</span>
-  <span class="nt">strategy.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmP69kCtcovLD2Z7quESuNxVEyNuiZgqqbwozp6wAbvBCd</span>
+  <span class="nt">README.md</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmPb5kHYZyhUN87EKmuahyGqDGgqVdGPyfC1KpGC3xfmcP</span>
+  <span class="nt">__init__.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmTSEedzQySy2nzRCY3F66CBSX52f8s3pWHZTejX4hKC9h</span>
+  <span class="nt">behaviours.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmS9sPCv2yBnhWsmHeaCptpApMtYZipbR39TXixeGK64Ks</span>
+  <span class="nt">dialogues.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmdTW8q1xQ7ajFVsWmuV62ypoT5J2b6Hkyz52LFaWuMEtd</span>
+  <span class="nt">handlers.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmQnQhSaHPUYaJut8bMe2LHEqiZqokMSVfCthVaqrvPbdi</span>
+  <span class="nt">strategy.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmYTUsfv64eRQDevCfMUDQPx2GCtiMLFdacN4sS1E4Fdfx</span>
 <span class="nt">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">connections</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.11.0</span>
 <span class="nt">contracts</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.9.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/fipa:0.10.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.7.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.10.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.10.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/fipa:0.11.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.8.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.11.0</span>
 <span class="nt">skills</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="nt">service_registration</span><span class="p">:</span>
@@ -2979,12 +3152,10 @@ We are checking the inform message. If it contains the transaction digest we ver
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">OefSearchDialogues</span>
   <span class="nt">strategy</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
-      <span class="nt">currency_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FET</span>
       <span class="nt">data_for_sale</span><span class="p">:</span>
         <span class="nt">generic</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">data</span>
       <span class="nt">has_data_source</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
       <span class="nt">is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">ledger_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
       <span class="nt">location</span><span class="p">:</span>
         <span class="nt">latitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">51.5194</span>
         <span class="nt">longitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.127</span>
@@ -3021,8 +3192,9 @@ We are checking the inform message. If it contains the transaction digest we ver
 <h3 id="step-2-create-the-behaviour_1">Step 2: Create the behaviour</h3>
 <p>A <a href="../api/skills/base#behaviour-objects"><code>Behaviour</code></a> class contains the business logic specific to actions initiated by the AEA rather than reactions to other events.</p>
 <p>Open the <code>behaviours.py</code> (<code>my_generic_buyer/skills/generic_buyer/behaviours.py</code>) and add the following code (replacing the stub code already present in the file):</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">cast</span>
 
+<span class="kn">from</span> <span class="nn">aea.protocols.dialogue.base</span> <span class="kn">import</span> <span class="n">DialogueLabel</span>
 <span class="kn">from</span> <span class="nn">aea.skills.behaviours</span> <span class="kn">import</span> <span class="n">TickerBehaviour</span>
 
 <span class="kn">from</span> <span class="nn">packages.fetchai.connections.ledger.base</span> <span class="kn">import</span> <span class="p">(</span>
@@ -3031,12 +3203,16 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="kn">from</span> <span class="nn">packages.fetchai.protocols.ledger_api.message</span> <span class="kn">import</span> <span class="n">LedgerApiMessage</span>
 <span class="kn">from</span> <span class="nn">packages.fetchai.protocols.oef_search.message</span> <span class="kn">import</span> <span class="n">OefSearchMessage</span>
 <span class="kn">from</span> <span class="nn">packages.fetchai.skills.generic_buyer.dialogues</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FipaDialogue</span><span class="p">,</span>
+    <span class="n">LedgerApiDialogue</span><span class="p">,</span>
     <span class="n">LedgerApiDialogues</span><span class="p">,</span>
     <span class="n">OefSearchDialogues</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">packages.fetchai.skills.generic_buyer.strategy</span> <span class="kn">import</span> <span class="n">GenericStrategy</span>
 
 
+<span class="n">DEFAULT_MAX_PROCESSING</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">DEFAULT_TX_INTERVAL</span> <span class="o">=</span> <span class="mf">2.0</span>
 <span class="n">DEFAULT_SEARCH_INTERVAL</span> <span class="o">=</span> <span class="mf">5.0</span>
 <span class="n">LEDGER_API_ADDRESS</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">LEDGER_CONNECTION_PUBLIC_ID</span><span class="p">)</span>
 
@@ -3094,6 +3270,112 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="sd">        :return: None</span>
 <span class="sd">        """</span>
         <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">GenericTransactionBehaviour</span><span class="p">(</span><span class="n">TickerBehaviour</span><span class="p">):</span>
+    <span class="sd">"""A behaviour to sequentially submit transactions to the blockchain."""</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">"""Initialize the transaction behaviour."""</span>
+        <span class="n">tx_interval</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="nb">float</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"transaction_interval"</span><span class="p">,</span> <span class="n">DEFAULT_TX_INTERVAL</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_processing</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="nb">float</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"max_processing"</span><span class="p">,</span> <span class="n">DEFAULT_MAX_PROCESSING</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processing_time</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waiting</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">FipaDialogue</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">LedgerApiDialogue</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timedout</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">DialogueLabel</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">tick_interval</span><span class="o">=</span><span class="n">tx_interval</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""Setup behaviour."""</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">act</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Implement the act.</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">processing</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">processing_time</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_processing</span><span class="p">:</span>
+                <span class="c1"># already processing</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">processing_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tick_interval</span>
+                <span class="k">return</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_processing</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">waiting</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># nothing to process</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start_processing</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_start_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""Process the next transaction."""</span>
+        <span class="n">fipa_dialogue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">waiting</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Processing transaction, {len(self.waiting)} transactions remaining"</span>
+        <span class="p">)</span>
+        <span class="n">ledger_api_dialogues</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">LedgerApiDialogues</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">ledger_api_dialogues</span>
+        <span class="p">)</span>
+        <span class="n">ledger_api_msg</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogues</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">counterparty</span><span class="o">=</span><span class="n">LEDGER_API_ADDRESS</span><span class="p">,</span>
+            <span class="n">performative</span><span class="o">=</span><span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">GET_RAW_TRANSACTION</span><span class="p">,</span>
+            <span class="n">terms</span><span class="o">=</span><span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">terms</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">LedgerApiDialogue</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">)</span>
+        <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span> <span class="o">=</span> <span class="n">fipa_dialogue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processing_time</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processing</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"requesting transfer transaction from ledger api for message=</span><span class="si">{ledger_api_msg}</span><span class="s2">..."</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">ledger_api_msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""Teardown behaviour."""</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_timeout_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""Timeout processing."""</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">processing</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timedout</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processing</span><span class="o">.</span><span class="n">dialogue_label</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waiting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processing</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processing_time</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processing</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">finish_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="n">LedgerApiDialogue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Finish processing.</span>
+
+<span class="sd">        :param ledger_api_dialogue: the ledger api dialogue</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">processing</span> <span class="o">==</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">processing_time</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">processing</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">dialogue_label</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">timedout</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"Non-matching dialogues in transaction behaviour: </span><span class="si">{self.processing}</span><span class="s2"> and </span><span class="si">{ledger_api_dialogue}</span><span class="s2">"</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timedout</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">dialogue_label</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Timeout dialogue in transaction processing: </span><span class="si">{ledger_api_dialogue}</span><span class="s2">"</span>
+        <span class="p">)</span>
+        <span class="c1"># don't reset, as another might be processing</span>
+
+    <span class="k">def</span> <span class="nf">failed_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="n">LedgerApiDialogue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Failed processing.</span>
+
+<span class="sd">        Currently, we retry processing indefinitely.</span>
+
+<span class="sd">        :param ledger_api_dialogue: the ledger api dialogue</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finish_processing</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waiting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span><span class="p">)</span>
 </code></pre></div>
 <p>This <a href="../api/skills/behaviours#tickerbehaviour-objects"><code>TickerBehaviour</code></a> will search on  the <a href="../simple-oef">SOEF search node</a> with a specific query at regular tick intervals.</p>
 <h3 id="step-3-create-the-handler_1">Step 3: Create the handler</h3>
@@ -3103,6 +3385,7 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span>
 
 <span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">PublicId</span>
+<span class="kn">from</span> <span class="nn">aea.crypto.ledger_apis</span> <span class="kn">import</span> <span class="n">LedgerApis</span>
 <span class="kn">from</span> <span class="nn">aea.protocols.base</span> <span class="kn">import</span> <span class="n">Message</span>
 <span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Handler</span>
 
@@ -3114,6 +3397,7 @@ We are checking the inform message. If it contains the transaction digest we ver
 <span class="kn">from</span> <span class="nn">packages.fetchai.protocols.ledger_api.message</span> <span class="kn">import</span> <span class="n">LedgerApiMessage</span>
 <span class="kn">from</span> <span class="nn">packages.fetchai.protocols.oef_search.message</span> <span class="kn">import</span> <span class="n">OefSearchMessage</span>
 <span class="kn">from</span> <span class="nn">packages.fetchai.protocols.signing.message</span> <span class="kn">import</span> <span class="n">SigningMessage</span>
+<span class="kn">from</span> <span class="nn">packages.fetchai.skills.generic_buyer.behaviours</span> <span class="kn">import</span> <span class="n">GenericTransactionBehaviour</span>
 <span class="kn">from</span> <span class="nn">packages.fetchai.skills.generic_buyer.dialogues</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">DefaultDialogues</span><span class="p">,</span>
     <span class="n">FipaDialogue</span><span class="p">,</span>
@@ -3290,21 +3574,11 @@ The above code terminates each dialogue with the specific AEA and stores the ste
                 <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">terms</span><span class="o">.</span><span class="n">counterparty_address</span> <span class="o">=</span> <span class="p">(</span>  <span class="c1"># pragma: nocover</span>
                     <span class="n">transfer_address</span>
                 <span class="p">)</span>
-            <span class="n">ledger_api_dialogues</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
-                <span class="n">LedgerApiDialogues</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">ledger_api_dialogues</span>
+
+            <span class="n">tx_behaviour</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+                <span class="n">GenericTransactionBehaviour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">behaviours</span><span class="o">.</span><span class="n">transaction</span>
             <span class="p">)</span>
-            <span class="n">ledger_api_msg</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogues</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-                <span class="n">counterparty</span><span class="o">=</span><span class="n">LEDGER_API_ADDRESS</span><span class="p">,</span>
-                <span class="n">performative</span><span class="o">=</span><span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">GET_RAW_TRANSACTION</span><span class="p">,</span>
-                <span class="n">terms</span><span class="o">=</span><span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">terms</span><span class="p">,</span>
-            <span class="p">)</span>
-            <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">LedgerApiDialogue</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">)</span>
-            <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span> <span class="o">=</span> <span class="n">fipa_dialogue</span>
-            <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">associated_ledger_api_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">ledger_api_msg</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-                <span class="s2">"requesting transfer transaction from ledger api..."</span>
-            <span class="p">)</span>
+            <span class="n">tx_behaviour</span><span class="o">.</span><span class="n">waiting</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fipa_dialogue</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">inform_msg</span> <span class="o">=</span> <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
                 <span class="n">performative</span><span class="o">=</span><span class="n">FipaMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">INFORM</span><span class="p">,</span>
@@ -3568,8 +3842,7 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
 <span class="sd">        :return: None</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"transaction signing was successful."</span><span class="p">)</span>
-        <span class="n">fipa_dialogue</span> <span class="o">=</span> <span class="n">signing_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span>
-        <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">associated_ledger_api_dialogue</span>
+        <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">signing_dialogue</span><span class="o">.</span><span class="n">associated_ledger_api_dialogue</span>
         <span class="n">last_ledger_api_msg</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">last_incoming_message</span>
         <span class="k">if</span> <span class="n">last_ledger_api_msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Could not retrieve last message in ledger api dialogue"</span><span class="p">)</span>
@@ -3596,6 +3869,19 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
                 <span class="n">signing_msg</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="n">signing_dialogue</span>
             <span class="p">)</span>
         <span class="p">)</span>
+        <span class="n">signing_msg_</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">Optional</span><span class="p">[</span><span class="n">SigningMessage</span><span class="p">],</span> <span class="n">signing_dialogue</span><span class="o">.</span><span class="n">last_outgoing_message</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">signing_msg_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="n">signing_msg_</span><span class="o">.</span><span class="n">performative</span>
+            <span class="o">==</span> <span class="n">SigningMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">SIGN_TRANSACTION</span>
+        <span class="p">):</span>
+            <span class="n">tx_behaviour</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+                <span class="n">GenericTransactionBehaviour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">behaviours</span><span class="o">.</span><span class="n">transaction</span>
+            <span class="p">)</span>
+            <span class="n">ledger_api_dialogue</span> <span class="o">=</span> <span class="n">signing_dialogue</span><span class="o">.</span><span class="n">associated_ledger_api_dialogue</span>
+            <span class="n">tx_behaviour</span><span class="o">.</span><span class="n">failed_processing</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_handle_invalid</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">signing_msg</span><span class="p">:</span> <span class="n">SigningMessage</span><span class="p">,</span> <span class="n">signing_dialogue</span><span class="p">:</span> <span class="n">SigningDialogue</span>
@@ -3655,6 +3941,11 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
             <span class="o">==</span> <span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">TRANSACTION_DIGEST</span>
         <span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_handle_transaction_digest</span><span class="p">(</span><span class="n">ledger_api_msg</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="p">(</span>
+            <span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">performative</span>
+            <span class="o">==</span> <span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">TRANSACTION_RECEIPT</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handle_transaction_receipt</span><span class="p">(</span><span class="n">ledger_api_msg</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">performative</span> <span class="o">==</span> <span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_handle_error</span><span class="p">(</span><span class="n">ledger_api_msg</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -3719,9 +4010,7 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
             <span class="n">terms</span><span class="o">=</span><span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span><span class="o">.</span><span class="n">terms</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">signing_dialogue</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">SigningDialogue</span><span class="p">,</span> <span class="n">signing_dialogue</span><span class="p">)</span>
-        <span class="n">signing_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span>
-        <span class="p">)</span>
+        <span class="n">signing_dialogue</span><span class="o">.</span><span class="n">associated_ledger_api_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">decision_maker_message_queue</span><span class="o">.</span><span class="n">put_nowait</span><span class="p">(</span><span class="n">signing_msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
             <span class="s2">"proposing the transaction to the decision maker. Waiting for confirmation ..."</span>
@@ -3736,26 +4025,65 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
 <span class="sd">        :param ledger_api_message: the ledger api message</span>
 <span class="sd">        :param ledger_api_dialogue: the ledger api dialogue</span>
 <span class="sd">        """</span>
-        <span class="n">fipa_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
             <span class="s2">"transaction was successfully submitted. Transaction digest=</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">transaction_digest</span>
             <span class="p">)</span>
         <span class="p">)</span>
-        <span class="n">fipa_msg</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Optional</span><span class="p">[</span><span class="n">FipaMessage</span><span class="p">],</span> <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">last_incoming_message</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">fipa_msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Could not retrieve fipa message"</span><span class="p">)</span>
-        <span class="n">inform_msg</span> <span class="o">=</span> <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
-            <span class="n">performative</span><span class="o">=</span><span class="n">FipaMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">INFORM</span><span class="p">,</span>
-            <span class="n">target_message</span><span class="o">=</span><span class="n">fipa_msg</span><span class="p">,</span>
-            <span class="n">info</span><span class="o">=</span><span class="p">{</span><span class="s2">"transaction_digest"</span><span class="p">:</span> <span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">transaction_digest</span><span class="o">.</span><span class="n">body</span><span class="p">},</span>
+        <span class="n">ledger_api_msg_</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
+            <span class="n">performative</span><span class="o">=</span><span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">GET_TRANSACTION_RECEIPT</span><span class="p">,</span>
+            <span class="n">target_message</span><span class="o">=</span><span class="n">ledger_api_msg</span><span class="p">,</span>
+            <span class="n">transaction_digest</span><span class="o">=</span><span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">transaction_digest</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">inform_msg</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-            <span class="s2">"informing counterparty=</span><span class="si">{}</span><span class="s2"> of transaction digest."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">dialogue_label</span><span class="o">.</span><span class="n">dialogue_opponent_addr</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:],</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"checking transaction is settled."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">ledger_api_msg_</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_transaction_receipt</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_msg</span><span class="p">:</span> <span class="n">LedgerApiMessage</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="n">LedgerApiDialogue</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Handle a message of balance performative.</span>
+
+<span class="sd">        :param ledger_api_message: the ledger api message</span>
+<span class="sd">        :param ledger_api_dialogue: the ledger api dialogue</span>
+<span class="sd">        """</span>
+        <span class="n">fipa_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">associated_fipa_dialogue</span>
+        <span class="n">is_settled</span> <span class="o">=</span> <span class="n">LedgerApis</span><span class="o">.</span><span class="n">is_transaction_settled</span><span class="p">(</span>
+            <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">terms</span><span class="o">.</span><span class="n">ledger_id</span><span class="p">,</span> <span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">transaction_receipt</span><span class="o">.</span><span class="n">receipt</span>
+        <span class="p">)</span>
+        <span class="n">tx_behaviour</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">GenericTransactionBehaviour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">behaviours</span><span class="o">.</span><span class="n">transaction</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_settled</span><span class="p">:</span>
+            <span class="n">tx_behaviour</span><span class="o">.</span><span class="n">finish_processing</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="p">)</span>
+            <span class="n">ledger_api_msg_</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+                <span class="n">Optional</span><span class="p">[</span><span class="n">LedgerApiMessage</span><span class="p">],</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">last_outgoing_message</span>
             <span class="p">)</span>
-        <span class="p">)</span>
+            <span class="k">if</span> <span class="n">ledger_api_msg_</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>  <span class="c1"># pragma: nocover</span>
+                    <span class="s2">"Could not retrieve last ledger_api message"</span>
+                <span class="p">)</span>
+            <span class="n">fipa_msg</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Optional</span><span class="p">[</span><span class="n">FipaMessage</span><span class="p">],</span> <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">last_incoming_message</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">fipa_msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Could not retrieve last fipa message"</span><span class="p">)</span>
+            <span class="n">inform_msg</span> <span class="o">=</span> <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
+                <span class="n">performative</span><span class="o">=</span><span class="n">FipaMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">INFORM</span><span class="p">,</span>
+                <span class="n">target_message</span><span class="o">=</span><span class="n">fipa_msg</span><span class="p">,</span>
+                <span class="n">info</span><span class="o">=</span><span class="p">{</span><span class="s2">"transaction_digest"</span><span class="p">:</span> <span class="n">ledger_api_msg_</span><span class="o">.</span><span class="n">transaction_digest</span><span class="o">.</span><span class="n">body</span><span class="p">},</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">outbox</span><span class="o">.</span><span class="n">put_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">inform_msg</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">"transaction confirmed, informing counterparty=</span><span class="si">{}</span><span class="s2"> of transaction digest."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">fipa_dialogue</span><span class="o">.</span><span class="n">dialogue_label</span><span class="o">.</span><span class="n">dialogue_opponent_addr</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:],</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tx_behaviour</span><span class="o">.</span><span class="n">failed_processing</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">"transaction_receipt=</span><span class="si">{}</span><span class="s2"> not settled or not valid, aborting"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">ledger_api_msg</span><span class="o">.</span><span class="n">transaction_receipt</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_handle_error</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_msg</span><span class="p">:</span> <span class="n">LedgerApiMessage</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="n">LedgerApiDialogue</span>
@@ -3771,6 +4099,18 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
                 <span class="n">ledger_api_msg</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span>
             <span class="p">)</span>
         <span class="p">)</span>
+        <span class="n">ledger_api_msg_</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">Optional</span><span class="p">[</span><span class="n">LedgerApiMessage</span><span class="p">],</span> <span class="n">ledger_api_dialogue</span><span class="o">.</span><span class="n">last_outgoing_message</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">ledger_api_msg_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="n">ledger_api_msg_</span><span class="o">.</span><span class="n">performative</span>
+            <span class="o">!=</span> <span class="n">LedgerApiMessage</span><span class="o">.</span><span class="n">Performative</span><span class="o">.</span><span class="n">GET_BALANCE</span>
+        <span class="p">):</span>
+            <span class="n">tx_behaviour</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
+                <span class="n">GenericTransactionBehaviour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">behaviours</span><span class="o">.</span><span class="n">transaction</span>
+            <span class="p">)</span>
+            <span class="n">tx_behaviour</span><span class="o">.</span><span class="n">failed_processing</span><span class="p">(</span><span class="n">ledger_api_dialogue</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_handle_invalid</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_msg</span><span class="p">:</span> <span class="n">LedgerApiMessage</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="n">LedgerApiDialogue</span>
@@ -3808,6 +4148,8 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
 <span class="n">DEFAULT_MAX_UNIT_PRICE</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">DEFAULT_MAX_TX_FEE</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">DEFAULT_SERVICE_ID</span> <span class="o">=</span> <span class="s2">"generic_service"</span>
+<span class="n">DEFAULT_MIN_QUANTITY</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">DEFAULT_MAX_QUANTITY</span> <span class="o">=</span> <span class="mi">100</span>
 
 <span class="n">DEFAULT_LOCATION</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"longitude"</span><span class="p">:</span> <span class="mf">0.1270</span><span class="p">,</span> <span class="s2">"latitude"</span><span class="p">:</span> <span class="mf">51.5194</span><span class="p">}</span>
 <span class="n">DEFAULT_SEARCH_QUERY</span> <span class="o">=</span> <span class="p">{</span>
@@ -3834,6 +4176,8 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
         <span class="bp">self</span><span class="o">.</span><span class="n">_is_ledger_tx</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"is_ledger_tx"</span><span class="p">,</span> <span class="n">DEFAULT_IS_LEDGER_TX</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_unit_price</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"max_unit_price"</span><span class="p">,</span> <span class="n">DEFAULT_MAX_UNIT_PRICE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_quantity</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"min_quantity"</span><span class="p">,</span> <span class="n">DEFAULT_MIN_QUANTITY</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_quantity</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"max_quantity"</span><span class="p">,</span> <span class="n">DEFAULT_MAX_QUANTITY</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_tx_fee</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"max_tx_fee"</span><span class="p">,</span> <span class="n">DEFAULT_MAX_TX_FEE</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_service_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"service_id"</span><span class="p">,</span> <span class="n">DEFAULT_SERVICE_ID</span><span class="p">)</span>
 
@@ -3962,6 +4306,9 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
                 <span class="p">]</span>
             <span class="p">)</span>
             <span class="ow">and</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"ledger_id"</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">ledger_id</span>
+            <span class="ow">and</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+            <span class="ow">and</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"quantity"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_quantity</span>
+            <span class="ow">and</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"quantity"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_quantity</span>
             <span class="ow">and</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span>
             <span class="o">&lt;=</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"quantity"</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_unit_price</span>
             <span class="ow">and</span> <span class="n">proposal</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s2">"currency_id"</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_currency_id</span>
@@ -4139,7 +4486,6 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
             <span class="n">message_class</span><span class="o">=</span><span class="n">message_class</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_terms</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[Terms]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[LedgerApiDialogue]</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">terms</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Terms</span><span class="p">:</span>
@@ -4153,24 +4499,6 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
         <span class="sd">"""Set terms."""</span>
         <span class="n">enforce</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_terms</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">"Terms already set!"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_terms</span> <span class="o">=</span> <span class="n">terms</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">associated_ledger_api_dialogue</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"LedgerApiDialogue"</span><span class="p">:</span>
-        <span class="sd">"""Get associated_ledger_api_dialogue."""</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">AEAEnforceError</span><span class="p">(</span><span class="s2">"LedgerApiDialogue not set!"</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span>
-
-    <span class="nd">@associated_ledger_api_dialogue</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">associated_ledger_api_dialogue</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="s2">"LedgerApiDialogue"</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">"""Set associated_ledger_api_dialogue"""</span>
-        <span class="n">enforce</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="s2">"LedgerApiDialogue already set!"</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span>
 
 
 <span class="k">class</span> <span class="nc">FipaDialogues</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="n">BaseFipaDialogues</span><span class="p">):</span>
@@ -4334,20 +4662,25 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
             <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="p">,</span>
             <span class="n">message_class</span><span class="o">=</span><span class="n">message_class</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_associated_fipa_dialogue</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[FipaDialogue]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[LedgerApiDialogue]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">associated_fipa_dialogue</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FipaDialogue</span><span class="p">:</span>
-        <span class="sd">"""Get associated_fipa_dialogue."""</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associated_fipa_dialogue</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">AEAEnforceError</span><span class="p">(</span><span class="s2">"FipaDialogue not set!"</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associated_fipa_dialogue</span>
+    <span class="k">def</span> <span class="nf">associated_ledger_api_dialogue</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LedgerApiDialogue</span><span class="p">:</span>
+        <span class="sd">"""Get associated_ledger_api_dialogue."""</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">AEAEnforceError</span><span class="p">(</span><span class="s2">"LedgerApiDialogue not set!"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span>
 
-    <span class="nd">@associated_fipa_dialogue</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">associated_fipa_dialogue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fipa_dialogue</span><span class="p">:</span> <span class="n">FipaDialogue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">"""Set associated_fipa_dialogue"""</span>
-        <span class="n">enforce</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_associated_fipa_dialogue</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">"FipaDialogue already set!"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_associated_fipa_dialogue</span> <span class="o">=</span> <span class="n">fipa_dialogue</span>
+    <span class="nd">@associated_ledger_api_dialogue</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">associated_ledger_api_dialogue</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ledger_api_dialogue</span><span class="p">:</span> <span class="n">LedgerApiDialogue</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""Set associated_ledger_api_dialogue"""</span>
+        <span class="n">enforce</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">"LedgerApiDialogue already set!"</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_associated_ledger_api_dialogue</span> <span class="o">=</span> <span class="n">ledger_api_dialogue</span>
 
 
 <span class="k">class</span> <span class="nc">SigningDialogues</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="n">BaseSigningDialogues</span><span class="p">):</span>
@@ -4383,34 +4716,42 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
 <p>The dialogues class stores dialogue with each AEA and other AEA components so we can have access to previous messages and enable us to identify possible communications problems between the <code>my_generic_seller</code> AEA and the <code>my_generic_buyer</code> AEA.</p>
 <h3 id="step-6-update-the-yaml-files_1">Step 6: Update the YAML files</h3>
 <p>Since we made so many changes to our AEA we have to update the <code>skill.yaml</code> to contain our newly created scripts and the details that will be used from the strategy.</p>
-<p>First, we update the <code>skill.yaml</code>. Make sure that your <code>skill.yaml</code> matches with the following code:</p>
+<p>First, we update the <code>skill.yaml</code>. Make sure you update your <code>skill.yaml</code> with the following configuration:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generic_buyer</span>
 <span class="nt">author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
 <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>
 <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">skill</span>
 <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The weather client skill implements the skill to purchase weather data.</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache-2.0</span>
-<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.7.0,</span><span class="nv"> </span><span class="s">&lt;0.8.0'</span>
+<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.8.0,</span><span class="nv"> </span><span class="s">&lt;0.9.0'</span>
 <span class="nt">fingerprint</span><span class="p">:</span>
-  <span class="nt">__init__.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmNkZAetyctaZCUf6ACxP5onGWsSxu2hjSNoFmJ3ta6Lta</span>
-  <span class="nt">behaviours.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmUBQvZkoCcik71vqRZGP4JJBgFP2kj8o7C24dfkAphitP</span>
-  <span class="nt">dialogues.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Qmf3McwyT5wMv3BzoN1L3ssqZzEq19LShEjQueiKqvADcX</span>
-  <span class="nt">handlers.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmQVmi3GnuYJ5VM4trYjUeJyFHVfrUeMGDsRmtNCuntKA8</span>
-  <span class="nt">strategy.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmQHQsjAsPiox5zMtMHhdhhhHt4rKq3cs3bqnwjgGSFp6n</span>
+  <span class="nt">README.md</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmTR91jm7WfJpmabisy74NR5mc35YXjDU1zQAUKZeHRw8L</span>
+  <span class="nt">__init__.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmU5vrC8FipyjfS5biNa6qDWdp4aeH5h4YTtbFDmCg8Chj</span>
+  <span class="nt">behaviours.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmNwvSjEz4kzM3gWtnKbZVFJc2Z85Nb748CWAK4C4Sa4nT</span>
+  <span class="nt">dialogues.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmNen91qQDWy4bNBKrB3LabAP5iRf29B8iwYss4NB13iNU</span>
+  <span class="nt">handlers.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmZfudXXbdiREiViuwPZDXoQQyXT2ySQHdF7psQsohZXQy</span>
+  <span class="nt">strategy.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmcrwaEWvKHDCNti8QjRhB4utJBJn5L8GpD27Uy9zHwKhY</span>
 <span class="nt">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">connections</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.11.0</span>
 <span class="nt">contracts</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.9.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/fipa:0.10.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.7.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.10.0</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/signing:0.7.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/default:0.10.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/fipa:0.11.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.8.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.11.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/signing:0.8.0</span>
 <span class="nt">skills</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="nt">search</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
       <span class="nt">search_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GenericSearchBehaviour</span>
+  <span class="nt">transaction</span><span class="p">:</span>
+    <span class="nt">args</span><span class="p">:</span>
+      <span class="nt">max_processing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">420</span>
+      <span class="nt">transaction_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+    <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GenericTransactionBehaviour</span>
 <span class="nt">handlers</span><span class="p">:</span>
   <span class="nt">fipa</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
@@ -4442,21 +4783,21 @@ When we receive a message from the <a href="../simple-oef">SOEF search node</a> 
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SigningDialogues</span>
   <span class="nt">strategy</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
-      <span class="nt">currency_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FET</span>
       <span class="nt">is_ledger_tx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">ledger_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai</span>
       <span class="nt">location</span><span class="p">:</span>
         <span class="nt">latitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">51.5194</span>
         <span class="nt">longitude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.127</span>
       <span class="nt">max_negotiations</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
       <span class="nt">max_tx_fee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
       <span class="nt">max_unit_price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">20</span>
+      <span class="nt">min_quantity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
       <span class="nt">search_query</span><span class="p">:</span>
         <span class="nt">constraint_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">==</span>
         <span class="nt">search_key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seller_service</span>
         <span class="nt">search_value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generic_service</span>
       <span class="nt">search_radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5.0</span>
       <span class="nt">service_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generic_service</span>
+      <span class="nt">stop_searching_on_result</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GenericStrategy</span>
 <span class="nt">dependencies</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 </code></pre></div>
@@ -4491,8 +4832,8 @@ aea add-key fetchai fetchai_private_key.txt --connection
 <h3 id="update-the-aea-configs">Update the AEA configs</h3>
 <p>Both in <code>my_generic_seller/aea-config.yaml</code> and <code>my_generic_buyer/aea-config.yaml</code>, and
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.7.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.9.0</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.10.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.13.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger_api:0.8.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/ledger:0.11.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.11.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.14.0</span>
 </code></pre></div></p>
 <h3 id="fund-the-buyer-aea">Fund the buyer AEA</h3>
 <p>Create some wealth for your buyer on the Fetch.ai testnet. (It takes a while).</p>
@@ -4500,24 +4841,24 @@ aea add-key fetchai fetchai_private_key.txt --connection
 </code></pre></div>
 <h3 id="run-seller-aea">Run seller AEA</h3>
 <p>Add the remaining packages for the seller AEA, then run it:</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/p2p_libp2p:0.12.0
-aea add connection fetchai/soef:0.13.0
-aea add connection fetchai/ledger:0.9.0
-aea add protocol fetchai/fipa:0.10.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/p2p_libp2p:0.13.0
+aea add connection fetchai/soef:0.14.0
+aea add connection fetchai/ledger:0.11.0
+aea add protocol fetchai/fipa:0.11.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.13.0
 aea run
 </code></pre></div>
 <p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address.</p>
 <h4 id="run-buyer-aea">Run buyer AEA</h4>
 <p>Add the remaining packages for the buyer AEA:</p>
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/p2p_libp2p:0.12.0
-aea add connection fetchai/soef:0.13.0
-aea add connection fetchai/ledger:0.9.0
-aea add protocol fetchai/fipa:0.10.0
-aea add protocol fetchai/signing:0.7.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/p2p_libp2p:0.13.0
+aea add connection fetchai/soef:0.14.0
+aea add connection fetchai/ledger:0.11.0
+aea add protocol fetchai/fipa:0.11.0
+aea add protocol fetchai/signing:0.8.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.13.0
 </code></pre></div>
 <p>Then, update the configuration of the buyer AEA's p2p connection (in <code>vendor/fetchai/connections/p2p_libp2p/connection.yaml</code>) replace the following:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">config</span><span class="p">:</span>

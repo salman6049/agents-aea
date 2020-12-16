@@ -6,9 +6,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
-<meta content="Everything you need to know about Fetch.AI." name="description"/>
+<meta content="Everything you need to know about AEAs." name="description"/>
 <link href="https://docs.fetch.ai/skill-guide/" rel="canonical"/>
-<meta content="diarmid.campbell@fetch.ai" name="author"/>
+<meta content="developer@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
 <meta content="en" name="lang:search.language"/>
@@ -20,7 +20,7 @@
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
-<title>Build a skill for an AEA - AEA Developer Documentation</title>
+<title>Build a skill for an AEA - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -32,6 +32,7 @@
 <body dir="ltr">
 <svg class="md-svg">
 <defs>
+<svg height="448" id="__github" viewbox="0 0 416 448" width="416" xmlns="http://www.w3.org/2000/svg"><path d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z" fill="currentColor"></path></svg>
 </defs>
 </svg>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -44,7 +45,7 @@
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a aria-label="AEA Developer Documentation" class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<a aria-label="aea" class="md-header-nav__button md-logo" href="https://docs.fetch.ai/" title="aea">
 <i class="md-icon">code</i>
 </a>
 </div>
@@ -54,7 +55,7 @@
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
 <span class="md-header-nav__topic">
-              AEA Developer Documentation
+              aea
             </span>
 <span class="md-header-nav__topic">
               
@@ -65,6 +66,20 @@
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
 </div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a class="md-source" data-md-source="github" href="https://github.com/agents-aea/docs/" title="Go to repository">
+<div class="md-source__icon">
+<svg height="24" viewbox="0 0 24 24" width="24">
+<use height="24" width="24" xlink:href="#__github"></use>
+</svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</div>
 </div>
 </nav>
 </header>
@@ -73,8 +88,23 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="..">
-          AEA Framework
+<a class="md-tabs__link" href="..">
+        Introduction
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../language-agnostic-definition/">
+          Concepts
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../demos/">
+          Demos
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../quickstart/">
+          Development
         </a>
 </li>
 </ul>
@@ -87,25 +117,27 @@
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="AEA Developer Documentation">
+<a class="md-nav__button md-logo" href="https://docs.fetch.ai/" title="aea">
 <i class="md-icon">code</i>
 </a>
-    AEA Developer Documentation
+    aea
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1">
-      AEA Framework
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-<label class="md-nav__title" for="nav-1">
-        AEA Framework
-      </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-source="github" href="https://github.com/agents-aea/docs/" title="Go to repository">
+<div class="md-source__icon">
+<svg height="24" viewbox="0 0 24 24" width="24">
+<use height="24" width="24" xlink:href="#__github"></use>
+</svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href=".." title="Welcome">
-      Welcome
+<a class="md-nav__link" href=".." title="Introduction">
+      Introduction
     </a>
 </li>
 <li class="md-nav__item">
@@ -114,12 +146,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" id="nav-1-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
       Concepts
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
         Concepts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -157,12 +189,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" id="nav-1-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       Demos
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
         Demos
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -197,6 +229,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../oracle-demo/" title="Oracle skills">
+      Oracle skills
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../tac-skills/" title="TAC skills">
       TAC skills
     </a>
@@ -225,22 +262,22 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" id="nav-1-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
       Development
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-<label class="md-nav__title" for="nav-1-5">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
         Development
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-1" id="nav-1-5-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-1">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" id="nav-5-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-1">
       Getting started
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-1">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-1">
         Getting started
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -356,12 +393,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-2" id="nav-1-5-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" id="nav-5-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-2">
       Topic guides
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-2">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-2">
         Topic guides
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -421,6 +458,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
+      Prometheus monitoring
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../known-limits/" title="Known limitations">
       Known limitations
     </a>
@@ -451,6 +493,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../generic-storage/" title="Generic Storage">
+      Generic Storage
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
     </a>
@@ -460,16 +507,21 @@
       Debugging
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../runtime-cost/" title="Profiling">
+      Profiling
+    </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-3" id="nav-1-5-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" id="nav-5-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-3">
       Use case components
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-3">
         Use case components
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -512,12 +564,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" id="nav-1-5-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" id="nav-5-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-4">
       Architecture &amp; component deep-dives
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-4">
         Architecture &amp; component deep-dives
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -575,12 +627,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-5" id="nav-1-5-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" id="nav-5-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-5">
       Agent Communication
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-5">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-5">
         Agent Communication
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -593,12 +645,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-6" id="nav-1-5-6" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-6">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" id="nav-5-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-6">
       Search &amp; Discovery
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-6">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-6">
         Search &amp; Discovery
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -626,22 +678,22 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-7" id="nav-1-5-7" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-7">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" id="nav-5-7" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-7">
       Developer Interfaces
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-7">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-7">
         Developer Interfaces
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-7-1" id="nav-1-5-7-1" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-7-1">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7-1" id="nav-5-7-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-7-1">
       CLI
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-7-1">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-7-1">
         CLI
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -677,12 +729,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-8" id="nav-1-5-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" id="nav-5-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-8">
       Benchmarks
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-8">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-8">
         Benchmarks
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -695,12 +747,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9" id="nav-1-5-9" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" id="nav-5-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9">
       API
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-<label class="md-nav__title" for="nav-1-5-9">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+<label class="md-nav__title" for="nav-5-9">
         API
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -765,12 +817,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-13" id="nav-1-5-9-13" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-13">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-13" id="nav-5-9-13" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-13">
       Components
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-13">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-13">
         Components
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -788,12 +840,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-14" id="nav-1-5-9-14" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-14">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-14" id="nav-5-9-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-14">
       Configurations
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-14">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-14">
         Configurations
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -831,12 +883,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-15" id="nav-1-5-9-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-15">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-15" id="nav-5-9-15" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-15">
       Connections
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-15">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-15">
         Connections
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -859,12 +911,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-17" id="nav-1-5-9-17" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-17">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-17" id="nav-5-9-17" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-17">
       Contracts
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-17">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-17">
         Contracts
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -877,12 +929,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-18" id="nav-1-5-9-18" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-18">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-18" id="nav-5-9-18" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-18">
       Crypto
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-18">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-18">
         Crypto
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -922,12 +974,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-18-8" id="nav-1-5-9-18-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-18-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-18-8" id="nav-5-9-18-8" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-18-8">
       Registries
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-18-8">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-18-8">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -943,12 +995,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-19" id="nav-1-5-9-19" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-19">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-19" id="nav-5-9-19" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-19">
       Decision Maker
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-19">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-19">
         Decision Maker
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -966,12 +1018,35 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20" id="nav-1-5-9-20" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-20" id="nav-5-9-20" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-20">
+      Error Handler
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-20">
+        Error Handler
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/error_handler/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/error_handler/default/" title="Default">
+      Default
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21" id="nav-5-9-21" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21">
       Helpers
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-20">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-21">
         Helpers
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -989,24 +1064,6 @@
 <a class="md-nav__link" href="../api/helpers/base/" title="Base">
       Base
     </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-4" id="nav-1-5-9-20-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-4">
-      Dialogue
-    </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-4">
-        Dialogue
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/dialogue/base/" title="Base">
-      Base
-    </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/exception_policy/" title="Exception Policy">
@@ -1034,12 +1091,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-10" id="nav-1-5-9-20-10" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-10">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-9" id="nav-5-9-21-9" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-9">
       IPFS
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-10">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-9">
         IPFS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1057,12 +1114,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-12" id="nav-1-5-9-20-12" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-12">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-11" id="nav-5-9-21-11" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-11">
       MultiAddress
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-12">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-11">
         MultiAddress
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1085,12 +1142,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-15" id="nav-1-5-9-20-15" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-15">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-14" id="nav-5-9-21-14" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-14">
       Preferences
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-15">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-14">
         Preferences
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1108,12 +1165,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-17" id="nav-1-5-9-20-17" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-17">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-16" id="nav-5-9-21-16" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-16">
       Search
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-17">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-16">
         Search
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1131,22 +1188,63 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/serializers/" title="Serializers">
+      Serializers
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-18" id="nav-5-9-21-18" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-18">
+      Storage
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-18">
+        Storage
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/storage/generic_storage/" title="GenericStorage">
+      GenericStorage
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-18-2" id="nav-5-9-21-18-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-18-2">
+      Backends
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-5-9-21-18-2">
+        Backends
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/storage/backends/base/" title="Base">
+      Base
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/storage/backends/sqlite/" title="Sqlite">
+      Sqlite
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/helpers/sym_link/" title="Sym Link">
       Sym Link
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/helpers/temp_error_handler/" title="Temp Error Handler">
-      Temp Error Handler
-    </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-20-20" id="nav-1-5-9-20-20" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-20-20">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-21-20" id="nav-5-9-21-20" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-21-20">
       Transaction
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-20-20">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-21-20">
         Transaction
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1182,12 +1280,12 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23" id="nav-1-5-9-23" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24" id="nav-5-9-24" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24">
       Protocols
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-23">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-24">
         Protocols
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1197,12 +1295,30 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-2" id="nav-1-5-9-23-2" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-2">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-2" id="nav-5-9-24-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-2">
+      Dialogue
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-2">
+        Dialogue
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/protocols/dialogue/base/" title="Base">
+      Base
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-3" id="nav-5-9-24-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-3">
       Generator
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-2">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-3">
         Generator
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1230,12 +1346,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-3" id="nav-1-5-9-23-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-3">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-4" id="nav-5-9-24-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-4">
       Default Protocol
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-4">
         Default Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1263,12 +1379,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-4" id="nav-1-5-9-23-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-4">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-5" id="nav-5-9-24-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-5">
       Signing Protocol
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-5">
         Signing Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1296,12 +1412,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-23-5" id="nav-1-5-9-23-5" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-23-5">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-24-6" id="nav-5-9-24-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-24-6">
       State Update Protocol
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-<label class="md-nav__title" for="nav-1-5-9-23-5">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-5-9-24-6">
         State Update Protocol
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1327,12 +1443,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-24" id="nav-1-5-9-24" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-24">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-25" id="nav-5-9-25" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-25">
       Registries
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-24">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-25">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1355,12 +1471,12 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-25" id="nav-1-5-9-25" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-25">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-26" id="nav-5-9-26" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-26">
       Skills
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-25">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-26">
         Skills
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1388,15 +1504,25 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-9-26" id="nav-1-5-9-26" type="checkbox"/>
-<label class="md-nav__link" for="nav-1-5-9-26">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9-27" id="nav-5-9-27" type="checkbox"/>
+<label class="md-nav__link" for="nav-5-9-27">
       Test Tools
     </label>
-<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-1-5-9-26">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-5-9-27">
         Test Tools
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/constants/" title="Constants">
+      Constants
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/test_tools/exceptions/" title="Exceptions">
+      Exceptions
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
       Generic
@@ -1430,9 +1556,6 @@
 <a class="md-nav__link" href="../questions-and-answers/" title="Q&amp;A">
       Q&amp;A
     </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1521,6 +1644,7 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
+<a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/skill-guide.md" title="Edit this page"></a>
 <h1>Build a skill for an AEA</h1>
 <p>This guide will take you through the development of a simple skill.</p>
 <h3 id="dependencies">Dependencies</h3>
@@ -1761,7 +1885,7 @@ aea scaffold skill my_search
 <p>Also note, how we have access to other objects in the skill via <code>self.context</code>, the <a href="../api/skills/base#skillcontext-objects"><code>SkillContext</code></a>.</p>
 <p>We place this code in <code>my_aea/skills/my_search/handlers.py</code>. Ensure you replace the <code>fetchai</code> author in this line <code>from packages.fetchai.skills.my_search.dialogues import (</code> with your author handle (run <code>aea init</code> to set or check the author name).</p>
 <h2 id="step-4-add-dialogues-model">Step 4: Add dialogues model</h2>
-<p>We have implemented a behaviour and a handler. We now implement a <a href="../api/skills/base#model-objects"><code>Model</code></a>, in particular we implement the <a href="../api/helpers/dialogue/base#dialogue-objects"><code>Dialogue</code></a> and <a href="../api/helpers/dialogue/base#dialogues-objects"><code>Dialogues</code></a> classes.</p>
+<p>We have implemented a behaviour and a handler. We now implement a <a href="../api/skills/base#model-objects"><code>Model</code></a>, in particular we implement the <a href="../api/protocols/dialogue/base#dialogue-objects"><code>Dialogue</code></a> and <a href="../api/protocols/dialogue/base#dialogues-objects"><code>Dialogues</code></a> classes.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">aea.protocols.base</span> <span class="kn">import</span> <span class="n">Message</span>
 <span class="kn">from</span> <span class="nn">aea.protocols.dialogue.base</span> <span class="kn">import</span> <span class="n">Dialogue</span> <span class="k">as</span> <span class="n">BaseDialogue</span>
 <span class="kn">from</span> <span class="nn">aea.skills.base</span> <span class="kn">import</span> <span class="n">Address</span><span class="p">,</span> <span class="n">Model</span>
@@ -1815,12 +1939,12 @@ aea scaffold skill my_search
 <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">skill</span>
 <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">A simple search skill utilising the SOEF search node.</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache-2.0</span>
-<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.7.0,</span><span class="nv"> </span><span class="s">&lt;0.8.0'</span>
+<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.8.0,</span><span class="nv"> </span><span class="s">&lt;0.9.0'</span>
 <span class="nt">fingerprint</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 <span class="nt">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">contracts</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.10.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.11.0</span>
 <span class="nt">skills</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="nt">my_search_behaviour</span><span class="p">:</span>
@@ -1883,23 +2007,23 @@ Again, ensure the author field matches your own.</p>
 Ensure, you use the correct author name to reference your skill (here we use <code>fetchai</code> as the author.)</p>
 <h2 id="step-7-add-the-oef-protocol-and-connection">Step 7: Add the oef protocol and connection</h2>
 <p>Our AEA does not have the oef protocol yet so let's add it.
-<div class="highlight"><pre><span></span><code>aea add protocol fetchai/oef_search:0.10.0
+<div class="highlight"><pre><span></span><code>aea add protocol fetchai/oef_search:0.11.0
 </code></pre></div></p>
 <p>This adds the protocol to our AEA and makes it available on the path <code>packages.fetchai.protocols...</code>.</p>
 <p>We also need to add the soef and p2p connections and install the AEA's dependencies:
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/soef:0.13.0
-aea add connection fetchai/p2p_libp2p:0.12.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/soef:0.14.0
+aea add connection fetchai/p2p_libp2p:0.13.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.12.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.13.0
 </code></pre></div></p>
 <p>Finally, in the <code>aea-config.yaml</code> add the following lines:
 <div class="highlight"><pre><span></span><code><span class="nt">default_routing</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.10.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.13.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.11.0</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/soef:0.14.0</span>
 </code></pre></div></p>
 <p>This will ensure that search requests are processed by the correct connection.</p>
 <h2 id="step-8-run-a-service-provider-aea">Step 8: Run a service provider AEA</h2>
 <p>In order to be able to find another AEA when searching, from a different terminal window, we fetch another finished AEA and install its Python dependencies:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/simple_service_registration:0.17.0 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> simple_service_registration <span class="o">&amp;&amp;</span> aea install
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/simple_service_registration:0.18.0 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> simple_service_registration <span class="o">&amp;&amp;</span> aea install
 </code></pre></div></p>
 <p>This AEA will simply register a location service on the <a href="../simple-oef">SOEF search node</a> so we can search for it.</p>
 <p>We first create the private key for the service provider AEA based on the network you want to transact. To generate and add a private-public key pair for Fetch.ai <code>AgentLand</code> use:
@@ -2182,7 +2306,7 @@ Finally, we have a handler, placed in `handlers.py`:
     <span class="n">OefSearchDialogues</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">LEDGER_API_ADDRESS</span> <span class="o">=</span> <span class="s2">"fetchai/ledger:0.9.0"</span>
+<span class="n">LEDGER_API_ADDRESS</span> <span class="o">=</span> <span class="s2">"fetchai/ledger:0.11.0"</span>
 
 
 <span class="k">class</span> <span class="nc">OefSearchHandler</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
@@ -2281,7 +2405,7 @@ The associated `skill.yaml` is:
 <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">skill</span>
 <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The simple service registration skills is a skill to register a service.</span>
 <span class="nt">license</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Apache-2.0</span>
-<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.7.0,</span><span class="nv"> </span><span class="s">&lt;0.8.0'</span>
+<span class="nt">aea_version</span><span class="p">:</span> <span class="s">'&gt;=0.8.0,</span><span class="nv"> </span><span class="s">&lt;0.9.0'</span>
 <span class="nt">fingerprint</span><span class="p">:</span>
   <span class="nt">__init__.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmNkZAetyctaZCUf6ACxP5onGWsSxu2hjSNoFmJ3ta6Lta</span>
   <span class="nt">behaviours.py</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QmRr1oe3zWKyPcktzKP4BiKqjCqmKjEDdLUQhn1JzNm4nD</span>
@@ -2291,7 +2415,7 @@ The associated `skill.yaml` is:
 <span class="nt">fingerprint_ignore_patterns</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">contracts</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.10.0</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fetchai/oef_search:0.11.0</span>
 <span class="nt">skills</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">behaviours</span><span class="p">:</span>
   <span class="nt">service</span><span class="p">:</span>
