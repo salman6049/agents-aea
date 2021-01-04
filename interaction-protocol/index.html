@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="Everything you need to know about AEAs." name="description"/>
-<link href="https://docs.fetch.ai/api/helpers/exception_policy/" rel="canonical"/>
+<link href="https://docs.fetch.ai/interaction-protocol/" rel="canonical"/>
 <meta content="developer@fetch.ai" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
@@ -18,16 +18,16 @@
 <meta content="1 matching document" name="lang:search.result.one"/>
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
-<link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
+<link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
-<title>Exception Policy - aea</title>
-<link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
-<script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+<title>Interaction protocols - aea</title>
+<link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
+<script src="../assets/javascripts/modernizr.86422ebf.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-<link href="../../../assets/fonts/material-icons.css" rel="stylesheet"/>
-<link href="../../../css/my-styles.css" rel="stylesheet"/>
+<link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../css/my-styles.css" rel="stylesheet"/>
 </head>
 <body dir="ltr">
 <svg class="md-svg">
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#aeahelpersexception_policy" tabindex="0">
+<a class="md-skip" href="#example-1-negotiation" tabindex="0">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -59,7 +59,7 @@
             </span>
 <span class="md-header-nav__topic">
               
-                Exception Policy
+                Interaction protocols
               
             </span>
 </div>
@@ -88,27 +88,27 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="..">
         Introduction
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../language-agnostic-definition/">
+<a class="md-tabs__link" href="../language-agnostic-definition/">
           Concepts
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../demos/">
+<a class="md-tabs__link" href="../demos/">
           Demos
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../quickstart/">
+<a class="md-tabs__link md-tabs__link--active" href="../quickstart/">
           Development - Beginner
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../step-one/">
+<a class="md-tabs__link" href="../step-one/">
           Development - Advanced
         </a>
 </li>
@@ -141,12 +141,12 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../.." title="Introduction">
+<a class="md-nav__link" href=".." title="Introduction">
       Introduction
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../version/" title="Version">
+<a class="md-nav__link" href="../version/" title="Version">
       Version
     </a>
 </li>
@@ -161,37 +161,37 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../language-agnostic-definition/" title="Language Agnostic Definition">
+<a class="md-nav__link" href="../language-agnostic-definition/" title="Language Agnostic Definition">
       Language Agnostic Definition
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../agent-oriented-development/" title="Agent-oriented development">
+<a class="md-nav__link" href="../agent-oriented-development/" title="Agent-oriented development">
       Agent-oriented development
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../vision/" title="Vision">
+<a class="md-nav__link" href="../vision/" title="Vision">
       Vision
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../app-areas/" title="Application areas">
+<a class="md-nav__link" href="../app-areas/" title="Application areas">
       Application areas
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../oef-ledger/" title="Relation to OEF and Ledger">
+<a class="md-nav__link" href="../oef-ledger/" title="Relation to OEF and Ledger">
       Relation to OEF and Ledger
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../identity/" title="Identity">
+<a class="md-nav__link" href="../identity/" title="Identity">
       Identity
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../trust/" title="Trust issues">
+<a class="md-nav__link" href="../trust/" title="Trust issues">
       Trust issues
     </a>
 </li>
@@ -209,70 +209,70 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../demos/" title="Demos">
+<a class="md-nav__link" href="../demos/" title="Demos">
       Demos
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aries-cloud-agent-demo/" title="Aries Cloud Agents Demo">
+<a class="md-nav__link" href="../aries-cloud-agent-demo/" title="Aries Cloud Agents Demo">
       Aries Cloud Agents Demo
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../car-park-skills/" title="Car park skills">
+<a class="md-nav__link" href="../car-park-skills/" title="Car park skills">
       Car park skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../gym-example/" title="Gym example">
+<a class="md-nav__link" href="../gym-example/" title="Gym example">
       Gym example
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../gym-skill/" title="Gym skill">
+<a class="md-nav__link" href="../gym-skill/" title="Gym skill">
       Gym skill
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ml-skills/" title="ML skills">
+<a class="md-nav__link" href="../ml-skills/" title="ML skills">
       ML skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../oracle-demo/" title="Oracle skills">
+<a class="md-nav__link" href="../oracle-demo/" title="Oracle skills">
       Oracle skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tac-skills/" title="TAC skills">
+<a class="md-nav__link" href="../tac-skills/" title="TAC skills">
       TAC skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tac-skills-contract/" title="TAC skills ledger-based">
+<a class="md-nav__link" href="../tac-skills-contract/" title="TAC skills ledger-based">
       TAC skills ledger-based
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tac/" title="TAC external app">
+<a class="md-nav__link" href="../tac/" title="TAC external app">
       TAC external app
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../thermometer-skills/" title="Thermometer skills">
+<a class="md-nav__link" href="../thermometer-skills/" title="Thermometer skills">
       Thermometer skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../weather-skills/" title="Weather skills">
+<a class="md-nav__link" href="../weather-skills/" title="Weather skills">
       Weather skills
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-5">
       Development - Beginner
     </label>
@@ -282,50 +282,74 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../quickstart/" title="AEA quick start">
+<a class="md-nav__link" href="../quickstart/" title="AEA quick start">
       AEA quick start
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../core-components-1/" title="Core components - Part 1">
+<a class="md-nav__link" href="../core-components-1/" title="Core components - Part 1">
       Core components - Part 1
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../aea-vs-mvc/" title="AEA and web frameworks">
+<a class="md-nav__link" href="../aea-vs-mvc/" title="AEA and web frameworks">
       AEA and web frameworks
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../skill-guide/" title="Build a skill for an AEA">
+<a class="md-nav__link" href="../skill-guide/" title="Build a skill for an AEA">
       Build a skill for an AEA
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../core-components-2/" title="Core components - Part 2">
+<a class="md-nav__link" href="../core-components-2/" title="Core components - Part 2">
       Core components - Part 2
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../interaction-protocol/" title="Interaction protocols">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Interaction protocols
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Interaction protocols">
       Interaction protocols
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-1-negotiation">
+    Example 1: negotiation
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../generic-skills-step-by-step/" title="Trade between two AEAs">
+<a class="md-nav__link" href="#example-2-aea-web-client">
+    Example 2: AEA &lt;&gt; web client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-3-aea-3rd-party-server">
+    Example 3 : AEA &lt;&gt; 3rd party server
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../generic-skills-step-by-step/" title="Trade between two AEAs">
       Trade between two AEAs
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../development-setup/" title="Development setup">
+<a class="md-nav__link" href="../development-setup/" title="Development setup">
       Development setup
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
 <label class="md-nav__link" for="nav-6">
       Development - Advanced
     </label>
@@ -345,112 +369,112 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../step-one/" title="Ways to build an AEA">
+<a class="md-nav__link" href="../step-one/" title="Ways to build an AEA">
       Ways to build an AEA
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build-aea-step-by-step/" title="Build an AEA with the CLI">
+<a class="md-nav__link" href="../build-aea-step-by-step/" title="Build an AEA with the CLI">
       Build an AEA with the CLI
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../scaffolding/" title="Scaffolding packages">
+<a class="md-nav__link" href="../scaffolding/" title="Scaffolding packages">
       Scaffolding packages
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../protocol-generator/" title="Generating protocols">
+<a class="md-nav__link" href="../protocol-generator/" title="Generating protocols">
       Generating protocols
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../logging/" title="Logging">
+<a class="md-nav__link" href="../logging/" title="Logging">
       Logging
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../multiplexer-standalone/" title="Use multiplexer stand-alone">
+<a class="md-nav__link" href="../multiplexer-standalone/" title="Use multiplexer stand-alone">
       Use multiplexer stand-alone
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../standalone-transaction/" title="Create stand-alone transaction">
+<a class="md-nav__link" href="../standalone-transaction/" title="Create stand-alone transaction">
       Create stand-alone transaction
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../decision-maker-transaction/" title="Create decision-maker transaction">
+<a class="md-nav__link" href="../decision-maker-transaction/" title="Create decision-maker transaction">
       Create decision-maker transaction
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../skill-testing/" title="Testing Skills">
+<a class="md-nav__link" href="../skill-testing/" title="Testing Skills">
       Testing Skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../deployment/" title="Deployment">
+<a class="md-nav__link" href="../deployment/" title="Deployment">
       Deployment
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../prometheus/" title="Prometheus monitoring">
+<a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../known-limits/" title="Known limitations">
+<a class="md-nav__link" href="../known-limits/" title="Known limitations">
       Known limitations
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../build-aea-programmatically/" title="Build an AEA programmatically">
+<a class="md-nav__link" href="../build-aea-programmatically/" title="Build an AEA programmatically">
       Build an AEA programmatically
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-vs-programmatic-aeas/" title="CLI vs programmatic AEAs">
+<a class="md-nav__link" href="../cli-vs-programmatic-aeas/" title="CLI vs programmatic AEAs">
       CLI vs programmatic AEAs
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../agent-vs-aea/" title="AEAs vs agents">
+<a class="md-nav__link" href="../agent-vs-aea/" title="AEAs vs agents">
       AEAs vs agents
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../upgrading/" title="Upgrading versions">
+<a class="md-nav__link" href="../upgrading/" title="Upgrading versions">
       Upgrading versions
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../modes/" title="Modes of running an AEA">
+<a class="md-nav__link" href="../modes/" title="Modes of running an AEA">
       Modes of running an AEA
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../generic-storage/" title="Generic Storage">
+<a class="md-nav__link" href="../generic-storage/" title="Generic Storage">
       Generic Storage
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../multi-agent-manager/" title="Multi agent manager">
+<a class="md-nav__link" href="../multi-agent-manager/" title="Multi agent manager">
       Multi agent manager
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../debug/" title="Debugging">
+<a class="md-nav__link" href="../debug/" title="Debugging">
       Debugging
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../runtime-cost/" title="Profiling">
+<a class="md-nav__link" href="../runtime-cost/" title="Profiling">
       Profiling
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../por/" title="Proof of Representation">
+<a class="md-nav__link" href="../por/" title="Proof of Representation">
       Proof of Representation
     </a>
 </li>
@@ -468,37 +492,37 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../generic-skills/" title="Generic skills">
+<a class="md-nav__link" href="../generic-skills/" title="Generic skills">
       Generic skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../connect-a-frontend/" title="Front-end intergration">
+<a class="md-nav__link" href="../connect-a-frontend/" title="Front-end intergration">
       Front-end intergration
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../http-connection-and-skill/" title="HTTP Connection">
+<a class="md-nav__link" href="../http-connection-and-skill/" title="HTTP Connection">
       HTTP Connection
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orm-integration/" title="ORM integration">
+<a class="md-nav__link" href="../orm-integration/" title="ORM integration">
       ORM integration
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../erc1155-skills/" title="Contract deploy and interact">
+<a class="md-nav__link" href="../erc1155-skills/" title="Contract deploy and interact">
       Contract deploy and interact
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../p2p-connection/" title="P2P Connection">
+<a class="md-nav__link" href="../p2p-connection/" title="P2P Connection">
       P2P Connection
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
+<a class="md-nav__link" href="../raspberry-set-up/" title="Build an AEA on a Raspberry Pi">
       Build an AEA on a Raspberry Pi
     </a>
 </li>
@@ -516,52 +540,52 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../design-principles/" title="Design principles">
+<a class="md-nav__link" href="../design-principles/" title="Design principles">
       Design principles
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../diagram/" title="Architectural diagram">
+<a class="md-nav__link" href="../diagram/" title="Architectural diagram">
       Architectural diagram
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../connection/" title="Connections">
+<a class="md-nav__link" href="../connection/" title="Connections">
       Connections
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../protocol/" title="Protocols">
+<a class="md-nav__link" href="../protocol/" title="Protocols">
       Protocols
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../skill/" title="Skills">
+<a class="md-nav__link" href="../skill/" title="Skills">
       Skills
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../contract/" title="Contracts">
+<a class="md-nav__link" href="../contract/" title="Contracts">
       Contracts
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../decision-maker/" title="Decision Maker">
+<a class="md-nav__link" href="../decision-maker/" title="Decision Maker">
       Decision Maker
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ledger-integration/" title="Ledger &amp; Crypto APIs">
+<a class="md-nav__link" href="../ledger-integration/" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../message-routing/" title="Message routing">
+<a class="md-nav__link" href="../message-routing/" title="Message routing">
       Message routing
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../config/" title="Configurations">
+<a class="md-nav__link" href="../config/" title="Configurations">
       Configurations
     </a>
 </li>
@@ -579,7 +603,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../acn/" title="Agent Communication Network">
+<a class="md-nav__link" href="../acn/" title="Agent Communication Network">
       Agent Communication Network
     </a>
 </li>
@@ -597,22 +621,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../simple-oef/" title="Simple OEF">
+<a class="md-nav__link" href="../simple-oef/" title="Simple OEF">
       Simple OEF
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../defining-data-models/" title="Defining Data Models">
+<a class="md-nav__link" href="../defining-data-models/" title="Defining Data Models">
       Defining Data Models
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../query-language/" title="The Query Language">
+<a class="md-nav__link" href="../query-language/" title="The Query Language">
       The Query Language
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../simple-oef-usage/" title="SOEF Connection">
+<a class="md-nav__link" href="../simple-oef-usage/" title="SOEF Connection">
       SOEF Connection
     </a>
 </li>
@@ -640,22 +664,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-how-to/" title="Installation">
+<a class="md-nav__link" href="../cli-how-to/" title="Installation">
       Installation
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-commands/" title="Commands">
+<a class="md-nav__link" href="../cli-commands/" title="Commands">
       Commands
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../package-imports/" title="File structure">
+<a class="md-nav__link" href="../package-imports/" title="File structure">
       File structure
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../wealth/" title="Generating wealth">
+<a class="md-nav__link" href="../wealth/" title="Generating wealth">
       Generating wealth
     </a>
 </li>
@@ -663,7 +687,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-gui/" title="GUI">
+<a class="md-nav__link" href="../cli-gui/" title="GUI">
       GUI
     </a>
 </li>
@@ -681,15 +705,15 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../performance-benchmark/" title="Performance benchmark">
+<a class="md-nav__link" href="../performance-benchmark/" title="Performance benchmark">
       Performance benchmark
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" id="nav-6-8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" id="nav-6-8" type="checkbox"/>
 <label class="md-nav__link" for="nav-6-8">
       API
     </label>
@@ -699,62 +723,62 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../abstract_agent/" title="AbstractAgent">
+<a class="md-nav__link" href="../api/abstract_agent/" title="AbstractAgent">
       AbstractAgent
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aea/" title="AEA">
+<a class="md-nav__link" href="../api/aea/" title="AEA">
       AEA
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aea_builder/" title="AEA Builder">
+<a class="md-nav__link" href="../api/aea_builder/" title="AEA Builder">
       AEA Builder
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../agent/" title="Agent">
+<a class="md-nav__link" href="../api/agent/" title="Agent">
       Agent
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../agent_loop/" title="Agent Loop">
+<a class="md-nav__link" href="../api/agent_loop/" title="Agent Loop">
       Agent Loop
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../common/" title="Common">
+<a class="md-nav__link" href="../api/common/" title="Common">
       Common
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../exceptions/" title="Exceptions">
+<a class="md-nav__link" href="../api/exceptions/" title="Exceptions">
       Exceptions
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../launcher/" title="Launcher">
+<a class="md-nav__link" href="../api/launcher/" title="Launcher">
       Launcher
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../manager/" title="Manager">
+<a class="md-nav__link" href="../api/manager/" title="Manager">
       Manager
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../multiplexer/" title="Multiplexer">
+<a class="md-nav__link" href="../api/multiplexer/" title="Multiplexer">
       Multiplexer
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../runner/" title="Runner">
+<a class="md-nav__link" href="../api/runner/" title="Runner">
       Runner
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../runtime/" title="Runtime">
+<a class="md-nav__link" href="../api/runtime/" title="Runtime">
       Runtime
     </a>
 </li>
@@ -769,12 +793,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../components/base/" title="Base">
+<a class="md-nav__link" href="../api/components/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../components/loader/" title="Loader">
+<a class="md-nav__link" href="../api/components/loader/" title="Loader">
       Loader
     </a>
 </li>
@@ -792,32 +816,32 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../configurations/base/" title="Base">
+<a class="md-nav__link" href="../api/configurations/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../configurations/constants/" title="Constants">
+<a class="md-nav__link" href="../api/configurations/constants/" title="Constants">
       Constants
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../configurations/loader/" title="Loader">
+<a class="md-nav__link" href="../api/configurations/loader/" title="Loader">
       Loader
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../configurations/project/" title="Project">
+<a class="md-nav__link" href="../api/configurations/project/" title="Project">
       Project
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../configurations/pypi/" title="Pypi">
+<a class="md-nav__link" href="../api/configurations/pypi/" title="Pypi">
       Pypi
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../configurations/utils/" title="Utils">
+<a class="md-nav__link" href="../api/configurations/utils/" title="Utils">
       Utils
     </a>
 </li>
@@ -835,12 +859,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../connections/base/" title="Base">
+<a class="md-nav__link" href="../api/connections/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../connections/stub/connection/" title="Stub Connection">
+<a class="md-nav__link" href="../api/connections/stub/connection/" title="Stub Connection">
       Stub Connection
     </a>
 </li>
@@ -848,7 +872,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../context/base/" title="Context">
+<a class="md-nav__link" href="../api/context/base/" title="Context">
       Context
     </a>
 </li>
@@ -863,7 +887,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../contracts/base/" title="Base">
+<a class="md-nav__link" href="../api/contracts/base/" title="Base">
       Base
     </a>
 </li>
@@ -881,37 +905,37 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/base/" title="Base">
+<a class="md-nav__link" href="../api/crypto/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/cosmos/" title="Cosmos">
+<a class="md-nav__link" href="../api/crypto/cosmos/" title="Cosmos">
       Cosmos
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/ethereum/" title="Ethereum">
+<a class="md-nav__link" href="../api/crypto/ethereum/" title="Ethereum">
       Ethereum
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/fetchai/" title="Fetchai">
+<a class="md-nav__link" href="../api/crypto/fetchai/" title="Fetchai">
       Fetchai
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/helpers/" title="Helpers">
+<a class="md-nav__link" href="../api/crypto/helpers/" title="Helpers">
       Helpers
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/ledger_apis/" title="LedgerApis">
+<a class="md-nav__link" href="../api/crypto/ledger_apis/" title="LedgerApis">
       LedgerApis
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/wallet/" title="Wallet">
+<a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
@@ -926,7 +950,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/registries/base/" title="Base">
+<a class="md-nav__link" href="../api/crypto/registries/base/" title="Base">
       Base
     </a>
 </li>
@@ -947,12 +971,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../decision_maker/base/" title="Base">
+<a class="md-nav__link" href="../api/decision_maker/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../decision_maker/default/" title="Default">
+<a class="md-nav__link" href="../api/decision_maker/default/" title="Default">
       Default
     </a>
 </li>
@@ -970,20 +994,20 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../error_handler/base/" title="Base">
+<a class="md-nav__link" href="../api/error_handler/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../error_handler/default/" title="Default">
+<a class="md-nav__link" href="../api/error_handler/default/" title="Default">
       Default
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-21" id="nav-6-8-21" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-21" id="nav-6-8-21" type="checkbox"/>
 <label class="md-nav__link" for="nav-6-8-21">
       Helpers
     </label>
@@ -993,56 +1017,42 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../async_friendly_queue/" title="Async Friendly Queue">
+<a class="md-nav__link" href="../api/helpers/async_friendly_queue/" title="Async Friendly Queue">
       Async Friendly Queue
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../async_utils/" title="Async Utils">
+<a class="md-nav__link" href="../api/helpers/async_utils/" title="Async Utils">
       Async Utils
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../base/" title="Base">
+<a class="md-nav__link" href="../api/helpers/base/" title="Base">
       Base
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Exception Policy
-      </label>
-<a class="md-nav__link md-nav__link--active" href="./" title="Exception Policy">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/helpers/exception_policy/" title="Exception Policy">
       Exception Policy
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#exceptionpolicyenum-objects">
-    ExceptionPolicyEnum Objects
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../exec_timeout/" title="Exec Timeout">
+<a class="md-nav__link" href="../api/helpers/exec_timeout/" title="Exec Timeout">
       Exec Timeout
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file_io/" title="File IO">
+<a class="md-nav__link" href="../api/helpers/file_io/" title="File IO">
       File IO
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file_lock/" title="File Lock">
+<a class="md-nav__link" href="../api/helpers/file_lock/" title="File Lock">
       File Lock
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install_dependency/" title="Install Dependency">
+<a class="md-nav__link" href="../api/helpers/install_dependency/" title="Install Dependency">
       Install Dependency
     </a>
 </li>
@@ -1057,7 +1067,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ipfs/base/" title="Base">
+<a class="md-nav__link" href="../api/helpers/ipfs/base/" title="Base">
       Base
     </a>
 </li>
@@ -1065,7 +1075,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../logging/" title="Logging">
+<a class="md-nav__link" href="../api/helpers/logging/" title="Logging">
       Logging
     </a>
 </li>
@@ -1080,7 +1090,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../multiaddr/base/" title="Base">
+<a class="md-nav__link" href="../api/helpers/multiaddr/base/" title="Base">
       Base
     </a>
 </li>
@@ -1088,12 +1098,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../multiple_executor/" title="MultipleExecutor">
+<a class="md-nav__link" href="../api/helpers/multiple_executor/" title="MultipleExecutor">
       MultipleExecutor
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pipe/" title="Pipe">
+<a class="md-nav__link" href="../api/helpers/pipe/" title="Pipe">
       Pipe
     </a>
 </li>
@@ -1108,7 +1118,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../preference_representations/base/" title="Base">
+<a class="md-nav__link" href="../api/helpers/preference_representations/base/" title="Base">
       Base
     </a>
 </li>
@@ -1116,7 +1126,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../profiling/" title="Profiling">
+<a class="md-nav__link" href="../api/helpers/profiling/" title="Profiling">
       Profiling
     </a>
 </li>
@@ -1131,12 +1141,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../search/generic/" title="Generic">
+<a class="md-nav__link" href="../api/helpers/search/generic/" title="Generic">
       Generic
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../search/models/" title="Models">
+<a class="md-nav__link" href="../api/helpers/search/models/" title="Models">
       Models
     </a>
 </li>
@@ -1144,7 +1154,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../serializers/" title="Serializers">
+<a class="md-nav__link" href="../api/helpers/serializers/" title="Serializers">
       Serializers
     </a>
 </li>
@@ -1159,7 +1169,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../storage/generic_storage/" title="GenericStorage">
+<a class="md-nav__link" href="../api/helpers/storage/generic_storage/" title="GenericStorage">
       GenericStorage
     </a>
 </li>
@@ -1174,12 +1184,12 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../storage/backends/base/" title="Base">
+<a class="md-nav__link" href="../api/helpers/storage/backends/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../storage/backends/sqlite/" title="Sqlite">
+<a class="md-nav__link" href="../api/helpers/storage/backends/sqlite/" title="Sqlite">
       Sqlite
     </a>
 </li>
@@ -1190,7 +1200,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../sym_link/" title="Sym Link">
+<a class="md-nav__link" href="../api/helpers/sym_link/" title="Sym Link">
       Sym Link
     </a>
 </li>
@@ -1205,7 +1215,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../transaction/base/" title="Base">
+<a class="md-nav__link" href="../api/helpers/transaction/base/" title="Base">
       Base
     </a>
 </li>
@@ -1213,12 +1223,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../win32/" title="Win32">
+<a class="md-nav__link" href="../api/helpers/win32/" title="Win32">
       Win32
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../yaml_utils/" title="YamlUtils">
+<a class="md-nav__link" href="../api/helpers/yaml_utils/" title="YamlUtils">
       YamlUtils
     </a>
 </li>
@@ -1226,12 +1236,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../identity/base/" title="Identity">
+<a class="md-nav__link" href="../api/identity/base/" title="Identity">
       Identity
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mail/base/" title="Mail">
+<a class="md-nav__link" href="../api/mail/base/" title="Mail">
       Mail
     </a>
 </li>
@@ -1246,7 +1256,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/base/" title="Base">
+<a class="md-nav__link" href="../api/protocols/base/" title="Base">
       Base
     </a>
 </li>
@@ -1261,7 +1271,7 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/dialogue/base/" title="Base">
+<a class="md-nav__link" href="../api/protocols/dialogue/base/" title="Base">
       Base
     </a>
 </li>
@@ -1279,22 +1289,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/generator/base/" title="Base">
+<a class="md-nav__link" href="../api/protocols/generator/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/generator/common/" title="Common">
+<a class="md-nav__link" href="../api/protocols/generator/common/" title="Common">
       Common
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/generator/extract_specification/" title="Extract Specification">
+<a class="md-nav__link" href="../api/protocols/generator/extract_specification/" title="Extract Specification">
       Extract Specification
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/generator/validate/" title="Validate">
+<a class="md-nav__link" href="../api/protocols/generator/validate/" title="Validate">
       Validate
     </a>
 </li>
@@ -1312,22 +1322,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/default/custom_types/" title="Custom Types">
+<a class="md-nav__link" href="../api/protocols/default/custom_types/" title="Custom Types">
       Custom Types
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/default/dialogues/" title="Dialogues">
+<a class="md-nav__link" href="../api/protocols/default/dialogues/" title="Dialogues">
       Dialogues
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/default/message/" title="Message">
+<a class="md-nav__link" href="../api/protocols/default/message/" title="Message">
       Message
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/default/serialization/" title="Serialization">
+<a class="md-nav__link" href="../api/protocols/default/serialization/" title="Serialization">
       Serialization
     </a>
 </li>
@@ -1345,22 +1355,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/signing/custom_types/" title="Custom Types">
+<a class="md-nav__link" href="../api/protocols/signing/custom_types/" title="Custom Types">
       Custom Types
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/signing/dialogues/" title="Dialogues">
+<a class="md-nav__link" href="../api/protocols/signing/dialogues/" title="Dialogues">
       Dialogues
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/signing/message/" title="Message">
+<a class="md-nav__link" href="../api/protocols/signing/message/" title="Message">
       Message
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/signing/serialization/" title="Serialization">
+<a class="md-nav__link" href="../api/protocols/signing/serialization/" title="Serialization">
       Serialization
     </a>
 </li>
@@ -1378,17 +1388,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/state_update/dialogues/" title="Dialogues">
+<a class="md-nav__link" href="../api/protocols/state_update/dialogues/" title="Dialogues">
       Dialogues
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/state_update/message/" title="Message">
+<a class="md-nav__link" href="../api/protocols/state_update/message/" title="Message">
       Message
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../protocols/state_update/serialization/" title="Serialization">
+<a class="md-nav__link" href="../api/protocols/state_update/serialization/" title="Serialization">
       Serialization
     </a>
 </li>
@@ -1409,17 +1419,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../registries/base/" title="Base">
+<a class="md-nav__link" href="../api/registries/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../registries/filter/" title="Filter">
+<a class="md-nav__link" href="../api/registries/filter/" title="Filter">
       Filter
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../registries/resources/" title="Resources">
+<a class="md-nav__link" href="../api/registries/resources/" title="Resources">
       Resources
     </a>
 </li>
@@ -1437,22 +1447,22 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../skills/base/" title="Base">
+<a class="md-nav__link" href="../api/skills/base/" title="Base">
       Base
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../skills/error/handlers/" title="Error Skill">
+<a class="md-nav__link" href="../api/skills/error/handlers/" title="Error Skill">
       Error Skill
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../skills/behaviours/" title="Behaviors">
+<a class="md-nav__link" href="../api/skills/behaviours/" title="Behaviors">
       Behaviors
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../skills/tasks/" title="Task">
+<a class="md-nav__link" href="../api/skills/tasks/" title="Task">
       Task
     </a>
 </li>
@@ -1470,27 +1480,27 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/constants/" title="Constants">
+<a class="md-nav__link" href="../api/test_tools/constants/" title="Constants">
       Constants
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/exceptions/" title="Exceptions">
+<a class="md-nav__link" href="../api/test_tools/exceptions/" title="Exceptions">
       Exceptions
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/generic/" title="Generic">
+<a class="md-nav__link" href="../api/test_tools/generic/" title="Generic">
       Generic
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/test_cases/" title="Test Cases">
+<a class="md-nav__link" href="../api/test_tools/test_cases/" title="Test Cases">
       Test Cases
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../test_tools/test_skill/" title="Test Skill">
+<a class="md-nav__link" href="../api/test_tools/test_skill/" title="Test Skill">
       Test Skill
     </a>
 </li>
@@ -1504,12 +1514,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../glossary/" title="Glossary">
+<a class="md-nav__link" href="../glossary/" title="Glossary">
       Glossary
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../questions-and-answers/" title="Q&amp;A">
+<a class="md-nav__link" href="../questions-and-answers/" title="Q&amp;A">
       Q&amp;A
     </a>
 </li>
@@ -1525,8 +1535,18 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exceptionpolicyenum-objects">
-    ExceptionPolicyEnum Objects
+<a class="md-nav__link" href="#example-1-negotiation">
+    Example 1: negotiation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-2-aea-web-client">
+    Example 2: AEA &lt;&gt; web client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-3-aea-3rd-party-server">
+    Example 3 : AEA &lt;&gt; 3rd party server
   </a>
 </li>
 </ul>
@@ -1536,15 +1556,25 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/api/helpers/exception_policy.md" title="Edit this page"></a>
-<p><a name="aea.helpers.exception_policy"></a></p>
-<h1 id="aeahelpersexception_policy">aea.helpers.exception<code>_</code>policy</h1>
-<p>This module contains enum of aea exception policies.</p>
-<p><a name="aea.helpers.exception_policy.ExceptionPolicyEnum"></a></p>
-<h2 id="exceptionpolicyenum-objects">ExceptionPolicyEnum Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExceptionPolicyEnum</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
-</code></pre></div>
-<p>AEA Exception policies.</p>
+<a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/interaction-protocol.md" title="Edit this page"></a>
+<h1>Interaction protocols</h1>
+<p><a href="https://en.wikipedia.org/wiki/Interaction_protocol" target="_blank">Interaction protocols</a> are possible communication scenarios between agents or agent components (specifically, skills and connections).</p>
+<p>There are multiple types of interactions an AEA can have:</p>
+<ul>
+<li>
+<p>AEA to AEA interactions, as for instance demonstrated in the <a href="../demos">demo sections</a>.</p>
+</li>
+<li>
+<p>AEA internal interactions, between components of the framework.</p>
+</li>
+</ul>
+<p>Usually, an interaction involves three types of framework packages: skills, protocols and connections.</p>
+<h2 id="example-1-negotiation">Example 1: negotiation</h2>
+<p>In the <a href="../generic-skills">generic buyer/seller skills</a> the protocol <code>fetchai/fipa</code> is used for maintaining the negotiation dialogue between two AEAs. The skills <code>fetchai/generic_buyer</code> and <code>fetchai/generic_seller</code> are used to implement the handling and generating of individual messages and associated logic. The connextion <code>fetchai/p2p_libp2p</code> is used for connecting to the <a href="../acn">agent communication network</a>.</p>
+<h2 id="example-2-aea-web-client">Example 2: AEA &lt;&gt; web client</h2>
+<p>In the <a href="../http-connection-and-skill">http connection and skill guide</a> we demo how a skill (<code>fetchai/http_echo</code>) can be used to process http requests received by a http server connection (<code>fetchai/http_server</code>). The <code>fetchai/http</code> protocol is used for communication between the connection and skill.</p>
+<h2 id="example-3-aea-3rd-party-server">Example 3 : AEA &lt;&gt; 3rd party server</h2>
+<p>The <code>fetchai/http_client</code> connection can be used to make requests to third party servers. Alternatively, a third party SDK can be wrapped in a connection and shared with other developers as a package. Often, the developer will also create a custom protocol to enforce the type of interactions permitted with the SDK wrapped in such a connection.</p>
 </article>
 </div>
 </div>
@@ -1552,7 +1582,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../base/" rel="prev" title="Base">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../core-components-2/" rel="prev" title="Core components - Part 2">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -1561,17 +1591,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Base
+                Core components - Part 2
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../exec_timeout/" rel="next" title="Exec Timeout">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../generic-skills-step-by-step/" rel="next" title="Trade between two AEAs">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Exec Timeout
+                Trade between two AEAs
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -1594,8 +1624,8 @@
 </div>
 </footer>
 </div>
-<script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+<script src="../assets/javascripts/application.c33a9706.js"></script>
+<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>
