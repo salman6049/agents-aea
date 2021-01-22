@@ -38,6 +38,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#cosmwasm-supporting-chains" tabindex="0">
+        Skip to content
+      </a>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -506,9 +509,22 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Ledger &amp; Crypto APIs
+      </label>
 <a class="md-nav__link md-nav__link--active" href="./" title="Ledger &amp; Crypto APIs">
       Ledger &amp; Crypto APIs
     </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cosmwasm-supporting-chains">
+    CosmWasm supporting chains
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../message-routing/" title="Message routing">
@@ -1568,6 +1584,22 @@
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cosmwasm-supporting-chains">
+    CosmWasm supporting chains
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/ledger-integration.md" title="Edit this page"></a>
@@ -1577,6 +1609,7 @@
 <ul>
 <li>Fetch.ai</li>
 <li>Ethereum</li>
+<li>Cosmos</li>
 </ul>
 <p>However, support for additional ledgers can be added to the framework at runtime.</p>
 <p>For a ledger to be considered <code>supported</code> in the framework, three abstract base classes need to be implemented:</p>
@@ -1641,6 +1674,48 @@
 </code></pre></div>
 <p>The framework wraps all <code>LedgerApi</code> classes and exposes them in the <a href="../api/crypto/ledger_apis#aea.crypto.base.LedgerApis"><code>LedgerApis</code> classes. The framework also wraps the crypto APIs to create identities on both ledgers and exposes them in the <code>Wallet</code>.</a></p>
 <p>The separation between the <code>Crypto</code> and <code>LedgerApi</code> is fundamental to the framework design. In particular, the object which holds the private key is separated from the object which interacts with the ledger. This design pattern is repeated throughout the framework: the decision maker is the only entity with access to the AEA's <code>Wallet</code> whilst <code>LedgerApis</code> are accessible by all skills.</p>
+<h2 id="cosmwasm-supporting-chains">CosmWasm supporting chains</h2>
+<p>The Fetch.ai networks use <a href="https://cosmwasm.com" target="_blank">CosmWasm</a> for smart contract support.</p>
+<p>Currently, to use the smart contract functionality of the Fetch.ai network you have to install a CLI tool which is used by the AEA framework to perform some necessary actions for the smart contract functionality on-chain.</p>
+<ol>
+<li>Install Rust using the following command:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>curl --proto <span class="s1">'=https'</span> --tlsv1.2 https://sh.rustup.rs -sSf <span class="p">|</span> sh
+</code></pre></div>
+<ol>
+<li>Update the configuration for Rust:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>rustup default stable
+cargo version
+<span class="c1"># If this is lower than 1.44.1+, update with:</span>
+<span class="c1"># rustup update stable</span>
+
+rustup target list --installed
+rustup target add wasm32-unknown-unknown
+</code></pre></div>
+<ol>
+<li>Install <code>fetchd</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/fetchai/fetchd.git
+<span class="nb">cd</span> fetchd
+git checkout release/v0.2.x
+make install
+
+<span class="c1"># Check if wasmcli is properly installed</span>
+wasmcli version
+<span class="c1"># Version should be &gt;=0.2.5</span>
+</code></pre></div>
+<ol>
+<li>Configure <code>wasmcli</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>wasmcli config chain-id agent-land
+wasmcli config trust-node <span class="nb">false</span>
+wasmcli config node https://rpc-agent-land.fetch.ai:443
+wasmcli config output json
+wasmcli config indent <span class="nb">true</span>
+wasmcli config broadcast-mode block
+</code></pre></div>
+<p>Now <code>wasmcli</code> will be ready for use on your system.</p>
 </article>
 </div>
 </div>
