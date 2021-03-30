@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Build an AEA on a Raspberry Pi - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -457,6 +462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -520,6 +530,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -618,11 +633,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -843,21 +853,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -868,17 +863,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1506,6 +1506,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1579,18 +1700,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-a-virtual-environment">
-    Install a virtual environment
+<a class="md-nav__link" href="#booting-up-and-updating-the-os">
+    Booting up and updating the OS
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-and-launch-a-virtual-environment">
-    Create and launch a virtual environment
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installing-the-aea-framework">
-    Installing the AEA-framework
+<a class="md-nav__link" href="#install-the-aea-framework">
+    Install the AEA Framework
   </a>
 </li>
 </ul>
@@ -1636,18 +1752,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-a-virtual-environment">
-    Install a virtual environment
+<a class="md-nav__link" href="#booting-up-and-updating-the-os">
+    Booting up and updating the OS
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-and-launch-a-virtual-environment">
-    Create and launch a virtual environment
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installing-the-aea-framework">
-    Installing the AEA-framework
+<a class="md-nav__link" href="#install-the-aea-framework">
+    Install the AEA Framework
   </a>
 </li>
 </ul>
@@ -1659,36 +1770,37 @@
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/raspberry-set-up.md" title="Edit this page"></a>
 <h1>Build an AEA on a Raspberry Pi</h1>
+<p>This guide explains how to run an AEA inside a Raspberry Pi.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Raspberry Pi 4  <a href="https://thepihut.com/products/raspberry-pi-4-model-b?gclid=EAIaIQobChMImcuwvcfh4wIVirHtCh3szg2EEAAYASAAEgJQ_fD_BwE" target="_blank">link</a> (You can also use Raspberry Pi3 b or Raspberry Pi3 b+)</p>
-<p>I use a wireless network because, once your Raspberry Pi is set up, you want as few wires going to it as possible.</p>
+<ul>
+<li><a href="https://thepihut.com/products/raspberry-pi-4-model-b?gclid=EAIaIQobChMImcuwvcfh4wIVirHtCh3szg2EEAAYASAAEgJQ_fD_BwE" target="_blank">Raspberry Pi 4</a> (You can also use Raspberry Pi3 b or Raspberry Pi3 b+)</li>
+<li>Internet connection (preferably wireless to minimise the number of wires connecting into your device)</li>
+</ul>
 <h2 id="preparing-the-raspberry-pi">Preparing the Raspberry Pi</h2>
-<p>If you have got a brand-new Raspberry Pi, you can simply insert the SD card, connect the power and boot up.
+<p>If you have a brand-new Raspberry Pi, you can simply insert the SD card, connect the power and boot up.
 If you do not have a new Raspberry Pi SD card, you will need to make one. To do this follow the NOOBS instructions below.</p>
 <h2 id="noobs">NOOBS</h2>
-<p>NOOBS is a way to get an SD card like it was when you got your Raspberry Pi new from the shop.
-Go to the following link https://www.raspberrypi.org/downloads/ to download noobs. 
-You can follow this guide to set up your SD card : https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up </p>
-<p>Once you have set up your SD card, plug it into your Raspberry Pi, connect the power and watch it boot up. When prompted, select the Raspbian operating system and click on Install.
-Booting up and updating the OS</p>
-<p>When you first boot your Raspberry Pi, you will be prompted to enter a password for the Raspberry PI and your WiFi password so the Raspberry Pi has access to the internet. You may also be given the option to update the operating system and software. Let the system update and when it has finished you will be prompted to restart. Do this.</p>
-<p>I recommend having these instructions easily accessible on your Raspberry Pi so you can copy and paste lines into the terminal. You will also be restarting your Raspberry Pi a few times during this process. </p>
-<p>Even if your Raspberry Pi updated itself, I recommend making sure it is completely up to date using the terminal. Open a Terminal window and type:
+<p>NOOBS is a way to create an SD card for easy operating system installation on a Raspberry Pi. </p>
+<p>First download noobs from <a href="https://www.raspberrypi.org/software/" target="_blank">this link</a>.</p>
+<p>Then follow <a href="https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up" target="_blank">this guide</a> to set up your SD card.</p>
+<p>Once you have set up your SD card, plug it into your Raspberry Pi, connect the power and boot up. When prompted, select the Raspbian operating system and click "Install".</p>
+<h2 id="booting-up-and-updating-the-os">Booting up and updating the OS</h2>
+<p>When you first boot your Raspberry Pi, you will be prompted to enter a password for the Raspberry Pi and your WiFi password so the device can access the internet. You may also be given the option to update the operating system and software. We recommend that you let the system update. Once finished you will be prompted to restart.</p>
+<p>Even if your Raspberry Pi updated itself, we recommend that you make sure it is completely up to date using the terminal. Open a Terminal window (your Raspberry Pi might restart a few times during this process):</p>
 <div class="highlight"><pre><span></span><code>sudo apt update -y 
 sudo apt-get update
 sudo apt-get dist-upgrade 
-</code></pre></div></p>
-<h2 id="install-a-virtual-environment">Install a virtual environment</h2>
-<p>You will need to install pipenv. This is a virtual environment for python. Open a terminal and write the following command:</p>
+</code></pre></div>
+<h2 id="install-the-aea-framework">Install the AEA Framework</h2>
+<p>First, install pipenv: </p>
 <div class="highlight"><pre><span></span><code>sudo apt-get install pipenv
 </code></pre></div>
-<h2 id="create-and-launch-a-virtual-environment">Create and launch a virtual environment</h2>
+<p>Once installed, create and launch a clean virtual environment with Python 3.7:</p>
 <div class="highlight"><pre><span></span><code>pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
 </code></pre></div>
-<h2 id="installing-the-aea-framework">Installing the AEA-framework</h2>
-<p>Install the package from source:
+<p>Finally, install the AEA framework from PyPI:</p>
 <div class="highlight"><pre><span></span><code>pip install aea<span class="o">[</span>all<span class="o">]</span>
-</code></pre></div></p>
+</code></pre></div>
 </article>
 </div>
 </div>
@@ -1739,7 +1851,7 @@ sudo apt-get dist-upgrade
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

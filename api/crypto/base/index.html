@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Base - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -457,6 +462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -520,6 +530,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -618,11 +633,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -900,8 +910,23 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#load">
+    load
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#dump">
     dump
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encrypt">
+    encrypt
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decrypt">
+    decrypt
   </a>
 </li>
 </ul>
@@ -921,6 +946,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#is_transaction_valid">
     is_transaction_valid
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_contract_address">
+    get_contract_address
   </a>
 </li>
 <li class="md-nav__item">
@@ -1038,21 +1068,6 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../helpers/" title="Helpers">
       Helpers
     </a>
@@ -1063,17 +1078,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1701,6 +1721,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1828,8 +1969,23 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#load">
+    load
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#dump">
     dump
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encrypt">
+    encrypt
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decrypt">
+    decrypt
   </a>
 </li>
 </ul>
@@ -1849,6 +2005,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#is_transaction_valid">
     is_transaction_valid
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_contract_address">
+    get_contract_address
   </a>
 </li>
 <li class="md-nav__item">
@@ -1980,10 +2141,10 @@
 <p>Base class for a crypto object.</p>
 <p><a name="aea.crypto.base.Crypto.__init__"></a></p>
 <h4 id="__init__"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">private_key_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">private_key_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="p">,)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Initialize the crypto object.</p>
-<p>The actual behaivour of this constructor is determined by the abstract
+<p>The actual behaviour of this constructor is determined by the abstract
 methods 'generate_private_key()' and 'load_private_key_from_path().
 Either way, the entity object will be accessible as a property.</p>
 <p><strong>Arguments</strong>:</p>
@@ -1991,6 +2152,7 @@ Either way, the entity object will be accessible as a property.</p>
 <li><code>private_key_path</code>: the path to the private key.
 If None, the key will be generated by 'generate_private_key()'.
 If not None, the path will be processed by 'load_private_key_from_path()'.</li>
+<li><code>password</code>: the password to encrypt/decrypt the private key.</li>
 <li><code>kwargs</code>: keyword arguments.</li>
 </ul>
 <p><a name="aea.crypto.base.Crypto.generate_private_key"></a></p>
@@ -2006,12 +2168,13 @@ If not None, the path will be processed by 'load_private_key_from_path()'.</li>
 <h4 id="load_private_key_from_path">load<code>_</code>private<code>_</code>key<code>_</code>from<code>_</code>path</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
  <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">load_private_key_from_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EntityClass</span>
+ <span class="o">|</span> <span class="n">load_private_key_from_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EntityClass</span>
 </code></pre></div>
-<p>Load a private key in hex format from a file.</p>
+<p>Load a private key in hex format for raw private key and json format for encrypted private key from a file.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>file_name</code>: the path to the hex file.</li>
+<li><code>file_name</code>: the path to the hex/json file.</li>
+<li><code>password</code>: the password to encrypt/decrypt the private key.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the entity object.</p>
@@ -2075,18 +2238,58 @@ If not None, the path will be processed by 'load_private_key_from_path()'.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>signed transaction</p>
-<p><a name="aea.crypto.base.Crypto.dump"></a></p>
-<h4 id="dump">dump</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
- <span class="o">|</span> <span class="n">dump</span><span class="p">(</span><span class="n">fp</span><span class="p">:</span> <span class="n">BinaryIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<p><a name="aea.crypto.base.Crypto.load"></a></p>
+<h4 id="load">load</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">private_key_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p>Serialize crypto object as binary stream to <code>fp</code> (a <code>.write()</code>-supporting file-like object).</p>
+<p>Load private key from file.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>fp</code>: the output file pointer. Must be set in binary mode (mode='wb')</li>
+<li><code>private_key_file</code>: the file where the key is stored.</li>
+<li><code>password</code>: the password to encrypt/decrypt the private key.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>private_key in hex string format</p>
+<p><a name="aea.crypto.base.Crypto.dump"></a></p>
+<h4 id="dump">dump</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">dump</span><span class="p">(</span><span class="n">private_key_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Dump private key to file.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>private_key_file</code>: the file where the key is stored.</li>
+<li><code>password</code>: the password to encrypt/decrypt the private key.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
+<p><a name="aea.crypto.base.Crypto.encrypt"></a></p>
+<h4 id="encrypt">encrypt</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Encrypt the private key and return in json.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>private_key</code>: the raw private key.</li>
+<li><code>password</code>: the password to decrypt.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>json string containing encrypted private key.</p>
+<p><a name="aea.crypto.base.Crypto.decrypt"></a></p>
+<h4 id="decrypt">decrypt</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">decrypt</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">keyfile_json</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Decrypt the private key and return in raw form.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>keyfile_json</code>: json string containing encrypted private key.</li>
+<li><code>password</code>: the password to decrypt.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>the raw private key.</p>
 <p><a name="aea.crypto.base.Helper"></a></p>
 <h2 id="helper-objects">Helper Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Helper</span><span class="p">(</span><span class="n">ABC</span><span class="p">)</span>
@@ -2122,13 +2325,26 @@ If not None, the path will be processed by 'load_private_key_from_path()'.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>True if the random_message is equals to tx['input']</p>
+<p><a name="aea.crypto.base.Helper.get_contract_address"></a></p>
+<h4 id="get_contract_address">get<code>_</code>contract<code>_</code>address</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
+ <span class="o">|</span> <span class="nd">@abstractmethod</span>
+ <span class="o">|</span> <span class="n">get_contract_address</span><span class="p">(</span><span class="n">tx_receipt</span><span class="p">:</span> <span class="n">JSONLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+<p>Get the contract address from a transaction receipt.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>tx_receipt</code>: the transaction digest</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>the contract address if successful</p>
 <p><a name="aea.crypto.base.Helper.generate_tx_nonce"></a></p>
 <h4 id="generate_tx_nonce">generate<code>_</code>tx<code>_</code>nonce</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
  <span class="o">|</span> <span class="nd">@abstractmethod</span>
  <span class="o">|</span> <span class="n">generate_tx_nonce</span><span class="p">(</span><span class="n">seller</span><span class="p">:</span> <span class="n">Address</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">Address</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p>Generate a unique hash to distinguish txs with the same terms.</p>
+<p>Generate a unique hash to distinguish transactions with the same terms.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>seller</code>: the address of the seller.</li>
@@ -2384,13 +2600,13 @@ If there is no such object, return None.</p>
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../cosmos/" rel="next" title="Cosmos">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../helpers/" rel="next" title="Helpers">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Cosmos
+                Helpers
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -2414,7 +2630,7 @@ If there is no such object, return None.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

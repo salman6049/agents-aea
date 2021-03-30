@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>LedgerApis - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -457,6 +462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -520,6 +530,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -618,11 +633,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -843,21 +853,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../helpers/" title="Helpers">
       Helpers
     </a>
@@ -915,6 +910,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#get_contract_address">
+    get_contract_address
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#is_transaction_settled">
     is_transaction_settled
   </a>
@@ -951,17 +951,22 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1589,6 +1594,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1703,6 +1829,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#get_transaction">
     get_transaction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_contract_address">
+    get_contract_address
   </a>
 </li>
 <li class="md-nav__item">
@@ -1835,6 +1966,19 @@
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the tx, if present</p>
+<p><a name="aea.crypto.ledger_apis.LedgerApis.get_contract_address"></a></p>
+<h4 id="get_contract_address">get<code>_</code>contract<code>_</code>address</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
+ <span class="o">|</span> <span class="n">get_contract_address</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tx_receipt</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Address</span><span class="p">]</span>
+</code></pre></div>
+<p>Get the contract address from a transaction receipt.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>identifier</code>: the identifier of the ledger</li>
+<li><code>tx_receipt</code>: the transaction receipt</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>the contract address if successful</p>
 <p><a name="aea.crypto.ledger_apis.LedgerApis.is_transaction_settled"></a></p>
 <h4 id="is_transaction_settled">is<code>_</code>transaction<code>_</code>settled</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@staticmethod</span>
@@ -1937,13 +2081,13 @@
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../wallet/" rel="next" title="Wallet">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../plugin/" rel="next" title="Plugin">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Wallet
+                Plugin
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -1967,7 +2111,7 @@
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

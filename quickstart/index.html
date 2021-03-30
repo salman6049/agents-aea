@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>AEA quick start - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -314,8 +314,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#option-2-automated-install-script">
-    Option 2: Automated install script
+<a class="md-nav__link" href="#option-2-using-an-automated-install-script">
+    Option 2: Using an automated install script
   </a>
 </li>
 <li class="md-nav__item">
@@ -360,6 +360,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#stub-connection">
     Stub connection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-aea-dependencies">
+    Install AEA dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-and-create-a-private-key">
+    Add and create a private key
   </a>
 </li>
 <li class="md-nav__item">
@@ -511,6 +521,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -563,6 +578,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -626,6 +646,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -724,11 +749,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -949,21 +969,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -974,17 +979,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1612,6 +1622,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1699,8 +1830,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#option-2-automated-install-script">
-    Option 2: Automated install script
+<a class="md-nav__link" href="#option-2-using-an-automated-install-script">
+    Option 2: Using an automated install script
   </a>
 </li>
 <li class="md-nav__item">
@@ -1745,6 +1876,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#stub-connection">
     Stub connection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-aea-dependencies">
+    Install AEA dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-and-create-a-private-key">
+    Add and create a private key
   </a>
 </li>
 <li class="md-nav__item">
@@ -1795,50 +1936,49 @@
 <h1>AEA quick start</h1>
 <p>If you want to create Autonomous Economic Agents (AEAs) that can act independently of constant user input and autonomously execute actions to achieve their objective, you can use the AEA framework.</p>
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/mwkAUh-_uxA" width="560"></iframe>
-<p>This example will take you through a simple AEA to familiarise you with the framework's basics.</p>
+<p>This example will take you through a simple AEA to familiarise you with the basics of the framework.</p>
 <h2 id="system-requirements">System Requirements</h2>
 <p>The AEA framework can be used on <code>Windows</code>, <code>Ubuntu/Debian</code> and <code>MacOS</code>.</p>
 <p>You need <a href="https://www.python.org/downloads/" target="_blank">Python 3.6</a> or higher as well as <a href="https://golang.org/dl/" target="_blank">Go 1.14.2</a> or higher installed.
 ​</p>
 <h3 id="option-1-manual-system-preparation">Option 1: Manual system preparation</h3>
 <p>Install a compatible Python and Go version on your system (see <a href="https://realpython.com/installing-python/" target="_blank">this external resource</a> for a comprehensive guide).</p>
-<p>The following hints can help:</p>
+<details><summary>Manual approach</summary>
+
+The following hints can help:
+
 <ul>
-<li>
-<p>To install Go, follow the
- official guide, depending on your platform <a href="https://golang.org/doc/install" target="_blank">here</a></p>
-</li>
-<li>
-<p>Python is already included by default on 
+<li>To install Go, follow the official guide, depending on your platform <a href="https://golang.org/doc/install" target="_blank">here</a></li>
+<li>Python is already included by default on 
 many Linux distributions (e.g. Ubuntu), as well as MacOS.
 To check you have the right version, open a terminal and run: 
 <div class="highlight"><pre><span></span><code>python3 --version
-</code></pre></div></p>
+</code></pre></div>
 </li>
-<li>
-<p>To install Python on Windows machines, 
-you can download a specific release <a href="https://www.python.org/downloads/" target="_blank">here</a>.</p>
-</li>
-<li>
-<p>Ubuntu/Debian systems only: install Python headers,
+<li>To install Python on Windows machines, you can download a specific release <a href="https://www.python.org/downloads/" target="_blank">here</a>.</li>
+<li>Ubuntu/Debian systems only: install Python headers,
   depending on the Python version you have installed on your machine.
   E.g. for Python 3.7: 
 <div class="highlight"><pre><span></span><code>sudo apt-get install python3.7-dev
-</code></pre></div></p>
+</code></pre></div>
 </li>
-<li>
-<p>Windows users: install <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019" target="_blank">tools for Visual Studio</a>.</p>
-</li>
+<li>Windows users: install <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019" target="_blank">tools for Visual Studio</a>.</li>
 </ul>
-<h3 id="option-2-automated-install-script">Option 2: Automated install script</h3>
-<p>We provide a script to automatically install all framework dependencies and the framework itself. This means that if you follow this option, you can skip the <code>installation</code> step below.</p>
-<p>On MacOS or Ubuntu run:</p>
-<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/fetchai/agents-aea/master/scripts/install.sh --output install.sh
+</details>
+<h3 id="option-2-using-an-automated-install-script">Option 2: Using an automated install script</h3>
+<p>We provide a script to automatically install all framework dependencies and the framework itself. This means that if you follow this option, you can skip the <a href="../quickstart#installation">installation step</a> that comes later on this page.</p>
+<details><summary>Automated install script approach</summary>
+
+On MacOS or Ubuntu run the following commands to download and install:
+
+<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/fetchai/agents-aea/main/scripts/install.sh --output install.sh
 chmod +x install.sh
 ./install.sh
 </code></pre></div>
-<p>On Windows:</p>
-<p>Download <code>https://raw.githubusercontent.com/fetchai/agents-aea/master/scripts/install.ps1</code>, then run <code>install.ps1</code> with the PowerShell terminal.</p>
+
+On Windows: download <a href="https://raw.githubusercontent.com/fetchai/agents-aea/main/scripts/install.ps1" target="_blank">https://raw.githubusercontent.com/fetchai/agents-aea/main/scripts/install.ps1</a>, then run <code>install.ps1</code> with the PowerShell terminal.
+
+</details>
 <h3 id="option-3-using-docker">Option 3: Using Docker</h3>
 <p>​
 We also provide a Docker image with all the needed dependencies.</p>
@@ -1866,11 +2006,16 @@ you can follow the rest of the guide the same way as if not using docker.
 ​
 </details>
 <h2 id="preliminaries">Preliminaries</h2>
-<p>We have created a  <a href="https://github.com/fetchai/agents-template" target="_blank">template repo for AEA development</a> here which you can optionally fork and use immediately.</p>
-<p>Alternatively, create and enter into a new working directory:</p>
-<div class="highlight"><pre><span></span><code>mkdir my_aea_projects/
-<span class="nb">cd</span> my_aea_projects/
-</code></pre></div>
+<p>Ensure, you are in a clean working directory:</p>
+<ul>
+<li>
+<p>either you create it manually <code>mkdir my_aea_projects/ &amp;&amp; cd my_aea_projects/</code>, then add an empty directory called <code>packages</code> with the following command <code>mkdir packages/</code>,</p>
+</li>
+<li>
+<p>or you clone the template repo as described in <code>Approach 1</code> in the <a href="../development-setup#approach-1">development setup</a> guide.</p>
+</li>
+</ul>
+<p>At this point, when typing <code>ls</code> you should see a single folder called <code>packages</code> in your working environment. This will act as your local registry for AEA components.</p>
 <p>Unless you are using the docker image, we highly recommend using a virtual environment to ensure consistency across dependencies.</p>
 <p>Check that you have <a href="https://github.com/pypa/pipenv" target="_blank"><code>pipenv</code></a>.</p>
 <div class="highlight"><pre><span></span><code>which pipenv
@@ -1879,9 +2024,8 @@ you can follow the rest of the guide the same way as if not using docker.
 <p>Once installed, create a new environment and open it (here we use Python 3.7 but the AEA framework supports any Python &gt;= 3.6).</p>
 <div class="highlight"><pre><span></span><code>touch Pipfile <span class="o">&amp;&amp;</span> pipenv --python <span class="m">3</span>.7 <span class="o">&amp;&amp;</span> pipenv shell
 </code></pre></div>
-<p>For more guidance on setting up a development environment check out <a href="../development-setup">this guide</a>.</p>
 <h2 id="installation">Installation</h2>
-<p>The following installs the entire AEA package which also includes a <a href="../cli-commands">command-line interface (CLI)</a>.</p>
+<p>The following installs the entire AEA package which also includes a <a href="../cli-commands">command-line interface (CLI)</a>. (You can skip this step if you used the install script above: <a href="../quickstart#option-2-using-an-automated-install-script">Option 2 </a>.)</p>
 <div class="highlight"><pre><span></span><code>pip install aea<span class="o">[</span>all<span class="o">]</span>
 </code></pre></div>
 <p>If you are using <code>zsh</code> rather than <code>bash</code> type
@@ -1889,11 +2033,11 @@ you can follow the rest of the guide the same way as if not using docker.
 </code></pre></div></p>
 <p>If the installation steps fail, it might be a dependency issue. Make sure you have followed all the relevant system specific steps above under <code>System Requirements</code>.</p>
 <h2 id="setup-author-name">Setup author name</h2>
-<p>AEAs are composed from components. The components can be developed by anyone and are available on the <a href="https://aea-registry.fetch.ai" target="_blank">AEA registry</a>. To use the registry we need to register an author name.</p>
-<p>You can setup your author name using the <code>init</code> command:
+<p>AEAs are composed from components. AEAs and AEA components can be developed by anyone and pushed to the <a href="https://aea-registry.fetch.ai" target="_blank">AEA registry</a> for others to use. To use the registry, we need to register an author name.</p>
+<p>You can set up your author name using the <code>init</code> command:
 <div class="highlight"><pre><span></span><code>aea init
 </code></pre></div></p>
-<p>This is your unique author name in the Fetch.ai ecosystem.</p>
+<p>This is your unique author (or developer) name in the AEA ecosystem.</p>
 <p>You should see a similar output (with your input instead of the sample username and email):
 <div class="highlight"><pre><span></span><code>Do you have a Registry account? <span class="o">[</span>y/N<span class="o">]</span>: n
 Create a new account on the Registry now:
@@ -1908,18 +2052,18 @@ Confirm password:
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.10.1
+v1.0.0
 
 AEA configurations successfully initialized: <span class="o">{</span><span class="s1">'author'</span>: <span class="s1">'fetchai'</span><span class="o">}</span>
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you would rather not create an account on the registry at this point, then run `aea init --local` instead.</p>
+<p>If you would rather not create an account on the registry at this point, then run <code>aea init --local</code> instead.</p>
 </div>
 <h2 id="echo-skill-demo">Echo skill demo</h2>
 <p>This is a simple demo that introduces you to the main components of an AEA. </p>
 <p>The fastest way to have your first AEA is to fetch one that already exists!</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/my_first_aea:0.20.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/my_first_aea:0.26.0
 <span class="nb">cd</span> my_first_aea
 </code></pre></div>
 <p>To learn more about the folder structure of an AEA project read on <a href="../package-imports/">here</a>.</p>
@@ -1934,15 +2078,15 @@ First, create a new AEA project and enter it.
 <b>Add the stub connection</b>
 <br/>
 Second, add the stub connection to the project.
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/stub:0.17.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/stub:0.20.0
 </code></pre></div>
 <br/>
 <b>Add the echo skill</b>
 <br/>
 Third, add the echo skill to the project.
-<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.14.0
+<div class="highlight"><pre><span></span><code>aea add skill fetchai/echo:0.18.0
 </code></pre></div>
-This copies the `fetchai/echo:0.14.0` skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill `fetchai/echo:0.14.0` consists of the name of the author of the skill, followed by the skill name and its version.
+This copies the <code>fetchai/echo:0.18.0</code> skill code containing the "behaviours", and "handlers" into the project, ready to run. The identifier of the skill <code>fetchai/echo:0.18.0</code> consists of the name of the author of the skill, followed by the skill name and its version.
 </details>
 <h3 id="echo-skill">Echo skill</h3>
 <p>Just like humans, AEAs can have <em>skills</em> to achieve their tasks. As an agent developer, you can create skills to add to your own AEAs. You can also choose to publish your skills so others add them to their AEAs. More details on skills can be found on <a href="../skill/"> this page </a>.</p>
@@ -1951,14 +2095,22 @@ This copies the `fetchai/echo:0.14.0` skill code containing the "behaviours", an
 <p>AEAs use envelopes containing messages for communication. To learn more, check out the <a href="../core-components-1/">next section</a>.</p>
 <h3 id="stub-connection">Stub connection</h3>
 <p>Besides skills, AEAs may have one or more <em>connections</em> enabling them to interface with entities in the outside world. For example, an HTTP client connection allows an AEA to communicate with HTTP servers. To read more about connections see <a href="../connection/">this page</a>.</p>
-<p>In this demo we use a stub connection (<code>fetchai/stub0.15.0</code>) to send envelopes to and receive envelopes from the AEA.</p>
+<p>In this demo, we use the stub connection (<code>fetchai/stub0.15.0</code>) to send envelopes to and receive envelopes from the AEA.</p>
 <p>A stub connection provides an I/O reader and writer. It uses two files for communication: one for incoming envelopes and the other for outgoing envelopes.</p>
 <p>The AEA waits for a new envelope posted to the file <code>my_first_aea/input_file</code>, and adds a response to the file <code>my_first_aea/output_file</code>.</p>
 <p>The format of each envelope is the following:</p>
 <div class="highlight"><pre><span></span><code>TO,SENDER,PROTOCOL_ID,ENCODED_MESSAGE,
 </code></pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:0.12.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span><span class="se">\x</span><span class="m">12</span><span class="se">\x</span><span class="m">011</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
+<div class="highlight"><pre><span></span><code>recipient_aea,sender_aea,fetchai/default:1.0.0,<span class="se">\x</span><span class="m">08</span><span class="se">\x</span><span class="m">01</span><span class="se">\x</span><span class="m">12</span><span class="se">\x</span><span class="m">011</span>*<span class="se">\x</span><span class="m">07</span><span class="se">\n\x</span>05hello,
+</code></pre></div>
+<h3 id="install-aea-dependencies">Install AEA dependencies</h3>
+<div class="highlight"><pre><span></span><code>aea install
+</code></pre></div>
+<h3 id="add-and-create-a-private-key">Add and create a private key</h3>
+<p>All AEAs need a private key to run. Add one now:</p>
+<div class="highlight"><pre><span></span><code>aea generate-key fetchai
+aea add-key fetchai
 </code></pre></div>
 <h3 id="run-the-aea">Run the AEA</h3>
 <p>Run the AEA.</p>
@@ -1971,9 +2123,9 @@ This copies the `fetchai/echo:0.14.0` skill code containing the "behaviours", an
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v0.10.1
+v1.0.0
 
-Starting AEA <span class="s1">'my_first_aea'</span> in <span class="s1">'async'</span> mode ...
+Starting AEA <span class="s1">'my_first_aea'</span> <span class="k">in</span> <span class="s1">'async'</span> mode ...
 info: Echo Handler: setup method called.
 info: Echo Behaviour: setup method called.
 info: <span class="o">[</span>my_first_aea<span class="o">]</span>: Start processing messages...
@@ -1984,7 +2136,8 @@ info: Echo Behaviour: act method called.
 </code></pre></div>
 <p>The framework first calls the <code>setup</code> methods in the skill's <code>Handler</code> and <code>Behaviour</code> classes in that order; after which it repeatedly calls the <code>act</code> method of <code>Behaviour</code> class. This is the main agent loop in action.</p>
 <h4 id="add-a-message-to-the-input-file">Add a message to the input file</h4>
-<p>From a different terminal and same directory, you can send the AEA a message wrapped in an envelop using the CLI's <code>interact</code> command:</p>
+<p>You can send the AEA a message wrapped in an envelope using the CLI's <code>interact</code> command.</p>
+<p>From a different terminal and same directory (ensure you are in the same virtual environment: <code>pipenv shell</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> my_first_aea
 aea interact
 </code></pre></div>
@@ -1997,12 +2150,12 @@ info: Echo Behaviour: act method called.
 </code></pre></div>
 <details><summary>Manual approach</summary>
 
-Optionally, from a different terminal and same directory (i.e. the `my_first_aea` project), you can send the AEA a message wrapped in an envelope via the input file.
+Optionally, from a different terminal and same directory (i.e. the <code>my_first_aea</code> project), you can send the AEA a message wrapped in an envelope via the input file.
 
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:0.12.0,\x12\x10\x08\x01\x12\x011*\t*\x07\n\x05hello,'</span> &gt;&gt; input_file
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">'my_first_aea,sender_aea,fetchai/default:1.0.0,\x12\x10\x08\x01\x12\x011*\t*\x07\n\x05hello,'</span> &gt;&gt; input_file
 </code></pre></div>
 
-You will see the `Echo Handler` dealing with the envelope and responding with the same message to the `output_file`, and also decoding the Base64 encrypted message in this case.
+You will see the <code>Echo Handler</code> dealing with the envelope and responding with the same message to the <code>output_file</code>, and also decoding the Base64 encrypted message in this case.
 
 <div class="highlight"><pre><span></span><code>info: Echo Behaviour: act method called.
 Echo Handler: <span class="nv">message</span><span class="o">=</span>Message<span class="o">(</span><span class="nv">sender</span><span class="o">=</span>sender_aea,to<span class="o">=</span>my_first_aea,content<span class="o">=</span>b<span class="s1">'hello'</span>,dialogue_reference<span class="o">=(</span><span class="s1">'1'</span>, <span class="s1">''</span><span class="o">)</span>,message_id<span class="o">=</span><span class="m">1</span>,performative<span class="o">=</span>bytes,target<span class="o">=</span><span class="m">0</span><span class="o">)</span>, <span class="nv">sender</span><span class="o">=</span>sender_aea
@@ -2010,7 +2163,7 @@ info: Echo Behaviour: act method called.
 info: Echo Behaviour: act method called.
 </code></pre></div>
 
-Note, due to the dialogue reference having to be incremented, you can only send the above envelope once! This approach does not work in conjunction with the `aea interact` command.
+Note, due to the dialogue reference having to be incremented, you can only send the above envelope once! This approach does not work in conjunction with the <code>aea interact</code> command.
 
 </details>
 <h3 id="stop-the-aea">Stop the AEA</h3>
@@ -2027,9 +2180,9 @@ info: Echo Behaviour: teardown method called.
 <p>We can write an end-to-end test for the AEA utilising helper classes provided by the framework.</p>
 <details><summary>Writing tests</summary>
 
-The following test class replicates the preceding demo and tests it's correct behaviour. The `AEATestCase` classes are a tool for AEA developers to write useful end-to-end tests of their AEAs.
+The following test class replicates the preceding demo and tests it's correct behaviour. The <code>AEATestCase</code> classes are a tool for AEA developers to write useful end-to-end tests of their AEAs.
 
-First, get the packages directory from the AEA repository (execute from the working directory which contains the `my_first_aea` folder):
+First, get the packages directory from the AEA repository (execute from the working directory which contains the <code>my_first_aea</code> folder):
 
 <div class="highlight"><pre><span></span><code>svn <span class="nb">export</span> https://github.com/fetchai/agents-aea.git/trunk/packages
 </code></pre></div>
@@ -2106,7 +2259,7 @@ Then write the test:
         <span class="p">),</span> <span class="s2">"Echo agent wasn't successfully terminated."</span>
 </code></pre></div>
 
-Place the above code into a file `test.py` in your AEA project directory (the same level as the `aea-config.yaml` file).
+Place the above code into a file <code>test.py</code> in your AEA project directory (the same level as the <code>aea-config.yaml</code> file).
 
 To run, execute the following:
 
@@ -2179,7 +2332,7 @@ To run, execute the following:
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

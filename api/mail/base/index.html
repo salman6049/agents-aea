@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Mail - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -457,6 +462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -520,6 +530,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -618,11 +633,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -843,21 +853,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -868,17 +863,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1233,16 +1233,6 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#aeaconnectionerror-objects">
-    AEAConnectionError Objects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#empty-objects">
-    Empty Objects
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#uri-objects">
     URI Objects
   </a>
@@ -1328,18 +1318,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#uri">
+    uri
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#connection_id">
     connection_id
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#skill_id">
-    skill_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uri_raw">
-    uri_raw
+<a class="md-nav__link" href="#connection_id_1">
+    connection_id
   </a>
 </li>
 <li class="md-nav__item">
@@ -1354,6 +1344,16 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aeaconnectionerror-objects">
+    AEAConnectionError Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#empty-objects">
+    Empty Objects
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#envelopeserializer-objects">
@@ -1450,13 +1450,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#skill_id_1">
-    skill_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#connection_id_1">
-    connection_id
+<a class="md-nav__link" href="#to_as_public_id">
+    to_as_public_id
   </a>
 </li>
 <li class="md-nav__item">
@@ -1467,6 +1462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#is_to_public_id">
     is_to_public_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_component_to_component_message">
+    is_component_to_component_message
   </a>
 </li>
 <li class="md-nav__item">
@@ -1775,6 +1775,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1850,16 +1971,6 @@
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aeaconnectionerror-objects">
-    AEAConnectionError Objects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#empty-objects">
-    Empty Objects
-  </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#uri-objects">
     URI Objects
@@ -1946,18 +2057,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#uri">
+    uri
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#connection_id">
     connection_id
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#skill_id">
-    skill_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uri_raw">
-    uri_raw
+<a class="md-nav__link" href="#connection_id_1">
+    connection_id
   </a>
 </li>
 <li class="md-nav__item">
@@ -1972,6 +2083,16 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aeaconnectionerror-objects">
+    AEAConnectionError Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#empty-objects">
+    Empty Objects
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#envelopeserializer-objects">
@@ -2068,13 +2189,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#skill_id_1">
-    skill_id
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#connection_id_1">
-    connection_id
+<a class="md-nav__link" href="#to_as_public_id">
+    to_as_public_id
   </a>
 </li>
 <li class="md-nav__item">
@@ -2085,6 +2201,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#is_to_public_id">
     is_to_public_id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#is_component_to_component_message">
+    is_component_to_component_message
   </a>
 </li>
 <li class="md-nav__item">
@@ -2121,16 +2242,6 @@
 <p><a name="aea.mail.base"></a></p>
 <h1 id="aeamailbase">aea.mail.base</h1>
 <p>Mail module abstract base classes.</p>
-<p><a name="aea.mail.base.AEAConnectionError"></a></p>
-<h2 id="aeaconnectionerror-objects">AEAConnectionError Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AEAConnectionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span>
-</code></pre></div>
-<p>Exception class for connection errors.</p>
-<p><a name="aea.mail.base.Empty"></a></p>
-<h2 id="empty-objects">Empty Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Empty</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span>
-</code></pre></div>
-<p>Exception for when the inbox is empty.</p>
 <p><a name="aea.mail.base.URI"></a></p>
 <h2 id="uri-objects">URI Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">URI</span><span class="p">()</span>
@@ -2224,36 +2335,35 @@
 <h2 id="envelopecontext-objects">EnvelopeContext Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">EnvelopeContext</span><span class="p">()</span>
 </code></pre></div>
-<p>Extra information for the handling of an envelope.</p>
+<p>Contains context information of an envelope.</p>
 <p><a name="aea.mail.base.EnvelopeContext.__init__"></a></p>
 <h4 id="__init___1"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">uri</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">URI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">uri</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">URI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Initialize the envelope context.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>connection_id</code>: the connection id used for routing the outgoing envelope in the multiplexer.</li>
-<li><code>skill_id</code>: the skill id used for routing the incoming envelope in the AEA.</li>
 <li><code>uri</code>: the URI sent with the envelope.</li>
 </ul>
+<p><a name="aea.mail.base.EnvelopeContext.uri"></a></p>
+<h4 id="uri">uri</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">uri</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">URI</span><span class="p">]</span>
+</code></pre></div>
+<p>Get the URI.</p>
 <p><a name="aea.mail.base.EnvelopeContext.connection_id"></a></p>
 <h4 id="connection_id">connection<code>_</code>id</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
  <span class="o">|</span> <span class="n">connection_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span>
 </code></pre></div>
-<p>Get the connection id.</p>
-<p><a name="aea.mail.base.EnvelopeContext.skill_id"></a></p>
-<h4 id="skill_id">skill<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">skill_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span>
+<p>Get the connection id to route the envelope.</p>
+<p><a name="aea.mail.base.EnvelopeContext.connection_id"></a></p>
+<h4 id="connection_id_1">connection<code>_</code>id</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@connection_id</span><span class="o">.</span><span class="n">setter</span>
+ <span class="o">|</span> <span class="n">connection_id</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Get the skill id.</p>
-<p><a name="aea.mail.base.EnvelopeContext.uri_raw"></a></p>
-<h4 id="uri_raw">uri<code>_</code>raw</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">uri_raw</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>Get uri in string format.</p>
+<p>Set the 'via' connection id.</p>
 <p><a name="aea.mail.base.EnvelopeContext.__str__"></a></p>
 <h4 id="__str___1"><code>__</code>str<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__str__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -2264,6 +2374,16 @@
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 <p>Compare with another object.</p>
+<p><a name="aea.mail.base.AEAConnectionError"></a></p>
+<h2 id="aeaconnectionerror-objects">AEAConnectionError Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AEAConnectionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span>
+</code></pre></div>
+<p>Exception class for connection errors.</p>
+<p><a name="aea.mail.base.Empty"></a></p>
+<h2 id="empty-objects">Empty Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Empty</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span>
+</code></pre></div>
+<p>Exception for when the inbox is empty.</p>
 <p><a name="aea.mail.base.EnvelopeSerializer"></a></p>
 <h2 id="envelopeserializer-objects">EnvelopeSerializer Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">EnvelopeSerializer</span><span class="p">(</span><span class="n">ABC</span><span class="p">)</span>
@@ -2390,25 +2510,15 @@
 <p><a name="aea.mail.base.Envelope.context"></a></p>
 <h4 id="context">context</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">context</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">EnvelopeContext</span>
+ <span class="o">|</span> <span class="n">context</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">EnvelopeContext</span><span class="p">]</span>
 </code></pre></div>
 <p>Get the envelope context.</p>
-<p><a name="aea.mail.base.Envelope.skill_id"></a></p>
-<h4 id="skill_id_1">skill<code>_</code>id</h4>
+<p><a name="aea.mail.base.Envelope.to_as_public_id"></a></p>
+<h4 id="to_as_public_id">to<code>_</code>as<code>_</code>public<code>_</code>id</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">skill_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span>
+ <span class="o">|</span> <span class="n">to_as_public_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span>
 </code></pre></div>
-<p>Get the skill id from an envelope context, if set.</p>
-<p><strong>Returns</strong>:</p>
-<p>skill id</p>
-<p><a name="aea.mail.base.Envelope.connection_id"></a></p>
-<h4 id="connection_id_1">connection<code>_</code>id</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
- <span class="o">|</span> <span class="n">connection_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PublicId</span><span class="p">]</span>
-</code></pre></div>
-<p>Get the connection id from an envelope context, if set.</p>
-<p><strong>Returns</strong>:</p>
-<p>connection id</p>
+<p>Get to as public id.</p>
 <p><a name="aea.mail.base.Envelope.is_sender_public_id"></a></p>
 <h4 id="is_sender_public_id">is<code>_</code>sender<code>_</code>public<code>_</code>id</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2421,6 +2531,12 @@
  <span class="o">|</span> <span class="n">is_to_public_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 <p>Check if to is a public id.</p>
+<p><a name="aea.mail.base.Envelope.is_component_to_component_message"></a></p>
+<h4 id="is_component_to_component_message">is<code>_</code>component<code>_</code>to<code>_</code>component<code>_</code>message</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">is_component_to_component_message</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Whether or not the message contained is component to component.</p>
 <p><a name="aea.mail.base.Envelope.__eq__"></a></p>
 <h4 id="__eq___2"><code>__</code>eq<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
@@ -2505,7 +2621,7 @@
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

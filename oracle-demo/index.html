@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Oracle skills - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -295,13 +295,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up-with-a-local-ganache-node">
-    Setting up with a local Ganache node
+<a class="md-nav__link" href="#setting-up-with-a-local-ganache-node-ethereum-ledger-only">
+    Setting up with a local Ganache node (Ethereum ledger only)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#set-the-erc20-contract-address-for-the-oracle-aea">
-    Set the ERC20 contract address for the oracle AEA:
+<a class="md-nav__link" href="#set-the-erc20-contract-address-for-the-oracle-aea-ethereum-ledger-only">
+    Set the ERC20 contract address for the oracle AEA (Ethereum ledger only):
   </a>
 </li>
 <li class="md-nav__item">
@@ -477,6 +477,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -529,6 +534,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -592,6 +602,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -690,11 +705,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -915,21 +925,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -940,17 +935,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1578,6 +1578,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1689,13 +1810,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up-with-a-local-ganache-node">
-    Setting up with a local Ganache node
+<a class="md-nav__link" href="#setting-up-with-a-local-ganache-node-ethereum-ledger-only">
+    Setting up with a local Ganache node (Ethereum ledger only)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#set-the-erc20-contract-address-for-the-oracle-aea">
-    Set the ERC20 contract address for the oracle AEA:
+<a class="md-nav__link" href="#set-the-erc20-contract-address-for-the-oracle-aea-ethereum-ledger-only">
+    Set the ERC20 contract address for the oracle AEA (Ethereum ledger only):
   </a>
 </li>
 <li class="md-nav__item">
@@ -1728,14 +1849,14 @@
 <p>This demo shows how an AEA can be used to maintain an oracle and how another AEA can request the oracle value.</p>
 <h2 id="discussion">Discussion</h2>
 <p><strong>Oracle agents</strong> are agents that have permission to update or validate updates to state variables in a smart contract and whose goal is to accurately estimate or predict some real world quantity or quantities.</p>
-<p>This demonstration shows how to set up a simple oracle agent who deploys an oracle contract and updates the contract with a token price fetched from a public API. It also shows how to create an oracle client agent that can request the value from the oracle contract. </p>
+<p>This demonstration shows how to set up a simple oracle agent who deploys an oracle contract and updates the contract with a token price fetched from a public API. It also shows how to create an oracle client agent that can request the value from the oracle contract.</p>
 <h2 id="preparation-instructions">Preparation instructions</h2>
 <h3 id="dependencies">Dependencies</h3>
 <p>Follow the <a href="../quickstart/#preliminaries">Preliminaries</a> and <a href="../quickstart/#installation">Installation</a> sections from the AEA quick start.</p>
 <h2 id="demo">Demo</h2>
 <h3 id="create-the-oracle-aea">Create the oracle AEA</h3>
 <p>Fetch the AEA that will deploy and update the oracle contract.</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/coin_price_oracle:0.6.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/coin_price_oracle:0.12.0
 <span class="nb">cd</span> coin_price_oracle
 aea install
 aea build
@@ -1747,45 +1868,81 @@ Create the AEA that will deploy the contract.
 
 <div class="highlight"><pre><span></span><code>aea create coin_price_oracle
 <span class="nb">cd</span> coin_price_oracle
-aea add connection fetchai/http_client:0.17.0
-aea add connection fetchai/ledger:0.13.0
-aea add connection fetchai/p2p_libp2p:0.16.0
-aea add skill fetchai/coin_price:0.5.0
-aea add skill fetchai/simple_oracle:0.5.0
+aea add connection fetchai/http_client:0.22.0
+aea add connection fetchai/ledger:0.18.0
+aea add connection fetchai/p2p_libp2p:0.21.0
+aea add skill fetchai/advanced_data_request:0.4.0
+aea add skill fetchai/simple_oracle:0.11.0
+aea config <span class="nb">set</span> --type dict agent.dependencies <span class="se">\</span>
+<span class="s1">'{</span>
+<span class="s1">  "aea-ledger-fetchai": {"version": "&lt;2.0.0,&gt;=1.0.0"},</span>
+<span class="s1">  "aea-ledger-ethereum": {"version": "&lt;2.0.0,&gt;=1.0.0"}</span>
+<span class="s1">}'</span>
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.21.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.16.0
+aea build
 </code></pre></div>
 
-Then update the agent configuration with the default routing and cert requests:
+Set the URL for the data request skill:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> --type str vendor.fetchai.skills.advanced_data_request.models.advanced_data_request_model.args.url <span class="s2">"https://api.coingecko.com/api/v3/simple/price?ids=fetch-ai&amp;vs_currencies=usd"</span>
+</code></pre></div>
+
+Specify the name and JSON path of the data to fetch from the API:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> --type list vendor.fetchai.skills.advanced_data_request.models.advanced_data_request_model.args.outputs <span class="s1">'[{"name": "price", "json_path": "fetch-ai.usd"}]'</span>
+</code></pre></div>
+
+Set the name of the oracle value in the simple oracle skill:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle.models.strategy.args.oracle_value_name price
+</code></pre></div>
+
+Then update the agent configuration with the default routing:
 <div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> --type dict agent.default_routing <span class="se">\</span>
 <span class="s1">'{</span>
-<span class="s1">"fetchai/contract_api:0.11.0": "fetchai/ledger:0.13.0",</span>
-<span class="s1">"fetchai/http:0.12.0": "fetchai/http_client:0.17.0",</span>
-<span class="s1">"fetchai/ledger_api:0.10.0": "fetchai/ledger:0.13.0"</span>
+<span class="s1">"fetchai/contract_api:1.0.0": "fetchai/ledger:0.18.0",</span>
+<span class="s1">"fetchai/http:1.0.0": "fetchai/http_client:0.22.0",</span>
+<span class="s1">"fetchai/ledger_api:1.0.0": "fetchai/ledger:0.18.0"</span>
 <span class="s1">}'</span>
-aea config <span class="nb">set</span> --type list vendor.fetchai.connections.p2p_libp2p.cert_requests <span class="se">\</span>
-<span class="s1">'[{"identifier": "acn", "ledger_id": "ethereum", "not_after": "2022-01-01", "not_before": "2021-01-01", "public_key": "fetchai", "save_path": ".certs/conn_cert.txt"}]'</span>
-</code></pre></div>
-
-And change the default ledger:
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_ledger ethereum
 </code></pre></div>
 </p>
 </details>
-<p>Additionally, create the private key for the oracle AEA. Generate and add a key for Ethereum use:</p>
-<div class="highlight"><pre><span></span><code>aea generate-key ethereum
-aea add-key ethereum
+<p>The following steps depend on the type of ledger the oracle will be run on.
+Select a ledger type by setting a temporary variable to either <code>fetchai</code> or <code>ethereum</code>:
+<div class="highlight"><pre><span></span><code><span class="nv">LEDGER_ID</span><span class="o">=</span>fetchai
 </code></pre></div>
+or
+<div class="highlight"><pre><span></span><code><span class="nv">LEDGER_ID</span><span class="o">=</span>ethereum
+</code></pre></div></p>
+<p>Update the default ledger and cert requests using the chosen ledger.
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_ledger <span class="nv">$LEDGER_ID</span>
+aea config <span class="nb">set</span> --type list vendor.fetchai.connections.p2p_libp2p.cert_requests <span class="se">\</span>
+<span class="s1">'[{"identifier": "acn", "ledger_id": '</span><span class="s2">"\"</span><span class="nv">$LEDGER_ID</span><span class="s2">\""</span><span class="s1">', "not_after": "2022-01-01", "not_before": "2021-01-01", "public_key": "fetchai", "message_format": "{public_key}", "save_path": ".certs/conn_cert.txt"}]'</span>
+</code></pre></div></p>
+<p>Set the following configuration for the oracle skill:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle.models.strategy.args.ledger_id <span class="nv">$LEDGER_ID</span>
+</code></pre></div>
+If running on the Fetch.ai ledger:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle.models.strategy.args.update_function update_oracle_value
+</code></pre></div>
+Otherwise, if running on an Ethereum-based ledger:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle.models.strategy.args.update_function updateOracleValue
+</code></pre></div></p>
+<p>Additionally, create the private key for the oracle AEA. Generate and add a key for use with the ledger:
+<div class="highlight"><pre><span></span><code>aea generate-key <span class="nv">$LEDGER_ID</span>
+aea add-key <span class="nv">$LEDGER_ID</span>
+</code></pre></div></p>
+<p>If running on a testnet (not including Ganache), generate some wealth for your AEA:
+<div class="highlight"><pre><span></span><code>aea generate-wealth <span class="nv">$LEDGER_ID</span>
+</code></pre></div></p>
 <p>Next, create a private key used to secure the AEA's communications:
 <div class="highlight"><pre><span></span><code>aea generate-key fetchai fetchai_connection_private_key.txt
 aea add-key fetchai fetchai_connection_private_key.txt --connection
 </code></pre></div></p>
-<p>Finally, certify the key for use by the connections that request that:
+<p>Finally, certify the keys for use by the connections that request them:
 <div class="highlight"><pre><span></span><code>aea issue-certificates
 </code></pre></div></p>
 <h3 id="create-the-oracle-client-aea">Create the oracle client AEA</h3>
 <p>From a new terminal (in the same top-level directory), fetch the AEA that will deploy the oracle client contract and call the function that requests the coin price from the oracle contract.</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/coin_price_oracle_client:0.3.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/coin_price_oracle_client:0.9.0
 <span class="nb">cd</span> coin_price_oracle_client
 aea install
 </code></pre></div>
@@ -1794,36 +1951,54 @@ aea install
 
 Create the AEA that will deploy the contract.
 
-<div class="highlight"><pre><span></span><code>aea create coin_price_oracle
-<span class="nb">cd</span> coin_price_oracle
-aea add connection fetchai/http_client:0.17.0
-aea add connection fetchai/ledger:0.13.0
-aea add skill fetchai/simple_oracle_client:0.4.0
+<div class="highlight"><pre><span></span><code>aea create coin_price_oracle_client
+<span class="nb">cd</span> coin_price_oracle_client
+aea add connection fetchai/http_client:0.22.0
+aea add connection fetchai/ledger:0.18.0
+aea add skill fetchai/simple_oracle_client:0.9.0
+aea config <span class="nb">set</span> --type dict agent.dependencies <span class="se">\</span>
+<span class="s1">'{</span>
+<span class="s1">  "aea-ledger-fetchai": {"version": "&lt;2.0.0,&gt;=1.0.0"},</span>
+<span class="s1">  "aea-ledger-ethereum": {"version": "&lt;2.0.0,&gt;=1.0.0"}</span>
+<span class="s1">}'</span>
+aea config <span class="nb">set</span> agent.default_connection fetchai/ledger:0.18.0
 aea install
-aea config <span class="nb">set</span> agent.default_connection fetchai/ledger:0.13.0
+aea build
 </code></pre></div>
 
 Then update the agent configuration with the default routing:
 <div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> --type dict agent.default_routing <span class="se">\</span>
 <span class="s1">'{</span>
-<span class="s1">"fetchai/contract_api:0.11.0": "fetchai/ledger:0.13.0",</span>
-<span class="s1">"fetchai/http:0.12.0": "fetchai/http_client:0.17.0",</span>
-<span class="s1">"fetchai/ledger_api:0.10.0": "fetchai/ledger:0.13.0"</span>
+<span class="s1">"fetchai/contract_api:1.0.0": "fetchai/ledger:0.18.0",</span>
+<span class="s1">"fetchai/http:1.0.0": "fetchai/http_client:0.22.0",</span>
+<span class="s1">"fetchai/ledger_api:1.0.0": "fetchai/ledger:0.18.0"</span>
 <span class="s1">}'</span>
-</code></pre></div>
-
-Change the default ledger:
-<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_ledger ethereum
 </code></pre></div>
 </p>
 </details>
-<p>Create the private key for the oracle client AEA. Generate and add a key for Ethereum use:</p>
-<div class="highlight"><pre><span></span><code>aea generate-key ethereum
-aea add-key ethereum
+<p>Similar to above, set a temporary variable <code>LEDGER_ID=fetchai</code> or <code>LEDGER_ID=ethereum</code>.</p>
+<p>Set the default ledger:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> agent.default_ledger <span class="nv">$LEDGER_ID</span>
 </code></pre></div>
+Set the following configuration for the oracle client skill:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle_client.models.strategy.args.ledger_id <span class="nv">$LEDGER_ID</span>
+</code></pre></div>
+If running on the Fetch.ai ledger:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle_client.models.strategy.args.query_function query_oracle_value
+</code></pre></div>
+Otherwise, if running on an Ethereum-based ledger:
+<div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle_client.models.strategy.args.query_function queryOracleValue
+</code></pre></div></p>
+<p>Create the private key for the oracle client AEA. Generate and add a key for use on the ledger:</p>
+<div class="highlight"><pre><span></span><code>aea generate-key <span class="nv">$LEDGER_ID</span>
+aea add-key <span class="nv">$LEDGER_ID</span>
+</code></pre></div>
+<p>If running on a testnet (not including Ganache), generate some wealth for your AEA:
+<div class="highlight"><pre><span></span><code>aea generate-wealth <span class="nv">$LEDGER_ID</span>
+</code></pre></div></p>
 <p>The oracle AEAs require either a locally running test node or a connection to a remote testnet.</p>
-<h3 id="setting-up-with-a-local-ganache-node">Setting up with a local Ganache node</h3>
-<p>The easiest way to test the oracle agents is to set up a local Ethereum test node using Ganache. This can be done by running the following docker command from the directory you started from (in a new terminal). This command will also fund the accounts of the AEAs:</p>
+<h3 id="setting-up-with-a-local-ganache-node-ethereum-ledger-only">Setting up with a local Ganache node (Ethereum ledger only)</h3>
+<p>The easiest way to test the oracle agents on an Ethereum-based ledger to set up a local test node using Ganache. This can be done by running the following docker command from the directory you started from (in a new terminal). This command will also fund the accounts of the AEAs:</p>
 <div class="highlight"><pre><span></span><code>docker run -p <span class="m">8545</span>:8545 trufflesuite/ganache-cli:latest --verbose --gasPrice<span class="o">=</span><span class="m">0</span> --gasLimit<span class="o">=</span>0x1fffffffffffff --account<span class="o">=</span><span class="s2">"</span><span class="k">$(</span>cat coin_price_oracle/ethereum_private_key.txt<span class="k">)</span><span class="s2">,1000000000000000000000"</span> --account<span class="o">=</span><span class="s2">"</span><span class="k">$(</span>cat coin_price_oracle_client/ethereum_private_key.txt<span class="k">)</span><span class="s2">,1000000000000000000000"</span>
 </code></pre></div>
 <details><summary>Run the enclosed Python script (with <code>web3</code> installed) from the top-level directory to deploy a mock Fetch ERC20 contract and give some test FET to the client agent.</summary>
@@ -1880,7 +2055,7 @@ aea add-key ethereum
 </code></pre></div>
 </p>
 </details>
-<h3 id="set-the-erc20-contract-address-for-the-oracle-aea">Set the ERC20 contract address for the oracle AEA:</h3>
+<h3 id="set-the-erc20-contract-address-for-the-oracle-aea-ethereum-ledger-only">Set the ERC20 contract address for the oracle AEA (Ethereum ledger only):</h3>
 <p><div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle.models.strategy.args.erc20_address ERC20_ADDRESS
 </code></pre></div>
 where <code>ERC20_ADDRESS</code> is in the output of the script above.</p>
@@ -1889,7 +2064,7 @@ where <code>ERC20_ADDRESS</code> is in the output of the script above.</p>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div></p>
 <p>After a few moments, you should see the following notices in the logs:
-<div class="highlight"><pre><span></span><code>info: <span class="o">[</span>coin_price_oracle<span class="o">]</span> Oracle contract successfully deployed!
+<div class="highlight"><pre><span></span><code>info: <span class="o">[</span>coin_price_oracle<span class="o">]</span> Oracle contract successfully deployed at address: ...
 ...
 info: <span class="o">[</span>coin_price_oracle<span class="o">]</span> Oracle role successfully granted!
 ...
@@ -1900,15 +2075,15 @@ The oracle contract will continue to be updated with the latest retrieved coin p
 <p><div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle_client.models.strategy.args.erc20_address ERC20_ADDRESS
 aea config <span class="nb">set</span> vendor.fetchai.skills.simple_oracle_client.models.strategy.args.oracle_contract_address ORACLE_ADDRESS
 </code></pre></div>
-where <code>ORACLE_ADDRESS</code> appears in the <code>contractAddress</code> field of the contract deployment transaction.</p>
+where <code>ORACLE_ADDRESS</code> should be set to the address shown in the oracle AEA logs:
+<div class="highlight"><pre><span></span><code>Oracle contract successfully deployed at address: ORACLE_ADDRESS
+</code></pre></div></p>
 <h3 id="run-the-oracle-client-aea">Run the oracle client AEA</h3>
 <p>Run the oracle client agent. This will deploy an oracle client contract to the testnet, approve the contract to spend tokens on behalf of the AEA, and periodically call the contract function that requests the latest price of FET (or whichever coin was specified).
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div></p>
 <p>After a few moments, you should see the following notices in the logs:
-<div class="highlight"><pre><span></span><code>info: <span class="o">[</span>coin_price_oracle_client<span class="o">]</span> Oracle client contract successfully deployed!
-...
-info: <span class="o">[</span>coin_price_oracle_client<span class="o">]</span> Oracle client transactions approved!
+<div class="highlight"><pre><span></span><code>info: <span class="o">[</span>coin_price_oracle_client<span class="o">]</span> Oracle client contract successfully deployed at address: ...
 ...
 info: <span class="o">[</span>coin_price_oracle_client<span class="o">]</span> Oracle value successfully requested!
 </code></pre></div>
@@ -1963,7 +2138,7 @@ The AEA will continue to request the latest coin price at the default time inter
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

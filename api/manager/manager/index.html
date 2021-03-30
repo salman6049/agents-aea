@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Manager - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -457,6 +462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -520,6 +530,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -618,11 +633,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -843,21 +853,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -868,17 +863,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1248,13 +1248,32 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#projectnotfounderror-objects">
+    ProjectNotFoundError Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projectcheckerror-objects">
+    ProjectCheckError Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#__init__">
+    __init__
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#agentrunasynctask-objects">
     AgentRunAsyncTask Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#__init__">
+<a class="md-nav__link" href="#__init___1">
     __init__
   </a>
 </li>
@@ -1298,7 +1317,7 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#__init___1">
+<a class="md-nav__link" href="#__init___2">
     __init__
   </a>
 </li>
@@ -1327,7 +1346,7 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#__init___2">
+<a class="md-nav__link" href="#__init___3">
     __init__
   </a>
 </li>
@@ -1352,6 +1371,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#projects">
+    projects
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#add_error_callback">
     add_error_callback
   </a>
@@ -1359,6 +1383,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#start_manager">
     start_manager
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#last_start_status">
+    last_start_status
   </a>
 </li>
 <li class="md-nav__item">
@@ -1722,6 +1751,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1798,13 +1948,32 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#projectnotfounderror-objects">
+    ProjectNotFoundError Objects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projectcheckerror-objects">
+    ProjectCheckError Objects
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#__init__">
+    __init__
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#agentrunasynctask-objects">
     AgentRunAsyncTask Objects
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#__init__">
+<a class="md-nav__link" href="#__init___1">
     __init__
   </a>
 </li>
@@ -1848,7 +2017,7 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#__init___1">
+<a class="md-nav__link" href="#__init___2">
     __init__
   </a>
 </li>
@@ -1877,7 +2046,7 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#__init___2">
+<a class="md-nav__link" href="#__init___3">
     __init__
   </a>
 </li>
@@ -1902,6 +2071,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#projects">
+    projects
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#add_error_callback">
     add_error_callback
   </a>
@@ -1909,6 +2083,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#start_manager">
     start_manager
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#last_start_status">
+    last_start_status
   </a>
 </li>
 <li class="md-nav__item">
@@ -2015,13 +2194,28 @@
 <p><a name="aea.manager.manager"></a></p>
 <h1 id="aeamanagermanager">aea.manager.manager</h1>
 <p>This module contains the implementation of AEA agents manager.</p>
+<p><a name="aea.manager.manager.ProjectNotFoundError"></a></p>
+<h2 id="projectnotfounderror-objects">ProjectNotFoundError Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ProjectNotFoundError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span>
+</code></pre></div>
+<p>Project not found exception.</p>
+<p><a name="aea.manager.manager.ProjectCheckError"></a></p>
+<h2 id="projectcheckerror-objects">ProjectCheckError Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ProjectCheckError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span>
+</code></pre></div>
+<p>Project check error exception.</p>
+<p><a name="aea.manager.manager.ProjectCheckError.__init__"></a></p>
+<h4 id="__init__"><code>__</code>init<code>__</code></h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">source_exception</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">)</span>
+</code></pre></div>
+<p>Init exception.</p>
 <p><a name="aea.manager.manager.AgentRunAsyncTask"></a></p>
 <h2 id="agentrunasynctask-objects">AgentRunAsyncTask Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AgentRunAsyncTask</span><span class="p">()</span>
 </code></pre></div>
 <p>Async task wrapper for agent.</p>
 <p><a name="aea.manager.manager.AgentRunAsyncTask.__init__"></a></p>
-<h4 id="__init__"><code>__</code>init<code>__</code></h4>
+<h4 id="__init___1"><code>__</code>init<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span> <span class="n">AEA</span><span class="p">,</span> <span class="n">loop</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">AbstractEventLoop</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Init task with agent and loop.</p>
@@ -2062,7 +2256,7 @@
 </code></pre></div>
 <p>Threaded wrapper to run agent.</p>
 <p><a name="aea.manager.manager.AgentRunThreadTask.__init__"></a></p>
-<h4 id="__init___1"><code>__</code>init<code>__</code></h4>
+<h4 id="__init___2"><code>__</code>init<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span> <span class="n">AEA</span><span class="p">,</span> <span class="n">loop</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">AbstractEventLoop</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Init task with agent and loop.</p>
@@ -2087,14 +2281,20 @@
 </code></pre></div>
 <p>Multi agents manager.</p>
 <p><a name="aea.manager.manager.MultiAgentManager.__init__"></a></p>
-<h4 id="__init___2"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">working_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"async"</span><span class="p">,</span> <span class="n">registry_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">DEFAULT_REGISTRY_NAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<h4 id="__init___3"><code>__</code>init<code>__</code></h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">working_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"async"</span><span class="p">,</span> <span class="n">registry_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">DEFAULT_REGISTRY_NAME</span><span class="p">,</span> <span class="n">auto_add_remove_project</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Initialize manager.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>working_dir</code>: directory to store base agents.</li>
+<li><code>mode</code>: str. async or threaded</li>
+<li><code>registry_path</code>: str. path to the local packages registry</li>
+<li><code>auto_add_remove_project</code>: bool. add/remove project on the first agent add/last agent remove</li>
+<li><code>password</code>: the password to encrypt/decrypt the private key.</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
 <p><a name="aea.manager.manager.MultiAgentManager.data_dir"></a></p>
 <h4 id="data_dir">data<code>_</code>dir</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2118,6 +2318,12 @@
  <span class="o">|</span> <span class="n">dict_state</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
 </code></pre></div>
 <p>Create MultiAgentManager dist state.</p>
+<p><a name="aea.manager.manager.MultiAgentManager.projects"></a></p>
+<h4 id="projects">projects</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">projects</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">PublicId</span><span class="p">,</span> <span class="n">Project</span><span class="p">]</span>
+</code></pre></div>
+<p>Get all projects.</p>
 <p><a name="aea.manager.manager.MultiAgentManager.add_error_callback"></a></p>
 <h4 id="add_error_callback">add<code>_</code>error<code>_</code>callback</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_error_callback</span><span class="p">(</span><span class="n">error_callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="ne">BaseException</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2138,6 +2344,14 @@ registry, and then from remote registry in case of failure).</p>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the MultiAgentManager instance.</p>
+<p><a name="aea.manager.manager.MultiAgentManager.last_start_status"></a></p>
+<h4 id="last_start_status">last<code>_</code>start<code>_</code>status</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">last_start_status</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span>
+ <span class="o">|</span>         <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">PublicId</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]],</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PublicId</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">],</span> <span class="ne">Exception</span><span class="p">]],</span>
+ <span class="o">|</span>     <span class="p">]</span>
+</code></pre></div>
+<p>Get status of the last agents start loading state.</p>
 <p><a name="aea.manager.manager.MultiAgentManager.stop_manager"></a></p>
 <h4 id="stop_manager">stop<code>_</code>manager</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">stop_manager</span><span class="p">(</span><span class="n">cleanup</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">save</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
@@ -2161,8 +2375,12 @@ are fetched in mixed mode (i.e. first try from local
 registry, and then from remote registry in case of failure).</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>public_id</code>: the public if of the agent project.</li>
-<li><code>local</code>: whether or not to fetch from local registry.</li>
+<li>
+<p><code>public_id</code>: the public if of the agent project.</p>
+</li>
+<li>
+<p><code>local</code>: whether or not to fetch from local registry.</p>
+</li>
 <li><code>remote</code>: whether or not to fetch from remote registry.</li>
 <li><code>restore</code>: bool flag for restoring already fetched agent.</li>
 </ul>
@@ -2180,7 +2398,7 @@ registry, and then from remote registry in case of failure).</p>
 <p>list of public ids of projects</p>
 <p><a name="aea.manager.manager.MultiAgentManager.add_agent"></a></p>
 <h4 id="add_agent">add<code>_</code>agent</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_agent</span><span class="p">(</span><span class="n">public_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">agent_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">agent_overrides</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">component_overrides</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_agent</span><span class="p">(</span><span class="n">public_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">agent_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">agent_overrides</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">component_overrides</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">local</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">remote</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">restore</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
 </code></pre></div>
 <p>Create new agent configuration based on project with config overrides applied.</p>
 <p>Alias is stored in memory only!</p>
@@ -2190,7 +2408,14 @@ registry, and then from remote registry in case of failure).</p>
 <li><code>agent_name</code>: unique name for the agent</li>
 <li><code>agent_overrides</code>: overrides for agent config.</li>
 <li><code>component_overrides</code>: overrides for component section.</li>
-<li><code>config</code>: agent config (used for agent re-creation).</li>
+<li>
+<p><code>config</code>: agent config (used for agent re-creation).</p>
+</li>
+<li>
+<p><code>local</code>: whether or not to fetch from local registry.</p>
+</li>
+<li><code>remote</code>: whether or not to fetch from remote registry.</li>
+<li><code>restore</code>: bool flag for restoring already fetched agent.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>manager</p>
@@ -2252,12 +2477,13 @@ registry, and then from remote registry in case of failure).</p>
 <p>list of agents names</p>
 <p><a name="aea.manager.manager.MultiAgentManager.remove_agent"></a></p>
 <h4 id="remove_agent">remove<code>_</code>agent</h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_agent</span><span class="p">(</span><span class="n">agent_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">remove_agent</span><span class="p">(</span><span class="n">agent_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">skip_project_auto_remove</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"MultiAgentManager"</span>
 </code></pre></div>
 <p>Remove agent alias definition from registry.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>agent_name</code>: agent name to remove</li>
+<li><code>skip_project_auto_remove</code>: disable auto project remove on last agent removed.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
@@ -2368,7 +2594,7 @@ registry, and then from remote registry in case of failure).</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

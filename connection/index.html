@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Connections - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#configuration" tabindex="0">
+<a class="md-skip" href="#developing-your-connection" tabindex="0">
         Skip to content
       </a>
 <header class="md-header" data-md-component="header">
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -459,6 +464,11 @@
       Proof of Representation
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../security/" title="Security">
+      Security
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -494,21 +504,30 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuration">
-    Configuration
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#developing-your-own">
-    Developing your own
+<a class="md-nav__link" href="#developing-your-connection">
+    Developing your connection
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#primary-methods-to-develop">
-    Primary methods to develop
+<a class="md-nav__link" href="#primary-methods-to-develop-asynchronous-connection-interface">
+    Primary methods to develop - asynchronous connection interface
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primary-methods-to-develop-sync-connection-interface">
+    Primary methods to develop - sync connection interface
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration">
+    Configuration
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#configuration-options">
     Configuration options
@@ -553,6 +572,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -651,11 +675,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -876,21 +895,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../api/crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -901,17 +905,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../api/crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../api/crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1539,6 +1548,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1615,21 +1745,30 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuration">
-    Configuration
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#developing-your-own">
-    Developing your own
+<a class="md-nav__link" href="#developing-your-connection">
+    Developing your connection
   </a>
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#primary-methods-to-develop">
-    Primary methods to develop
+<a class="md-nav__link" href="#primary-methods-to-develop-asynchronous-connection-interface">
+    Primary methods to develop - asynchronous connection interface
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primary-methods-to-develop-sync-connection-interface">
+    Primary methods to develop - sync connection interface
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration">
+    Configuration
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#configuration-options">
     Configuration options
@@ -1647,26 +1786,23 @@
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/connection.md" title="Edit this page"></a>
 <h1>Connections</h1>
-<p>A <a href="../api/connections/base#connection-objects"><code>Connection</code></a> wraps an SDK or API and provides an interface to network, ledgers and other services. As such a connection is concerned with I/O bound and continuously connected operations. Where necessary, a connection is responsible for translating between the framework specific <a href="../protocol">protocol</a> (an <a href="../api/mail/base#envelope-objects"><code>Envelope</code></a> with its contained <a href="../api/protocols/base#message-objects"><code>Message</code></a>) and the external service or third-party protocol (e.g. <code>HTTP</code>).</p>
+<p>A <a href="../api/connections/base#connection-objects"><code>Connection</code></a> provides an interface for the agent to connect with entities in the outside world. Connections wrap SDKs or APIs and provide interfaces to networks, ledgers and other services. As such, a connection is concerned with I/O bound and continuously connected operations. Where necessary, a connection is responsible for translating between the framework specific <a href="../protocol">protocol</a> (an <a href="../api/mail/base#envelope-objects"><code>Envelope</code></a> with its contained <a href="../api/protocols/base#message-objects"><code>Message</code></a>) and the external service or third-party protocol (e.g. <code>HTTP</code>). Hence, there are two roles for connections: wrapper and transport connection. The transport connection is responsible to delivering AEA envelopes.</p>
 <p>The messages constructed or received by a connection are eventually processed by one or several <a href="../skill">skills</a> which deal with handling and generating messages related to a specific business objective.</p>
-<p>The framework provides one default connection, called <code>stub</code>. It implements an I/O reader and writer to send messages to the agent from a local file. Additional connections can be added as packages.</p>
-<p>An <code>AEA</code> can interact with multiple connections at the same time via the <a href="../api/connections/base#connection-objects"><code>Multiplexer</code></a>.</p>
 <p><img alt="Multiplexer of an AEA" class="center" src="../assets/multiplexer.png" style="display: block; margin-left: auto; margin-right: auto;width:50%;"/></p>
-<p>It maintains an <a href="../api/multiplexer#inbox-objects"><code>InBox</code></a> and <a href="../api/multiplexer#outbox-objects"><code>OutBox</code></a>, which are, respectively, queues for incoming and outgoing envelopes and their contained messages.</p>
-<h2 id="configuration">Configuration</h2>
-<p>The <code>connection.yaml</code> file of a connection package contains meta information on the connection as well as all the required configuration details. For more details have a look <a href="../config">here</a></p>
-<h2 id="developing-your-own">Developing your own</h2>
+<p>An <code>AEA</code> can interact with multiple connections at the same time via the <a href="../api/connections/base#connection-objects"><code>Multiplexer</code></a>. Connections are passive in terms of multiplexer interactions (its methods are called by the Multiplexer), but they can run their own asynchronous or threaded tasks.</p>
+<p>The <code>Multiplexer</code> maintains an <a href="../api/multiplexer#inbox-objects"><code>InBox</code></a> and <a href="../api/multiplexer#outbox-objects"><code>OutBox</code></a>, which are, respectively, queues for incoming and outgoing envelopes and their contained messages.</p>
+<h2 id="developing-your-connection">Developing your connection</h2>
 <p>The easiest way to get started developing your own connection is by using the <a href="../scaffolding">scaffold</a> command:</p>
 <div class="highlight"><pre><span></span><code>aea scaffold connection my_new_connection
 </code></pre></div>
 <p>This will scaffold a connection package called <code>my_new_connection</code> with three files:</p>
 <ul>
 <li><code>__init__.py</code> </li>
-<li><code>connection.py</code>, containing the scaffolded connection class</li>
-<li><code>connection.yaml</code>, containing the scaffolded configuration file</li>
+<li><code>connection.py</code> containing the scaffolded connection class</li>
+<li><code>connection.yaml</code> containing the scaffolded configuration file</li>
 </ul>
-<h3 id="primary-methods-to-develop">Primary methods to develop</h3>
-<p>The scaffolded <code>connection.py</code> file contains a single class inherited from the <a href="../api/connections/base#connection-objects"><code>Connection</code></a> base class.</p>
+<p>As a developer you have the choice between implementing a sync or asynchronous interface. The scaffolded <code>connection.py</code> file contains two classes: the <code>MyScaffoldAsyncConnection</code> inherited from the <a href="../api/connections/base#connection-objects"><code>Connection</code></a> base class and the <code>MyScaffoldSyncConnection</code> inherited from the <a href="../api/connections/base#connection-objects"><code>BaseSyncConnection</code></a>. Remove the unused class.</p>
+<h3 id="primary-methods-to-develop-asynchronous-connection-interface">Primary methods to develop - asynchronous connection interface</h3>
 <p>The developer needs to implement four public coroutines:</p>
 <ul>
 <li>
@@ -1676,15 +1812,26 @@
 <p>The <code>disconnect</code> coroutine implements the teardown logic required to be performed for the connection when it is eventually stopped. The <code>disconnect</code> coroutine is called by the AEA framework once when the agent is being stopped.</p>
 </li>
 <li>
-<p>The <code>send</code> coroutine is called by the AEA framework each time when the <code>Multiplexer</code> handles an outgoing envelope specified to be handled by the connection. The <code>send</code> coroutine must implement the processing of the envelope leaving the agent.</p>
+<p>The <code>send</code> coroutine is called by the AEA framework each time the <code>Multiplexer</code> handles an outgoing envelope specified to be handled by this connection. The <code>send</code> coroutine must implement the processing of the envelope leaving the agent.</p>
 </li>
 <li>
-<p>The <code>receive</code> coroutine is continuously called by the AEA framework. It either returns <code>None</code> or an envelope. The <code>receive</code> coroutine must implement the logic of data being received by the agent and if necessary its translation into a relevant protocol.</p>
+<p>The <code>receive</code> coroutine is continuously called by the AEA framework. It either returns <code>None</code> or an envelope. The <code>receive</code> coroutine must implement the logic of data being received by the agent, and if necessary, its translation into a relevant protocol.</p>
 </li>
 </ul>
-<p>When developing your own connection you might benefit from inspecting the <code>fetchai/http_server:0.16.0</code> and <code>fetchai/http_client:0.17.0</code> connections to gain more familiarity and inspiration.</p>
+<p>The framework provides a demo <code>stub</code> connection which implements an I/O reader and writer to send and receive messages between the agent and a local file. To gain inspiration and become familiar with the structure of connection packages, you may find it useful to check out <code>fetchai/stub:0.20.0</code>, <code>fetchai/http_server:0.21.0</code> or <code>fetchai/http_client:0.22.0</code> connections. The latter two connections are for external clients to connect with an agent, and for the agent to connect with external servers, respectively.</p>
+<h3 id="primary-methods-to-develop-sync-connection-interface">Primary methods to develop - sync connection interface</h3>
+<p>The <a href="../api/connections/base#connection-objects"><code>BaseSyncConnection</code></a> uses executors to execute synchronous code from the asynchronous context of the <code>Multiplexer</code> in executors/threads, which are limited by the amount of configured workers.</p>
+<p>The asynchronous methods <code>connect</code>, <code>disconnect</code> and <code>send</code> are converted to callbacks which the developer implements:
+* <code>on_connect</code>
+* <code>on_disconnect</code>
+* <code>on_send</code></p>
+<p>All of these methods will be executed in the executor pool.</p>
+<p>Every method can create a message by putting it into the thread/asynchronous friendly queue that is consumed by the <code>Multiplexer</code>.</p>
+<p>The <code>receive</code> coroutine has no direct equivalent. Instead, the developer implements a <code>main</code> method which runs synchronously in the background.</p>
+<h2 id="configuration">Configuration</h2>
+<p>Every connection must have a configuration file in <code>connection.yaml</code>, containing meta-information about the connection as well as all the required configuration details. For more details, have a look <a href="../config">here</a>.</p>
 <h3 id="configuration-options">Configuration options</h3>
-<p>The <code>connection.yaml</code> files contains a number of fields required to be edited by the developer of the connection:</p>
+<p>The <code>connection.yaml</code> file contains a number of fields that must be edited by the developer of the connection:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">connections</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">protocols</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">class_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MyScaffoldConnection</span>
@@ -1700,10 +1847,10 @@
 <li><code>connections</code> specifies the list of other connection this connection depends on</li>
 <li><code>protocols</code> specifies the list of protocols this connection depends on</li>
 <li><code>class_name</code> needs to match the name of the connection class in <code>connection.py</code></li>
-<li><code>config</code> can contain arbitrary configuration information which is available in the constructor of the connection</li>
+<li><code>config</code> can contain arbitrary configuration information which is made available in the constructor of the connection as keyword arguments (<code>**kwargs</code>)</li>
 <li><code>excluded_protocols</code> lists the protocols which cannot be used in this connection</li>
 <li><code>restricted_to_protocols</code> lists the protocols which this connection is restricted to be used by</li>
-<li><code>dependencies</code> lists any Python dependencies of the package</li>
+<li><code>dependencies</code> lists any Python dependencies of the connection package</li>
 <li><code>is_abstract</code> specifies whether this connection is only used as an abstract base class</li>
 <li><code>cert_requests</code> lists certification requests of the connection (see <a href="../por">proof of representation</a> for details)</li>
 </ul>
@@ -1758,7 +1905,7 @@
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

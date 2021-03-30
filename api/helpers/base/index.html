@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
 <title>Base - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -405,6 +405,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../12-factor/" title="12-Factor app and AEAs">
+      12-Factor app and AEAs
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../prometheus/" title="Prometheus monitoring">
       Prometheus monitoring
     </a>
@@ -457,6 +462,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../por/" title="Proof of Representation">
       Proof of Representation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security/" title="Security">
+      Security
     </a>
 </li>
 </ul>
@@ -520,6 +530,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../config/" title="Configurations">
       Configurations
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../limits/" title="Limitations of v1">
+      Limitations of v1
     </a>
 </li>
 </ul>
@@ -618,11 +633,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cli-gui/" title="GUI">
-      GUI
-    </a>
 </li>
 </ul>
 </nav>
@@ -843,21 +853,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/cosmos/" title="Cosmos">
-      Cosmos
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/ethereum/" title="Ethereum">
-      Ethereum
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../crypto/fetchai/" title="Fetchai">
-      Fetchai
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../crypto/helpers/" title="Helpers">
       Helpers
     </a>
@@ -868,17 +863,22 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../crypto/plugin/" title="Plugin">
+      Plugin
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../crypto/wallet/" title="Wallet">
       Wallet
     </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-8" id="nav-7-7-17-8" type="checkbox"/>
-<label class="md-nav__link" for="nav-7-7-17-8">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-17-6" id="nav-7-7-17-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-17-6">
       Registries
     </label>
 <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-<label class="md-nav__title" for="nav-7-7-17-8">
+<label class="md-nav__title" for="nav-7-7-17-6">
         Registries
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
@@ -1191,6 +1191,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#message_format">
+    message_format
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#save_path">
     save_path
   </a>
@@ -1208,6 +1213,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#get_message">
     get_message
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#construct_message">
+    construct_message
   </a>
 </li>
 <li class="md-nav__item">
@@ -1770,6 +1780,127 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28" id="nav-7-7-28" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28">
+      Plugins
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+<label class="md-nav__title" for="nav-7-7-28">
+        Plugins
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1" id="nav-7-7-28-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-1">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-1-1" id="nav-7-7-28-1-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-1-1">
+      IPFS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-1-1">
+        IPFS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/core/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_cli_ipfs/ipfs_utils/" title="Utils">
+      Utils
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2" id="nav-7-7-28-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2">
+      Ledger
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+<label class="md-nav__title" for="nav-7-7-28-2">
+        Ledger
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-1" id="nav-7-7-28-2-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-1">
+      Cosmos
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-1">
+        Cosmos
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_cosmos/cosmos/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-2" id="nav-7-7-28-2-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-2">
+      Ethereum
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-2">
+        Ethereum
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_ethereum/ethereum/" title="API">
+      API
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-28-2-3" id="nav-7-7-28-2-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-7-7-28-2-3">
+      Fetchai
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+<label class="md-nav__title" for="nav-7-7-28-2-3">
+        Fetchai
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/fetchai/" title="API">
+      API
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../plugins/aea_ledger_fetchai/_cosmos/" title="Helper">
+      Helper
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -2038,6 +2169,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#message_format">
+    message_format
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#save_path">
     save_path
   </a>
@@ -2055,6 +2191,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#get_message">
     get_message
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#construct_message">
+    construct_message
   </a>
 </li>
 <li class="md-nav__item">
@@ -2171,7 +2312,7 @@ Return empty dict if platform is not win32</p>
 <h4 id="send_control_c">send<code>_</code>control<code>_</code>c</h4>
 <div class="highlight"><pre><span></span><code><span class="n">send_control_c</span><span class="p">(</span><span class="n">process</span><span class="p">:</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">,</span> <span class="n">kill_group</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Send ctrl-C crossplatform to terminate a subprocess.</p>
+<p>Send ctrl-C cross-platform to terminate a subprocess.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>process</code>: the process to send the signal to.</li>
@@ -2218,6 +2359,10 @@ attribute to implement a different behaviour.</p>
 Traceback (most recent call last):
 ...
 ValueError: Value 0an_identifier does not match the regular expression re.compile('[a-zA-Z_][a-zA-Z0-9_]{0,127}')</p>
+<p>SimpleId("an identifier")
+Traceback (most recent call last):
+...
+ValueError: Value an identifier does not match the regular expression re.compile('[a-zA-Z_][a-zA-Z0-9_]{0,127}')</p>
 <p>SimpleId("")
 Traceback (most recent call last):
 ...
@@ -2236,7 +2381,7 @@ ValueError: Value  does not match the regular expression re.compile('[a-zA-Z_][a
 <div class="highlight"><pre><span></span><code><span class="n">get_logger_method</span><span class="p">(</span><span class="n">fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">logger_method</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span>
 </code></pre></div>
 <p>Get logger method for function.</p>
-<p>Get logger in <code>fn</code> definion module or creates logger is module.<strong>name</strong>.
+<p>Get logger in <code>fn</code> definition module or creates logger is module.<strong>name</strong>.
 Or return logger_method if it's callable.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
@@ -2272,7 +2417,7 @@ Or return logger_method if it's callable.</p>
 <ul>
 <li><code>number_of_retries</code>: amount of attempts</li>
 <li><code>error_message</code>: message template with one <code>{}</code> for exception</li>
-<li><code>delay</code>: num of seconds to sleep between retries. default 0</li>
+<li><code>delay</code>: number of seconds to sleep between retries. default 0</li>
 <li><code>logger_method</code>: name of the logger method or callable to print logs</li>
 </ul>
 <p><a name="aea.helpers.base.exception_log_and_reraise"></a></p>
@@ -2379,19 +2524,21 @@ to_update
 <p>Certificate request for proof of representation.</p>
 <p><a name="aea.helpers.base.CertRequest.__init__"></a></p>
 <h4 id="__init___2"><code>__</code>init<code>__</code></h4>
-<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">identifier</span><span class="p">:</span> <span class="n">SimpleIdOrStr</span><span class="p">,</span> <span class="n">ledger_id</span><span class="p">:</span> <span class="n">SimpleIdOrStr</span><span class="p">,</span> <span class="n">not_before</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">not_after</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">save_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">identifier</span><span class="p">:</span> <span class="n">SimpleIdOrStr</span><span class="p">,</span> <span class="n">ledger_id</span><span class="p">:</span> <span class="n">SimpleIdOrStr</span><span class="p">,</span> <span class="n">not_before</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">not_after</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">message_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">save_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Initialize the certificate request.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>public_key</code>: the public key, or the key id.</li>
 <li><code>identifier</code>: certificate identifier.</li>
+<li><code>ledger_id</code>: ledger identifier the request is referring to.</li>
 <li><code>not_before</code>: specify the lower bound for certificate validity.
 If it is a string, it must follow the format: 'YYYY-MM-DD'. It
-will be interpreted as timezone UTC.</li>
+will be interpreted as timezone UTC-0.</li>
 <li><code>not_before</code>: specify the lower bound for certificate validity.
 if it is a string, it must follow the format: 'YYYY-MM-DD' It
 will be interpreted as timezone UTC-0.</li>
+<li><code>message_format</code>: message format used for signing</li>
 <li><code>save_path</code>: the save_path where to save the certificate.</li>
 </ul>
 <p><a name="aea.helpers.base.CertRequest.public_key"></a></p>
@@ -2442,6 +2589,12 @@ will be interpreted as timezone UTC-0.</li>
  <span class="o">|</span> <span class="n">not_after</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span>
 </code></pre></div>
 <p>Get the not_after field.</p>
+<p><a name="aea.helpers.base.CertRequest.message_format"></a></p>
+<h4 id="message_format">message<code>_</code>format</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
+ <span class="o">|</span> <span class="n">message_format</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Get the message format.</p>
 <p><a name="aea.helpers.base.CertRequest.save_path"></a></p>
 <h4 id="save_path">save<code>_</code>path</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2474,6 +2627,20 @@ Otherwise, the path prefix is prepended.</p>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_message</span><span class="p">(</span><span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span>
 </code></pre></div>
 <p>Get the message to sign.</p>
+<p><a name="aea.helpers.base.CertRequest.construct_message"></a></p>
+<h4 id="construct_message">construct<code>_</code>message</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">construct_message</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">public_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">identifier</span><span class="p">:</span> <span class="n">SimpleIdOrStr</span><span class="p">,</span> <span class="n">not_before_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">not_after_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">message_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span>
+</code></pre></div>
+<p>Construct message for singning.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>public_key</code>: the public key</li>
+<li><code>identifier</code>: identifier to be signed</li>
+<li><code>not_before_string</code>: signature not valid before</li>
+<li><code>not_after_string</code>: signature not valid after</li>
+<li><code>message_format</code>: message format used for signing</li>
+</ul>
 <p><a name="aea.helpers.base.CertRequest.get_signature"></a></p>
 <h4 id="get_signature">get<code>_</code>signature</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_signature</span><span class="p">(</span><span class="n">path_prefix</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PathLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -2481,7 +2648,7 @@ Otherwise, the path prefix is prepended.</p>
 <p>Get signature from save_path.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>path_prefix</code>: the path prefix to be prependend to save_path. Defaults to cwd.</li>
+<li><code>path_prefix</code>: the path prefix to be prepended to save_path. Defaults to cwd.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the signature.</p>
@@ -2506,9 +2673,13 @@ Otherwise, the path prefix is prepended.</p>
 <h4 id="compute_specifier_from_version">compute<code>_</code>specifier<code>_</code>from<code>_</code>version</h4>
 <div class="highlight"><pre><span></span><code><span class="n">compute_specifier_from_version</span><span class="p">(</span><span class="n">version</span><span class="p">:</span> <span class="n">Version</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p>Compute the specifier set from a version, by varying only on the patch number.</p>
-<p>I.e. from "{major}.{minor}.{patch}", return</p>
-<p>"&gt;={major}.{minor}.0, &lt;{major}.{minor + 1}.0"</p>
+<p>Compute the specifier set from a version.</p>
+<p>Varying only on the patch number for versions with major 0.</p>
+<p>I.e. from "{major}.{minor}.{patch}.{extra}", return</p>
+<p>"&gt;=min({major}.{minor}.0, {major}.{minor}.{patch}.{extra}), &lt;{major}.{minor + 1}.0"</p>
+<p>Varying on the patch and minor number for versions with major &gt;= 1.</p>
+<p>I.e. from "{major}.{minor}.{patch}.{extra}", return</p>
+<p>"&gt;=min({major}.0.0, {major}.{minor}.{patch}.{extra}), &lt;{major+1}.0.0"</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>version</code>: the version</li>
@@ -2596,7 +2767,7 @@ def myfunction():
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>
