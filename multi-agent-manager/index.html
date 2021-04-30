@@ -254,6 +254,11 @@
     </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../aggregation-demo/" title="Aggegation skill">
+      Aggegation skill
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../tac-skills/" title="TAC skills">
       TAC skills
     </a>
@@ -446,47 +451,9 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Multi agent manager
-      </label>
 <a class="md-nav__link md-nav__link--active" href="./" title="Multi agent manager">
       Multi agent manager
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup">
-    Setup
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adding-projects">
-    Adding projects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adding-agent-instances">
-    Adding agent instances
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#running-the-agents">
-    Running the agents:
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stopping-the-agents">
-    Stopping the agents:
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cleaning-up">
-    Cleaning up
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../debug/" title="Debugging">
@@ -1739,39 +1706,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup">
-    Setup
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adding-projects">
-    Adding projects
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adding-agent-instances">
-    Adding agent instances
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#running-the-agents">
-    Running the agents:
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stopping-the-agents">
-    Stopping the agents:
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cleaning-up">
-    Cleaning up
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -1779,7 +1713,6 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/agents-aea/docs/edit/master/docs/multi-agent-manager.md" title="Edit this page"></a>
-<h1>Multi agent manager</h1>
 <p>The <a href="../api/manager/manager"><code>MultiAgentManager</code></a> allows managing multiple agent projects programmatically.</p>
 <h2 id="setup">Setup</h2>
 <p>We instantiate the manager by providing it with the working directory in which to operate and starting it:</p>
@@ -1796,8 +1729,8 @@
 <p>We first add a couple of finished AEA project:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">aea.configurations.base</span> <span class="kn">import</span> <span class="n">PublicId</span>
 
-<span class="n">weather_station_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/weather_station:0.27.0"</span><span class="p">)</span>
-<span class="n">weather_client_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/weather_client:0.28.0"</span><span class="p">)</span>
+<span class="n">weather_station_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/weather_station:0.28.0"</span><span class="p">)</span>
+<span class="n">weather_client_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/weather_client:0.29.0"</span><span class="p">)</span>
 <span class="n">manager</span><span class="o">.</span><span class="n">add_project</span><span class="p">(</span><span class="n">weather_station_id</span><span class="p">)</span>
 <span class="n">manager</span><span class="o">.</span><span class="n">add_project</span><span class="p">(</span><span class="n">weather_client_id</span><span class="p">)</span>
 <span class="n">weather_station_name</span> <span class="o">=</span> <span class="n">weather_station_id</span><span class="o">.</span><span class="n">name</span>
@@ -1810,8 +1743,8 @@
     <span class="s2">"connection_private_key_paths"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"fetchai"</span><span class="p">:</span> <span class="s2">"fetchai_connection_private_key.txt"</span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">p2p_public_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/p2p_libp2p:0.21.0"</span><span class="p">)</span>
-<span class="n">soef_public_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/soef:0.22.0"</span><span class="p">)</span>
+<span class="n">p2p_public_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/p2p_libp2p:0.22.0"</span><span class="p">)</span>
+<span class="n">soef_public_id</span> <span class="o">=</span> <span class="n">PublicId</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="s2">"fetchai/soef:0.23.0"</span><span class="p">)</span>
 
 <span class="n">component_overrides</span> <span class="o">=</span> <span class="p">[{</span>
     <span class="o">**</span><span class="n">p2p_public_id</span><span class="o">.</span><span class="n">json</span><span class="p">,</span>
@@ -1901,6 +1834,8 @@
 <h2 id="cleaning-up">Cleaning up</h2>
 <div class="highlight"><pre><span></span><code><span class="n">manager</span><span class="o">.</span><span class="n">stop_manager</span><span class="p">()</span>
 </code></pre></div>
+<h1 id="limitations">Limitations</h1>
+<p>The <code>MultiAgentManager</code> can only be used with compatible package versions, in particular the same package (with respect to author and name) cannot be used in different versions. If you want to run multiple agents with differing versions of the same package then use the <code>aea launch</code> command in the multi-processing mode, or simply launch each agent individually with <code>aea run</code>.</p>
 </article>
 </div>
 </div>
