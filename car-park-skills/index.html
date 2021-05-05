@@ -1762,10 +1762,10 @@ This demo allows you to test the AEA functionality of the car park AEA demo with
 <p>The following steps assume you have launched the AEA Manager Desktop app.</p>
 <ol>
 <li>
-<p>Add a new AEA called <code>car_detector</code> with public id <code>fetchai/car_detector:0.28.0</code>.</p>
+<p>Add a new AEA called <code>car_detector</code> with public id <code>fetchai/car_detector:0.29.0</code>.</p>
 </li>
 <li>
-<p>Add another new AEA called <code>car_data_buyer</code> with public id <code>fetchai/car_data_buyer:0.29.0</code>.</p>
+<p>Add another new AEA called <code>car_data_buyer</code> with public id <code>fetchai/car_data_buyer:0.30.0</code>.</p>
 </li>
 <li>
 <p>Copy the address from the <code>car_data_buyer</code> into your clip board. Then go to the <a href="https://explore-agent-land.fetch.ai" target="_blank">AgentLand block explorer</a> and request some test tokens via <code>Get Funds</code>.</p>
@@ -1798,7 +1798,7 @@ This demo allows you to test the AEA functionality of the car park AEA demo with
 <h2 id="demo-instructions_1">Demo instructions</h2>
 <h3 id="create-car-detector-aea">Create car detector AEA</h3>
 <p>First, fetch the car detector AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/car_detector:0.28.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/car_detector:0.29.0
 <span class="nb">cd</span> car_detector
 aea install
 aea build
@@ -1809,19 +1809,19 @@ aea build
 The following steps create the car detector from scratch:
 <div class="highlight"><pre><span></span><code>aea create car_detector
 <span class="nb">cd</span> car_detector
-aea add connection fetchai/p2p_libp2p:0.22.0
-aea add connection fetchai/soef:0.23.0
+aea add connection fetchai/p2p_libp2p:0.23.0
+aea add connection fetchai/soef:0.24.0
 aea add connection fetchai/ledger:0.18.0
 aea add skill fetchai/carpark_detection:0.25.0
 aea config <span class="nb">set</span> --type dict agent.dependencies <span class="se">\</span>
 <span class="s1">'{</span>
 <span class="s1">  "aea-ledger-fetchai": {"version": "&lt;2.0.0,&gt;=1.0.0"}</span>
 <span class="s1">}'</span>
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.22.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.23.0
 aea config <span class="nb">set</span> --type dict agent.default_routing <span class="se">\</span>
 <span class="s1">'{</span>
 <span class="s1">  "fetchai/ledger_api:1.0.0": "fetchai/ledger:0.18.0",</span>
-<span class="s1">  "fetchai/oef_search:1.0.0": "fetchai/soef:0.23.0"</span>
+<span class="s1">  "fetchai/oef_search:1.0.0": "fetchai/soef:0.24.0"</span>
 <span class="s1">}'</span>
 aea install
 aea build
@@ -1830,7 +1830,7 @@ aea build
 </details>
 <h3 id="create-car-data-buyer-aea">Create car data buyer AEA</h3>
 <p>Then, fetch the car data client AEA:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/car_data_buyer:0.29.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/car_data_buyer:0.30.0
 <span class="nb">cd</span> car_data_buyer
 aea install
 aea build
@@ -1841,19 +1841,19 @@ aea build
 The following steps create the car data client from scratch:
 <div class="highlight"><pre><span></span><code>aea create car_data_buyer
 <span class="nb">cd</span> car_data_buyer
-aea add connection fetchai/p2p_libp2p:0.22.0
-aea add connection fetchai/soef:0.23.0
+aea add connection fetchai/p2p_libp2p:0.23.0
+aea add connection fetchai/soef:0.24.0
 aea add connection fetchai/ledger:0.18.0
 aea add skill fetchai/carpark_client:0.25.0
 aea config <span class="nb">set</span> --type dict agent.dependencies <span class="se">\</span>
 <span class="s1">'{</span>
 <span class="s1">  "aea-ledger-fetchai": {"version": "&lt;2.0.0,&gt;=1.0.0"}</span>
 <span class="s1">}'</span>
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.22.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.23.0
 aea config <span class="nb">set</span> --type dict agent.default_routing <span class="se">\</span>
 <span class="s1">'{</span>
 <span class="s1">  "fetchai/ledger_api:1.0.0": "fetchai/ledger:0.18.0",</span>
-<span class="s1">  "fetchai/oef_search:1.0.0": "fetchai/soef:0.23.0"</span>
+<span class="s1">  "fetchai/oef_search:1.0.0": "fetchai/soef:0.24.0"</span>
 <span class="s1">}'</span>
 aea install
 aea build
@@ -1893,7 +1893,7 @@ aea add-key fetchai fetchai_connection_private_key.txt --connection
 <p>First, run the car data seller AEA:</p>
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div>
-<p>Once you see a message of the form <code>To join its network use multiaddr 'SOME_ADDRESS'</code> take note of the address. (Alternatively, use <code>aea get-multiaddress fetchai -c -i fetchai/p2p_libp2p:0.22.0 -u public_uri</code> to retrieve the address.)
+<p>Once you see a message of the form <code>To join its network use multiaddr 'SOME_ADDRESS'</code> take note of the address. (Alternatively, use <code>aea get-multiaddress fetchai -c -i fetchai/p2p_libp2p:0.23.0 -u public_uri</code> to retrieve the address.)
 This is the entry peer address for the local <a href="../acn">agent communication network</a> created by the car data seller.</p>
 <p>Then, in the car data buyer, run this command (replace <code>SOME_ADDRESS</code> with the correct value as described above):
 <div class="highlight"><pre><span></span><code>aea config <span class="nb">set</span> --type dict vendor.fetchai.connections.p2p_libp2p.config <span class="se">\</span>

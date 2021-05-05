@@ -1832,7 +1832,7 @@
 <p>Repeat the following process four times in four different terminals (for each {<code>i=0</code>, <code>i=1</code>, <code>i=2</code>, <code>i=3</code>}):</p>
 <p>Fetch the aggregator AEA:
 <div class="highlight"><pre><span></span><code><span class="nv">agent_name</span><span class="o">=</span><span class="s2">"agg</span><span class="nv">$i</span><span class="s2">"</span>
-aea fetch fetchai/simple_aggregator:0.1.0 --alias <span class="nv">$agent_name</span>
+aea fetch fetchai/simple_aggregator:0.2.0 --alias <span class="nv">$agent_name</span>
 <span class="nb">cd</span> <span class="nv">$agent_name</span>
 aea install
 aea build
@@ -1847,13 +1847,13 @@ aea create agent_name
 <span class="nb">cd</span> agent_name
 aea add connection fetchai/http_client:0.22.0
 aea add connection fetchai/http_server:0.21.0
-aea add connection fetchai/p2p_libp2p:0.22.0
-aea add connection fetchai/soef:0.23.0
+aea add connection fetchai/p2p_libp2p:0.23.0
+aea add connection fetchai/soef:0.24.0
 aea add connection fetchai/prometheus:0.7.0
 aea add skill fetchai/advanced_data_request:0.5.0
 aea add skill fetchai/simple_aggregation:0.1.0
 
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.22.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.23.0
 aea install
 aea build
 </code></pre></div>

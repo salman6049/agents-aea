@@ -1861,7 +1861,7 @@
 <h2 id="demo">Demo</h2>
 <h3 id="create-the-oracle-aea">Create the oracle AEA</h3>
 <p>Fetch the AEA that will deploy and update the oracle contract.</p>
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/coin_price_oracle:0.13.0
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/coin_price_oracle:0.14.0
 <span class="nb">cd</span> coin_price_oracle
 aea install
 aea build
@@ -1875,7 +1875,7 @@ Create the AEA that will deploy the contract.
 <span class="nb">cd</span> coin_price_oracle
 aea add connection fetchai/http_client:0.22.0
 aea add connection fetchai/ledger:0.18.0
-aea add connection fetchai/p2p_libp2p:0.22.0
+aea add connection fetchai/p2p_libp2p:0.23.0
 aea add skill fetchai/advanced_data_request:0.5.0
 aea add skill fetchai/simple_oracle:0.12.0
 aea config <span class="nb">set</span> --type dict agent.dependencies <span class="se">\</span>
@@ -1883,7 +1883,7 @@ aea config <span class="nb">set</span> --type dict agent.dependencies <span clas
 <span class="s1">  "aea-ledger-fetchai": {"version": "&lt;2.0.0,&gt;=1.0.0"},</span>
 <span class="s1">  "aea-ledger-ethereum": {"version": "&lt;2.0.0,&gt;=1.0.0"}</span>
 <span class="s1">}'</span>
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.22.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.23.0
 aea install
 aea build
 </code></pre></div>
