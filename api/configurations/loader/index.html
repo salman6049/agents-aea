@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Loader - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -1950,8 +1950,6 @@
 <ul>
 <li><code>json_data</code>: the JSON data.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None.</p>
 <p><a name="aea.configurations.loader.BaseConfigLoader.required_fields"></a></p>
 <h4 id="required_fields">required<code>_</code>fields</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2014,8 +2012,6 @@
 <li><code>configuration</code>: the configuration to be dumped.</li>
 <li><code>file_pointer</code>: the file pointer to the configuration file</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.configurations.loader.ConfigLoader.from_configuration_type"></a></p>
 <h4 id="from_configuration_type">from<code>_</code>configuration<code>_</code>type</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
@@ -2030,6 +2026,7 @@
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>configuration_json</code>: list of dicts with aea configuration</li>
+<li><code>validate</code>: whether or not to validate</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>AgentConfig instance</p>
@@ -2046,8 +2043,10 @@
 <p>Get a config loader from the configuration type.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
-<li><code>configuration_type</code>: the configuration type</li>
+<li><code>configuration_type</code>: the configuration type.</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>configuration loader</p>
 <p><a name="aea.configurations.loader.load_component_configuration"></a></p>
 <h4 id="load_component_configuration">load<code>_</code>component<code>_</code>configuration</h4>
 <div class="highlight"><pre><span></span><code><span class="n">load_component_configuration</span><span class="p">(</span><span class="n">component_type</span><span class="p">:</span> <span class="n">ComponentType</span><span class="p">,</span> <span class="n">directory</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">skip_consistency_check</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ComponentConfiguration</span>
@@ -2124,7 +2123,7 @@
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

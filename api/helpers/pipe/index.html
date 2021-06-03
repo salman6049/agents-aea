@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Pipe - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -2296,6 +2296,8 @@
 <ul>
 <li><code>timeout</code>: timeout for other end to connect</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>connection status</p>
 <p><a name="aea.helpers.pipe.IPCChannelClient.write"></a></p>
 <h4 id="write">write</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@abstractmethod</span>
@@ -2322,8 +2324,6 @@
  <span class="o">|</span> <span class="k">async</span> <span class="n">close</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Close the communication channel.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.helpers.pipe.IPCChannel"></a></p>
 <h2 id="ipcchannel-objects">IPCChannel Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">IPCChannel</span><span class="p">(</span><span class="n">IPCChannelClient</span><span class="p">)</span>
@@ -2361,6 +2361,8 @@
 <ul>
 <li><code>in_path</code>: rendezvous point for incoming data</li>
 <li><code>out_path</code>: rendezvous point for outgoing data</li>
+<li><code>logger</code>: the logger</li>
+<li><code>loop</code>: the event loop</li>
 </ul>
 <p><a name="aea.helpers.pipe.PosixNamedPipeProtocol.connect"></a></p>
 <h4 id="connect_1">connect</h4>
@@ -2408,6 +2410,8 @@
 <ul>
 <li><code>reader</code>: established asyncio reader</li>
 <li><code>writer</code>: established asyncio writer</li>
+<li><code>logger</code>: the logger</li>
+<li><code>loop</code>: the event loop</li>
 </ul>
 <p><a name="aea.helpers.pipe.TCPSocketProtocol.write"></a></p>
 <h4 id="write_2">write</h4>
@@ -2449,6 +2453,8 @@
 <ul>
 <li><code>timeout</code>: timeout for the connection to be established</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>connection status</p>
 <p><a name="aea.helpers.pipe.TCPSocketChannel.write"></a></p>
 <h4 id="write_3">write</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2463,10 +2469,8 @@
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">read</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]</span>
 </code></pre></div>
 <p>Read from channel.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>data</code>: read bytes</li>
-</ul>
+<p><strong>Returns</strong>:</p>
+<p>read bytes</p>
 <p><a name="aea.helpers.pipe.TCPSocketChannel.close"></a></p>
 <h4 id="close_3">close</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">close</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2552,6 +2556,8 @@
 <ul>
 <li><code>in_path</code>: rendezvous point for incoming data</li>
 <li><code>out_path</code>: rendezvous point for outgoing data</li>
+<li><code>logger</code>: the logger</li>
+<li><code>loop</code>: the event loop</li>
 </ul>
 <p><a name="aea.helpers.pipe.TCPSocketChannelClient.connect"></a></p>
 <h4 id="connect_4">connect</h4>
@@ -2562,6 +2568,8 @@
 <ul>
 <li><code>timeout</code>: timeout for connection to be established</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>connection status</p>
 <p><a name="aea.helpers.pipe.TCPSocketChannelClient.write"></a></p>
 <h4 id="write_5">write</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2597,6 +2605,8 @@
 <ul>
 <li><code>in_path</code>: rendezvous point for incoming data</li>
 <li><code>out_path</code>: rendezvous point for outgoing data</li>
+<li><code>logger</code>: the logger</li>
+<li><code>loop</code>: the event loop</li>
 </ul>
 <p><a name="aea.helpers.pipe.PosixNamedPipeChannelClient.connect"></a></p>
 <h4 id="connect_5">connect</h4>
@@ -2607,6 +2617,8 @@
 <ul>
 <li><code>timeout</code>: timeout for connection to be established</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>connection status</p>
 <p><a name="aea.helpers.pipe.PosixNamedPipeChannelClient.write"></a></p>
 <h4 id="write_6">write</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2704,7 +2716,7 @@
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

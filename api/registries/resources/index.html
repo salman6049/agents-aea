@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Resources - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -2075,7 +2075,10 @@
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">agent_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"standalone"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Instantiate the resources.</p>
-<p>:return None</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>agent_name</code>: the name of the agent</li>
+</ul>
 <p><a name="aea.registries.resources.Resources.agent_name"></a></p>
 <h4 id="agent_name">agent<code>_</code>name</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2120,8 +2123,6 @@
 <ul>
 <li><code>protocol</code>: a protocol</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.get_protocol"></a></p>
 <h4 id="get_protocol">get<code>_</code>protocol</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_protocol</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Protocol</span><span class="p">]</span>
@@ -2160,8 +2161,6 @@
 <ul>
 <li><code>protocol_id</code>: the protocol id for the protocol to be removed.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.add_contract"></a></p>
 <h4 id="add_contract">add<code>_</code>contract</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_contract</span><span class="p">(</span><span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2171,8 +2170,6 @@
 <ul>
 <li><code>contract</code>: a contract</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.get_contract"></a></p>
 <h4 id="get_contract">get<code>_</code>contract</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_contract</span><span class="p">(</span><span class="n">contract_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Contract</span><span class="p">]</span>
@@ -2200,8 +2197,6 @@
 <ul>
 <li><code>contract_id</code>: the contract id for the contract to be removed.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.add_connection"></a></p>
 <h4 id="add_connection">add<code>_</code>connection</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_connection</span><span class="p">(</span><span class="n">connection</span><span class="p">:</span> <span class="n">Connection</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2211,8 +2206,6 @@
 <ul>
 <li><code>connection</code>: a connection</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.get_connection"></a></p>
 <h4 id="get_connection">get<code>_</code>connection</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_connection</span><span class="p">(</span><span class="n">connection_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Connection</span><span class="p">]</span>
@@ -2240,8 +2233,6 @@
 <ul>
 <li><code>connection_id</code>: the connection id for the connection to be removed.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.add_skill"></a></p>
 <h4 id="add_skill">add<code>_</code>skill</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">add_skill</span><span class="p">(</span><span class="n">skill</span><span class="p">:</span> <span class="n">Skill</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2251,8 +2242,6 @@
 <ul>
 <li><code>skill</code>: a skill</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.get_skill"></a></p>
 <h4 id="get_skill">get<code>_</code>skill</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_skill</span><span class="p">(</span><span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Skill</span><span class="p">]</span>
@@ -2280,8 +2269,6 @@
 <ul>
 <li><code>skill_id</code>: the skill id for the skill to be removed.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.get_handler"></a></p>
 <h4 id="get_handler">get<code>_</code>handler</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get_handler</span><span class="p">(</span><span class="n">protocol_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">:</span> <span class="n">PublicId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Handler</span><span class="p">]</span>
@@ -2348,16 +2335,12 @@
 </code></pre></div>
 <p>Set up the resources.</p>
 <p>Calls setup on all resources.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.registries.resources.Resources.teardown"></a></p>
 <h4 id="teardown">teardown</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">teardown</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Teardown the resources.</p>
 <p>Calls teardown on all resources.</p>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 </article>
 </div>
 </div>
@@ -2408,7 +2391,7 @@
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

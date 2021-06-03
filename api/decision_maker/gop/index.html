@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>GOP - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -2172,8 +2172,6 @@
 <ul>
 <li><code>new_status</code>: the new status</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.decision_maker.gop.OwnershipState"></a></p>
 <h2 id="ownershipstate-objects">OwnershipState Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">OwnershipState</span><span class="p">(</span><span class="n">BaseOwnershipState</span><span class="p">)</span>
@@ -2184,10 +2182,6 @@
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Instantiate an ownership state object.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>decision_maker</code>: the decision maker</li>
-</ul>
 <p><a name="aea.decision_maker.gop.OwnershipState.set"></a></p>
 <h4 id="set">set</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">amount_by_currency_id</span><span class="p">:</span> <span class="n">CurrencyHoldings</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">quantities_by_good_id</span><span class="p">:</span> <span class="n">GoodHoldings</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="p">,)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2197,6 +2191,7 @@
 <ul>
 <li><code>amount_by_currency_id</code>: the currency endowment of the agent in this state.</li>
 <li><code>quantities_by_good_id</code>: the good endowment of the agent in this state.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><a name="aea.decision_maker.gop.OwnershipState.apply_delta"></a></p>
 <h4 id="apply_delta">apply<code>_</code>delta</h4>
@@ -2208,9 +2203,8 @@
 <ul>
 <li><code>delta_amount_by_currency_id</code>: the delta in the currency amounts</li>
 <li><code>delta_quantities_by_good_id</code>: the delta in the quantities by good</li>
+<li><code>kwargs</code>: the keyword arguments</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.decision_maker.gop.OwnershipState.is_initialized"></a></p>
 <h4 id="is_initialized">is<code>_</code>initialized</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2262,8 +2256,6 @@ Note, the agent is the sender of the transaction message by design.</p>
 <ul>
 <li><code>terms</code>: the transaction terms</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.decision_maker.gop.OwnershipState.apply_transactions"></a></p>
 <h4 id="apply_transactions">apply<code>_</code>transactions</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">apply_transactions</span><span class="p">(</span><span class="n">list_of_terms</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Terms</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s2">"OwnershipState"</span>
@@ -2299,6 +2291,7 @@ Note, the agent is the sender of the transaction message by design.</p>
 <ul>
 <li><code>exchange_params_by_currency_id</code>: the exchange params.</li>
 <li><code>utility_params_by_good_id</code>: the utility params for every asset.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><a name="aea.decision_maker.gop.Preferences.is_initialized"></a></p>
 <h4 id="is_initialized_1">is<code>_</code>initialized</h4>
@@ -2306,7 +2299,8 @@ Note, the agent is the sender of the transaction message by design.</p>
  <span class="o">|</span> <span class="n">is_initialized</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 <p>Get the initialization status.</p>
-<p>Returns True if exchange_params_by_currency_id and utility_params_by_good_id are not None.</p>
+<p><strong>Returns</strong>:</p>
+<p>True if exchange_params_by_currency_id and utility_params_by_good_id are not None.</p>
 <p><a name="aea.decision_maker.gop.Preferences.exchange_params_by_currency_id"></a></p>
 <h4 id="exchange_params_by_currency_id">exchange<code>_</code>params<code>_</code>by<code>_</code>currency<code>_</code>id</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@property</span>
@@ -2363,6 +2357,7 @@ Note, the agent is the sender of the transaction message by design.</p>
 <li><code>ownership_state</code>: the ownership state against which to compute the marginal utility.</li>
 <li><code>delta_quantities_by_good_id</code>: the change in good holdings</li>
 <li><code>delta_amount_by_currency_id</code>: the change in money holdings</li>
+<li><code>kwargs</code>: the keyword arguments</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the marginal utility score</p>
@@ -2413,9 +2408,8 @@ Note, the agent is the sender of the transaction message by design.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>self_address</code>: the address of the entity for whom dialogues are maintained</li>
+<li><code>kwargs</code>: the keyword arguments</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.decision_maker.gop.DecisionMakerHandler.StateUpdateDialogues"></a></p>
 <h2 id="stateupdatedialogues-objects">StateUpdateDialogues Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">StateUpdateDialogues</span><span class="p">(</span><span class="n">BaseStateUpdateDialogues</span><span class="p">)</span>
@@ -2429,9 +2423,8 @@ Note, the agent is the sender of the transaction message by design.</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>self_address</code>: the address of the entity for whom dialogues are maintained</li>
+<li><code>kwargs</code>: the keyword arguments</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.decision_maker.gop.DecisionMakerHandler.__init__"></a></p>
 <h4 id="__init___5"><code>__</code>init<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">identity</span><span class="p">:</span> <span class="n">Identity</span><span class="p">,</span> <span class="n">wallet</span><span class="p">:</span> <span class="n">Wallet</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2452,8 +2445,6 @@ Note, the agent is the sender of the transaction message by design.</p>
 <ul>
 <li><code>message</code>: the internal message</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 </article>
 </div>
 </div>
@@ -2504,7 +2495,7 @@ Note, the agent is the sender of the transaction message by design.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

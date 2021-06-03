@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>AEA quick start - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -1944,8 +1944,12 @@
 <p>This example will take you through a simple AEA to familiarise you with the basics of the framework.</p>
 <h2 id="system-requirements">System Requirements</h2>
 <p>The AEA framework can be used on <code>Windows</code>, <code>Ubuntu/Debian</code> and <code>MacOS</code>.</p>
-<p>You need <a href="https://www.python.org/downloads/" target="_blank">Python 3.6</a> or higher as well as <a href="https://golang.org/dl/" target="_blank">Go 1.14.2</a> or higher installed.
-​</p>
+<p>You need <a href="https://www.python.org/downloads/" target="_blank">Python 3.6</a> or higher as well as <a href="https://golang.org/dl/" target="_blank">Go 1.14.2</a> or higher installed.</p>
+<p>​GCC installation is required:
+* Ubuntu: <code>apt-get install gcc</code>
+* Windows (with <a href="https://chocolatey.org/" target="_blank"><code>choco</code></a>
+ installed): <code>choco install mingw</code>
+* MacOS X (with home brew): <code>brew install gcc</code></p>
 <h3 id="option-1-manual-system-preparation">Option 1: Manual system preparation</h3>
 <p>Install a compatible Python and Go version on your system (see <a href="https://realpython.com/installing-python/" target="_blank">this external resource</a> for a comprehensive guide).</p>
 <details><summary>Manual approach</summary>
@@ -2057,7 +2061,7 @@ Confirm password:
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v1.0.1
+v1.0.2
 
 AEA configurations successfully initialized: <span class="o">{</span><span class="s1">'author'</span>: <span class="s1">'fetchai'</span><span class="o">}</span>
 </code></pre></div></p>
@@ -2128,7 +2132,7 @@ aea add-key fetchai
  / ___ <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>___  / ___ <span class="se">\</span>
 /_/   <span class="se">\_\|</span>_____<span class="p">|</span>/_/   <span class="se">\_\</span>
 
-v1.0.1
+v1.0.2
 
 Starting AEA <span class="s1">'my_first_aea'</span> <span class="k">in</span> <span class="s1">'async'</span> mode ...
 info: Echo Handler: setup method called.
@@ -2337,7 +2341,7 @@ To run, execute the following:
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Build your first skill - search &amp; discovery - aea</title>
 <link href="../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -2239,21 +2239,21 @@ Ensure, you use the correct author name to reference your skill (here we use <co
 </code></pre></div></p>
 <p>This adds the protocol to our AEA and makes it available on the path <code>packages.fetchai.protocols...</code>.</p>
 <p>At this point we need to add the SOEF and P2P connections to allow the AEA to communicate with the SOEF node and other AEAs, install the AEA's dependencies, and configure the AEA:
-<div class="highlight"><pre><span></span><code>aea add connection fetchai/soef:0.24.0
-aea add connection fetchai/p2p_libp2p:0.23.0
+<div class="highlight"><pre><span></span><code>aea add connection fetchai/soef:0.25.0
+aea add connection fetchai/p2p_libp2p:0.24.0
 aea install
 aea build
-aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.23.0
+aea config <span class="nb">set</span> agent.default_connection fetchai/p2p_libp2p:0.24.0
 aea config <span class="nb">set</span> --type dict agent.default_routing <span class="se">\</span>
 <span class="s1">'{</span>
-<span class="s1">  "fetchai/oef_search:1.0.0": "fetchai/soef:0.24.0"</span>
+<span class="s1">  "fetchai/oef_search:1.0.0": "fetchai/soef:0.25.0"</span>
 <span class="s1">}'</span>
 </code></pre></div></p>
 <p>The last command will ensure that search requests are processed by the correct connection.</p>
 <h2 id="step-8-run-a-service-provider-aea">Step 8: Run a service provider AEA</h2>
 <p>In order for this AEA to find another AEA when searching, the second AEA (let's call it the service provider AEA) must exist and have been registered with the SOEF. </p>
 <p>From a different terminal window, we fetch a finished service provider AEA and install its Python dependencies:
-<div class="highlight"><pre><span></span><code>aea fetch fetchai/simple_service_registration:0.29.0 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> simple_service_registration <span class="o">&amp;&amp;</span> aea install <span class="o">&amp;&amp;</span> aea build
+<div class="highlight"><pre><span></span><code>aea fetch fetchai/simple_service_registration:0.30.0 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> simple_service_registration <span class="o">&amp;&amp;</span> aea install <span class="o">&amp;&amp;</span> aea build
 </code></pre></div></p>
 <p>This AEA will simply register a location service on the <a href="../simple-oef">SOEF search node</a> so we can search for it.</p>
 <p>We first create the private key for the service provider AEA based on the network you want to transact. To generate and add a private-public key pair for Fetch.ai <code>AgentLand</code> use:
@@ -2270,7 +2270,7 @@ aea add-key fetchai fetchai_connection_private_key.txt --connection
 <p>Then we run the AEA:
 <div class="highlight"><pre><span></span><code>aea run
 </code></pre></div></p>
-<p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address. (Alternatively, use <code>aea get-multiaddress fetchai -c -i fetchai/p2p_libp2p:0.23.0 -u public_uri</code> to retrieve the address.) This is the entry peer address for the local <a href="../acn">agent communication network</a> created by the <code>simple_service_registration</code> (service provider) AEA.</p>
+<p>Once you see a message of the form <code>To join its network use multiaddr: ['SOME_ADDRESS']</code> take note of the address. (Alternatively, use <code>aea get-multiaddress fetchai -c -i fetchai/p2p_libp2p:0.24.0 -u public_uri</code> to retrieve the address.) This is the entry peer address for the local <a href="../acn">agent communication network</a> created by the <code>simple_service_registration</code> (service provider) AEA.</p>
 <details><summary>Click here to see full code and guide for this AEA</summary>
 <p>
 
@@ -2944,7 +2944,7 @@ This allows the search AEA to connect to the same local agent communication netw
 </footer>
 </div>
 <script src="../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:".."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

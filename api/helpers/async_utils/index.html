@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Async Utils - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -2111,8 +2111,6 @@
 <ul>
 <li><code>callback_fn</code>: callable object to be called on state changed.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.helpers.async_utils.AsyncState.get"></a></p>
 <h4 id="get">get</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">get</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Any</span>
@@ -2139,10 +2137,9 @@
 <ul>
 <li><code>initial</code>: set state on context enter, not_set by default</li>
 <li><code>success</code>: set state on context block done, not_set by default</li>
-<li><code>fail</code>: set state on context block raises exception, not_set by default</li>
+<li><code>fail</code>: set state on context block raises exception, not_set by default
+:yield: generator</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.helpers.async_utils.PeriodicCaller"></a></p>
 <h2 id="periodiccaller-objects">PeriodicCaller Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PeriodicCaller</span><span class="p">()</span>
@@ -2197,6 +2194,8 @@
 <ul>
 <li><code>timeout</code>: optional timeout to wait in seconds.</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>result</p>
 <p><a name="aea.helpers.async_utils.AnotherThreadTask.cancel"></a></p>
 <h4 id="cancel">cancel</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">cancel</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2240,6 +2239,8 @@
 <ul>
 <li><code>coro</code>: a coroutine to run.</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>task</p>
 <p><a name="aea.helpers.async_utils.ThreadedAsyncRunner.stop"></a></p>
 <h4 id="stop_1">stop</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">stop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -2263,8 +2264,6 @@ Use wait_completed to await task was completed.</p>
 <li><code>loop</code>: asyncio event loop to use.</li>
 <li><code>threaded</code>: bool. start in thread if True.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.helpers.async_utils.Runnable.start"></a></p>
 <h4 id="start_2">start</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">start</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
@@ -2357,7 +2356,7 @@ Use wait_completed to await task was completed.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

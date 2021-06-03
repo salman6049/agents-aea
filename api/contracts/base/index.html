@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Base - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -1858,6 +1858,7 @@
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>contract_config</code>: the contract configurations.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><a name="aea.contracts.base.Contract.id"></a></p>
 <h4 id="id">id</h4>
@@ -1893,6 +1894,7 @@
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>directory</code>: the directory to the skill package.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the contract object.</p>
@@ -1905,6 +1907,7 @@
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>configuration</code>: the contract configuration.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>the contract object.</p>
@@ -1936,9 +1939,10 @@ to handle the contract requests manually.</p>
 <ul>
 <li><code>ledger_api</code>: the ledger apis.</li>
 <li><code>contract_address</code>: the contract address.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
-<p>the tx</p>
+<p>the tx  # noqa: DAR202</p>
 <p><a name="aea.contracts.base.Contract.get_raw_message"></a></p>
 <h4 id="get_raw_message">get<code>_</code>raw<code>_</code>message</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
@@ -1951,9 +1955,10 @@ to handle the contract requests manually.</p>
 <ul>
 <li><code>ledger_api</code>: the ledger apis.</li>
 <li><code>contract_address</code>: the contract address.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
-<p>the tx</p>
+<p>the tx  # noqa: DAR202</p>
 <p><a name="aea.contracts.base.Contract.get_state"></a></p>
 <h4 id="get_state">get<code>_</code>state</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
@@ -1966,9 +1971,10 @@ to handle the contract requests manually.</p>
 <ul>
 <li><code>ledger_api</code>: the ledger apis.</li>
 <li><code>contract_address</code>: the contract address.</li>
+<li><code>kwargs</code>: the keyword arguments.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
-<p>the tx</p>
+<p>the tx  # noqa: DAR202</p>
 </article>
 </div>
 </div>
@@ -2019,7 +2025,7 @@ to handle the contract requests manually.</p>
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>

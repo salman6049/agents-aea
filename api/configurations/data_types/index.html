@@ -19,7 +19,7 @@
 <meta content="# matching documents" name="lang:search.result.other"/>
 <meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-4.6.3" name="generator"/>
 <title>Data Types - aea</title>
 <link href="../../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
 <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
@@ -2719,6 +2719,8 @@ PackageType.CONTRACT.to_plural()
 </blockquote>
 </blockquote>
 </blockquote>
+<p><strong>Returns</strong>:</p>
+<p>pluralised package type</p>
 <p><a name="aea.configurations.data_types.PackageType.__str__"></a></p>
 <h4 id="__str___1"><code>__</code>str<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__str__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -2748,6 +2750,8 @@ PackageType.CONTRACT.to_plural()
 </blockquote>
 </blockquote>
 </blockquote>
+<p><strong>Returns</strong>:</p>
+<p>list of all pluralised component types</p>
 <p><a name="aea.configurations.data_types.ComponentType.to_plural"></a></p>
 <h4 id="to_plural_1">to<code>_</code>plural</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">to_plural</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -2767,6 +2771,8 @@ ComponentType.CONTRACT.to_plural()
 </blockquote>
 </blockquote>
 </blockquote>
+<p><strong>Returns</strong>:</p>
+<p>pluralised component type</p>
 <p><a name="aea.configurations.data_types.ComponentType.__str__"></a></p>
 <h4 id="__str___2"><code>__</code>str<code>__</code></h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__str__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -3002,6 +3008,16 @@ ValueError: The public IDs author_1/name_1:0.1.0 and author_1/name_2:0.1.0 canno
 </blockquote>
 </blockquote>
 </blockquote>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>other</code>: the object to compate to</li>
+</ul>
+<p><strong>Raises</strong>:</p>
+<ul>
+<li><code>ValueError</code>: if the public ids cannot be confirmed</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>whether or not the inequality is satisfied</p>
 <p><a name="aea.configurations.data_types.PackageId"></a></p>
 <h2 id="packageid-objects">PackageId Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PackageId</span><span class="p">()</span>
@@ -3303,8 +3319,6 @@ We cannot have two items with the same package name since the keys of a YAML obj
 <li><code>item_id</code>: the item id.</li>
 <li><code>item</code>: the item to be added.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><strong>Raises</strong>:</p>
 <ul>
 <li><code>ValueError</code>: if the item with the same id is already in the collection.</li>
@@ -3330,8 +3344,6 @@ We cannot have two items with the same package name since the keys of a YAML obj
 <li><code>item_id</code>: the item id.</li>
 <li><code>item</code>: the item to be added.</li>
 </ul>
-<p><strong>Returns</strong>:</p>
-<p>None</p>
 <p><a name="aea.configurations.data_types.CRUDCollection.delete"></a></p>
 <h4 id="delete">delete</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="n">delete</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -3397,7 +3409,7 @@ We cannot have two items with the same package name since the keys of a YAML obj
 </footer>
 </div>
 <script src="../../../assets/javascripts/application.c33a9706.js"></script>
-<script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+<script>app.initialize({version:"1.1.2",url:{base:"../../.."}})</script>
 <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
 </body>
 </html>
