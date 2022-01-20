@@ -20,7 +20,6 @@
 """This package contains the handlers for the faber_alice skill."""
 
 import json
-import random
 from typing import Any, Dict, List, Optional, cast
 
 from aea.configurations.base import PublicId
@@ -40,6 +39,7 @@ from packages.fetchai.skills.aries_faber.dialogues import (
 from packages.fetchai.skills.aries_faber.strategy import (
     ADMIN_COMMAND_CREATE_INVITATION,
     ADMIN_COMMAND_CREDDEF,
+    ADMIN_COMMAND_REGISTGER_PUBLIC_DID,
     ADMIN_COMMAND_SCEHMAS,
     ADMIN_COMMAND_STATUS,
     FABER_ACA_IDENTITY,
@@ -63,10 +63,7 @@ class HttpHandler(Handler):
 
         # ACA stuff
         self.faber_identity = FABER_ACA_IDENTITY
-        rand_name = str(random.randint(100_000, 999_999))  # nosec
-        # use my_name to manually use the same seed in this demo and when starting up the accompanying ACA
-        # use rand_name to not use any seed when starting up the accompanying ACA
-        self.seed = ("my_seed_000000000000000000000000" + rand_name)[-32:]
+
         self.did = None  # type: Optional[str]
         self._schema_id = None  # type: Optional[str]
         self.credential_definition_id = None  # type: Optional[str]
@@ -101,11 +98,28 @@ class HttpHandler(Handler):
         # send
         self.context.outbox.put_message(message=message)
 
+    def _register_public_did(self) -> None:
+        """Register DID on the ledger."""
+        strategy = cast(Strategy, self.context.strategy)
+        self.context.behaviours.faber.send_http_request_message(
+            method="POST",
+            url=strategy.admin_url
+            + ADMIN_COMMAND_REGISTGER_PUBLIC_DID
+            + f"?did={self.did}",
+            content="",
+        )
+
     def _register_did(self) -> None:
         """Register DID on the ledger."""
         strategy = cast(Strategy, self.context.strategy)
-        self.context.logger.info(f"Registering Faber_ACA with seed {str(self.seed)}")
-        data = {"alias": self.faber_identity, "seed": self.seed, "role": "TRUST_ANCHOR"}
+        self.context.logger.info(
+            f"Registering Faber_ACA with seed {str(strategy.seed)}"
+        )
+        data = {
+            "alias": self.faber_identity,
+            "seed": strategy.seed,
+            "role": "TRUST_ANCHOR",
+        }
         self.context.behaviours.faber.send_http_request_message(
             method="POST",
             url=strategy.ledger_url + LEDGER_COMMAND_REGISTER_DID,
@@ -186,8 +200,11 @@ class HttpHandler(Handler):
             if "version" in content:  # response to /status
                 self._register_did()
             elif "did" in content:
-                self.context.logger.info(f"Received DID: {self.did}")
                 self.did = content["did"]
+                self.context.logger.info(f"Received DID: {self.did}")
+                self._register_public_did()
+            elif "result" in content and "posture" in content["result"]:
+                self.context.logger.info(f"Registered public DID: {content}")
                 self._register_schema(
                     schema_name="degree schema",
                     version="0.0.1",
